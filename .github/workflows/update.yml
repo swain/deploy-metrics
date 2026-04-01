@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "update.ts"
+      - ".github/workflows/update.yml"
+      - "package*.json"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch: {}

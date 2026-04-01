@@ -56,7 +56,7 @@ const run = async () => {
   console.log(`Deployed: ${deployed.length} PRs`);
   console.log(`Pending:  ${pending.length} PRs`);
   console.log(
-    `Avg MTTD: ${(avgMTTD / 24).toFixed(1)} days (${avgMTTD.toFixed(1)} hrs)`,
+    `Avg MTTD: ${(avgMTTD / 24).toFixed(1)} days (${avgMTTD.toFixed(1)} hrs)`
   );
 
   await publishToGitHub(metricsJson);
@@ -93,13 +93,13 @@ const publishToGitHub = async (metricsJson: string) => {
   }
 
   console.log(
-    `\nDashboard: https://${PUBLISH_OWNER}.github.io/${PUBLISH_REPO}/`,
+    `\nDashboard: https://${PUBLISH_OWNER}.github.io/${PUBLISH_REPO}/`
   );
 };
 
 const collectRepoMetrics = async (
   repo: string,
-  since: dayjs.Dayjs,
+  since: dayjs.Dayjs
 ): Promise<PRMetric[]> => {
   const mergedPRs = await fetchMergedPRs(repo, "develop", since);
   console.log(`  ${mergedPRs.length} PRs merged to develop`);
@@ -108,7 +108,7 @@ const collectRepoMetrics = async (
     await fetchMergedPRs(repo, "master", since.subtract(30, "day"))
   ).sort(
     (a, b) =>
-      new Date(a.merged_at!).getTime() - new Date(b.merged_at!).getTime(),
+      new Date(a.merged_at!).getTime() - new Date(b.merged_at!).getTime()
   );
   console.log(`  ${deployPRs.length} PRs merged to master (deploy events)`);
 
@@ -132,7 +132,7 @@ const collectRepoMetrics = async (
     if (isDeployed) {
       const prMergedTime = new Date(pr.merged_at!).getTime();
       const deploy = deployPRs.find(
-        (d) => new Date(d.merged_at!).getTime() >= prMergedTime,
+        (d) => new Date(d.merged_at!).getTime() >= prMergedTime
       );
 
       if (deploy?.merged_at) {
@@ -160,7 +160,7 @@ const collectRepoMetrics = async (
 const fetchMergedPRs = async (
   repo: string,
   base: string,
-  since: dayjs.Dayjs,
+  since: dayjs.Dayjs
 ) => {
   const mergedPRs: Awaited<ReturnType<typeof github.pulls.list>>["data"] = [];
   let page = 1;
@@ -180,9 +180,7 @@ const fetchMergedPRs = async (
     if (data.length === 0) break;
 
     mergedPRs.push(
-      ...data.filter(
-        (pr) => pr.merged_at && dayjs(pr.merged_at).isAfter(since),
-      ),
+      ...data.filter((pr) => pr.merged_at && dayjs(pr.merged_at).isAfter(since))
     );
 
     const oldestUpdate = dayjs(data[data.length - 1].updated_at);
@@ -255,7 +253,7 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MTTD Dashboard</title>
+<title>Time To Deploy Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -290,10 +288,10 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 </style>
 </head>
 <body>
-<h1>Mean Time to Deploy</h1>
+<h1>Time to Deploy</h1>
 <p class="subtitle" id="subtitle">Loading...</p>
 <p class="description">
-  <strong>MTTD (Mean Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
+  <strong>TTD (Mean Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
   This tracks the full promotion cycle across all repositories: develop &rarr; qa &rarr; master.
   The chart shows a 4-week rolling average to smooth out weekly variation from weekends and release cadence.
 </p>
@@ -302,7 +300,7 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 
 <div class="chart-container">
   <div class="chart-header">
-    <div class="chart-title">MTTD Over Time (4-week rolling avg, hours)</div>
+    <div class="chart-title">TTD Over Time (4-week rolling avg, hours)</div>
     <div class="range-btns" id="range-btns">
       <button class="range-btn" data-days="30">30d</button>
       <button class="range-btn" data-days="60">60d</button>
@@ -316,7 +314,7 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 <details>
   <summary>PR Details</summary>
   <table>
-    <thead><tr><th>Repo</th><th>PR</th><th>Author</th><th>Merged to develop</th><th>Deployed to master</th><th>MTTD</th></tr></thead>
+    <thead><tr><th>Repo</th><th>PR</th><th>Author</th><th>Merged to develop</th><th>Deployed to master</th><th>TTD</th></tr></thead>
     <tbody id="pr-table"></tbody>
   </table>
 </details>
@@ -389,10 +387,10 @@ function renderStats(prs, weeks) {
   }
 
   document.getElementById('stats').innerHTML =
-    '<div class="stat-card"><div class="label">Mean MTTD</div>' +
+    '<div class="stat-card"><div class="label">Mean TTD</div>' +
     '<div class="value">' + formatDuration(avgHours) + '</div>' +
     trendHtml + '</div>' +
-    '<div class="stat-card"><div class="label">Median MTTD</div>' +
+    '<div class="stat-card"><div class="label">Median TTD</div>' +
     '<div class="value">' + formatDuration(medianHours) + '</div></div>' +
     '<div class="stat-card"><div class="label">PRs Measured</div>' +
     '<div class="value">' + deployed.length + '</div>' +
