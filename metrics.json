@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-04-01T01:33:40.795Z",
+  "generated_at": "2026-04-01T16:23:53.897Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1645,
+      "title": "Refactor LogTaskModal and TasksList components to streamline state ma…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-01T15:30:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1644,
@@ -2056,15 +2065,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1170,
-      "title": "fix: job page application loading",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-21T22:04:11Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 67.51972222222223
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1166,
       "title": "feat: new pipeline",
       "author": "tomer-tgp",
@@ -2955,13 +2955,13 @@
       "mttd_hours": 3.6036111111111113
     },
     {
-      "repo": "gp-webapp",
-      "number": 1000,
-      "title": "ENG-3695: v2 of pro blocking experience in contacts",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T15:44:54Z",
-      "deployed_to_master_at": "2025-10-03T21:16:31Z",
-      "mttd_hours": 5.526944444444444
+      "repo": "gp-api",
+      "number": 1393,
+      "title": "feat: enhance campaign task completion with update history tracking",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-01T15:30:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7176,24 +7176,6 @@
       "mttd_hours": 2.0833333333333335
     },
     {
-      "repo": "gp-api",
-      "number": 592,
-      "title": "ENG-3695: disable contacts API operations if campaign is not pro",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T15:38:14Z",
-      "deployed_to_master_at": "2025-10-03T21:14:09Z",
-      "mttd_hours": 5.598611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 579,
-      "title": "chore: cleanup ecanvasser log",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-03T14:34:12Z",
-      "deployed_to_master_at": "2025-10-03T21:14:09Z",
-      "mttd_hours": 6.6658333333333335
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7842,15 +7824,6 @@
       "mttd_hours": 1.4266666666666667
     },
     {
-      "repo": "people-api",
-      "number": 58,
-      "title": "ENG-3897 - Search for a person",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-03T14:30:32Z",
-      "deployed_to_master_at": "2025-10-03T20:24:10Z",
-      "mttd_hours": 5.893888888888889
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -8089,25 +8062,25 @@
     {
       "week_start": "2025-09-29",
       "all_repos": {
-        "mean_hours": 3.4,
-        "median_hours": 2.8,
-        "count": 12
+        "mean_hours": 2.1,
+        "median_hours": 2,
+        "count": 8
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 3.7,
-          "median_hours": 3.7,
-          "count": 4
+          "mean_hours": 3.1,
+          "median_hours": 3.6,
+          "count": 3
         },
         "gp-api": {
-          "mean_hours": 3.1,
-          "median_hours": 2.1,
-          "count": 6
+          "mean_hours": 1.6,
+          "median_hours": 1.8,
+          "count": 4
         },
         "people-api": {
-          "mean_hours": 3.7,
-          "median_hours": 3.7,
-          "count": 2
+          "mean_hours": 1.4,
+          "median_hours": 1.4,
+          "count": 1
         }
       }
     },
@@ -8274,15 +8247,15 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 78.7,
-        "median_hours": 90.6,
-        "count": 35
+        "mean_hours": 79,
+        "median_hours": 91,
+        "count": 34
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 75.8,
-          "median_hours": 90.3,
-          "count": 24
+          "mean_hours": 76.1,
+          "median_hours": 90.5,
+          "count": 23
         },
         "gp-api": {
           "mean_hours": 84.7,
