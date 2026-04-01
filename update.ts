@@ -56,7 +56,7 @@ const run = async () => {
   console.log(`Deployed: ${deployed.length} PRs`);
   console.log(`Pending:  ${pending.length} PRs`);
   console.log(
-    `Avg MTTD: ${(avgMTTD / 24).toFixed(1)} days (${avgMTTD.toFixed(1)} hrs)`
+    `Avg MTTD: ${(avgMTTD / 24).toFixed(1)} days (${avgMTTD.toFixed(1)} hrs)`,
   );
 
   await publishToGitHub(metricsJson);
@@ -93,13 +93,13 @@ const publishToGitHub = async (metricsJson: string) => {
   }
 
   console.log(
-    `\nDashboard: https://${PUBLISH_OWNER}.github.io/${PUBLISH_REPO}/`
+    `\nDashboard: https://${PUBLISH_OWNER}.github.io/${PUBLISH_REPO}/`,
   );
 };
 
 const collectRepoMetrics = async (
   repo: string,
-  since: dayjs.Dayjs
+  since: dayjs.Dayjs,
 ): Promise<PRMetric[]> => {
   const mergedPRs = await fetchMergedPRs(repo, "develop", since);
   console.log(`  ${mergedPRs.length} PRs merged to develop`);
@@ -108,7 +108,7 @@ const collectRepoMetrics = async (
     await fetchMergedPRs(repo, "master", since.subtract(30, "day"))
   ).sort(
     (a, b) =>
-      new Date(a.merged_at!).getTime() - new Date(b.merged_at!).getTime()
+      new Date(a.merged_at!).getTime() - new Date(b.merged_at!).getTime(),
   );
   console.log(`  ${deployPRs.length} PRs merged to master (deploy events)`);
 
@@ -132,7 +132,7 @@ const collectRepoMetrics = async (
     if (isDeployed) {
       const prMergedTime = new Date(pr.merged_at!).getTime();
       const deploy = deployPRs.find(
-        (d) => new Date(d.merged_at!).getTime() >= prMergedTime
+        (d) => new Date(d.merged_at!).getTime() >= prMergedTime,
       );
 
       if (deploy?.merged_at) {
@@ -160,7 +160,7 @@ const collectRepoMetrics = async (
 const fetchMergedPRs = async (
   repo: string,
   base: string,
-  since: dayjs.Dayjs
+  since: dayjs.Dayjs,
 ) => {
   const mergedPRs: Awaited<ReturnType<typeof github.pulls.list>>["data"] = [];
   let page = 1;
@@ -180,7 +180,9 @@ const fetchMergedPRs = async (
     if (data.length === 0) break;
 
     mergedPRs.push(
-      ...data.filter((pr) => pr.merged_at && dayjs(pr.merged_at).isAfter(since))
+      ...data.filter(
+        (pr) => pr.merged_at && dayjs(pr.merged_at).isAfter(since),
+      ),
     );
 
     const oldestUpdate = dayjs(data[data.length - 1].updated_at);
@@ -266,10 +268,16 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
   .stat-card .label { font-size: 12px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
   .stat-card .value { font-size: 32px; font-weight: 700; color: #f0f6fc; }
   .stat-card .unit { font-size: 14px; color: #8b949e; }
-  .stat-card .trend { font-size: 14px; margin-top: 4px; }
-  .trend.down { color: #3fb950; }
-  .trend.up { color: #f85149; }
-  .trend.flat { color: #8b949e; }
+  .compare-banner { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; display: none; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .compare-banner.visible { display: flex; }
+  .compare-banner .compare-label { font-size: 13px; color: #8b949e; }
+  .compare-banner .compare-value { font-size: 18px; font-weight: 700; }
+  .compare-banner .compare-value.improved { color: #3fb950; }
+  .compare-banner .compare-value.regressed { color: #f85149; }
+  .compare-banner .compare-value.neutral { color: #8b949e; }
+  .compare-banner .compare-reset { margin-left: auto; padding: 4px 12px; border-radius: 6px; border: 1px solid #30363d; background: transparent; color: #8b949e; cursor: pointer; font-size: 12px; }
+  .compare-banner .compare-reset:hover { border-color: #58a6ff; color: #f0f6fc; }
+  .compare-hint { font-size: 12px; color: #484f58; margin-top: 8px; }
   .chart-container { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; margin-bottom: 32px; }
   .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
   .chart-title { font-size: 16px; font-weight: 600; color: #f0f6fc; }
@@ -298,6 +306,8 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 
 <div class="stats" id="stats"></div>
 
+<div id="compare-banner" class="compare-banner"></div>
+
 <div class="chart-container">
   <div class="chart-header">
     <div class="chart-title">TTD Over Time (4-week rolling avg, hours)</div>
@@ -309,6 +319,7 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
     </div>
   </div>
   <canvas id="chart" height="100"></canvas>
+  <div class="compare-hint">Click two points on the chart to compare</div>
 </div>
 
 <details>
@@ -322,6 +333,8 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 <script>
 let chart = null
 let allData = null
+let comparePoints = []
+let currentWeeks = []
 
 const formatDuration = (hours) => {
   if (hours === null || isNaN(hours)) return '-'
@@ -356,6 +369,9 @@ function renderAll(days) {
   const cutoff = new Date(Date.now() - days * 86400000).toISOString()
   const filteredPRs = allData.prs.filter(p => p.merged_to_develop_at >= cutoff)
   const filteredWeeks = allData.weekly_averages.filter(w => w.week_start >= cutoff.slice(0, 10))
+  currentWeeks = filteredWeeks
+  comparePoints = []
+  renderCompare()
   renderStats(filteredPRs, filteredWeeks)
   renderChart(filteredWeeks)
   renderTable(filteredPRs)
@@ -375,21 +391,9 @@ function renderStats(prs, weeks) {
       })()
     : null
 
-  let trendHtml = ''
-  if (weeks.length >= 2) {
-    const prev = weeks[weeks.length - 2].all_repos.mean_hours
-    const curr = weeks[weeks.length - 1].all_repos.mean_hours
-    const diff = curr - prev
-    const pct = prev > 0 ? Math.round(Math.abs(diff / prev) * 100) : 0
-    const cls = diff < -1 ? 'down' : diff > 1 ? 'up' : 'flat'
-    const arrow = diff < -1 ? 'v ' : diff > 1 ? '^ ' : '~ '
-    trendHtml = '<div class="trend ' + cls + '">' + arrow + pct + '% vs prior week</div>'
-  }
-
   document.getElementById('stats').innerHTML =
     '<div class="stat-card"><div class="label">Mean TTD</div>' +
-    '<div class="value">' + formatDuration(avgHours) + '</div>' +
-    trendHtml + '</div>' +
+    '<div class="value">' + formatDuration(avgHours) + '</div></div>' +
     '<div class="stat-card"><div class="label">Median TTD</div>' +
     '<div class="value">' + formatDuration(medianHours) + '</div></div>' +
     '<div class="stat-card"><div class="label">PRs Measured</div>' +
@@ -454,8 +458,50 @@ function renderChart(weeks) {
           },
         },
       },
+      onClick: (evt, elements) => {
+        if (!elements.length) return
+        const idx = elements[0].index
+        if (comparePoints.length === 0) {
+          comparePoints = [idx]
+        } else if (comparePoints.length === 1) {
+          if (idx === comparePoints[0]) return
+          comparePoints = [comparePoints[0], idx].sort((a, b) => a - b)
+        } else {
+          comparePoints = [idx]
+        }
+        renderCompare()
+      },
     },
   })
+}
+
+function renderCompare() {
+  const banner = document.getElementById('compare-banner')
+  if (comparePoints.length < 2) {
+    if (comparePoints.length === 1) {
+      banner.innerHTML = '<span class="compare-label">Selected: week of ' + currentWeeks[comparePoints[0]].week_start + ' — click another point to compare</span>' +
+        '<button class="compare-reset" onclick="comparePoints=[];renderCompare()">Clear</button>'
+      banner.classList.add('visible')
+    } else {
+      banner.classList.remove('visible')
+    }
+    return
+  }
+
+  const a = currentWeeks[comparePoints[0]].all_repos
+  const b = currentWeeks[comparePoints[1]].all_repos
+  const meanPct = a.mean_hours > 0 ? Math.round((b.mean_hours - a.mean_hours) / a.mean_hours * 100) : 0
+  const medianPct = a.median_hours > 0 ? Math.round((b.median_hours - a.median_hours) / a.median_hours * 100) : 0
+  const meanCls = meanPct < 0 ? 'improved' : meanPct > 0 ? 'regressed' : 'neutral'
+  const medianCls = medianPct < 0 ? 'improved' : medianPct > 0 ? 'regressed' : 'neutral'
+  const sign = (v) => v > 0 ? '+' : ''
+
+  banner.innerHTML =
+    '<span class="compare-label">' + currentWeeks[comparePoints[0]].week_start + ' vs ' + currentWeeks[comparePoints[1]].week_start + '</span>' +
+    '<div><span class="compare-label">Mean</span> <span class="compare-value ' + meanCls + '">' + sign(meanPct) + meanPct + '%</span></div>' +
+    '<div><span class="compare-label">Median</span> <span class="compare-value ' + medianCls + '">' + sign(medianPct) + medianPct + '%</span></div>' +
+    '<button class="compare-reset" onclick="comparePoints=[];renderCompare()">Clear</button>'
+  banner.classList.add('visible')
 }
 
 function renderTable(prs) {
