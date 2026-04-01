@@ -86,7 +86,7 @@ const rollingAvg = (arr, window) => {
   })
 }
 
-fetch('metrics.json')
+fetch('metrics.json?t=' + Date.now())
   .then(r => r.json())
   .then(data => {
     allData = data
