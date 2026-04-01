@@ -291,7 +291,7 @@ const DASHBOARD_HTML = `<!DOCTYPE html>
 <h1>Time to Deploy</h1>
 <p class="subtitle" id="subtitle">Loading...</p>
 <p class="description">
-  <strong>TTD (Mean Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
+  <strong>TTD (Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
   This tracks the full promotion cycle across all repositories: develop &rarr; qa &rarr; master.
   The chart shows a 4-week rolling average to smooth out weekly variation from weekends and release cadence.
 </p>
