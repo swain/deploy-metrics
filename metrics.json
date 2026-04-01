@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T23:44:37.858Z",
+  "generated_at": "2026-04-01T00:04:30.989Z",
   "days_back": 180,
   "prs": [
     {
@@ -8089,9 +8089,9 @@
     {
       "week_start": "2025-09-29",
       "all_repos": {
-        "mean_hours": 3,
-        "median_hours": 2.1,
-        "count": 14
+        "mean_hours": 3.4,
+        "median_hours": 2.8,
+        "count": 12
       },
       "by_repo": {
         "gp-webapp": {
@@ -8100,9 +8100,9 @@
           "count": 4
         },
         "gp-api": {
-          "mean_hours": 2.4,
-          "median_hours": 1.8,
-          "count": 8
+          "mean_hours": 3.1,
+          "median_hours": 2.1,
+          "count": 6
         },
         "people-api": {
           "mean_hours": 3.7,
@@ -8114,9 +8114,9 @@
     {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 19.8,
-        "median_hours": 21,
-        "count": 48
+        "mean_hours": 19,
+        "median_hours": 20.7,
+        "count": 50
       },
       "by_repo": {
         "gp-webapp": {
@@ -8125,9 +8125,9 @@
           "count": 21
         },
         "gp-api": {
-          "mean_hours": 22.3,
-          "median_hours": 22.4,
-          "count": 22
+          "mean_hours": 20.5,
+          "median_hours": 21.8,
+          "count": 24
         },
         "people-api": {
           "mean_hours": 11.7,
