@@ -398,13 +398,19 @@ fetch('metrics.json?t=' + Date.now())
 function renderAll(days) {
   const cutoff = new Date(Date.now() - days * 86400000).toISOString()
   const filteredPRs = allData.prs.filter(p => p.merged_to_develop_at >= cutoff)
-  const filteredWeeks = allData.weekly_averages.filter(w => w.week_start >= cutoff.slice(0, 10))
-  renderStats(filteredPRs, filteredWeeks)
-  renderChart(filteredWeeks, cutoff.slice(0, 10))
+  const allWeeks = allData.weekly_averages
+  const allMean = rollingAvg(allWeeks.map(w => w.all_repos.mean_hours), 4)
+  const allMedian = rollingAvg(allWeeks.map(w => w.all_repos.median_hours), 4)
+  const startIdx = allWeeks.findIndex(w => w.week_start >= cutoff.slice(0, 10))
+  const meanData = allMean.slice(startIdx)
+  const medianData = allMedian.slice(startIdx)
+  const labels = allWeeks.slice(startIdx).map(w => w.week_start)
+  renderStats(filteredPRs, meanData, medianData)
+  renderChart(labels, meanData, medianData)
   renderTable(filteredPRs)
 }
 
-function renderStats(prs, weeks) {
+function renderStats(prs, meanData, medianData) {
   const deployed = prs.filter(p => p.mttd_hours !== null)
   const pending = prs.filter(p => p.mttd_hours === null)
   const avgHours = deployed.length > 0
@@ -419,36 +425,31 @@ function renderStats(prs, weeks) {
     : null
 
   const trendHtml = (first, last) => {
-    if (first === null || last === null || first === 0) return ''
-    const pct = Math.round((last - first) / first * 100)
-    const cls = pct < 0 ? 'down' : pct > 0 ? 'up' : 'flat'
-    const arrow = pct < 0 ? 'v ' : pct > 0 ? '^ ' : '~ '
-    return '<div class="trend ' + cls + '">' + arrow + Math.abs(pct) + '% over interval</div>'
+    if (first === null || last === null) return ''
+    const diff = Math.round(last - first)
+    const cls = diff < 0 ? 'down' : diff > 0 ? 'up' : 'flat'
+    const arrow = diff < 0 ? 'down ' : diff > 0 ? 'up ' : '~ '
+    return '<div class="trend ' + cls + '">' + arrow + Math.abs(diff) + 'h over interval</div>'
   }
 
-  const firstWeek = weeks.length > 0 ? weeks[0].all_repos : null
-  const lastWeek = weeks.length > 0 ? weeks[weeks.length - 1].all_repos : null
+  const firstMean = meanData.length > 0 ? meanData[0] : null
+  const lastMean = meanData.length > 0 ? meanData[meanData.length - 1] : null
+  const firstMedian = medianData.length > 0 ? medianData[0] : null
+  const lastMedian = medianData.length > 0 ? medianData[medianData.length - 1] : null
 
   document.getElementById('stats').innerHTML =
     '<div class="stat-card"><div class="label">Mean TTD</div>' +
     '<div class="value">' + formatDuration(avgHours) + '</div>' +
-    (firstWeek && lastWeek ? trendHtml(firstWeek.mean_hours, lastWeek.mean_hours) : '') + '</div>' +
+    trendHtml(firstMean, lastMean) + '</div>' +
     '<div class="stat-card"><div class="label">Median TTD</div>' +
     '<div class="value">' + formatDuration(medianHours) + '</div>' +
-    (firstWeek && lastWeek ? trendHtml(firstWeek.median_hours, lastWeek.median_hours) : '') + '</div>' +
+    trendHtml(firstMedian, lastMedian) + '</div>' +
     '<div class="stat-card"><div class="label">PRs Measured</div>' +
     '<div class="value">' + deployed.length + '</div>' +
     '<div class="unit">' + pending.length + ' pending</div></div>'
 }
 
-function renderChart(weeks, cutoff) {
-  const allWeeks = allData.weekly_averages
-  const allMean = rollingAvg(allWeeks.map(w => w.all_repos.mean_hours), 4)
-  const allMedian = rollingAvg(allWeeks.map(w => w.all_repos.median_hours), 4)
-  const startIdx = allWeeks.findIndex(w => w.week_start >= cutoff)
-  const labels = allWeeks.slice(startIdx).map(w => w.week_start)
-  const meanData = allMean.slice(startIdx)
-  const medianData = allMedian.slice(startIdx)
+function renderChart(labels, meanData, medianData) {
 
   const datasets = [{
     label: 'Mean (4-wk rolling)',
