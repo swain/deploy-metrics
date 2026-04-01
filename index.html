@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MTTD Dashboard</title>
+<title>Time To Deploy Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,10 +38,10 @@
 </style>
 </head>
 <body>
-<h1>Mean Time to Deploy</h1>
+<h1>Time to Deploy</h1>
 <p class="subtitle" id="subtitle">Loading...</p>
 <p class="description">
-  <strong>MTTD (Mean Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
+  <strong>TTD (Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
   This tracks the full promotion cycle across all repositories: develop &rarr; qa &rarr; master.
   The chart shows a 4-week rolling average to smooth out weekly variation from weekends and release cadence.
 </p>
@@ -50,7 +50,7 @@
 
 <div class="chart-container">
   <div class="chart-header">
-    <div class="chart-title">MTTD Over Time (4-week rolling avg, hours)</div>
+    <div class="chart-title">TTD Over Time (4-week rolling avg, hours)</div>
     <div class="range-btns" id="range-btns">
       <button class="range-btn" data-days="30">30d</button>
       <button class="range-btn" data-days="60">60d</button>
@@ -64,7 +64,7 @@
 <details>
   <summary>PR Details</summary>
   <table>
-    <thead><tr><th>Repo</th><th>PR</th><th>Author</th><th>Merged to develop</th><th>Deployed to master</th><th>MTTD</th></tr></thead>
+    <thead><tr><th>Repo</th><th>PR</th><th>Author</th><th>Merged to develop</th><th>Deployed to master</th><th>TTD</th></tr></thead>
     <tbody id="pr-table"></tbody>
   </table>
 </details>
@@ -107,7 +107,7 @@ function renderAll(days) {
   const filteredPRs = allData.prs.filter(p => p.merged_to_develop_at >= cutoff)
   const filteredWeeks = allData.weekly_averages.filter(w => w.week_start >= cutoff.slice(0, 10))
   renderStats(filteredPRs, filteredWeeks)
-  renderChart(filteredWeeks)
+  renderChart(filteredWeeks, cutoff.slice(0, 10))
   renderTable(filteredPRs)
 }
 
@@ -125,36 +125,41 @@ function renderStats(prs, weeks) {
       })()
     : null
 
-  let trendHtml = ''
-  if (weeks.length >= 2) {
-    const prev = weeks[weeks.length - 2].all_repos.mean_hours
-    const curr = weeks[weeks.length - 1].all_repos.mean_hours
-    const diff = curr - prev
-    const pct = prev > 0 ? Math.round(Math.abs(diff / prev) * 100) : 0
-    const cls = diff < -1 ? 'down' : diff > 1 ? 'up' : 'flat'
-    const arrow = diff < -1 ? 'v ' : diff > 1 ? '^ ' : '~ '
-    trendHtml = '<div class="trend ' + cls + '">' + arrow + pct + '% vs prior week</div>'
+  const trendHtml = (first, last) => {
+    if (first === null || last === null || first === 0) return ''
+    const pct = Math.round((last - first) / first * 100)
+    const cls = pct < 0 ? 'down' : pct > 0 ? 'up' : 'flat'
+    const arrow = pct < 0 ? 'v ' : pct > 0 ? '^ ' : '~ '
+    return '<div class="trend ' + cls + '">' + arrow + Math.abs(pct) + '% over interval</div>'
   }
 
+  const firstWeek = weeks.length > 0 ? weeks[0].all_repos : null
+  const lastWeek = weeks.length > 0 ? weeks[weeks.length - 1].all_repos : null
+
   document.getElementById('stats').innerHTML =
-    '<div class="stat-card"><div class="label">Mean MTTD</div>' +
+    '<div class="stat-card"><div class="label">Mean TTD</div>' +
     '<div class="value">' + formatDuration(avgHours) + '</div>' +
-    trendHtml + '</div>' +
-    '<div class="stat-card"><div class="label">Median MTTD</div>' +
-    '<div class="value">' + formatDuration(medianHours) + '</div></div>' +
+    (firstWeek && lastWeek ? trendHtml(firstWeek.mean_hours, lastWeek.mean_hours) : '') + '</div>' +
+    '<div class="stat-card"><div class="label">Median TTD</div>' +
+    '<div class="value">' + formatDuration(medianHours) + '</div>' +
+    (firstWeek && lastWeek ? trendHtml(firstWeek.median_hours, lastWeek.median_hours) : '') + '</div>' +
     '<div class="stat-card"><div class="label">PRs Measured</div>' +
     '<div class="value">' + deployed.length + '</div>' +
     '<div class="unit">' + pending.length + ' pending</div></div>'
 }
 
-function renderChart(weeks) {
-  const labels = weeks.map(w => w.week_start)
-  const rawMean = weeks.map(w => w.all_repos.mean_hours)
-  const rawMedian = weeks.map(w => w.all_repos.median_hours)
+function renderChart(weeks, cutoff) {
+  const allWeeks = allData.weekly_averages
+  const allMean = rollingAvg(allWeeks.map(w => w.all_repos.mean_hours), 4)
+  const allMedian = rollingAvg(allWeeks.map(w => w.all_repos.median_hours), 4)
+  const startIdx = allWeeks.findIndex(w => w.week_start >= cutoff)
+  const labels = allWeeks.slice(startIdx).map(w => w.week_start)
+  const meanData = allMean.slice(startIdx)
+  const medianData = allMedian.slice(startIdx)
 
   const datasets = [{
     label: 'Mean (4-wk rolling)',
-    data: rollingAvg(rawMean, 4),
+    data: meanData,
     borderColor: '#58a6ff',
     backgroundColor: 'rgba(88,166,255,0.1)',
     borderWidth: 2,
@@ -163,7 +168,7 @@ function renderChart(weeks) {
     pointRadius: 3,
   }, {
     label: 'Median (4-wk rolling)',
-    data: rollingAvg(rawMedian, 4),
+    data: medianData,
     borderColor: '#3fb950',
     borderWidth: 2,
     tension: 0.3,
