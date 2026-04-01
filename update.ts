@@ -400,7 +400,7 @@ function renderAll(days) {
   const filteredPRs = allData.prs.filter(p => p.merged_to_develop_at >= cutoff)
   const filteredWeeks = allData.weekly_averages.filter(w => w.week_start >= cutoff.slice(0, 10))
   renderStats(filteredPRs, filteredWeeks)
-  renderChart(filteredWeeks)
+  renderChart(filteredWeeks, cutoff.slice(0, 10))
   renderTable(filteredPRs)
 }
 
@@ -441,14 +441,18 @@ function renderStats(prs, weeks) {
     '<div class="unit">' + pending.length + ' pending</div></div>'
 }
 
-function renderChart(weeks) {
-  const labels = weeks.map(w => w.week_start)
-  const rawMean = weeks.map(w => w.all_repos.mean_hours)
-  const rawMedian = weeks.map(w => w.all_repos.median_hours)
+function renderChart(weeks, cutoff) {
+  const allWeeks = allData.weekly_averages
+  const allMean = rollingAvg(allWeeks.map(w => w.all_repos.mean_hours), 4)
+  const allMedian = rollingAvg(allWeeks.map(w => w.all_repos.median_hours), 4)
+  const startIdx = allWeeks.findIndex(w => w.week_start >= cutoff)
+  const labels = allWeeks.slice(startIdx).map(w => w.week_start)
+  const meanData = allMean.slice(startIdx)
+  const medianData = allMedian.slice(startIdx)
 
   const datasets = [{
     label: 'Mean (4-wk rolling)',
-    data: rollingAvg(rawMean, 4),
+    data: meanData,
     borderColor: '#58a6ff',
     backgroundColor: 'rgba(88,166,255,0.1)',
     borderWidth: 2,
@@ -457,7 +461,7 @@ function renderChart(weeks) {
     pointRadius: 3,
   }, {
     label: 'Median (4-wk rolling)',
-    data: rollingAvg(rawMedian, 4),
+    data: medianData,
     borderColor: '#3fb950',
     borderWidth: 2,
     tension: 0.3,
