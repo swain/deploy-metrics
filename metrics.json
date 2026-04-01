@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T16:23:53.897Z",
+  "generated_at": "2026-04-01T22:11:13.296Z",
   "days_back": 180,
   "prs": [
     {
@@ -8,8 +8,8 @@
       "title": "Refactor LogTaskModal and TasksList components to streamline state ma…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-01T15:30:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:28:43Z",
+      "mttd_hours": 2.963611111111111
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +17,8 @@
       "title": "Refactor useWeekNavigation to manage session state for selected week …",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-03-31T22:00:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:28:43Z",
+      "mttd_hours": 20.465555555555557
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +26,8 @@
       "title": "simplify contacts queries to use typed path",
       "author": "swain",
       "merged_to_develop_at": "2026-03-31T21:06:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:28:43Z",
+      "mttd_hours": 21.365277777777777
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +35,8 @@
       "title": "ENG-7078: remove path to victory admin creation",
       "author": "swain",
       "merged_to_develop_at": "2026-03-31T20:13:11Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:28:43Z",
+      "mttd_hours": 22.25888888888889
     },
     {
       "repo": "gp-webapp",
@@ -2686,24 +2686,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1004,
-      "title": "Use Turbopack for local bundling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T19:21:31Z",
-      "deployed_to_master_at": "2025-10-03T21:16:31Z",
-      "mttd_hours": 1.9166666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1003,
-      "title": "ENG-3695: finish contacts free behavior",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T17:32:55Z",
-      "deployed_to_master_at": "2025-10-03T21:16:31Z",
-      "mttd_hours": 3.7266666666666666
-    },
-    {
-      "repo": "gp-webapp",
       "number": 998,
       "title": "fix typo in add campaign page title",
       "author": "swain",
@@ -2956,12 +2938,21 @@
     },
     {
       "repo": "gp-api",
+      "number": 1396,
+      "title": "ENG-7079: Remove silver match queue consumer",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-01T20:07:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
       "number": 1393,
       "title": "feat: enhance campaign task completion with update history tracking",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-01T15:30:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:16:17Z",
+      "mttd_hours": 2.766111111111111
     },
     {
       "repo": "gp-api",
@@ -2969,8 +2960,8 @@
       "title": "notify serve bugs on background failures",
       "author": "swain",
       "merged_to_develop_at": "2026-03-31T21:07:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:16:17Z",
+      "mttd_hours": 21.15277777777778
     },
     {
       "repo": "gp-api",
@@ -2978,8 +2969,8 @@
       "title": "Eng 7078",
       "author": "swain",
       "merged_to_develop_at": "2026-03-31T20:26:45Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-01T18:16:17Z",
+      "mttd_hours": 21.825555555555557
     },
     {
       "repo": "gp-api",
@@ -7167,15 +7158,6 @@
       "mttd_hours": 2.0216666666666665
     },
     {
-      "repo": "gp-api",
-      "number": 596,
-      "title": "block permissions for searchContacts",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T19:09:09Z",
-      "deployed_to_master_at": "2025-10-03T21:14:09Z",
-      "mttd_hours": 2.0833333333333335
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7815,15 +7797,6 @@
       "mttd_hours": 3.0166666666666666
     },
     {
-      "repo": "people-api",
-      "number": 60,
-      "title": "use 'people' as response key",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-03T18:58:34Z",
-      "deployed_to_master_at": "2025-10-03T20:24:10Z",
-      "mttd_hours": 1.4266666666666667
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -8062,25 +8035,20 @@
     {
       "week_start": "2025-09-29",
       "all_repos": {
-        "mean_hours": 2.1,
-        "median_hours": 2,
-        "count": 8
+        "mean_hours": 2,
+        "median_hours": 1.8,
+        "count": 4
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 3.1,
+          "mean_hours": 3.6,
           "median_hours": 3.6,
-          "count": 3
+          "count": 1
         },
         "gp-api": {
-          "mean_hours": 1.6,
-          "median_hours": 1.8,
-          "count": 4
-        },
-        "people-api": {
           "mean_hours": 1.4,
-          "median_hours": 1.4,
-          "count": 1
+          "median_hours": 1.7,
+          "count": 3
         }
       }
     },
@@ -8712,20 +8680,20 @@
     {
       "week_start": "2026-03-30",
       "all_repos": {
-        "mean_hours": 7.8,
-        "median_hours": 4.2,
-        "count": 9
+        "mean_hours": 11.5,
+        "median_hours": 10,
+        "count": 16
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 6.5,
-          "median_hours": 4.1,
-          "count": 4
+          "mean_hours": 11.6,
+          "median_hours": 10.5,
+          "count": 8
         },
         "gp-api": {
-          "mean_hours": 8.9,
-          "median_hours": 4.2,
-          "count": 5
+          "mean_hours": 11.3,
+          "median_hours": 9.2,
+          "count": 8
         }
       }
     }
