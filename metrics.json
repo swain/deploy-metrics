@@ -1,7 +1,43 @@
 {
-  "generated_at": "2026-04-01T22:11:13.296Z",
+  "generated_at": "2026-04-02T22:09:49.128Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1658,
+      "title": "feat: remove dialog",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-02T21:27:53Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1659,
+      "title": "fix: date format",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-02T21:18:23Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1648,
+      "title": "Add onComplete handler to TaskFlow and TasksList components for task …",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-02T16:35:15Z",
+      "deployed_to_master_at": "2026-04-02T19:49:09Z",
+      "mttd_hours": 3.2316666666666665
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1653,
+      "title": "ENG-7081: remove silver match phase 4",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-02T15:40:39Z",
+      "deployed_to_master_at": "2026-04-02T19:49:09Z",
+      "mttd_hours": 4.141666666666667
+    },
     {
       "repo": "gp-webapp",
       "number": 1645,
@@ -2928,13 +2964,49 @@
       "mttd_hours": 28.275
     },
     {
-      "repo": "gp-webapp",
-      "number": 1010,
-      "title": "ENG-4401: blur contacts for non-pro",
+      "repo": "gp-api",
+      "number": 1401,
+      "title": "Fix flapping health check alert",
       "author": "swain",
-      "merged_to_develop_at": "2025-10-03T22:10:57Z",
-      "deployed_to_master_at": "2025-10-04T01:47:10Z",
-      "mttd_hours": 3.6036111111111113
+      "merged_to_develop_at": "2026-04-02T18:20:52Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 0.8877777777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1402,
+      "title": "chore: seats bug",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-02T16:58:38Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 2.2583333333333333
+    },
+    {
+      "repo": "gp-api",
+      "number": 1400,
+      "title": "AI Model Fix",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-02T16:19:57Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 2.9030555555555555
+    },
+    {
+      "repo": "gp-api",
+      "number": 1399,
+      "title": "Increase timeout settings for campaign task tests to improve reliabil…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-02T14:44:22Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 4.496111111111111
+    },
+    {
+      "repo": "gp-api",
+      "number": 1398,
+      "title": "ENG-7080: remove silver match, phase 3",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-02T15:40:57Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 3.5530555555555554
     },
     {
       "repo": "gp-api",
@@ -2942,8 +3014,8 @@
       "title": "ENG-7079: Remove silver match queue consumer",
       "author": "swain",
       "merged_to_develop_at": "2026-04-01T20:07:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 23.103055555555557
     },
     {
       "repo": "gp-api",
@@ -8035,16 +8107,11 @@
     {
       "week_start": "2025-09-29",
       "all_repos": {
-        "mean_hours": 2,
-        "median_hours": 1.8,
-        "count": 4
+        "mean_hours": 1.4,
+        "median_hours": 1.7,
+        "count": 3
       },
       "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 3.6,
-          "median_hours": 3.6,
-          "count": 1
-        },
         "gp-api": {
           "mean_hours": 1.4,
           "median_hours": 1.7,
@@ -8680,20 +8747,20 @@
     {
       "week_start": "2026-03-30",
       "all_repos": {
-        "mean_hours": 11.5,
-        "median_hours": 10,
-        "count": 16
+        "mean_hours": 9.5,
+        "median_hours": 4.2,
+        "count": 24
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 11.6,
-          "median_hours": 10.5,
-          "count": 8
+          "mean_hours": 10,
+          "median_hours": 4.9,
+          "count": 10
         },
         "gp-api": {
-          "mean_hours": 11.3,
-          "median_hours": 9.2,
-          "count": 8
+          "mean_hours": 9.1,
+          "median_hours": 3.9,
+          "count": 14
         }
       }
     }
