@@ -1,15 +1,24 @@
 {
-  "generated_at": "2026-04-02T22:09:49.128Z",
+  "generated_at": "2026-04-03T22:07:43.920Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1663,
+      "title": "ENG-7204: Clear org cookie and React Query cache when impersonating",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-03T20:13:18Z",
+      "deployed_to_master_at": "2026-04-03T20:21:24Z",
+      "mttd_hours": 0.135
+    },
     {
       "repo": "gp-webapp",
       "number": 1658,
       "title": "feat: remove dialog",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-02T21:27:53Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-03T16:08:46Z",
+      "mttd_hours": 18.68138888888889
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +26,8 @@
       "title": "fix: date format",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-02T21:18:23Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-03T16:08:46Z",
+      "mttd_hours": 18.83972222222222
     },
     {
       "repo": "gp-webapp",
@@ -2965,6 +2974,60 @@
     },
     {
       "repo": "gp-api",
+      "number": 1414,
+      "title": "Raise health check probe failure threshold to 10%",
+      "author": "delegate-gp[bot]",
+      "merged_to_develop_at": "2026-04-03T20:12:52Z",
+      "deployed_to_master_at": "2026-04-03T20:17:35Z",
+      "mttd_hours": 0.07861111111111112
+    },
+    {
+      "repo": "gp-api",
+      "number": 1408,
+      "title": "AI model fix + error handling ",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-03T19:22:48Z",
+      "deployed_to_master_at": "2026-04-03T20:17:35Z",
+      "mttd_hours": 0.9130555555555555
+    },
+    {
+      "repo": "gp-api",
+      "number": 1413,
+      "title": "never generate campaign tasks for test users",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-03T18:27:57Z",
+      "deployed_to_master_at": "2026-04-03T20:17:35Z",
+      "mttd_hours": 1.8272222222222223
+    },
+    {
+      "repo": "gp-api",
+      "number": 1400,
+      "title": "AI Model Fix",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-02T16:19:57Z",
+      "deployed_to_master_at": "2026-04-02T19:14:08Z",
+      "mttd_hours": 2.9030555555555555
+    },
+    {
+      "repo": "gp-api",
+      "number": 1409,
+      "title": "Fix bad alerts",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-02T23:05:25Z",
+      "deployed_to_master_at": "2026-04-03T15:24:53Z",
+      "mttd_hours": 16.324444444444445
+    },
+    {
+      "repo": "gp-api",
+      "number": 1404,
+      "title": "Trigger poll execution fix",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-02T22:32:42Z",
+      "deployed_to_master_at": "2026-04-03T15:24:53Z",
+      "mttd_hours": 16.869722222222222
+    },
+    {
+      "repo": "gp-api",
       "number": 1401,
       "title": "Fix flapping health check alert",
       "author": "swain",
@@ -2980,15 +3043,6 @@
       "merged_to_develop_at": "2026-04-02T16:58:38Z",
       "deployed_to_master_at": "2026-04-02T19:14:08Z",
       "mttd_hours": 2.2583333333333333
-    },
-    {
-      "repo": "gp-api",
-      "number": 1400,
-      "title": "AI Model Fix",
-      "author": "oakinh",
-      "merged_to_develop_at": "2026-04-02T16:19:57Z",
-      "deployed_to_master_at": "2026-04-02T19:14:08Z",
-      "mttd_hours": 2.9030555555555555
     },
     {
       "repo": "gp-api",
@@ -8747,20 +8801,20 @@
     {
       "week_start": "2026-03-30",
       "all_repos": {
-        "mean_hours": 9.5,
+        "mean_hours": 9.4,
         "median_hours": 4.2,
-        "count": 24
+        "count": 32
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 10,
-          "median_hours": 4.9,
-          "count": 10
+          "mean_hours": 10.6,
+          "median_hours": 5.7,
+          "count": 13
         },
         "gp-api": {
-          "mean_hours": 9.1,
-          "median_hours": 3.9,
-          "count": 14
+          "mean_hours": 8.6,
+          "median_hours": 3.6,
+          "count": 19
         }
       }
     }
