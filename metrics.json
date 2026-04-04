@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T22:07:43.920Z",
+  "generated_at": "2026-04-04T22:05:59.691Z",
   "days_back": 180,
   "prs": [
     {
@@ -2713,33 +2713,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1007,
-      "title": "Contact Search API Integration",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-06T12:52:23Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 29.236666666666668
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1006,
-      "title": "TypeScript Support",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-06T21:33:02Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 20.559166666666666
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 998,
-      "title": "fix typo in add campaign page title",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-06T12:38:58Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 29.460277777777776
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1055,
       "title": "remove cookie check",
       "author": "stephtea",
@@ -2953,24 +2926,6 @@
       "merged_to_develop_at": "2025-10-06T22:31:41Z",
       "deployed_to_master_at": "2025-10-07T18:06:35Z",
       "mttd_hours": 19.581666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1008,
-      "title": "[ENG-4397] - Fixes RichEditor re-rendering on keystrokes",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-06T16:06:37Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 25.999444444444446
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1005,
-      "title": "Eng 4062 tevyn api",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-06T13:50:05Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 28.275
     },
     {
       "repo": "gp-api",
@@ -5041,15 +4996,6 @@
       "merged_to_develop_at": "2026-01-05T17:05:21Z",
       "deployed_to_master_at": "2026-01-12T15:07:27Z",
       "mttd_hours": 166.035
-    },
-    {
-      "repo": "gp-api",
-      "number": 609,
-      "title": "updating sample message",
-      "author": "awardquick",
-      "merged_to_develop_at": "2025-10-06T19:41:14Z",
-      "deployed_to_master_at": "2025-10-07T18:06:27Z",
-      "mttd_hours": 22.420277777777777
     },
     {
       "repo": "gp-api",
@@ -7212,78 +7158,6 @@
       "mttd_hours": 13.745
     },
     {
-      "repo": "gp-api",
-      "number": 610,
-      "title": "chore: ignore 401 errors",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-06T21:03:16Z",
-      "deployed_to_master_at": "2025-10-07T18:06:27Z",
-      "mttd_hours": 21.053055555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 597,
-      "title": "ENG-4391 [Contacts] Random Sample",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-06T20:47:20Z",
-      "deployed_to_master_at": "2025-10-07T18:06:27Z",
-      "mttd_hours": 21.31861111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 595,
-      "title": "Eng 4062 Tevyn api",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-06T13:49:09Z",
-      "deployed_to_master_at": "2025-10-07T18:06:27Z",
-      "mttd_hours": 28.288333333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 605,
-      "title": "chore: fix newrelic again",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-06T01:23:43Z",
-      "deployed_to_master_at": "2025-10-06T01:54:48Z",
-      "mttd_hours": 0.5180555555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 602,
-      "title": "chore: cleanup",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-06T00:26:18Z",
-      "deployed_to_master_at": "2025-10-06T00:32:48Z",
-      "mttd_hours": 0.10833333333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 601,
-      "title": "chore: newrelic3",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-05T23:56:51Z",
-      "deployed_to_master_at": "2025-10-06T00:32:48Z",
-      "mttd_hours": 0.5991666666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 600,
-      "title": "chore: newrelic2",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-05T22:53:45Z",
-      "deployed_to_master_at": "2025-10-06T00:32:48Z",
-      "mttd_hours": 1.6508333333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 599,
-      "title": "chore: fix new relic integration",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-05T22:31:30Z",
-      "deployed_to_master_at": "2025-10-06T00:32:48Z",
-      "mttd_hours": 2.0216666666666665
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7905,24 +7779,6 @@
       "mttd_hours": 29.205
     },
     {
-      "repo": "people-api",
-      "number": 61,
-      "title": "ENG-4391",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-06T20:19:13Z",
-      "deployed_to_master_at": "2025-10-07T18:06:19Z",
-      "mttd_hours": 21.785
-    },
-    {
-      "repo": "people-api",
-      "number": 63,
-      "title": "Add better logging, and prisma specific handling",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-06T17:04:08Z",
-      "deployed_to_master_at": "2025-10-06T20:05:08Z",
-      "mttd_hours": 3.0166666666666666
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -8159,42 +8015,27 @@
   ],
   "weekly_averages": [
     {
-      "week_start": "2025-09-29",
-      "all_repos": {
-        "mean_hours": 1.4,
-        "median_hours": 1.7,
-        "count": 3
-      },
-      "by_repo": {
-        "gp-api": {
-          "mean_hours": 1.4,
-          "median_hours": 1.7,
-          "count": 3
-        }
-      }
-    },
-    {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 19,
-        "median_hours": 20.7,
-        "count": 50
+        "mean_hours": 18.9,
+        "median_hours": 13.7,
+        "count": 37
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 19.1,
-          "median_hours": 19.6,
-          "count": 21
+          "mean_hours": 16.7,
+          "median_hours": 5.5,
+          "count": 16
         },
         "gp-api": {
-          "mean_hours": 20.5,
-          "median_hours": 21.8,
-          "count": 24
+          "mean_hours": 22.1,
+          "median_hours": 23.5,
+          "count": 18
         },
         "people-api": {
-          "mean_hours": 11.7,
+          "mean_hours": 11.2,
           "median_hours": 3.1,
-          "count": 5
+          "count": 3
         }
       }
     },
