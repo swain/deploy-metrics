@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T22:05:59.691Z",
+  "generated_at": "2026-04-05T22:06:30.394Z",
   "days_back": 180,
   "prs": [
     {
@@ -2899,33 +2899,6 @@
       "merged_to_develop_at": "2025-10-08T23:33:39Z",
       "deployed_to_master_at": "2025-10-09T19:55:19Z",
       "mttd_hours": 20.36111111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1018,
-      "title": "ENG-4440",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-07T17:07:29Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 0.985
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1015,
-      "title": "ENG-3673 Remove unused reference",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-07T14:27:30Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 3.651388888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1013,
-      "title": "load stats asynchronously",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-06T22:31:41Z",
-      "deployed_to_master_at": "2025-10-07T18:06:35Z",
-      "mttd_hours": 19.581666666666667
     },
     {
       "repo": "gp-api",
@@ -7131,33 +7104,6 @@
       "mttd_hours": 41.67777777777778
     },
     {
-      "repo": "gp-api",
-      "number": 593,
-      "title": "[ENG-3972] - Tracking of CV Token Status",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-07T21:54:53Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 46.00555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 615,
-      "title": "[ENG-4139] - peerly existential checks",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-07T20:40:34Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 47.244166666666665
-    },
-    {
-      "repo": "gp-api",
-      "number": 612,
-      "title": "fixes build problem",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-07T04:21:45Z",
-      "deployed_to_master_at": "2025-10-07T18:06:27Z",
-      "mttd_hours": 13.745
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -8017,20 +7963,20 @@
     {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 18.9,
-        "median_hours": 13.7,
-        "count": 37
+        "mean_hours": 18.3,
+        "median_hours": 9.6,
+        "count": 31
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 16.7,
-          "median_hours": 5.5,
-          "count": 16
+          "mean_hours": 18.7,
+          "median_hours": 6.1,
+          "count": 13
         },
         "gp-api": {
-          "mean_hours": 22.1,
-          "median_hours": 23.5,
-          "count": 18
+          "mean_hours": 19.4,
+          "median_hours": 22.3,
+          "count": 15
         },
         "people-api": {
           "mean_hours": 11.2,
