@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-04-05T22:06:30.394Z",
+  "generated_at": "2026-04-06T22:08:56.056Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1671,
+      "title": "fix task lint",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-06T19:46:35Z",
+      "deployed_to_master_at": "2026-04-06T19:53:40Z",
+      "mttd_hours": 0.11805555555555555
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1667,
+      "title": "Eng 7187 checkbox",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-06T19:22:57Z",
+      "deployed_to_master_at": "2026-04-06T19:53:40Z",
+      "mttd_hours": 0.5119444444444444
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1666,
+      "title": "restrict Amplitude session replay to app.goodparty.org",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-04-06T14:18:36Z",
+      "deployed_to_master_at": "2026-04-06T19:53:40Z",
+      "mttd_hours": 5.584444444444444
+    },
     {
       "repo": "gp-webapp",
       "number": 1663,
@@ -2692,24 +2719,6 @@
       "merged_to_develop_at": "2025-10-09T16:15:00Z",
       "deployed_to_master_at": "2025-10-09T19:55:19Z",
       "mttd_hours": 3.6719444444444442
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1023,
-      "title": "Fix check for dev environment on s3 upload util",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-08T20:41:12Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 23.235277777777778
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1020,
-      "title": "Temporary flow for using CSV for serve polls",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-08T16:54:40Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 27.010833333333334
     },
     {
       "repo": "gp-webapp",
@@ -7059,51 +7068,6 @@
       "mttd_hours": 20.859444444444446
     },
     {
-      "repo": "gp-api",
-      "number": 621,
-      "title": "Add polls table",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-08T21:37:09Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 22.301111111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 618,
-      "title": "scaffold polls module",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-08T19:16:57Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 24.637777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 617,
-      "title": "ENG-4478: create new table matching Collin's configuration",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-08T18:32:55Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 25.371666666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 614,
-      "title": "ENG-4442",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-08T14:35:05Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 29.335555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 616,
-      "title": "ENG-4062 - fix zod validation for tevyn API",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-08T02:14:33Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 41.67777777777778
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7716,15 +7680,6 @@
       "mttd_hours": 3.1294444444444443
     },
     {
-      "repo": "people-api",
-      "number": 66,
-      "title": "ENG-4442 ",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-08T14:42:48Z",
-      "deployed_to_master_at": "2025-10-09T19:55:06Z",
-      "mttd_hours": 29.205
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7963,25 +7918,25 @@
     {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 18.3,
-        "median_hours": 9.6,
-        "count": 31
+        "mean_hours": 15,
+        "median_hours": 6.1,
+        "count": 23
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 18.7,
-          "median_hours": 6.1,
-          "count": 13
+          "mean_hours": 17.6,
+          "median_hours": 4.9,
+          "count": 11
         },
         "gp-api": {
-          "mean_hours": 19.4,
-          "median_hours": 22.3,
-          "count": 15
+          "mean_hours": 14.8,
+          "median_hours": 9.6,
+          "count": 10
         },
         "people-api": {
-          "mean_hours": 11.2,
-          "median_hours": 3.1,
-          "count": 3
+          "mean_hours": 2.2,
+          "median_hours": 2.2,
+          "count": 2
         }
       }
     },
@@ -8602,6 +8557,21 @@
           "mean_hours": 8.6,
           "median_hours": 3.6,
           "count": 19
+        }
+      }
+    },
+    {
+      "week_start": "2026-04-06",
+      "all_repos": {
+        "mean_hours": 2.1,
+        "median_hours": 0.5,
+        "count": 3
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 2.1,
+          "median_hours": 0.5,
+          "count": 3
         }
       }
     }
