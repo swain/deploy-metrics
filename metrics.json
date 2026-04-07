@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-04-06T22:08:56.056Z",
+  "generated_at": "2026-04-07T22:11:50.351Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1650,
+      "title": "fix: Campaign Plan UI does not match Figma designs (ENG-7180)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-07T19:55:55Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1671,
@@ -2713,15 +2722,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1028,
-      "title": "Eng 4468 polls details",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-09T16:15:00Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 3.6719444444444442
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1055,
       "title": "remove cookie check",
       "author": "stephtea",
@@ -2865,49 +2865,31 @@
       "mttd_hours": 6.134722222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1026,
-      "title": "ENG-4774 Use user firstName and lastName instead of name on polls onboarding",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-09T20:15:12Z",
-      "deployed_to_master_at": "2025-10-11T01:18:21Z",
-      "mttd_hours": 29.0525
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1027,
-      "title": "Fix verbiage on polls onboarding",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-09T16:08:51Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 3.7744444444444443
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1022,
-      "title": "ENG-4392 - Onboarding Tracking",
+      "repo": "gp-api",
+      "number": 1412,
+      "title": "ENG-6982",
       "author": "oakinh",
-      "merged_to_develop_at": "2025-10-09T16:00:11Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 3.918888888888889
+      "merged_to_develop_at": "2026-04-07T19:44:05Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1025,
-      "title": "Eng 4451 polls listview",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-09T12:35:26Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 7.331388888888889
+      "repo": "gp-api",
+      "number": 1421,
+      "title": "Disable latency alerts for contacts/download and polls/analyze-bias",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-07T11:52:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1021,
-      "title": "Switching to Ubuntu-based test runner",
-      "author": "dustinsison",
-      "merged_to_develop_at": "2025-10-08T23:33:39Z",
-      "deployed_to_master_at": "2025-10-09T19:55:19Z",
-      "mttd_hours": 20.36111111111111
+      "repo": "gp-api",
+      "number": 1356,
+      "title": "ENG-7095 - fix slow Prisma connection alert firing on phantom values",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-04-06T23:20:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7005,69 +6987,6 @@
       "mttd_hours": 9.62111111111111
     },
     {
-      "repo": "gp-api",
-      "number": 630,
-      "title": "fix lockfile",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T21:16:57Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 28.025555555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 628,
-      "title": "Add a PR workflow",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T20:57:36Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 28.348055555555554
-    },
-    {
-      "repo": "gp-api",
-      "number": 626,
-      "title": "Polls API Cleanup",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T20:03:32Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 29.249166666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 625,
-      "title": "ENG-4768: implement PUT /:pollId/internal/complete",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T16:16:54Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 3.638611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 620,
-      "title": "ENG-4475, ENG-4476: implement dynamo-backed API routes",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T15:48:08Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 4.118055555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 624,
-      "title": "Add poll name",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-09T11:41:27Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 8.229444444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 623,
-      "title": "Fix polls module dependency",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-08T23:03:39Z",
-      "deployed_to_master_at": "2025-10-09T19:55:13Z",
-      "mttd_hours": 20.859444444444446
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7918,20 +7837,20 @@
     {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 15,
-        "median_hours": 6.1,
-        "count": 23
+        "mean_hours": 15.5,
+        "median_hours": 5.5,
+        "count": 10
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 17.6,
+          "mean_hours": 25,
           "median_hours": 4.9,
-          "count": 11
+          "count": 5
         },
         "gp-api": {
-          "mean_hours": 14.8,
+          "mean_hours": 8.4,
           "median_hours": 9.6,
-          "count": 10
+          "count": 3
         },
         "people-api": {
           "mean_hours": 2.2,
