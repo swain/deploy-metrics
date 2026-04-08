@@ -1,15 +1,51 @@
 {
-  "generated_at": "2026-04-07T22:11:50.351Z",
+  "generated_at": "2026-04-08T22:12:59.732Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1651,
+      "title": "ENG-7060: Add Amplitude event tracking for campaign plan",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-08T19:37:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1677,
+      "title": "[ENG-7087] - give secrets to snapshot updates",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-08T18:58:12Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1662,
+      "title": "ENG-6983-b",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-08T17:21:20Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1675,
+      "title": "chore: update icons",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-08T14:24:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1650,
       "title": "fix: Campaign Plan UI does not match Figma designs (ENG-7180)",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-07T19:55:55Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-08T16:03:35Z",
+      "mttd_hours": 20.127777777777776
     },
     {
       "repo": "gp-webapp",
@@ -2838,31 +2874,13 @@
       "mttd_hours": 3.0330555555555554
     },
     {
-      "repo": "gp-webapp",
-      "number": 1033,
-      "title": "Polls Onboarding - Temp Schedule",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-10T21:48:18Z",
-      "deployed_to_master_at": "2025-10-11T01:18:21Z",
-      "mttd_hours": 3.5008333333333335
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1031,
-      "title": "Eng 4468 completed poll",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-10T20:26:00Z",
-      "deployed_to_master_at": "2025-10-11T01:18:21Z",
-      "mttd_hours": 4.8725
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1030,
-      "title": "ENG-4479,ENG-4480: update tevyn api call to specify creating a poll",
+      "repo": "gp-api",
+      "number": 1420,
+      "title": "ENG-7084: remove p2v status from hubspot sync",
       "author": "swain",
-      "merged_to_develop_at": "2025-10-10T19:10:16Z",
-      "deployed_to_master_at": "2025-10-11T01:18:21Z",
-      "mttd_hours": 6.134722222222222
+      "merged_to_develop_at": "2026-04-08T16:12:04Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -2870,8 +2888,8 @@
       "title": "ENG-6982",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-07T19:44:05Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-08T16:03:40Z",
+      "mttd_hours": 20.32638888888889
     },
     {
       "repo": "gp-api",
@@ -2879,8 +2897,8 @@
       "title": "Disable latency alerts for contacts/download and polls/analyze-bias",
       "author": "swain",
       "merged_to_develop_at": "2026-04-07T11:52:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-08T16:03:40Z",
+      "mttd_hours": 28.190277777777776
     },
     {
       "repo": "gp-api",
@@ -2888,8 +2906,8 @@
       "title": "ENG-7095 - fix slow Prisma connection alert firing on phantom values",
       "author": "Collin-GP",
       "merged_to_develop_at": "2026-04-06T23:20:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-08T16:03:40Z",
+      "mttd_hours": 40.714166666666664
     },
     {
       "repo": "gp-api",
@@ -6960,33 +6978,6 @@
       "mttd_hours": 56.60638888888889
     },
     {
-      "repo": "gp-api",
-      "number": 633,
-      "title": "ENG-4479,ENG-4480: update tevyn flow to include polls",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-10T19:09:43Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 6.146111111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 632,
-      "title": "ENG-4477: implement GET /polls",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-10T15:44:19Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 9.569444444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 631,
-      "title": "Fix migrate:reset script",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-10T15:41:13Z",
-      "deployed_to_master_at": "2025-10-11T01:18:29Z",
-      "mttd_hours": 9.62111111111111
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7581,24 +7572,6 @@
       "mttd_hours": 53.46222222222222
     },
     {
-      "repo": "people-api",
-      "number": 70,
-      "title": "ENG-4791 - Optimize Sample Service",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-10T20:07:20Z",
-      "deployed_to_master_at": "2025-10-10T21:23:11Z",
-      "mttd_hours": 1.2641666666666667
-    },
-    {
-      "repo": "people-api",
-      "number": 69,
-      "title": "ENG-4789 - Add District and DistrictVoter table with corresponding migration",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-10T18:15:25Z",
-      "deployed_to_master_at": "2025-10-10T21:23:11Z",
-      "mttd_hours": 3.1294444444444443
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7837,24 +7810,14 @@
     {
       "week_start": "2025-10-06",
       "all_repos": {
-        "mean_hours": 15.5,
-        "median_hours": 5.5,
-        "count": 10
+        "mean_hours": 55.2,
+        "median_hours": 55.2,
+        "count": 2
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 25,
-          "median_hours": 4.9,
-          "count": 5
-        },
-        "gp-api": {
-          "mean_hours": 8.4,
-          "median_hours": 9.6,
-          "count": 3
-        },
-        "people-api": {
-          "mean_hours": 2.2,
-          "median_hours": 2.2,
+          "mean_hours": 55.2,
+          "median_hours": 55.2,
           "count": 2
         }
       }
@@ -8482,14 +8445,19 @@
     {
       "week_start": "2026-04-06",
       "all_repos": {
-        "mean_hours": 2.1,
-        "median_hours": 0.5,
-        "count": 3
+        "mean_hours": 16.5,
+        "median_hours": 20.1,
+        "count": 7
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 2.1,
-          "median_hours": 0.5,
+          "mean_hours": 6.6,
+          "median_hours": 3,
+          "count": 4
+        },
+        "gp-api": {
+          "mean_hours": 29.7,
+          "median_hours": 28.2,
           "count": 3
         }
       }
