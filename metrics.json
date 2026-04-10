@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-04-09T22:13:57.429Z",
+  "generated_at": "2026-04-10T22:10:18.936Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1688,
+      "title": "feat: recurring tasks",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-10T19:50:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1682,
+      "title": "ENG-6983-c ",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-10T19:34:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1690,
+      "title": "fix: route pro sign up continue button through full sign-up flow",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-10T19:01:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1687,
@@ -2899,6 +2926,24 @@
       "merged_to_develop_at": "2025-10-14T15:41:39Z",
       "deployed_to_master_at": "2025-10-15T22:51:14Z",
       "mttd_hours": 31.15972222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1431,
+      "title": "feat: recurring tasks",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-10T19:55:37Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1424,
+      "title": "ENG-6982-b - Significant changes to remove pre-org migration code",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-10T18:48:03Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
