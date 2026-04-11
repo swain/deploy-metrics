@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T22:10:18.936Z",
+  "generated_at": "2026-04-11T22:06:14.110Z",
   "days_back": 180,
   "prs": [
     {
@@ -2818,15 +2818,6 @@
       "merged_to_develop_at": "2025-10-14T20:58:02Z",
       "deployed_to_master_at": "2025-10-15T22:51:14Z",
       "mttd_hours": 25.886666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1037,
-      "title": "feat: issue detail page",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-13T14:23:00Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 56.470555555555556
     },
     {
       "repo": "gp-webapp",
@@ -7068,33 +7059,6 @@
       "mttd_hours": 48.376666666666665
     },
     {
-      "repo": "gp-api",
-      "number": 639,
-      "title": "Replace dayjs with date-fns",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T16:54:07Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 53.9525
-    },
-    {
-      "repo": "gp-api",
-      "number": 638,
-      "title": "Revert \"ENG-4407: track analytics event on poll results complete (#636)\"",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T16:04:14Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 54.78388888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 636,
-      "title": "ENG-4407: track analytics event on poll results complete",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T14:14:53Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 56.60638888888889
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7680,15 +7644,6 @@
       "mttd_hours": 7.932222222222222
     },
     {
-      "repo": "people-api",
-      "number": 72,
-      "title": "Add updatedAt for districtVoter",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-13T18:11:07Z",
-      "deployed_to_master_at": "2025-10-15T23:38:51Z",
-      "mttd_hours": 53.46222222222222
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7927,25 +7882,25 @@
     {
       "week_start": "2025-10-13",
       "all_repos": {
-        "mean_hours": 23.3,
-        "median_hours": 26.8,
-        "count": 79
+        "mean_hours": 21.2,
+        "median_hours": 24.9,
+        "count": 74
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 14.7,
-          "median_hours": 7.4,
-          "count": 19
+          "mean_hours": 12.4,
+          "median_hours": 6.3,
+          "count": 18
         },
         "gp-api": {
-          "mean_hours": 25.5,
-          "median_hours": 28.3,
-          "count": 56
+          "mean_hours": 23.8,
+          "median_hours": 27.5,
+          "count": 53
         },
         "people-api": {
-          "mean_hours": 22.5,
-          "median_hours": 7.9,
-          "count": 3
+          "mean_hours": 7.1,
+          "median_hours": 7.1,
+          "count": 2
         },
         "election-api": {
           "mean_hours": 68.1,
