@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T22:06:14.110Z",
+  "generated_at": "2026-04-12T22:07:26.918Z",
   "days_back": 180,
   "prs": [
     {
@@ -2812,15 +2812,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1044,
-      "title": "another small fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-14T20:58:02Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 25.886666666666667
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1055,
       "title": "remove cookie check",
       "author": "stephtea",
@@ -2881,42 +2872,6 @@
       "merged_to_develop_at": "2025-10-14T23:36:07Z",
       "deployed_to_master_at": "2025-10-15T22:51:14Z",
       "mttd_hours": 23.251944444444444
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1043,
-      "title": "poll-issues-fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-14T19:58:57Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 26.871388888888887
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1041,
-      "title": "[ENG-3958] - resources page minor change",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-14T19:22:08Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 27.485
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1042,
-      "title": "chore: extract results from issues",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-14T19:21:51Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 27.489722222222223
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1040,
-      "title": "[ENG-3958] - Resources Page",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-14T15:41:39Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 31.15972222222222
     },
     {
       "repo": "gp-api",
@@ -6780,285 +6735,6 @@
       "mttd_hours": 22.724722222222223
     },
     {
-      "repo": "gp-api",
-      "number": 672,
-      "title": "fix attempt 26",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T22:02:17Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 24.816388888888888
-    },
-    {
-      "repo": "gp-api",
-      "number": 671,
-      "title": "fix attempt 25",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T21:49:16Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 25.033333333333335
-    },
-    {
-      "repo": "gp-api",
-      "number": 670,
-      "title": "fix attempt 24: re-add lambda permissions",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T20:04:33Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 26.77861111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 669,
-      "title": "fix attempt 23",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T19:41:18Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 27.16611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 668,
-      "title": "fix attempt 22",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T19:32:11Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 27.318055555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 667,
-      "title": "fix attempt 21 log filepath",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T19:24:16Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 27.45
-    },
-    {
-      "repo": "gp-api",
-      "number": 666,
-      "title": "fix attempt 20",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T18:48:00Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 28.054444444444446
-    },
-    {
-      "repo": "gp-api",
-      "number": 665,
-      "title": "fix attempt 19",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T18:24:17Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 28.44972222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 664,
-      "title": "fix attempt 18",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T17:56:07Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 28.919166666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 641,
-      "title": "stop using gp-api iam user",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T17:41:57Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 29.155277777777776
-    },
-    {
-      "repo": "gp-api",
-      "number": 663,
-      "title": "fix attempt 17",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T17:23:49Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 29.4575
-    },
-    {
-      "repo": "gp-api",
-      "number": 662,
-      "title": "fix attempt 16",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T17:10:15Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 29.683611111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 661,
-      "title": "fix attempt 15",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T16:34:57Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 30.271944444444443
-    },
-    {
-      "repo": "gp-api",
-      "number": 659,
-      "title": "fix attempt 14",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T16:18:59Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 30.538055555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 658,
-      "title": "Fix attempt 13",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T15:59:13Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 30.8675
-    },
-    {
-      "repo": "gp-api",
-      "number": 657,
-      "title": "fix attempt 12",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T15:49:27Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 31.030277777777776
-    },
-    {
-      "repo": "gp-api",
-      "number": 656,
-      "title": "fix attempt 11",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T15:35:08Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 31.26888888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 655,
-      "title": "fix attempt 10",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T15:05:48Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 31.75777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 653,
-      "title": "Try more gets",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T13:40:43Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 33.17583333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 652,
-      "title": "use a single entry",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T02:46:31Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 44.079166666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 651,
-      "title": "use native policy objects",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T01:51:27Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 44.996944444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 650,
-      "title": "fix",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T01:43:54Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 45.12277777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 649,
-      "title": "chore: fix  MalformedPolicyDocument",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-14T01:29:21Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 45.36527777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 648,
-      "title": "chore: attempt to remove all .get on pulumi outputs",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-14T01:15:27Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 45.596944444444446
-    },
-    {
-      "repo": "gp-api",
-      "number": 643,
-      "title": "fix build command",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T22:56:52Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 47.906666666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 647,
-      "title": "Try different path",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T00:47:33Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 46.06194444444444
-    },
-    {
-      "repo": "gp-api",
-      "number": 646,
-      "title": "try assetarchive",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-14T00:14:39Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 46.610277777777775
-    },
-    {
-      "repo": "gp-api",
-      "number": 645,
-      "title": "fix imports once more",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T23:37:27Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 47.23027777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 644,
-      "title": "fix imports",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T23:04:21Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 47.78194444444444
-    },
-    {
-      "repo": "gp-api",
-      "number": 640,
-      "title": "Provision ai insights queue  + handler",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T22:35:26Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 48.263888888888886
-    },
-    {
-      "repo": "gp-api",
-      "number": 642,
-      "title": "support issues locally",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-13T22:28:40Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 48.376666666666665
-    },
-    {
       "repo": "people-api",
       "number": 177,
       "title": "Eng 6878",
@@ -7882,20 +7558,20 @@
     {
       "week_start": "2025-10-13",
       "all_repos": {
-        "mean_hours": 21.2,
-        "median_hours": 24.9,
-        "count": 74
+        "mean_hours": 8.5,
+        "median_hours": 3,
+        "count": 38
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 12.4,
-          "median_hours": 6.3,
-          "count": 18
+          "mean_hours": 6.5,
+          "median_hours": 3.4,
+          "count": 13
         },
         "gp-api": {
-          "mean_hours": 23.8,
-          "median_hours": 27.5,
-          "count": 53
+          "mean_hours": 7,
+          "median_hours": 2.3,
+          "count": 22
         },
         "people-api": {
           "mean_hours": 7.1,
