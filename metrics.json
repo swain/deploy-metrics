@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T22:14:40.374Z",
+  "generated_at": "2026-04-14T22:15:09.189Z",
   "days_back": 180,
   "prs": [
     {
@@ -8,8 +8,8 @@
       "title": "E2E helper alignment and hardening",
       "author": "swain",
       "merged_to_develop_at": "2026-04-13T21:52:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:35:21Z",
+      "mttd_hours": 16.70888888888889
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +17,8 @@
       "title": "Fix: always include current week in campaign plan navigation",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-13T14:27:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:35:21Z",
+      "mttd_hours": 24.124166666666667
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +26,8 @@
       "title": "feat: recurring tasks",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-10T19:50:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:35:21Z",
+      "mttd_hours": 90.75083333333333
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +35,8 @@
       "title": "ENG-6983-c ",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-10T19:34:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:35:21Z",
+      "mttd_hours": 91.00916666666667
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +44,8 @@
       "title": "fix: route pro sign up continue button through full sign-up flow",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-10T19:01:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:35:21Z",
+      "mttd_hours": 91.5575
     },
     {
       "repo": "gp-webapp",
@@ -53,8 +53,8 @@
       "title": "fix: show only \"This week\" label, date ranges for all other weeks",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-09T21:37:23Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-09T21:43:00Z",
+      "mttd_hours": 0.09361111111111112
     },
     {
       "repo": "gp-webapp",
@@ -62,8 +62,8 @@
       "title": "ENG-7239: Fix campaign plan task dates displaying one week ahead of week header",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-09T21:13:46Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-09T21:43:00Z",
+      "mttd_hours": 0.4872222222222222
     },
     {
       "repo": "gp-webapp",
@@ -2802,40 +2802,13 @@
       "mttd_hours": 3.417222222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1060,
-      "title": "fix: purchase form not waiting for intent",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-16T18:10:04Z",
-      "deployed_to_master_at": "2025-10-16T23:24:43Z",
-      "mttd_hours": 5.244166666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1057,
-      "title": "feat: only show polls nav menu to users with serve access",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-16T14:43:16Z",
-      "deployed_to_master_at": "2025-10-16T15:11:41Z",
-      "mttd_hours": 0.4736111111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1055,
-      "title": "remove cookie check",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-15T22:32:40Z",
-      "deployed_to_master_at": "2025-10-15T22:51:14Z",
-      "mttd_hours": 0.30944444444444447
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1051,
-      "title": "[ENG-4117] - P2P job status UI",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-16T01:35:59Z",
-      "deployed_to_master_at": "2025-10-16T15:11:41Z",
-      "mttd_hours": 13.595
+      "repo": "gp-api",
+      "number": 1433,
+      "title": "ENG-6984 Make ElectedOffice.campaignId relation optional",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-14T14:18:31Z",
+      "deployed_to_master_at": "2026-04-14T14:20:52Z",
+      "mttd_hours": 0.03916666666666667
     },
     {
       "repo": "gp-api",
@@ -2843,8 +2816,8 @@
       "title": "ENG-6987: final audit post-win/serve split",
       "author": "swain",
       "merged_to_develop_at": "2026-04-13T18:04:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:20:52Z",
+      "mttd_hours": 20.275
     },
     {
       "repo": "gp-api",
@@ -2852,8 +2825,8 @@
       "title": "feat: add new recurring tasks for door knocking and phone banking wit…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-13T15:56:40Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:20:52Z",
+      "mttd_hours": 22.403333333333332
     },
     {
       "repo": "gp-api",
@@ -2861,8 +2834,8 @@
       "title": "feat: recurring tasks",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-10T19:55:37Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:20:52Z",
+      "mttd_hours": 90.42083333333333
     },
     {
       "repo": "gp-api",
@@ -2870,8 +2843,8 @@
       "title": "ENG-6982-b - Significant changes to remove pre-org migration code",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-10T18:48:03Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:20:52Z",
+      "mttd_hours": 91.54694444444445
     },
     {
       "repo": "gp-api",
@@ -6591,112 +6564,13 @@
       "mttd_hours": 1.123888888888889
     },
     {
-      "repo": "gp-api",
-      "number": 694,
-      "title": "Fix SQL syntax",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-16T21:09:24Z",
-      "deployed_to_master_at": "2025-10-16T21:42:25Z",
-      "mttd_hours": 0.5502777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 692,
-      "title": "Revert \"[ENG-4117] - P2P job status\"",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-16T20:21:00Z",
-      "deployed_to_master_at": "2025-10-16T21:42:25Z",
-      "mttd_hours": 1.3569444444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 691,
-      "title": "hotfix contacts service",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-16T19:43:52Z",
-      "deployed_to_master_at": "2025-10-16T21:42:25Z",
-      "mttd_hours": 1.9758333333333333
-    },
-    {
-      "repo": "gp-api",
-      "number": 686,
-      "title": "ENG-4771: calculate confidence of poll results",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-16T17:55:48Z",
-      "deployed_to_master_at": "2025-10-16T21:42:25Z",
-      "mttd_hours": 3.7769444444444447
-    },
-    {
-      "repo": "gp-api",
-      "number": 685,
-      "title": "Handle queue events in the monolith listener",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-16T15:52:28Z",
-      "deployed_to_master_at": "2025-10-16T17:13:35Z",
-      "mttd_hours": 1.3519444444444444
-    },
-    {
-      "repo": "gp-api",
-      "number": 688,
-      "title": "Respect the .nvmrc",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-16T15:24:37Z",
-      "deployed_to_master_at": "2025-10-16T17:13:35Z",
-      "mttd_hours": 1.816111111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 660,
-      "title": "ENG-4845",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-16T15:14:36Z",
-      "deployed_to_master_at": "2025-10-16T17:13:35Z",
-      "mttd_hours": 1.9830555555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 678,
-      "title": "create pollIssues table, drop dynamodb",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-16T14:13:42Z",
-      "deployed_to_master_at": "2025-10-16T17:13:35Z",
-      "mttd_hours": 2.9980555555555557
-    },
-    {
-      "repo": "gp-api",
-      "number": 682,
-      "title": "Move ElectedOfficeGuard check from polls controller",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-15T23:08:52Z",
-      "deployed_to_master_at": "2025-10-16T13:02:57Z",
-      "mttd_hours": 13.901388888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 677,
-      "title": "[ENG-4117] - P2P job status",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-16T01:35:38Z",
-      "deployed_to_master_at": "2025-10-16T13:02:57Z",
-      "mttd_hours": 11.455277777777777
-    },
-    {
-      "repo": "gp-api",
-      "number": 679,
-      "title": "Temporarily create electedOffice for initialPoll",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-15T22:32:51Z",
-      "deployed_to_master_at": "2025-10-15T22:51:16Z",
-      "mttd_hours": 0.30694444444444446
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
       "author": "swain",
       "merged_to_develop_at": "2026-04-13T17:58:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-14T14:20:43Z",
+      "mttd_hours": 20.36861111111111
     },
     {
       "repo": "people-api",
@@ -7504,20 +7378,20 @@
     {
       "week_start": "2025-10-13",
       "all_repos": {
-        "mean_hours": 8.2,
-        "median_hours": 2,
-        "count": 27
+        "mean_hours": 13.2,
+        "median_hours": 2.5,
+        "count": 12
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 4,
+          "mean_hours": 2.7,
           "median_hours": 3.4,
-          "count": 7
+          "count": 3
         },
         "gp-api": {
-          "mean_hours": 6.5,
-          "median_hours": 2,
-          "count": 19
+          "mean_hours": 10.3,
+          "median_hours": 2.3,
+          "count": 8
         },
         "election-api": {
           "mean_hours": 68.1,
@@ -8119,20 +7993,45 @@
     {
       "week_start": "2026-04-06",
       "all_repos": {
-        "mean_hours": 12.7,
-        "median_hours": 4.6,
-        "count": 20
+        "mean_hours": 26.3,
+        "median_hours": 6.3,
+        "count": 27
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 10.7,
-          "median_hours": 3.7,
-          "count": 11
+          "mean_hours": 24.5,
+          "median_hours": 4.6,
+          "count": 16
         },
         "gp-api": {
-          "mean_hours": 15.1,
-          "median_hours": 6.3,
-          "count": 9
+          "mean_hours": 28.9,
+          "median_hours": 20.3,
+          "count": 11
+        }
+      }
+    },
+    {
+      "week_start": "2026-04-13",
+      "all_repos": {
+        "mean_hours": 17.3,
+        "median_hours": 20.3,
+        "count": 6
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 20.4,
+          "median_hours": 20.4,
+          "count": 2
+        },
+        "gp-api": {
+          "mean_hours": 14.2,
+          "median_hours": 20.3,
+          "count": 3
+        },
+        "people-api": {
+          "mean_hours": 20.4,
+          "median_hours": 20.4,
+          "count": 1
         }
       }
     }
