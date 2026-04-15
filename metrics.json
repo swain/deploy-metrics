@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-04-14T22:15:09.189Z",
+  "generated_at": "2026-04-15T22:14:47.165Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1704,
+      "title": "ENG - 7270 Remove legacy pathToVictory paths",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-15T20:22:20Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1700,
@@ -2775,31 +2784,40 @@
       "mttd_hours": 26.243055555555557
     },
     {
-      "repo": "gp-webapp",
-      "number": 1063,
-      "title": "ENG-4908 Add excludeInvalid override to admin p2v",
+      "repo": "gp-api",
+      "number": 1452,
+      "title": "Remove failing prod protection.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-15T21:03:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1444,
+      "title": "ENG-7270 - Delete PathToVictory Table and Related Code",
       "author": "oakinh",
-      "merged_to_develop_at": "2025-10-17T21:29:31Z",
-      "deployed_to_master_at": "2025-10-17T22:51:27Z",
-      "mttd_hours": 1.3655555555555556
+      "merged_to_develop_at": "2026-04-15T20:22:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1064,
-      "title": "ENG-4933 Fix scrolling on polls welcome page",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-17T19:28:21Z",
-      "deployed_to_master_at": "2025-10-17T22:51:27Z",
-      "mttd_hours": 3.385
+      "repo": "gp-api",
+      "number": 1453,
+      "title": "Run migrate dev",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-15T19:39:12Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1065,
-      "title": "ENG-4934: set segment to all when there is no query url",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-17T19:26:25Z",
-      "deployed_to_master_at": "2025-10-17T22:51:27Z",
-      "mttd_hours": 3.417222222222222
+      "repo": "gp-api",
+      "number": 1432,
+      "title": "ENG-7099 Wire in campaign-plan-lambda flow",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-15T15:44:05Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6492,78 +6510,6 @@
       "mttd_hours": 1.0225
     },
     {
-      "repo": "gp-api",
-      "number": 702,
-      "title": "ENG-4908",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-17T20:19:00Z",
-      "deployed_to_master_at": "2025-10-20T18:28:48Z",
-      "mttd_hours": 70.16333333333333
-    },
-    {
-      "repo": "gp-api",
-      "number": 707,
-      "title": "fix: handle non existent customerId",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-17T18:59:25Z",
-      "deployed_to_master_at": "2025-10-17T19:19:36Z",
-      "mttd_hours": 0.3363888888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 705,
-      "title": "fix prisma schema fodler",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-17T17:16:43Z",
-      "deployed_to_master_at": "2025-10-17T19:19:36Z",
-      "mttd_hours": 2.0480555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 703,
-      "title": "Make patchUserMetadata race-safe",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-17T16:49:37Z",
-      "deployed_to_master_at": "2025-10-17T19:19:36Z",
-      "mttd_hours": 2.499722222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 704,
-      "title": "chore: fix query",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-17T16:45:44Z",
-      "deployed_to_master_at": "2025-10-17T19:19:36Z",
-      "mttd_hours": 2.5644444444444443
-    },
-    {
-      "repo": "gp-api",
-      "number": 700,
-      "title": "chore: temp fillback of missing customerID",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-17T16:21:56Z",
-      "deployed_to_master_at": "2025-10-17T19:19:36Z",
-      "mttd_hours": 2.9611111111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 697,
-      "title": "chore: remove duplicate logger",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-16T22:25:03Z",
-      "deployed_to_master_at": "2025-10-16T23:24:05Z",
-      "mttd_hours": 0.9838888888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 696,
-      "title": "fix: save customerId or fail",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-16T22:16:39Z",
-      "deployed_to_master_at": "2025-10-16T23:24:05Z",
-      "mttd_hours": 1.123888888888889
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7363,43 +7309,9 @@
       "merged_to_develop_at": "2025-10-20T14:15:38Z",
       "deployed_to_master_at": "2025-10-20T16:25:42Z",
       "mttd_hours": 2.167777777777778
-    },
-    {
-      "repo": "election-api",
-      "number": 70,
-      "title": "ENG-4908 - Don't ignore excludeInvalid if electionYear is passed",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-17T20:18:31Z",
-      "deployed_to_master_at": "2025-10-20T16:25:42Z",
-      "mttd_hours": 68.11972222222222
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-10-13",
-      "all_repos": {
-        "mean_hours": 13.2,
-        "median_hours": 2.5,
-        "count": 12
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 2.7,
-          "median_hours": 3.4,
-          "count": 3
-        },
-        "gp-api": {
-          "mean_hours": 10.3,
-          "median_hours": 2.3,
-          "count": 8
-        },
-        "election-api": {
-          "mean_hours": 68.1,
-          "median_hours": 68.1,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-10-20",
       "all_repos": {
