@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-04-15T22:14:47.165Z",
+  "generated_at": "2026-04-16T22:13:30.289Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1524,
+      "title": "feat: clerk integration",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-16T19:02:08Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1704,
@@ -2785,6 +2794,78 @@
     },
     {
       "repo": "gp-api",
+      "number": 1471,
+      "title": "[ENG-6260][ENG-7020] - User migration kills container startup. Fix",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T18:00:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1468,
+      "title": "[ENG-7087] - Clerk Integration Part Deux",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T16:25:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1466,
+      "title": "Revert \"feat: clerk integration\"",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T04:50:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1465,
+      "title": "Revert \"[ENG-7087] - Attempting to resolve failing duplicate migration\"",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T04:49:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1464,
+      "title": "Revert \"Ravenhurst/eng 7087 get migrations to run\"",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T04:49:04Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1463,
+      "title": "Ravenhurst/eng 7087 get migrations to run",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T04:34:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1462,
+      "title": "[ENG-7087] - Attempting to resolve failing duplicate migration",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-16T04:01:55Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1260,
+      "title": "feat: clerk integration",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-16T02:43:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
       "number": 1452,
       "title": "Remove failing prod protection.",
       "author": "feliksalbright",
@@ -2807,8 +2888,8 @@
       "title": "Run migrate dev",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-15T19:39:12Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-15T22:25:28Z",
+      "mttd_hours": 2.7711111111111113
     },
     {
       "repo": "gp-api",
@@ -2816,8 +2897,8 @@
       "title": "ENG-7099 Wire in campaign-plan-lambda flow",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-04-15T15:44:05Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-15T22:25:28Z",
+      "mttd_hours": 6.689722222222223
     },
     {
       "repo": "gp-api",
@@ -7925,9 +8006,9 @@
     {
       "week_start": "2026-04-13",
       "all_repos": {
-        "mean_hours": 17.3,
-        "median_hours": 20.3,
-        "count": 6
+        "mean_hours": 14.2,
+        "median_hours": 18.5,
+        "count": 8
       },
       "by_repo": {
         "gp-webapp": {
@@ -7936,9 +8017,9 @@
           "count": 2
         },
         "gp-api": {
-          "mean_hours": 14.2,
-          "median_hours": 20.3,
-          "count": 3
+          "mean_hours": 10.4,
+          "median_hours": 6.7,
+          "count": 5
         },
         "people-api": {
           "mean_hours": 20.4,
