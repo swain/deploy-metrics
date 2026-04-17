@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-04-16T22:13:30.289Z",
+  "generated_at": "2026-04-17T22:12:21.182Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1723,
+      "title": "switching router navigation to window location href",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-17T20:51:00Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1719,
+      "title": "refactor: reorder UserProvider and FeatureFlagsProvider in PageWrappe…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-17T16:27:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1524,
