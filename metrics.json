@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:12:21.182Z",
+  "generated_at": "2026-04-18T22:07:47.452Z",
   "days_back": 180,
   "prs": [
     {
@@ -6591,24 +6591,6 @@
       "mttd_hours": 54.06138888888889
     },
     {
-      "repo": "gp-api",
-      "number": 714,
-      "title": "fix poll issue naming",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-20T20:29:07Z",
-      "deployed_to_master_at": "2025-10-20T21:04:33Z",
-      "mttd_hours": 0.5905555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 706,
-      "title": "Establish consistent request logging",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-20T20:03:12Z",
-      "deployed_to_master_at": "2025-10-20T21:04:33Z",
-      "mttd_hours": 1.0225
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7390,33 +7372,15 @@
       "merged_to_develop_at": "2025-10-22T21:09:43Z",
       "deployed_to_master_at": "2025-10-30T20:41:47Z",
       "mttd_hours": 191.53444444444443
-    },
-    {
-      "repo": "election-api",
-      "number": 75,
-      "title": "use transform for health check",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-20T17:57:59Z",
-      "deployed_to_master_at": "2025-10-20T18:20:14Z",
-      "mttd_hours": 0.37083333333333335
-    },
-    {
-      "repo": "election-api",
-      "number": 73,
-      "title": "stop using spot instances",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-20T14:15:38Z",
-      "deployed_to_master_at": "2025-10-20T16:25:42Z",
-      "mttd_hours": 2.167777777777778
     }
   ],
   "weekly_averages": [
     {
       "week_start": "2025-10-20",
       "all_repos": {
-        "mean_hours": 39.5,
-        "median_hours": 24.1,
-        "count": 49
+        "mean_hours": 42.9,
+        "median_hours": 24.5,
+        "count": 45
       },
       "by_repo": {
         "gp-webapp": {
@@ -7425,9 +7389,9 @@
           "count": 6
         },
         "gp-api": {
-          "mean_hours": 41.7,
-          "median_hours": 28.5,
-          "count": 25
+          "mean_hours": 45.2,
+          "median_hours": 28.6,
+          "count": 23
         },
         "people-api": {
           "mean_hours": 11.9,
@@ -7435,9 +7399,9 @@
           "count": 13
         },
         "election-api": {
-          "mean_hours": 106,
+          "mean_hours": 175.8,
           "median_hours": 167.9,
-          "count": 5
+          "count": 3
         }
       }
     },
