@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T22:07:47.452Z",
+  "generated_at": "2026-04-19T22:08:11.416Z",
   "days_back": 180,
   "prs": [
     {
@@ -6564,33 +6564,6 @@
       "mttd_hours": 40.532222222222224
     },
     {
-      "repo": "gp-api",
-      "number": 718,
-      "title": "ENG-4948: add aws upload command to tevyn api message",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T19:14:43Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 48.38388888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 713,
-      "title": "[ENG-4117] - fix p2p job status",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-21T17:48:14Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 49.82527777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 717,
-      "title": "better logging in contacts API",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T13:34:04Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 54.06138888888889
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7113,60 +7086,6 @@
       "mttd_hours": 22.48777777777778
     },
     {
-      "repo": "people-api",
-      "number": 83,
-      "title": "Fix logging again",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T18:15:11Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 49.38527777777778
-    },
-    {
-      "repo": "people-api",
-      "number": 82,
-      "title": "fix error log",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T16:52:06Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 50.77
-    },
-    {
-      "repo": "people-api",
-      "number": 80,
-      "title": "fix: missing import",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-21T15:22:18Z",
-      "deployed_to_master_at": "2025-10-21T16:41:33Z",
-      "mttd_hours": 1.3208333333333333
-    },
-    {
-      "repo": "people-api",
-      "number": 78,
-      "title": "make use of json logging",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T15:11:58Z",
-      "deployed_to_master_at": "2025-10-21T16:41:33Z",
-      "mttd_hours": 1.4930555555555556
-    },
-    {
-      "repo": "people-api",
-      "number": 76,
-      "title": "Use JSON logging",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T15:08:30Z",
-      "deployed_to_master_at": "2025-10-21T16:41:33Z",
-      "mttd_hours": 1.5508333333333333
-    },
-    {
-      "repo": "people-api",
-      "number": 77,
-      "title": "set connection limits",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-21T15:08:36Z",
-      "deployed_to_master_at": "2025-10-21T16:41:33Z",
-      "mttd_hours": 1.5491666666666666
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7378,9 +7297,9 @@
     {
       "week_start": "2025-10-20",
       "all_repos": {
-        "mean_hours": 42.9,
-        "median_hours": 24.5,
-        "count": 45
+        "mean_hours": 46.4,
+        "median_hours": 24.3,
+        "count": 36
       },
       "by_repo": {
         "gp-webapp": {
@@ -7389,14 +7308,14 @@
           "count": 6
         },
         "gp-api": {
-          "mean_hours": 45.2,
-          "median_hours": 28.6,
-          "count": 23
+          "mean_hours": 44.4,
+          "median_hours": 27.6,
+          "count": 20
         },
         "people-api": {
-          "mean_hours": 11.9,
-          "median_hours": 1.5,
-          "count": 13
+          "mean_hours": 7,
+          "median_hours": 0.6,
+          "count": 7
         },
         "election-api": {
           "mean_hours": 175.8,
