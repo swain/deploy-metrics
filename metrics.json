@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-04-19T22:08:11.416Z",
+  "generated_at": "2026-04-20T22:14:57.335Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1707,
+      "title": "ENG-7234 Drive loading checklist from SSE stream completion",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-20T19:25:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1734,
+      "title": "backmerge qa -> develop",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-20T18:47:56Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1733,
+      "title": "Ai campaign integration",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-20T17:41:03Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1723,
@@ -2775,40 +2802,31 @@
       "mttd_hours": 20.750833333333333
     },
     {
-      "repo": "gp-webapp",
-      "number": 1076,
-      "title": "fix missing import",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T22:13:29Z",
-      "deployed_to_master_at": "2025-10-23T19:38:03Z",
-      "mttd_hours": 21.409444444444443
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1068,
-      "title": "Expand polls",
+      "repo": "gp-api",
+      "number": 1480,
+      "title": "Ai campaign integration",
       "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-22T20:36:03Z",
-      "deployed_to_master_at": "2025-10-23T19:38:03Z",
-      "mttd_hours": 23.033333333333335
+      "merged_to_develop_at": "2026-04-20T19:26:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1074,
-      "title": "Update yard signs link on resources page",
-      "author": "patrick-tgp",
-      "merged_to_develop_at": "2025-10-22T17:55:06Z",
-      "deployed_to_master_at": "2025-10-23T19:38:03Z",
-      "mttd_hours": 25.715833333333332
+      "repo": "gp-api",
+      "number": 1486,
+      "title": "Backmerge qa -> develop",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-20T18:48:12Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1073,
-      "title": "ENG-4964-[Office Picker and Campaign Details] Cannot type spaces text fields",
-      "author": "awardquick",
-      "merged_to_develop_at": "2025-10-22T17:23:28Z",
-      "deployed_to_master_at": "2025-10-23T19:38:03Z",
-      "mttd_hours": 26.243055555555557
+      "repo": "gp-api",
+      "number": 1460,
+      "title": "Move Slack notification from queue consumer to default task creation",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-20T17:40:06Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6474,96 +6492,6 @@
       "mttd_hours": 21.21388888888889
     },
     {
-      "repo": "gp-api",
-      "number": 730,
-      "title": "[ENG-4463] - fix ai slack script",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-22T21:59:29Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 21.637777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 724,
-      "title": "add Environment and Project tags",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T21:09:13Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 22.475555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 723,
-      "title": "Add poll messages table",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T19:31:00Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 24.1125
-    },
-    {
-      "repo": "gp-api",
-      "number": 722,
-      "title": "Add poll expansion concept",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T19:29:49Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 24.13222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 726,
-      "title": "Revert logging",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T19:08:02Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 24.495277777777776
-    },
-    {
-      "repo": "gp-api",
-      "number": 725,
-      "title": "Ravenhurst/clean query logging",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-22T15:00:21Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 28.623333333333335
-    },
-    {
-      "repo": "gp-api",
-      "number": 720,
-      "title": "feat: poll purchase flow",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-22T16:54:02Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 26.72861111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 710,
-      "title": "Eng 4918 subscription end dates should use billing cycles instead of election day",
-      "author": "awardquick",
-      "merged_to_develop_at": "2025-10-22T15:05:26Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 28.538611111111113
-    },
-    {
-      "repo": "gp-api",
-      "number": 721,
-      "title": "Fix log behavior",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T14:57:47Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 28.66611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 719,
-      "title": "[ENG-4463] - Fixes message script from ai-generated content not being shown in Slack messages",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-22T03:05:49Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 40.532222222222224
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7068,24 +6996,6 @@
       "mttd_hours": 0.8130555555555555
     },
     {
-      "repo": "people-api",
-      "number": 81,
-      "title": "Remove unused stats code",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T19:39:14Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 23.984444444444446
-    },
-    {
-      "repo": "people-api",
-      "number": 84,
-      "title": "add default tags",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T21:09:02Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 22.48777777777778
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7282,45 +7192,36 @@
       "merged_to_develop_at": "2025-10-23T20:44:49Z",
       "deployed_to_master_at": "2025-10-30T20:41:47Z",
       "mttd_hours": 167.94944444444445
-    },
-    {
-      "repo": "election-api",
-      "number": 78,
-      "title": "use default tags",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T21:09:43Z",
-      "deployed_to_master_at": "2025-10-30T20:41:47Z",
-      "mttd_hours": 191.53444444444443
     }
   ],
   "weekly_averages": [
     {
       "week_start": "2025-10-20",
       "all_repos": {
-        "mean_hours": 46.4,
-        "median_hours": 24.3,
-        "count": 36
+        "mean_hours": 56.2,
+        "median_hours": 21.2,
+        "count": 19
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 34.5,
-          "median_hours": 24.4,
-          "count": 6
+          "mean_hours": 55.4,
+          "median_hours": 55.4,
+          "count": 2
         },
         "gp-api": {
-          "mean_hours": 44.4,
-          "median_hours": 27.6,
-          "count": 20
+          "mean_hours": 61.8,
+          "median_hours": 86.7,
+          "count": 10
         },
         "people-api": {
-          "mean_hours": 7,
+          "mean_hours": 0.5,
           "median_hours": 0.6,
-          "count": 7
+          "count": 5
         },
         "election-api": {
-          "mean_hours": 175.8,
+          "mean_hours": 167.9,
           "median_hours": 167.9,
-          "count": 3
+          "count": 2
         }
       }
     },
