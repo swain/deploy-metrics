@@ -1,15 +1,69 @@
 {
-  "generated_at": "2026-04-20T22:14:57.335Z",
+  "generated_at": "2026-04-21T22:14:28.060Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1744,
+      "title": "fix: Correct font family and weights in awareness detail modal",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T20:20:50Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1721,
+      "title": "fix(ENG-7327): show actionable error when L2 district data is missing",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T19:51:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1741,
+      "title": "fix(ENG-7343): use TanStack Query optimistic updates for voter contacts",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T17:39:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1735,
+      "title": "fix(ENG-7339): complete recurring tasks directly without outreach flow",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T17:01:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1736,
+      "title": "fix: update city attribute handling in OfficeStep component to remove…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-21T14:15:07Z",
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 4.702222222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1738,
+      "title": "feat: add ellipsis to task item",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-21T00:02:11Z",
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 18.91777777777778
+    },
     {
       "repo": "gp-webapp",
       "number": 1707,
       "title": "ENG-7234 Drive loading checklist from SSE stream completion",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-20T19:25:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 23.528333333333332
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +71,8 @@
       "title": "backmerge qa -> develop",
       "author": "swain",
       "merged_to_develop_at": "2026-04-20T18:47:56Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 24.155277777777776
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +80,8 @@
       "title": "Ai campaign integration",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-20T17:41:03Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 25.27
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +89,8 @@
       "title": "switching router navigation to window location href",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-17T20:51:00Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T15:38:45Z",
+      "mttd_hours": 66.79583333333333
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +98,8 @@
       "title": "refactor: reorder UserProvider and FeatureFlagsProvider in PageWrappe…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-17T16:27:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T15:38:45Z",
+      "mttd_hours": 71.18888888888888
     },
     {
       "repo": "gp-webapp",
@@ -53,8 +107,8 @@
       "title": "feat: clerk integration",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-16T19:02:08Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T15:38:45Z",
+      "mttd_hours": 92.61027777777778
     },
     {
       "repo": "gp-webapp",
@@ -62,8 +116,8 @@
       "title": "ENG - 7270 Remove legacy pathToVictory paths",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-15T20:22:20Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T15:38:45Z",
+      "mttd_hours": 115.27361111111111
     },
     {
       "repo": "gp-webapp",
@@ -2793,13 +2847,85 @@
       "mttd_hours": 90.10444444444444
     },
     {
-      "repo": "gp-webapp",
-      "number": 1078,
-      "title": "usePoll import",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T22:53:00Z",
-      "deployed_to_master_at": "2025-10-23T19:38:03Z",
-      "mttd_hours": 20.750833333333333
+      "repo": "gp-api",
+      "number": 1495,
+      "title": "Simplify Slack notification: plain HubSpot ID without bold or link",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T20:21:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1477,
+      "title": "fix(ENG-7327): surface missing L2 district data error to users",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T19:51:08Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1459,
+      "title": "ENG-6985 - Delete campaign fields and related code replaced by organizations",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-21T17:04:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1456,
+      "title": "Add migrate diff to CI",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-21T16:05:13Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 1.23
+    },
+    {
+      "repo": "gp-api",
+      "number": 1442,
+      "title": "ENG-7260",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-21T14:50:28Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 2.4758333333333336
+    },
+    {
+      "repo": "gp-api",
+      "number": 1458,
+      "title": "We don't want to generate default tasks if nondefault tasks already exist.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-21T14:49:32Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 2.491388888888889
+    },
+    {
+      "repo": "gp-api",
+      "number": 1472,
+      "title": "ENG 7208",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-21T14:49:07Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 2.4983333333333335
+    },
+    {
+      "repo": "gp-api",
+      "number": 1443,
+      "title": "ENG-7199 Create custom schedule for each p2p job.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-21T14:18:01Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 3.0166666666666666
+    },
+    {
+      "repo": "gp-api",
+      "number": 1450,
+      "title": "Remove incorrect readme info.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-21T14:17:25Z",
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 3.026666666666667
     },
     {
       "repo": "gp-api",
@@ -2807,8 +2933,8 @@
       "title": "Ai campaign integration",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-20T19:26:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 21.874166666666667
     },
     {
       "repo": "gp-api",
@@ -2816,8 +2942,8 @@
       "title": "Backmerge qa -> develop",
       "author": "swain",
       "merged_to_develop_at": "2026-04-20T18:48:12Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 22.51361111111111
     },
     {
       "repo": "gp-api",
@@ -2825,8 +2951,8 @@
       "title": "Move Slack notification from queue consumer to default task creation",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-20T17:40:06Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 23.648611111111112
     },
     {
       "repo": "gp-api",
@@ -2834,8 +2960,8 @@
       "title": "[ENG-6260][ENG-7020] - User migration kills container startup. Fix",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T18:00:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T13:51:08Z",
+      "mttd_hours": 91.8463888888889
     },
     {
       "repo": "gp-api",
@@ -2843,8 +2969,8 @@
       "title": "[ENG-7087] - Clerk Integration Part Deux",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T16:25:44Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-20T13:51:08Z",
+      "mttd_hours": 93.42333333333333
     },
     {
       "repo": "gp-api",
@@ -2852,8 +2978,8 @@
       "title": "Revert \"feat: clerk integration\"",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T04:50:28Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 11.03
     },
     {
       "repo": "gp-api",
@@ -2861,8 +2987,8 @@
       "title": "Revert \"[ENG-7087] - Attempting to resolve failing duplicate migration\"",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T04:49:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 11.042777777777777
     },
     {
       "repo": "gp-api",
@@ -2870,8 +2996,8 @@
       "title": "Revert \"Ravenhurst/eng 7087 get migrations to run\"",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T04:49:04Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 11.053333333333333
     },
     {
       "repo": "gp-api",
@@ -2879,8 +3005,8 @@
       "title": "Ravenhurst/eng 7087 get migrations to run",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T04:34:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 11.288611111111111
     },
     {
       "repo": "gp-api",
@@ -2888,8 +3014,8 @@
       "title": "[ENG-7087] - Attempting to resolve failing duplicate migration",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-16T04:01:55Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 11.839166666666667
     },
     {
       "repo": "gp-api",
@@ -2897,8 +3023,8 @@
       "title": "feat: clerk integration",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-16T02:43:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-16T15:52:16Z",
+      "mttd_hours": 13.146944444444445
     },
     {
       "repo": "gp-api",
@@ -2906,8 +3032,8 @@
       "title": "Remove failing prod protection.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-04-15T21:03:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-15T22:25:28Z",
+      "mttd_hours": 1.368611111111111
     },
     {
       "repo": "gp-api",
@@ -2915,8 +3041,8 @@
       "title": "ENG-7270 - Delete PathToVictory Table and Related Code",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-15T20:22:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-15T22:25:28Z",
+      "mttd_hours": 2.0533333333333332
     },
     {
       "repo": "gp-api",
@@ -6447,51 +6573,6 @@
       "mttd_hours": 91.56305555555555
     },
     {
-      "repo": "gp-api",
-      "number": 742,
-      "title": "use postgres version 16.8 in SST",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T20:39:54Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 113.00361111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 740,
-      "title": "revert payment intent price fix",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-23T16:38:45Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 2.9833333333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 736,
-      "title": "chore: one more fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-23T00:07:37Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 19.502222222222223
-    },
-    {
-      "repo": "gp-api",
-      "number": 734,
-      "title": "fix: payment intent price",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-22T23:51:51Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 19.765
-    },
-    {
-      "repo": "gp-api",
-      "number": 727,
-      "title": "Poll Expansion follow-ups",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-22T22:24:55Z",
-      "deployed_to_master_at": "2025-10-23T19:37:45Z",
-      "mttd_hours": 21.21388888888889
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -6951,51 +7032,6 @@
       "mttd_hours": 0.15916666666666668
     },
     {
-      "repo": "people-api",
-      "number": 90,
-      "title": "Re-add missing code",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T20:53:15Z",
-      "deployed_to_master_at": "2025-10-23T21:02:26Z",
-      "mttd_hours": 0.15305555555555556
-    },
-    {
-      "repo": "people-api",
-      "number": 89,
-      "title": "Revert \"Remove unused stats code\"",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-23T20:25:06Z",
-      "deployed_to_master_at": "2025-10-23T21:02:26Z",
-      "mttd_hours": 0.6222222222222222
-    },
-    {
-      "repo": "people-api",
-      "number": 87,
-      "title": "Fix health check",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T19:18:35Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 0.32861111111111113
-    },
-    {
-      "repo": "people-api",
-      "number": 86,
-      "title": "fix unused import",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T19:04:34Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 0.5622222222222222
-    },
-    {
-      "repo": "people-api",
-      "number": 85,
-      "title": "ENG-5016: fix voter likely filters",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T18:49:31Z",
-      "deployed_to_master_at": "2025-10-23T19:38:18Z",
-      "mttd_hours": 0.8130555555555555
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7174,54 +7210,26 @@
       "merged_to_develop_at": "2025-10-30T14:13:18Z",
       "deployed_to_master_at": "2025-10-30T20:41:47Z",
       "mttd_hours": 6.474722222222222
-    },
-    {
-      "repo": "election-api",
-      "number": 80,
-      "title": "fix tags",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-23T20:46:17Z",
-      "deployed_to_master_at": "2025-10-30T20:41:47Z",
-      "mttd_hours": 167.925
-    },
-    {
-      "repo": "election-api",
-      "number": 79,
-      "title": "Update sst.config.ts",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-23T20:44:49Z",
-      "deployed_to_master_at": "2025-10-30T20:41:47Z",
-      "mttd_hours": 167.94944444444445
     }
   ],
   "weekly_averages": [
     {
       "week_start": "2025-10-20",
       "all_repos": {
-        "mean_hours": 56.2,
-        "median_hours": 21.2,
-        "count": 19
+        "mean_hours": 88.6,
+        "median_hours": 88.3,
+        "count": 6
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 55.4,
-          "median_hours": 55.4,
-          "count": 2
+          "mean_hours": 90.1,
+          "median_hours": 90.1,
+          "count": 1
         },
         "gp-api": {
-          "mean_hours": 61.8,
-          "median_hours": 86.7,
-          "count": 10
-        },
-        "people-api": {
-          "mean_hours": 0.5,
-          "median_hours": 0.6,
+          "mean_hours": 88.3,
+          "median_hours": 88.2,
           "count": 5
-        },
-        "election-api": {
-          "mean_hours": 167.9,
-          "median_hours": 167.9,
-          "count": 2
         }
       }
     },
@@ -7808,25 +7816,45 @@
     {
       "week_start": "2026-04-13",
       "all_repos": {
-        "mean_hours": 14.2,
-        "median_hours": 18.5,
-        "count": 8
+        "mean_hours": 32.6,
+        "median_hours": 14.9,
+        "count": 22
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 20.4,
-          "median_hours": 20.4,
-          "count": 2
+          "mean_hours": 64.5,
+          "median_hours": 69,
+          "count": 6
         },
         "gp-api": {
-          "mean_hours": 10.4,
-          "median_hours": 6.7,
-          "count": 5
+          "mean_hours": 20.7,
+          "median_hours": 11.1,
+          "count": 15
         },
         "people-api": {
           "mean_hours": 20.4,
           "median_hours": 20.4,
           "count": 1
+        }
+      }
+    },
+    {
+      "week_start": "2026-04-20",
+      "all_repos": {
+        "mean_hours": 12.8,
+        "median_hours": 11.8,
+        "count": 14
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 19.3,
+          "median_hours": 23.5,
+          "count": 5
+        },
+        "gp-api": {
+          "mean_hours": 9.2,
+          "median_hours": 3,
+          "count": 9
         }
       }
     }
