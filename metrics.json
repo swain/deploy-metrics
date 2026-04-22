@@ -1,15 +1,51 @@
 {
-  "generated_at": "2026-04-21T22:14:28.060Z",
+  "generated_at": "2026-04-22T22:15:16.562Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1726,
+      "title": "chore: level up AI-friendliness (docs, .claude/, dead-code)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-22T17:04:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1737,
+      "title": "User account self deletion",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-22T16:59:55Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1743,
+      "title": "Fix E2Es",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-22T16:21:29Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1747,
+      "title": "Eng 7478 pledge",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-22T03:42:23Z",
+      "deployed_to_master_at": "2026-04-22T14:32:33Z",
+      "mttd_hours": 10.83611111111111
+    },
     {
       "repo": "gp-webapp",
       "number": 1744,
       "title": "fix: Correct font family and weights in awareness detail modal",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T20:20:50Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T21:51:02Z",
+      "mttd_hours": 1.5033333333333334
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +53,8 @@
       "title": "fix(ENG-7327): show actionable error when L2 district data is missing",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T19:51:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T21:51:02Z",
+      "mttd_hours": 1.993611111111111
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +62,8 @@
       "title": "fix(ENG-7343): use TanStack Query optimistic updates for voter contacts",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T17:39:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 1.2897222222222222
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +71,8 @@
       "title": "fix(ENG-7339): complete recurring tasks directly without outreach flow",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T17:01:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T18:57:15Z",
+      "mttd_hours": 1.9330555555555555
     },
     {
       "repo": "gp-webapp",
@@ -2838,13 +2874,85 @@
       "mttd_hours": 22.551388888888887
     },
     {
-      "repo": "gp-webapp",
-      "number": 1084,
-      "title": "ENG-4814 Polls Onboarding Path - navigate to polls if user won race",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-24T19:45:47Z",
-      "deployed_to_master_at": "2025-10-28T13:52:03Z",
-      "mttd_hours": 90.10444444444444
+      "repo": "gp-api",
+      "number": 1478,
+      "title": "chore: level up AI-friendliness (docs, .claude/, hygiene)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-22T17:04:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1502,
+      "title": "point to new voter db in prod",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-22T16:13:36Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1494,
+      "title": "ENG 7273 no tasks past election",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-22T15:43:29Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1487,
+      "title": "User account self deletion",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-22T15:32:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1503,
+      "title": "Force destroy s3 buckets in preview",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-22T14:36:30Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1470,
+      "title": "Remove slow Prisma connection acquisitions alert",
+      "author": "delegate-gp[bot]",
+      "merged_to_develop_at": "2026-04-22T14:23:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1498,
+      "title": "feat: add Primary/General Election Day awareness tasks (ENG-7344)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T23:57:10Z",
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 14.591388888888888
+    },
+    {
+      "repo": "gp-api",
+      "number": 1496,
+      "title": "feat: add Meta verified and design materials awareness tasks (ENG-7308)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T23:44:01Z",
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 14.810555555555556
+    },
+    {
+      "repo": "gp-api",
+      "number": 1493,
+      "title": "feat: Add campaign finance awareness task to campaign plan (ENG-7325)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-04-21T23:36:56Z",
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 14.928611111111111
     },
     {
       "repo": "gp-api",
@@ -2852,8 +2960,8 @@
       "title": "Simplify Slack notification: plain HubSpot ID without bold or link",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T20:21:02Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 18.19361111111111
     },
     {
       "repo": "gp-api",
@@ -2861,8 +2969,8 @@
       "title": "fix(ENG-7327): surface missing L2 district data error to users",
       "author": "dealvz",
       "merged_to_develop_at": "2026-04-21T19:51:08Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 18.691944444444445
     },
     {
       "repo": "gp-api",
@@ -2870,8 +2978,8 @@
       "title": "ENG-6985 - Delete campaign fields and related code replaced by organizations",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-21T17:04:28Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-21T17:19:01Z",
+      "mttd_hours": 0.2425
     },
     {
       "repo": "gp-api",
@@ -6546,33 +6654,6 @@
       "mttd_hours": 86.73694444444445
     },
     {
-      "repo": "gp-api",
-      "number": 746,
-      "title": "update syntax for target healthcheck",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-24T21:30:29Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 88.16055555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 745,
-      "title": "Update healthcheck to use target group",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-24T21:14:51Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 88.42111111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 744,
-      "title": "[ENG-5024] - Fixes bad SQL query",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-24T18:06:20Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 91.56305555555555
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7216,20 +7297,15 @@
     {
       "week_start": "2025-10-20",
       "all_repos": {
-        "mean_hours": 88.6,
-        "median_hours": 88.3,
-        "count": 6
+        "mean_hours": 86.7,
+        "median_hours": 86.7,
+        "count": 2
       },
       "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 90.1,
-          "median_hours": 90.1,
-          "count": 1
-        },
         "gp-api": {
-          "mean_hours": 88.3,
-          "median_hours": 88.2,
-          "count": 5
+          "mean_hours": 86.7,
+          "median_hours": 86.7,
+          "count": 2
         }
       }
     },
@@ -7841,20 +7917,20 @@
     {
       "week_start": "2026-04-20",
       "all_repos": {
-        "mean_hours": 12.8,
-        "median_hours": 11.8,
-        "count": 14
+        "mean_hours": 11.1,
+        "median_hours": 10.8,
+        "count": 25
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 19.3,
-          "median_hours": 23.5,
-          "count": 5
+          "mean_hours": 11.4,
+          "median_hours": 7.8,
+          "count": 10
         },
         "gp-api": {
-          "mean_hours": 9.2,
-          "median_hours": 3,
-          "count": 9
+          "mean_hours": 10.9,
+          "median_hours": 14.6,
+          "count": 15
         }
       }
     }
