@@ -1,15 +1,51 @@
 {
-  "generated_at": "2026-04-22T22:15:16.562Z",
+  "generated_at": "2026-04-23T22:14:30.769Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1758,
+      "title": "Ravenhurst/eng 7480 run for office redirect",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-23T15:53:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1754,
+      "title": "updating user impersonation banner to display user email",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-23T14:45:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1756,
+      "title": "refactor: remove unused TestingRegenerate mock from CampaignManager t…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-23T14:20:56Z",
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 1.1352777777777778
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1755,
+      "title": "refactor: remove TestingRegenerate",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-23T14:15:52Z",
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 1.2197222222222222
+    },
     {
       "repo": "gp-webapp",
       "number": 1726,
       "title": "chore: level up AI-friendliness (docs, .claude/, dead-code)",
       "author": "swain",
       "merged_to_develop_at": "2026-04-22T17:04:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 22.401666666666667
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +53,8 @@
       "title": "User account self deletion",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-22T16:59:55Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 22.485555555555557
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +62,8 @@
       "title": "Fix E2Es",
       "author": "swain",
       "merged_to_develop_at": "2026-04-22T16:21:29Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 23.12611111111111
     },
     {
       "repo": "gp-webapp",
@@ -2875,12 +2911,48 @@
     },
     {
       "repo": "gp-api",
+      "number": 1514,
+      "title": "[ENG-7338] - reverts longer timeouts post user migration",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-23T16:57:55Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1509,
+      "title": "removing unused import",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-23T14:44:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1510,
+      "title": "Remove temporary deleteAllTasks endpoint",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-23T14:16:02Z",
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 1.2105555555555556
+    },
+    {
+      "repo": "gp-api",
+      "number": 1448,
+      "title": "Disable GET /v1/contacts latency alert",
+      "author": "delegate-gp[bot]",
+      "merged_to_develop_at": "2026-04-22T22:29:01Z",
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 16.99416666666667
+    },
+    {
+      "repo": "gp-api",
       "number": 1478,
       "title": "chore: level up AI-friendliness (docs, .claude/, hygiene)",
       "author": "swain",
       "merged_to_develop_at": "2026-04-22T17:04:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 22.39666666666667
     },
     {
       "repo": "gp-api",
@@ -2888,8 +2960,8 @@
       "title": "point to new voter db in prod",
       "author": "swain",
       "merged_to_develop_at": "2026-04-22T16:13:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 23.25111111111111
     },
     {
       "repo": "gp-api",
@@ -2897,8 +2969,8 @@
       "title": "ENG 7273 no tasks past election",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-04-22T15:43:29Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 23.753055555555555
     },
     {
       "repo": "gp-api",
@@ -2906,8 +2978,8 @@
       "title": "User account self deletion",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-22T15:32:02Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 23.94388888888889
     },
     {
       "repo": "gp-api",
@@ -2915,8 +2987,8 @@
       "title": "Force destroy s3 buckets in preview",
       "author": "swain",
       "merged_to_develop_at": "2026-04-22T14:36:30Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 24.869444444444444
     },
     {
       "repo": "gp-api",
@@ -2924,8 +2996,8 @@
       "title": "Remove slow Prisma connection acquisitions alert",
       "author": "delegate-gp[bot]",
       "merged_to_develop_at": "2026-04-22T14:23:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-22T14:32:39Z",
+      "mttd_hours": 0.15138888888888888
     },
     {
       "repo": "gp-api",
@@ -6636,24 +6708,6 @@
       "mttd_hours": 22.533333333333335
     },
     {
-      "repo": "gp-api",
-      "number": 747,
-      "title": "Updated Robocall task strings from schedule-language to request-language",
-      "author": "patrick-tgp",
-      "merged_to_develop_at": "2025-10-24T23:04:28Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 86.59416666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 743,
-      "title": "feat: seed serve users",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-24T22:55:54Z",
-      "deployed_to_master_at": "2025-10-28T13:40:07Z",
-      "mttd_hours": 86.73694444444445
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7295,21 +7349,6 @@
   ],
   "weekly_averages": [
     {
-      "week_start": "2025-10-20",
-      "all_repos": {
-        "mean_hours": 86.7,
-        "median_hours": 86.7,
-        "count": 2
-      },
-      "by_repo": {
-        "gp-api": {
-          "mean_hours": 86.7,
-          "median_hours": 86.7,
-          "count": 2
-        }
-      }
-    },
-    {
       "week_start": "2025-10-27",
       "all_repos": {
         "mean_hours": 30.2,
@@ -7917,20 +7956,20 @@
     {
       "week_start": "2026-04-20",
       "all_repos": {
-        "mean_hours": 11.1,
-        "median_hours": 10.8,
-        "count": 25
+        "mean_hours": 12.8,
+        "median_hours": 14.9,
+        "count": 38
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 11.4,
-          "median_hours": 7.8,
-          "count": 10
+          "mean_hours": 12.3,
+          "median_hours": 10.8,
+          "count": 15
         },
         "gp-api": {
-          "mean_hours": 10.9,
-          "median_hours": 14.6,
-          "count": 15
+          "mean_hours": 13.1,
+          "median_hours": 14.9,
+          "count": 23
         }
       }
     }
