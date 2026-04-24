@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T22:14:30.769Z",
+  "generated_at": "2026-04-24T22:14:20.484Z",
   "days_back": 180,
   "prs": [
     {
@@ -2908,6 +2908,42 @@
       "merged_to_develop_at": "2025-10-27T15:18:58Z",
       "deployed_to_master_at": "2025-10-28T13:52:03Z",
       "mttd_hours": 22.551388888888887
+    },
+    {
+      "repo": "gp-api",
+      "number": 1523,
+      "title": "Backmerge QA -> Dev",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-24T21:22:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1518,
+      "title": "this should let us rerun builds",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-24T19:24:40Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1517,
+      "title": "[ENG-7471] - Adds isPro as filterable field for users",
+      "author": "RavenHursT",
+      "merged_to_develop_at": "2026-04-24T17:52:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1505,
+      "title": "ENG-7461",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-04-24T17:44:13Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
