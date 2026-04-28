@@ -1,15 +1,42 @@
 {
-  "generated_at": "2026-04-27T22:16:37.369Z",
+  "generated_at": "2026-04-28T22:19:20.057Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1753,
+      "title": "Drop webapp-side e2e test-user cleanup",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-28T19:48:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1766,
+      "title": "feat: steps UI",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-28T15:33:59Z",
+      "deployed_to_master_at": "2026-04-28T15:34:07Z",
+      "mttd_hours": 0.0022222222222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1696,
+      "title": "[GP-Bot] ENG-7309 Fix Next button overlap with HubSpot chat icon",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-04-28T14:33:06Z",
+      "deployed_to_master_at": "2026-04-28T15:34:07Z",
+      "mttd_hours": 1.0169444444444444
+    },
     {
       "repo": "gp-webapp",
       "number": 1763,
       "title": "feat: TextingComplianceFeatureFlag",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-27T18:48:46Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-28T15:34:07Z",
+      "mttd_hours": 20.75583333333333
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +44,8 @@
       "title": "Ravenhurst/eng 7480 run for office redirect",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-23T15:53:02Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-28T15:34:07Z",
+      "mttd_hours": 119.68472222222222
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +53,8 @@
       "title": "updating user impersonation banner to display user email",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-23T14:45:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:29:03Z",
+      "mttd_hours": 0.7288888888888889
     },
     {
       "repo": "gp-webapp",
@@ -2821,12 +2848,48 @@
     },
     {
       "repo": "gp-api",
+      "number": 1531,
+      "title": "Fix clerkThrottle import path that crashes prod build",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-28T17:29:35Z",
+      "deployed_to_master_at": "2026-04-28T17:36:45Z",
+      "mttd_hours": 0.11944444444444445
+    },
+    {
+      "repo": "gp-api",
+      "number": 1530,
+      "title": "Make test user cleanup clerk-aware",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-28T16:50:28Z",
+      "deployed_to_master_at": "2026-04-28T17:36:45Z",
+      "mttd_hours": 0.7713888888888889
+    },
+    {
+      "repo": "gp-api",
+      "number": 1513,
+      "title": "ENG-7254 Pass additional fields to the campaign task lambda.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-04-28T13:51:23Z",
+      "deployed_to_master_at": "2026-04-28T15:06:23Z",
+      "mttd_hours": 1.25
+    },
+    {
+      "repo": "gp-api",
+      "number": 1516,
+      "title": "Swain pmf v2",
+      "author": "swain",
+      "merged_to_develop_at": "2026-04-28T10:08:29Z",
+      "deployed_to_master_at": "2026-04-28T15:06:23Z",
+      "mttd_hours": 4.965
+    },
+    {
+      "repo": "gp-api",
       "number": 1525,
       "title": "[ENG-7522] - Removes no longer eneded Clerk users migration",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-27T16:14:32Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-28T15:06:23Z",
+      "mttd_hours": 22.864166666666666
     },
     {
       "repo": "gp-api",
@@ -2834,8 +2897,8 @@
       "title": "bumping the timeouts again to get DEV deployments unblocked",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-24T22:52:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-28T15:06:23Z",
+      "mttd_hours": 88.23527777777778
     },
     {
       "repo": "gp-api",
@@ -2843,8 +2906,8 @@
       "title": "Backmerge QA -> Dev",
       "author": "swain",
       "merged_to_develop_at": "2026-04-24T21:22:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-28T15:06:23Z",
+      "mttd_hours": 89.72666666666667
     },
     {
       "repo": "gp-api",
@@ -2852,8 +2915,8 @@
       "title": "this should let us rerun builds",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-24T19:24:40Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-24T21:19:08Z",
+      "mttd_hours": 1.9077777777777778
     },
     {
       "repo": "gp-api",
@@ -2861,8 +2924,8 @@
       "title": "[ENG-7471] - Adds isPro as filterable field for users",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-24T17:52:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-24T21:19:08Z",
+      "mttd_hours": 3.437222222222222
     },
     {
       "repo": "gp-api",
@@ -2870,8 +2933,8 @@
       "title": "ENG-7461",
       "author": "oakinh",
       "merged_to_develop_at": "2026-04-24T17:44:13Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-24T21:19:08Z",
+      "mttd_hours": 3.5819444444444444
     },
     {
       "repo": "gp-api",
@@ -2879,8 +2942,8 @@
       "title": "[ENG-7338] - reverts longer timeouts post user migration",
       "author": "RavenHursT",
       "merged_to_develop_at": "2026-04-23T16:57:55Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-24T21:19:08Z",
+      "mttd_hours": 28.35361111111111
     },
     {
       "repo": "gp-api",
@@ -2888,8 +2951,8 @@
       "title": "removing unused import",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-23T14:44:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-23T15:28:40Z",
+      "mttd_hours": 0.7311111111111112
     },
     {
       "repo": "gp-api",
@@ -6492,51 +6555,6 @@
       "mttd_hours": 76.0911111111111
     },
     {
-      "repo": "gp-api",
-      "number": 776,
-      "title": "fix tsc issue",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-30T18:03:22Z",
-      "deployed_to_master_at": "2025-10-30T21:06:02Z",
-      "mttd_hours": 3.0444444444444443
-    },
-    {
-      "repo": "gp-api",
-      "number": 771,
-      "title": "chore: sample people with POST endpoint",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-30T17:46:37Z",
-      "deployed_to_master_at": "2025-10-30T21:06:02Z",
-      "mttd_hours": 3.323611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 766,
-      "title": "Add FeaturesService",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-30T13:45:46Z",
-      "deployed_to_master_at": "2025-10-30T16:53:26Z",
-      "mttd_hours": 3.1277777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 772,
-      "title": "include cell phone when selecting csv data",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-30T14:37:33Z",
-      "deployed_to_master_at": "2025-10-30T16:53:26Z",
-      "mttd_hours": 2.2647222222222223
-    },
-    {
-      "repo": "gp-api",
-      "number": 769,
-      "title": "ENG-5500 - Allow updateRaceTargetDetailsBySlug to exclude projected turnout",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-30T14:22:13Z",
-      "deployed_to_master_at": "2025-10-30T16:53:26Z",
-      "mttd_hours": 2.520277777777778
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -6951,15 +6969,6 @@
       "mttd_hours": 0.3413888888888889
     },
     {
-      "repo": "people-api",
-      "number": 98,
-      "title": "Eng 5043 exclude ids",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-10-30T17:46:49Z",
-      "deployed_to_master_at": "2025-10-31T16:41:52Z",
-      "mttd_hours": 22.9175
-    },
-    {
       "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
@@ -7129,24 +7138,15 @@
       "merged_to_develop_at": "2025-12-11T18:45:05Z",
       "deployed_to_master_at": "2025-12-12T16:31:10Z",
       "mttd_hours": 21.768055555555556
-    },
-    {
-      "repo": "election-api",
-      "number": 82,
-      "title": "ENG-5500 - Allow querying for BR<>L2 match with turnout excluded",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-30T14:13:18Z",
-      "deployed_to_master_at": "2025-10-30T20:41:47Z",
-      "mttd_hours": 6.474722222222222
     }
   ],
   "weekly_averages": [
     {
       "week_start": "2025-10-27",
       "all_repos": {
-        "mean_hours": 42.6,
-        "median_hours": 66,
-        "count": 20
+        "mean_hours": 62.2,
+        "median_hours": 71.2,
+        "count": 13
       },
       "by_repo": {
         "gp-webapp": {
@@ -7155,19 +7155,9 @@
           "count": 5
         },
         "gp-api": {
-          "mean_hours": 45.4,
-          "median_hours": 68.6,
-          "count": 13
-        },
-        "people-api": {
-          "mean_hours": 22.9,
-          "median_hours": 22.9,
-          "count": 1
-        },
-        "election-api": {
-          "mean_hours": 6.5,
-          "median_hours": 6.5,
-          "count": 1
+          "mean_hours": 72,
+          "median_hours": 73,
+          "count": 8
         }
       }
     },
@@ -7749,20 +7739,40 @@
     {
       "week_start": "2026-04-20",
       "all_repos": {
-        "mean_hours": 12.8,
-        "median_hours": 14.9,
-        "count": 38
+        "mean_hours": 17.5,
+        "median_hours": 14.8,
+        "count": 47
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 12.3,
+          "mean_hours": 17.9,
           "median_hours": 10.8,
-          "count": 15
+          "count": 17
         },
         "gp-api": {
-          "mean_hours": 13.1,
+          "mean_hours": 17.2,
           "median_hours": 14.9,
-          "count": 23
+          "count": 30
+        }
+      }
+    },
+    {
+      "week_start": "2026-04-27",
+      "all_repos": {
+        "mean_hours": 6.5,
+        "median_hours": 1.1,
+        "count": 8
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 7.3,
+          "median_hours": 1,
+          "count": 3
+        },
+        "gp-api": {
+          "mean_hours": 6,
+          "median_hours": 1.3,
+          "count": 5
         }
       }
     }
