@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T22:19:20.057Z",
+  "generated_at": "2026-04-29T22:18:37.043Z",
   "days_back": 180,
   "prs": [
     {
@@ -2802,49 +2802,13 @@
       "mttd_hours": 45.560833333333335
     },
     {
-      "repo": "gp-webapp",
-      "number": 1111,
-      "title": "[ENG-5792] - Ensures that only one poll is performed at a time",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-10-31T22:11:45Z",
-      "deployed_to_master_at": "2025-11-03T18:31:52Z",
-      "mttd_hours": 68.33527777777778
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1108,
-      "title": "ENG-5525: make sure expansion count is an int",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T16:33:23Z",
-      "deployed_to_master_at": "2025-11-03T18:31:52Z",
-      "mttd_hours": 73.97472222222223
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1099,
-      "title": "Eng 4782 implement alphabetical and numerical sorting for office selection list in candidate onboarding",
+      "repo": "gp-api",
+      "number": 1521,
+      "title": "working on allowing users to search for other users to impersonate",
       "author": "awardquick",
-      "merged_to_develop_at": "2025-10-31T15:31:40Z",
-      "deployed_to_master_at": "2025-11-03T18:31:52Z",
-      "mttd_hours": 75.00333333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1104,
-      "title": "Polls - fix handlebars variable name",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-31T12:28:20Z",
-      "deployed_to_master_at": "2025-10-31T13:56:47Z",
-      "mttd_hours": 1.4741666666666666
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1103,
-      "title": "ENG-4822 Update Serve on ramp and analytics",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-10-30T23:33:42Z",
-      "deployed_to_master_at": "2025-10-31T13:56:47Z",
-      "mttd_hours": 14.384722222222223
+      "merged_to_develop_at": "2026-04-29T19:17:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6492,69 +6456,6 @@
       "mttd_hours": 63.61361111111111
     },
     {
-      "repo": "gp-api",
-      "number": 786,
-      "title": "ENG-5514-2 - Fix Data Race in Payments",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-31T21:43:20Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 68.5625
-    },
-    {
-      "repo": "gp-api",
-      "number": 782,
-      "title": "ENG-5514-1",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-10-31T20:14:15Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 70.04722222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 783,
-      "title": "respond to poll payment",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T19:02:59Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 71.235
-    },
-    {
-      "repo": "gp-api",
-      "number": 778,
-      "title": "ENG-5045: create poll expansion queue message",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T15:26:55Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 74.83611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 773,
-      "title": "add missing example env value",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T14:37:23Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 75.66166666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 777,
-      "title": "Remove the poll backfill endpoint",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T14:37:16Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 75.66361111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 779,
-      "title": "fix cursor rules location",
-      "author": "swain",
-      "merged_to_develop_at": "2025-10-31T14:11:37Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 76.0911111111111
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7144,20 +7045,15 @@
     {
       "week_start": "2025-10-27",
       "all_repos": {
-        "mean_hours": 62.2,
-        "median_hours": 71.2,
-        "count": 13
+        "mean_hours": 63.6,
+        "median_hours": 63.6,
+        "count": 1
       },
       "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 46.6,
-          "median_hours": 68.3,
-          "count": 5
-        },
         "gp-api": {
-          "mean_hours": 72,
-          "median_hours": 73,
-          "count": 8
+          "mean_hours": 63.6,
+          "median_hours": 63.6,
+          "count": 1
         }
       }
     },
