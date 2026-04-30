@@ -1,15 +1,42 @@
 {
-  "generated_at": "2026-04-29T22:18:37.043Z",
+  "generated_at": "2026-04-30T22:18:10.525Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1769,
+      "title": "Eng 7527 candiate profile",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-04-30T19:19:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1761,
+      "title": "Eng 7484 gp admin feature request quick impersonation swap",
+      "author": "awardquick",
+      "merged_to_develop_at": "2026-04-30T16:06:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1772,
+      "title": "updated contact link on /profile page to use marketing url - ENG-7337",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-04-30T15:21:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1753,
       "title": "Drop webapp-side e2e test-user cleanup",
       "author": "swain",
       "merged_to_develop_at": "2026-04-28T19:48:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-30T15:05:08Z",
+      "mttd_hours": 43.27055555555555
     },
     {
       "repo": "gp-webapp",
@@ -2807,8 +2834,8 @@
       "title": "working on allowing users to search for other users to impersonate",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-29T19:17:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-04-30T15:05:13Z",
+      "mttd_hours": 19.79388888888889
     },
     {
       "repo": "gp-api",
@@ -6447,15 +6474,6 @@
       "mttd_hours": 2.4044444444444446
     },
     {
-      "repo": "gp-api",
-      "number": 787,
-      "title": "[ENG-4921] - bypass dnc scrubbing",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-01T02:40:16Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 63.61361111111111
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7042,21 +7060,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-10-27",
-      "all_repos": {
-        "mean_hours": 63.6,
-        "median_hours": 63.6,
-        "count": 1
-      },
-      "by_repo": {
-        "gp-api": {
-          "mean_hours": 63.6,
-          "median_hours": 63.6,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-11-03",
       "all_repos": {
@@ -7655,20 +7658,20 @@
     {
       "week_start": "2026-04-27",
       "all_repos": {
-        "mean_hours": 6.5,
-        "median_hours": 1.1,
-        "count": 8
+        "mean_hours": 11.5,
+        "median_hours": 3.1,
+        "count": 10
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 7.3,
-          "median_hours": 1,
-          "count": 3
+          "mean_hours": 16.3,
+          "median_hours": 10.9,
+          "count": 4
         },
         "gp-api": {
-          "mean_hours": 6,
-          "median_hours": 1.3,
-          "count": 5
+          "mean_hours": 8.3,
+          "median_hours": 3.1,
+          "count": 6
         }
       }
     }
