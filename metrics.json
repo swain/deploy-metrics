@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-05-01T22:15:56.247Z",
+  "generated_at": "2026-05-02T22:12:22.803Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1778,
+      "title": "Feat: redesign profile page",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-02T10:08:56Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1777,
@@ -2827,15 +2836,6 @@
       "merged_to_develop_at": "2025-11-05T00:56:30Z",
       "deployed_to_master_at": "2025-11-05T18:30:05Z",
       "mttd_hours": 17.559722222222224
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1112,
-      "title": "fix: missing purchase complete",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-03T20:56:26Z",
-      "deployed_to_master_at": "2025-11-05T18:30:05Z",
-      "mttd_hours": 45.560833333333335
     },
     {
       "repo": "gp-api",
@@ -6474,24 +6474,6 @@
       "mttd_hours": 0.37027777777777776
     },
     {
-      "repo": "gp-api",
-      "number": 789,
-      "title": "fix nosuchkey error in s3",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-03T15:01:37Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 3.2577777777777777
-    },
-    {
-      "repo": "gp-api",
-      "number": 788,
-      "title": "feat: backfill messages",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-03T15:52:49Z",
-      "deployed_to_master_at": "2025-11-03T18:17:05Z",
-      "mttd_hours": 2.4044444444444446
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7081,20 +7063,20 @@
     {
       "week_start": "2025-11-03",
       "all_repos": {
-        "mean_hours": 22.7,
-        "median_hours": 3.4,
-        "count": 20
+        "mean_hours": 23.7,
+        "median_hours": 3.6,
+        "count": 17
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 47.7,
-          "median_hours": 3.6,
-          "count": 7
+          "mean_hours": 48.1,
+          "median_hours": 2.1,
+          "count": 6
         },
         "gp-api": {
-          "mean_hours": 9.2,
-          "median_hours": 3.3,
-          "count": 13
+          "mean_hours": 10.4,
+          "median_hours": 4.1,
+          "count": 11
         }
       }
     },
