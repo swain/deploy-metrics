@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T22:12:22.803Z",
+  "generated_at": "2026-05-03T22:13:01.046Z",
   "days_back": 180,
   "prs": [
     {
@@ -6447,33 +6447,6 @@
       "mttd_hours": 5.776111111111111
     },
     {
-      "repo": "gp-api",
-      "number": 799,
-      "title": "Add response count to api response",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-04T19:42:41Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 22.58138888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 800,
-      "title": "chore: cleanup temp script",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-03T23:15:56Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 43.02722222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 796,
-      "title": "chore: load backfill from new s3 bucket",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-03T22:15:52Z",
-      "deployed_to_master_at": "2025-11-03T22:38:05Z",
-      "mttd_hours": 0.37027777777777776
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -7063,9 +7036,9 @@
     {
       "week_start": "2025-11-03",
       "all_repos": {
-        "mean_hours": 23.7,
-        "median_hours": 3.6,
-        "count": 17
+        "mean_hours": 24.1,
+        "median_hours": 3,
+        "count": 14
       },
       "by_repo": {
         "gp-webapp": {
@@ -7074,9 +7047,9 @@
           "count": 6
         },
         "gp-api": {
-          "mean_hours": 10.4,
-          "median_hours": 4.1,
-          "count": 11
+          "mean_hours": 6,
+          "median_hours": 3.3,
+          "count": 8
         }
       }
     },
