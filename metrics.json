@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T22:13:01.046Z",
+  "generated_at": "2026-05-04T22:20:17.220Z",
   "days_back": 180,
   "prs": [
     {
@@ -17,8 +17,8 @@
       "title": "Bug Fixes - ENG-7596 | ENG-7469 | ENG-7468 | ENG-7466",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-01T01:29:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:30Z",
+      "mttd_hours": 88.60388888888889
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +26,8 @@
       "title": "Eng 7527 candiate profile",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-04-30T19:19:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:30Z",
+      "mttd_hours": 94.76138888888889
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +35,8 @@
       "title": "Eng 7484 gp admin feature request quick impersonation swap",
       "author": "awardquick",
       "merged_to_develop_at": "2026-04-30T16:06:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:30Z",
+      "mttd_hours": 97.98416666666667
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +44,8 @@
       "title": "updated contact link on /profile page to use marketing url - ENG-7337",
       "author": "patrick-tgp",
       "merged_to_develop_at": "2026-04-30T15:21:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:30Z",
+      "mttd_hours": 98.73666666666666
     },
     {
       "repo": "gp-webapp",
@@ -2820,22 +2820,13 @@
       "mttd_hours": 3.5641666666666665
     },
     {
-      "repo": "gp-webapp",
-      "number": 1117,
-      "title": "ENG-5506 Add sanitize method for polls office name",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-05T21:35:31Z",
-      "deployed_to_master_at": "2025-11-05T22:13:11Z",
-      "mttd_hours": 0.6277777777777778
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1113,
-      "title": "ENG-4883: fixup analytics events for poll expansion",
+      "repo": "gp-api",
+      "number": 1542,
+      "title": "chore: disable controller p95 latency alerts",
       "author": "swain",
-      "merged_to_develop_at": "2025-11-05T00:56:30Z",
-      "deployed_to_master_at": "2025-11-05T18:30:05Z",
-      "mttd_hours": 17.559722222222224
+      "merged_to_develop_at": "2026-05-04T15:17:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -2843,8 +2834,8 @@
       "title": "Bug Fixes - ENG-7596 | ENG-7469 | ENG-7468 | ENG-7466",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-01T01:29:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:55Z",
+      "mttd_hours": 88.61277777777778
     },
     {
       "repo": "gp-api",
@@ -6402,51 +6393,6 @@
       "mttd_hours": 17.81888888888889
     },
     {
-      "repo": "gp-api",
-      "number": 807,
-      "title": "fix csv url",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-05T18:34:01Z",
-      "deployed_to_master_at": "2025-11-05T18:34:48Z",
-      "mttd_hours": 0.013055555555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 793,
-      "title": "ENG-5518: clear out old issues before storing new ones",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-05T17:32:04Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 0.7583333333333333
-    },
-    {
-      "repo": "gp-api",
-      "number": 801,
-      "title": "ENG-5790 Add a couple logs to the mass backfillMIssingCustomerIdsOnBoot",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-05T15:50:24Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 2.452777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 802,
-      "title": "Revert to using public URLs for poll csvs",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-05T14:09:50Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 4.128888888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 795,
-      "title": "Fix count handling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-05T12:31:00Z",
-      "deployed_to_master_at": "2025-11-05T18:17:34Z",
-      "mttd_hours": 5.776111111111111
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -6862,6 +6808,24 @@
     },
     {
       "repo": "election-api",
+      "number": 144,
+      "title": "DATA-1866 - Add ZipToPosition table for OfficePicker",
+      "author": "danpelota",
+      "merged_to_develop_at": "2026-05-04T20:32:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 143,
+      "title": "ENG-7589 - Add Position to Place relation, and some code for serving it",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-04T15:14:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
       "number": 135,
       "title": "ENG-7091 - Support more ways of querying districts and projected turnout",
       "author": "oakinh",
@@ -7036,20 +7000,20 @@
     {
       "week_start": "2025-11-03",
       "all_repos": {
-        "mean_hours": 24.1,
-        "median_hours": 3,
-        "count": 14
+        "mean_hours": 43.7,
+        "median_hours": 3.6,
+        "count": 7
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 48.1,
+          "mean_hours": 67.6,
           "median_hours": 2.1,
-          "count": 6
+          "count": 4
         },
         "gp-api": {
-          "mean_hours": 6,
-          "median_hours": 3.3,
-          "count": 8
+          "mean_hours": 11.8,
+          "median_hours": 16.2,
+          "count": 3
         }
       }
     },
@@ -7631,20 +7595,20 @@
     {
       "week_start": "2026-04-27",
       "all_repos": {
-        "mean_hours": 11.5,
-        "median_hours": 3.1,
-        "count": 10
+        "mean_hours": 38.9,
+        "median_hours": 20.8,
+        "count": 15
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 16.3,
-          "median_hours": 10.9,
-          "count": 4
+          "mean_hours": 55.6,
+          "median_hours": 65.9,
+          "count": 8
         },
         "gp-api": {
-          "mean_hours": 8.3,
-          "median_hours": 3.1,
-          "count": 6
+          "mean_hours": 19.8,
+          "median_hours": 5,
+          "count": 7
         }
       }
     }
