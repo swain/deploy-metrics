@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-05-04T22:20:17.220Z",
+  "generated_at": "2026-05-05T22:19:37.304Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1784,
+      "title": "feat: step 2 - election filing",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-04T22:37:31Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1778,
@@ -2782,42 +2791,6 @@
       "merged_to_develop_at": "2025-11-11T17:37:46Z",
       "deployed_to_master_at": "2025-11-17T21:01:12Z",
       "mttd_hours": 147.39055555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1130,
-      "title": "Reduce loading delay from 2000ms to 1250ms in LoadingList component",
-      "author": "Tevyn",
-      "merged_to_develop_at": "2025-11-06T19:17:18Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 265.7316666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1126,
-      "title": "ENG-5827 Expand year ranges for sworn in date in polls onboarding",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-06T17:24:15Z",
-      "deployed_to_master_at": "2025-11-06T18:00:37Z",
-      "mttd_hours": 0.6061111111111112
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1124,
-      "title": "fix select default",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-06T15:48:48Z",
-      "deployed_to_master_at": "2025-11-06T16:20:49Z",
-      "mttd_hours": 0.5336111111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1121,
-      "title": "Expanding Polls Fixups",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-06T12:46:58Z",
-      "deployed_to_master_at": "2025-11-06T16:20:49Z",
-      "mttd_hours": 3.5641666666666665
     },
     {
       "repo": "gp-api",
@@ -6366,33 +6339,6 @@
       "mttd_hours": 145.28222222222223
     },
     {
-      "repo": "gp-api",
-      "number": 812,
-      "title": "Poll expansion fixups",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-06T16:24:51Z",
-      "deployed_to_master_at": "2025-11-06T17:37:22Z",
-      "mttd_hours": 1.208611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 810,
-      "title": "chore: healthurl",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-06T01:23:05Z",
-      "deployed_to_master_at": "2025-11-06T17:37:22Z",
-      "mttd_hours": 16.238055555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 806,
-      "title": "feat: integrate postman tests to our github actions",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-05T23:48:14Z",
-      "deployed_to_master_at": "2025-11-06T17:37:22Z",
-      "mttd_hours": 17.81888888888889
-    },
-    {
       "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
@@ -6997,26 +6943,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-11-03",
-      "all_repos": {
-        "mean_hours": 43.7,
-        "median_hours": 3.6,
-        "count": 7
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 67.6,
-          "median_hours": 2.1,
-          "count": 4
-        },
-        "gp-api": {
-          "mean_hours": 11.8,
-          "median_hours": 16.2,
-          "count": 3
-        }
-      }
-    },
     {
       "week_start": "2025-11-10",
       "all_repos": {
