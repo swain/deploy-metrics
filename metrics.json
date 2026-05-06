@@ -1,15 +1,33 @@
 {
-  "generated_at": "2026-05-05T22:19:37.304Z",
+  "generated_at": "2026-05-06T22:16:55.710Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1786,
+      "title": "Eng 7533 pin",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-06T17:24:11Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1789,
+      "title": "Add new onboarding flow shell",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T16:49:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1784,
       "title": "feat: step 2 - election filing",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-04T22:37:31Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T16:52:01Z",
+      "mttd_hours": 42.24166666666667
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +35,8 @@
       "title": "Feat: redesign profile page",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-02T10:08:56Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:30Z",
+      "mttd_hours": 55.94277777777778
     },
     {
       "repo": "gp-webapp",
@@ -2794,12 +2812,48 @@
     },
     {
       "repo": "gp-api",
+      "number": 1555,
+      "title": "feat(onboarding): add /v1/onboarding/voter-issues endpoint",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T21:29:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1554,
+      "title": "fix: align onboarding contacts stats schema with people-api response",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T19:41:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1547,
+      "title": "ENG-10093 Onboarding voter stats + local news endpoints",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T16:50:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1549,
+      "title": "chore(auth): remove dead JwtAuthGuard + JwtAuthStrategy",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-06T13:53:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
       "number": 1542,
       "title": "chore: disable controller p95 latency alerts",
       "author": "swain",
       "merged_to_develop_at": "2026-05-04T15:17:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T18:05:55Z",
+      "mttd_hours": 2.8055555555555554
     },
     {
       "repo": "gp-api",
@@ -6754,6 +6808,24 @@
     },
     {
       "repo": "election-api",
+      "number": 148,
+      "title": "feat(voter-issues): add /voter-issues endpoint backed by DistrictTopIssue",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T20:13:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 147,
+      "title": "Add DistrictTopIssue table for top Haystaq issues per district",
+      "author": "danpelota",
+      "merged_to_develop_at": "2026-05-06T19:08:00Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
       "number": 144,
       "title": "DATA-1866 - Add ZipToPosition table for OfficePicker",
       "author": "danpelota",
@@ -7521,20 +7593,40 @@
     {
       "week_start": "2026-04-27",
       "all_repos": {
-        "mean_hours": 38.9,
-        "median_hours": 20.8,
-        "count": 15
+        "mean_hours": 40,
+        "median_hours": 21.8,
+        "count": 16
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 55.6,
-          "median_hours": 65.9,
-          "count": 8
+          "mean_hours": 55.7,
+          "median_hours": 55.9,
+          "count": 9
         },
         "gp-api": {
           "mean_hours": 19.8,
           "median_hours": 5,
           "count": 7
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-04",
+      "all_repos": {
+        "mean_hours": 22.5,
+        "median_hours": 22.5,
+        "count": 2
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 42.2,
+          "median_hours": 42.2,
+          "count": 1
+        },
+        "gp-api": {
+          "mean_hours": 2.8,
+          "median_hours": 2.8,
+          "count": 1
         }
       }
     }
