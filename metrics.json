@@ -1,15 +1,96 @@
 {
-  "generated_at": "2026-05-06T22:16:55.710Z",
+  "generated_at": "2026-05-07T22:21:59.600Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1807,
+      "title": "DES: onboarding bug-bash + chart consolidation",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-07T21:59:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1804,
+      "title": "feat(onboarding): track Know Your Voters step completion (ENG-10200)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-07T20:45:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1806,
+      "title": "fix(onboarding): refresh stale data and add instant office selection",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-07T20:32:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1802,
+      "title": "fix(post-auth-redirect): tolerate org fetch race on fresh sign-up",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-07T17:39:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1800,
+      "title": "remove the promo banner",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T01:37:28Z",
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 0.18722222222222223
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1799,
+      "title": "DES: input-with-button radius + onboarding aside eyebrow",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-07T01:22:23Z",
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 0.4386111111111111
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1797,
+      "title": "feat(onboarding): hydrate selected race via /race-by-position",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T01:18:54Z",
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 0.49666666666666665
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1796,
+      "title": "Des onboarding UI",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-06T23:49:10Z",
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 1.9922222222222221
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1795,
+      "title": "onboarding: voter-issues UX polish",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-06T22:19:05Z",
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 3.493611111111111
+    },
     {
       "repo": "gp-webapp",
       "number": 1786,
       "title": "Eng 7533 pin",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-06T17:24:11Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-07T01:48:42Z",
+      "mttd_hours": 8.408611111111112
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +98,8 @@
       "title": "Add new onboarding flow shell",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-06T16:49:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T16:52:01Z",
+      "mttd_hours": 0.034444444444444444
     },
     {
       "repo": "gp-webapp",
@@ -2812,12 +2893,48 @@
     },
     {
       "repo": "gp-api",
+      "number": 1544,
+      "title": "ENG-7581: codegen-typed dispatch contracts for agent experiments",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T21:32:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1563,
+      "title": "ENG-10204: fire pro_upgrade_complete from Stripe subscription webhook so the event tracks reliably regardless of client-side success page render",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-05-07T21:19:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1560,
+      "title": "fix(meetings): allow null description in fullAgenda items",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-07T15:30:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1558,
+      "title": "feat: rewire races-by-year to election-api; add multi-filter search + race-by-position",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T00:49:42Z",
+      "deployed_to_master_at": "2026-05-07T01:39:41Z",
+      "mttd_hours": 0.8330555555555555
+    },
+    {
+      "repo": "gp-api",
       "number": 1555,
       "title": "feat(onboarding): add /v1/onboarding/voter-issues endpoint",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-06T21:29:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-07T01:39:41Z",
+      "mttd_hours": 4.175277777777778
     },
     {
       "repo": "gp-api",
@@ -2825,8 +2942,8 @@
       "title": "fix: align onboarding contacts stats schema with people-api response",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-06T19:41:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-07T01:39:41Z",
+      "mttd_hours": 5.973611111111111
     },
     {
       "repo": "gp-api",
@@ -2834,8 +2951,8 @@
       "title": "ENG-10093 Onboarding voter stats + local news endpoints",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-06T16:50:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T16:51:43Z",
+      "mttd_hours": 0.02388888888888889
     },
     {
       "repo": "gp-api",
@@ -2843,8 +2960,8 @@
       "title": "chore(auth): remove dead JwtAuthGuard + JwtAuthStrategy",
       "author": "swain",
       "merged_to_develop_at": "2026-05-06T13:53:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T16:51:43Z",
+      "mttd_hours": 2.971111111111111
     },
     {
       "repo": "gp-api",
@@ -6808,12 +6925,57 @@
     },
     {
       "repo": "election-api",
+      "number": 160,
+      "title": "DATA-1896: filter spurious ZIP↔district overlaps in offices-by-zip",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-07T21:10:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 158,
+      "title": "fix position return",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T18:14:20Z",
+      "deployed_to_master_at": "2026-05-07T18:15:25Z",
+      "mttd_hours": 0.018055555555555554
+    },
+    {
+      "repo": "election-api",
+      "number": 156,
+      "title": "Add position level column",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-07T16:32:09Z",
+      "deployed_to_master_at": "2026-05-07T18:15:25Z",
+      "mttd_hours": 1.721111111111111
+    },
+    {
+      "repo": "election-api",
+      "number": 150,
+      "title": "feat: GET /positions/search backed by ZipToPosition (zip / name / officeType filters)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-06T23:54:24Z",
+      "deployed_to_master_at": "2026-05-07T01:39:39Z",
+      "mttd_hours": 1.7541666666666667
+    },
+    {
+      "repo": "election-api",
+      "number": 152,
+      "title": "QA -> Dev",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-06T22:22:18Z",
+      "deployed_to_master_at": "2026-05-06T22:37:50Z",
+      "mttd_hours": 0.2588888888888889
+    },
+    {
+      "repo": "election-api",
       "number": 148,
       "title": "feat(voter-issues): add /voter-issues endpoint backed by DistrictTopIssue",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-06T20:13:44Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T22:37:50Z",
+      "mttd_hours": 2.401666666666667
     },
     {
       "repo": "election-api",
@@ -6821,8 +6983,8 @@
       "title": "Add DistrictTopIssue table for top Haystaq issues per district",
       "author": "danpelota",
       "merged_to_develop_at": "2026-05-06T19:08:00Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T22:37:50Z",
+      "mttd_hours": 3.4972222222222222
     },
     {
       "repo": "election-api",
@@ -6830,8 +6992,8 @@
       "title": "DATA-1866 - Add ZipToPosition table for OfficePicker",
       "author": "danpelota",
       "merged_to_develop_at": "2026-05-04T20:32:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-06T22:37:50Z",
+      "mttd_hours": 50.09444444444444
     },
     {
       "repo": "election-api",
@@ -6839,8 +7001,8 @@
       "title": "ENG-7589 - Add Position to Place relation, and some code for serving it",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-04T15:14:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-04T15:25:06Z",
+      "mttd_hours": 0.17
     },
     {
       "repo": "election-api",
@@ -7613,20 +7775,25 @@
     {
       "week_start": "2026-05-04",
       "all_repos": {
-        "mean_hours": 22.5,
-        "median_hours": 22.5,
-        "count": 2
+        "mean_hours": 6.1,
+        "median_hours": 1.9,
+        "count": 22
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 42.2,
-          "median_hours": 42.2,
-          "count": 1
+          "mean_hours": 7.2,
+          "median_hours": 1.2,
+          "count": 8
         },
         "gp-api": {
           "mean_hours": 2.8,
-          "median_hours": 2.8,
-          "count": 1
+          "median_hours": 2.9,
+          "count": 6
+        },
+        "election-api": {
+          "mean_hours": 7.5,
+          "median_hours": 1.7,
+          "count": 8
         }
       }
     }
