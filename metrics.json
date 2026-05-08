@@ -1,15 +1,60 @@
 {
-  "generated_at": "2026-05-07T22:21:59.600Z",
+  "generated_at": "2026-05-08T22:19:35.301Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1815,
+      "title": "fix(onboarding): refetch campaign on /dashboard after pledge [ENG-10187]",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-08T20:11:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1812,
+      "title": "remove client-side pro_upgrade_complete event fire from purchase success page",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-05-08T17:19:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1813,
+      "title": "DES: drop icons from top voter issues list",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-08T15:37:36Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1811,
+      "title": "feat: nested Claude.md",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-08T02:21:09Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1810,
+      "title": "ENG-10197: expand methodology dialog copy on path-to-victory step",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-07T22:42:39Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1807,
       "title": "DES: onboarding bug-bash + chart consolidation",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-07T21:59:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 16.93777777777778
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +62,8 @@
       "title": "feat(onboarding): track Know Your Voters step completion (ENG-10200)",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-07T20:45:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 18.18
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +71,8 @@
       "title": "fix(onboarding): refresh stale data and add instant office selection",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-07T20:32:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 18.400833333333335
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +80,8 @@
       "title": "fix(post-auth-redirect): tolerate org fetch race on fresh sign-up",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-07T17:39:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 21.28
     },
     {
       "repo": "gp-webapp",
@@ -2893,12 +2938,21 @@
     },
     {
       "repo": "gp-api",
+      "number": 1566,
+      "title": "feat: nested claude",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-08T02:20:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
       "number": 1544,
       "title": "ENG-7581: codegen-typed dispatch contracts for agent experiments",
       "author": "swain",
       "merged_to_develop_at": "2026-05-07T21:32:44Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:32Z",
+      "mttd_hours": 17.39666666666667
     },
     {
       "repo": "gp-api",
@@ -2906,8 +2960,8 @@
       "title": "ENG-10204: fire pro_upgrade_complete from Stripe subscription webhook so the event tracks reliably regardless of client-side success page render",
       "author": "patrick-tgp",
       "merged_to_develop_at": "2026-05-07T21:19:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:32Z",
+      "mttd_hours": 17.619722222222222
     },
     {
       "repo": "gp-api",
@@ -2915,8 +2969,8 @@
       "title": "fix(meetings): allow null description in fullAgenda items",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-07T15:30:28Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-07T15:41:21Z",
+      "mttd_hours": 0.18138888888888888
     },
     {
       "repo": "gp-api",
@@ -6511,6 +6565,15 @@
     },
     {
       "repo": "people-api",
+      "number": 192,
+      "title": "Eng 10171 claude",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-08T10:50:09Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
       "number": 185,
       "title": "ENG-6987: just use district",
       "author": "swain",
@@ -6922,6 +6985,15 @@
       "merged_to_develop_at": "2025-11-12T21:25:57Z",
       "deployed_to_master_at": "2025-11-12T21:46:26Z",
       "mttd_hours": 0.3413888888888889
+    },
+    {
+      "repo": "election-api",
+      "number": 161,
+      "title": "Eng 10170 claude",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-08T11:28:46Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "election-api",
@@ -7775,20 +7847,20 @@
     {
       "week_start": "2026-05-04",
       "all_repos": {
-        "mean_hours": 6.1,
-        "median_hours": 1.9,
-        "count": 22
+        "mean_hours": 8.4,
+        "median_hours": 2.8,
+        "count": 29
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 7.2,
-          "median_hours": 1.2,
-          "count": 8
+          "mean_hours": 11,
+          "median_hours": 6,
+          "count": 12
         },
         "gp-api": {
-          "mean_hours": 2.8,
-          "median_hours": 2.9,
-          "count": 6
+          "mean_hours": 5.8,
+          "median_hours": 3,
+          "count": 9
         },
         "election-api": {
           "mean_hours": 7.5,
