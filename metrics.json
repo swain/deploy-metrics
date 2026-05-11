@@ -1,15 +1,33 @@
 {
-  "generated_at": "2026-05-10T22:15:09.372Z",
+  "generated_at": "2026-05-11T22:22:18.417Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1805,
+      "title": "fix(post-auth-redirect): restore Onboarding - Registration Completed tracking",
+      "author": "bryclevgp",
+      "merged_to_develop_at": "2026-05-11T20:00:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1819,
+      "title": "ENG-10124 Fix audience selection race condition.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-11T17:14:08Z",
+      "deployed_to_master_at": "2026-05-11T20:29:50Z",
+      "mttd_hours": 3.2616666666666667
+    },
     {
       "repo": "gp-webapp",
       "number": 1815,
       "title": "fix(onboarding): refetch campaign on /dashboard after pledge [ENG-10187]",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-08T20:11:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:29:50Z",
+      "mttd_hours": 72.30416666666666
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +35,8 @@
       "title": "remove client-side pro_upgrade_complete event fire from purchase success page",
       "author": "patrick-tgp",
       "merged_to_develop_at": "2026-05-08T17:19:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:29:50Z",
+      "mttd_hours": 75.16888888888889
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +44,8 @@
       "title": "DES: drop icons from top voter issues list",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-08T15:37:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:29:50Z",
+      "mttd_hours": 76.87055555555555
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +53,8 @@
       "title": "feat: nested Claude.md",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-08T02:21:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 12.584444444444445
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +62,8 @@
       "title": "ENG-10197: expand methodology dialog copy on path-to-victory step",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-07T22:42:39Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:13Z",
+      "mttd_hours": 16.226111111111113
     },
     {
       "repo": "gp-webapp",
@@ -2901,40 +2919,13 @@
       "mttd_hours": 92.6075
     },
     {
-      "repo": "gp-webapp",
-      "number": 1135,
-      "title": "ENG-5825: add missing polls analytics events",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-12T15:38:44Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 125.37444444444445
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1132,
-      "title": "First pass at converting some \"leaf\" files in the codebase from JS -> TS",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-11T23:13:17Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 141.79861111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1134,
-      "title": "Added testid tag for isPro button",
-      "author": "dustinsison",
-      "merged_to_develop_at": "2025-11-11T22:41:46Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 142.3238888888889
-    },
-    {
       "repo": "gp-api",
       "number": 1566,
       "title": "feat: nested claude",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-08T02:20:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-08T14:56:32Z",
+      "mttd_hours": 12.595833333333333
     },
     {
       "repo": "gp-api",
@@ -6393,166 +6384,13 @@
       "mttd_hours": 116.55916666666667
     },
     {
-      "repo": "gp-api",
-      "number": 842,
-      "title": "fix: wait for a healthy instance",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T21:50:22Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 119.17916666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 841,
-      "title": "chore: quick fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T21:25:55Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 119.58666666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 840,
-      "title": "chore: improve failure message for e2e tests",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T19:52:25Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 121.145
-    },
-    {
-      "repo": "gp-api",
-      "number": 839,
-      "title": "chore: tsconfig fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T18:13:20Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 122.79638888888888
-    },
-    {
-      "repo": "gp-api",
-      "number": 838,
-      "title": "chore: npx tsc issue",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T17:55:32Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 123.09305555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 835,
-      "title": "chore:-lockfile",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T16:20:11Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 124.68222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 837,
-      "title": "chore: another attempt",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T17:28:10Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 123.54916666666666
-    },
-    {
-      "repo": "gp-api",
-      "number": 803,
-      "title": "better count handling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-12T17:15:54Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 123.75361111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 836,
-      "title": "chore: lockfile",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T16:27:44Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 124.55638888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 834,
-      "title": "chore: lockfile",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T16:14:15Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 124.78111111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 833,
-      "title": "chore: deploy",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T16:11:47Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 124.82222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 818,
-      "title": "feat: ENG-5846 - E2E tests",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-12T16:04:21Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 124.94611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 830,
-      "title": "ENG-5824: one more missing analytics event",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-12T15:38:35Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 125.37555555555555
-    },
-    {
-      "repo": "gp-api",
-      "number": 816,
-      "title": "ENG-5789 Making patchUserMetaData and trackSession smarter",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-12T15:08:33Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 125.87611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 826,
-      "title": "ENG-5521: add issues to poll result analysis complete event",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-12T15:05:39Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 125.92444444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 824,
-      "title": "ENG-5824: respect single poll analysis complete event",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-12T15:05:20Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 125.92972222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 823,
-      "title": "[ENG-5800] - send null to axios for requests w/o body",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-11T23:06:47Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 141.90555555555557
-    },
-    {
       "repo": "people-api",
       "number": 192,
       "title": "Eng 10171 claude",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-08T10:50:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:22:28Z",
+      "mttd_hours": 81.53861111111111
     },
     {
       "repo": "people-api",
@@ -6951,31 +6789,13 @@
       "mttd_hours": 120.30416666666666
     },
     {
-      "repo": "people-api",
-      "number": 102,
-      "title": "Add prisma exception handler",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-12T21:26:11Z",
-      "deployed_to_master_at": "2025-11-12T21:46:26Z",
-      "mttd_hours": 0.3375
-    },
-    {
-      "repo": "people-api",
-      "number": 101,
-      "title": "Better error handling, make tasks thunks so controlling concurrency works as intended",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-12T21:25:57Z",
-      "deployed_to_master_at": "2025-11-12T21:46:26Z",
-      "mttd_hours": 0.3413888888888889
-    },
-    {
       "repo": "election-api",
       "number": 161,
       "title": "Eng 10170 claude",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-08T11:28:46Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:23:23Z",
+      "mttd_hours": 80.91027777777778
     },
     {
       "repo": "election-api",
@@ -6983,8 +6803,8 @@
       "title": "DATA-1896: filter spurious ZIP↔district overlaps in offices-by-zip",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-07T21:10:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:23:23Z",
+      "mttd_hours": 95.21833333333333
     },
     {
       "repo": "election-api",
@@ -7234,25 +7054,20 @@
     {
       "week_start": "2025-11-10",
       "all_repos": {
-        "mean_hours": 108.9,
-        "median_hours": 119.4,
-        "count": 38
+        "mean_hours": 100.3,
+        "median_hours": 113.5,
+        "count": 16
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 99.4,
-          "median_hours": 93.5,
-          "count": 7
+          "mean_hours": 71.6,
+          "median_hours": 81.5,
+          "count": 4
         },
         "gp-api": {
-          "mean_hours": 118.6,
-          "median_hours": 121.1,
-          "count": 29
-        },
-        "people-api": {
-          "mean_hours": 0.3,
-          "median_hours": 0.3,
-          "count": 2
+          "mean_hours": 109.9,
+          "median_hours": 114.1,
+          "count": 12
         }
       }
     },
@@ -7829,25 +7644,45 @@
     {
       "week_start": "2026-05-04",
       "all_repos": {
-        "mean_hours": 8.4,
-        "median_hours": 2.8,
-        "count": 29
+        "mean_hours": 20.2,
+        "median_hours": 5.1,
+        "count": 38
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 11,
-          "median_hours": 6,
-          "count": 12
+          "mean_hours": 22.7,
+          "median_hours": 16.2,
+          "count": 17
         },
         "gp-api": {
-          "mean_hours": 5.8,
-          "median_hours": 3,
-          "count": 9
+          "mean_hours": 6.5,
+          "median_hours": 3.6,
+          "count": 10
+        },
+        "people-api": {
+          "mean_hours": 81.5,
+          "median_hours": 81.5,
+          "count": 1
         },
         "election-api": {
-          "mean_hours": 7.5,
-          "median_hours": 1.7,
-          "count": 8
+          "mean_hours": 23.6,
+          "median_hours": 2.1,
+          "count": 10
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-11",
+      "all_repos": {
+        "mean_hours": 3.3,
+        "median_hours": 3.3,
+        "count": 1
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 3.3,
+          "median_hours": 3.3,
+          "count": 1
         }
       }
     }
