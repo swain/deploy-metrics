@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-05-11T22:22:18.417Z",
+  "generated_at": "2026-05-12T22:25:47.485Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1824,
+      "title": "fix(dashboard): show post-election state in AI Campaign Manager [ENG-7496]",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-12T21:36:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1794,
+      "title": "ENG-7483 Remove call to /voters/voter-file/schedule",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-12T13:54:05Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1820,
+      "title": "Fix e2e tests",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-11T23:38:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1805,
@@ -2917,6 +2944,60 @@
       "merged_to_develop_at": "2025-11-14T00:24:45Z",
       "deployed_to_master_at": "2025-11-17T21:01:12Z",
       "mttd_hours": 92.6075
+    },
+    {
+      "repo": "gp-api",
+      "number": 1576,
+      "title": "Implement domain purchase functionality in DomainsController and Doma…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-12T20:06:09Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1526,
+      "title": "ENG-7494: Send campaign plan Slack message only on free→Pro upgrade",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-12T15:53:46Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1574,
+      "title": "feat(experiments): include clerk_user_id in agent dispatch SQS payload",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-12T14:02:36Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1556,
+      "title": "ENG-7483 Merge /schedule into /outreach",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-12T13:54:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1571,
+      "title": "ENG-7541 - Domain search endpoint with pattern + price cap",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-12T11:53:07Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1573,
+      "title": "Introduce general MCP server",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-12T11:37:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6294,96 +6375,6 @@
       "mttd_hours": 90.60055555555556
     },
     {
-      "repo": "gp-api",
-      "number": 852,
-      "title": "chore: cleanup",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T12:44:13Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 104.28166666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 851,
-      "title": "chore: remove all campaigns call",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T03:41:43Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 113.32333333333334
-    },
-    {
-      "repo": "gp-api",
-      "number": 850,
-      "title": "chore: another attempt",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T03:25:03Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 113.60111111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 849,
-      "title": "chore: another attempt",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T03:07:46Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 113.88916666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 848,
-      "title": "fix: gha",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T02:46:06Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 114.25027777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 847,
-      "title": "chore: another attempt",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T02:44:07Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 114.28333333333333
-    },
-    {
-      "repo": "gp-api",
-      "number": 843,
-      "title": "don't run tests fully in-parallel",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-13T01:30:39Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 115.50777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 846,
-      "title": "chore: remove content sync",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T01:29:22Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 115.52916666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 845,
-      "title": "fix: polling approach attempt",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T00:51:50Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 116.15472222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 844,
-      "title": "chore: fix 503 attempt 2",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-13T00:27:34Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 116.55916666666667
-    },
-    {
       "repo": "people-api",
       "number": 192,
       "title": "Eng 10171 claude",
@@ -7054,9 +7045,9 @@
     {
       "week_start": "2025-11-10",
       "all_repos": {
-        "mean_hours": 100.3,
-        "median_hours": 113.5,
-        "count": 16
+        "mean_hours": 77.9,
+        "median_hours": 90.5,
+        "count": 6
       },
       "by_repo": {
         "gp-webapp": {
@@ -7065,9 +7056,9 @@
           "count": 4
         },
         "gp-api": {
-          "mean_hours": 109.9,
-          "median_hours": 114.1,
-          "count": 12
+          "mean_hours": 90.5,
+          "median_hours": 90.5,
+          "count": 2
         }
       }
     },
