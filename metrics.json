@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T22:25:47.485Z",
+  "generated_at": "2026-05-13T22:26:09.236Z",
   "days_back": 180,
   "prs": [
     {
@@ -2200,15 +2200,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1131,
-      "title": "Update company values with new content and styling",
-      "author": "bryclevgp",
-      "merged_to_develop_at": "2025-11-13T23:31:24Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 93.49666666666667
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1263,
       "title": "[ENG-4387] - next batch, lets go",
       "author": "RavenHursT",
@@ -2937,13 +2928,31 @@
       "mttd_hours": 29.82888888888889
     },
     {
-      "repo": "gp-webapp",
-      "number": 1137,
-      "title": "Second JS 👉 TS pass",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-14T00:24:45Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 92.6075
+      "repo": "gp-api",
+      "number": 1579,
+      "title": "Implement domain registrant verification process",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-13T19:02:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1578,
+      "title": "Disable email forwarding from existing auto-provisioned domains to candidate personal accounts",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-13T03:35:09Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1577,
+      "title": "Add campaignEmail field to Campaign model and update related tests",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-13T00:59:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6357,24 +6366,6 @@
       "mttd_hours": 1.1022222222222222
     },
     {
-      "repo": "gp-api",
-      "number": 855,
-      "title": "chore: type fix",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-14T02:34:54Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 90.43694444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 853,
-      "title": "feat: migrating the rest of the tests",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-14T02:25:05Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 90.60055555555556
-    },
-    {
       "repo": "people-api",
       "number": 192,
       "title": "Eng 10171 claude",
@@ -6781,6 +6772,24 @@
     },
     {
       "repo": "election-api",
+      "number": 164,
+      "title": "[DATA-1903] DistrictTopIssue jurisdictional flags + voter-issues filter",
+      "author": "sanjayr1",
+      "merged_to_develop_at": "2026-05-13T20:31:26Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 165,
+      "title": "feat(positions): expose BallotReady filing fees on position endpoint",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-13T20:06:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
       "number": 161,
       "title": "Eng 10170 claude",
       "author": "tomer-tgp",
@@ -7045,19 +7054,14 @@
     {
       "week_start": "2025-11-10",
       "all_repos": {
-        "mean_hours": 77.9,
-        "median_hours": 90.5,
-        "count": 6
+        "mean_hours": 50.1,
+        "median_hours": 50.1,
+        "count": 2
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 71.6,
-          "median_hours": 81.5,
-          "count": 4
-        },
-        "gp-api": {
-          "mean_hours": 90.5,
-          "median_hours": 90.5,
+          "mean_hours": 50.1,
+          "median_hours": 50.1,
           "count": 2
         }
       }
