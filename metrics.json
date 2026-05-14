@@ -1,15 +1,24 @@
 {
-  "generated_at": "2026-05-13T22:26:09.236Z",
+  "generated_at": "2026-05-14T22:22:48.067Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1828,
+      "title": "feat(briefings): new briefings UI with annotations",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-14T21:53:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1824,
       "title": "fix(dashboard): show post-election state in AI Campaign Manager [ENG-7496]",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-12T21:36:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:26Z",
+      "mttd_hours": 43.42888888888889
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +26,8 @@
       "title": "ENG-7483 Remove call to /voters/voter-file/schedule",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-12T13:54:05Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:26Z",
+      "mttd_hours": 51.13916666666667
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +35,8 @@
       "title": "Fix e2e tests",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-11T23:38:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:26Z",
+      "mttd_hours": 65.39083333333333
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +44,8 @@
       "title": "fix(post-auth-redirect): restore Onboarding - Registration Completed tracking",
       "author": "bryclevgp",
       "merged_to_develop_at": "2026-05-11T20:00:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-11T20:29:50Z",
+      "mttd_hours": 0.4913888888888889
     },
     {
       "repo": "gp-webapp",
@@ -2911,15 +2920,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1141,
-      "title": "[ENG-4387] - Started JS 👉 TS conversions on shared folder",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-14T22:34:47Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 70.44027777777778
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1142,
       "title": "feat: use simpleTable",
       "author": "tomer-tgp",
@@ -2929,12 +2929,84 @@
     },
     {
       "repo": "gp-api",
+      "number": 1591,
+      "title": "fix(grafana): skip RuleGroup creation for controllers with zero alerts",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-14T21:38:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1589,
+      "title": "feat(meetings): /v1/meetings read-side services + endpoints",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-14T20:00:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1586,
+      "title": "Compliance state endpoint for resumable runs",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-14T17:54:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1585,
+      "title": "feat(prisma): add meeting briefing + annotation + chat models",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-14T16:44:43Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1580,
+      "title": "refactor: enhance WebsitesController to enforce content completeness …",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-14T12:02:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1572,
+      "title": "Add prototype pollution protection to AI content schemas",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-14T05:03:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1584,
+      "title": "Reduce OTel metric cardinality to stop Grafana billing spike",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-14T01:23:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1583,
+      "title": "fix(users): order Clerk test-user cleanup oldest-first",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-14T01:24:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
       "number": 1579,
       "title": "Implement domain registrant verification process",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-13T19:02:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 21.9975
     },
     {
       "repo": "gp-api",
@@ -2942,8 +3014,8 @@
       "title": "Disable email forwarding from existing auto-provisioned domains to candidate personal accounts",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-13T03:35:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 37.45
     },
     {
       "repo": "gp-api",
@@ -2951,8 +3023,8 @@
       "title": "Add campaignEmail field to Campaign model and update related tests",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-13T00:59:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 40.04805555555556
     },
     {
       "repo": "gp-api",
@@ -2960,8 +3032,8 @@
       "title": "Implement domain purchase functionality in DomainsController and Doma…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-12T20:06:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 44.93333333333333
     },
     {
       "repo": "gp-api",
@@ -2969,8 +3041,8 @@
       "title": "ENG-7494: Send campaign plan Slack message only on free→Pro upgrade",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-12T15:53:46Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 49.139722222222225
     },
     {
       "repo": "gp-api",
@@ -2978,8 +3050,8 @@
       "title": "feat(experiments): include clerk_user_id in agent dispatch SQS payload",
       "author": "swain",
       "merged_to_develop_at": "2026-05-12T14:02:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 50.9925
     },
     {
       "repo": "gp-api",
@@ -2987,8 +3059,8 @@
       "title": "ENG-7483 Merge /schedule into /outreach",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-12T13:54:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 51.12638888888889
     },
     {
       "repo": "gp-api",
@@ -2996,8 +3068,8 @@
       "title": "ENG-7541 - Domain search endpoint with pattern + price cap",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-12T11:53:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 53.150555555555556
     },
     {
       "repo": "gp-api",
@@ -3005,8 +3077,8 @@
       "title": "Introduce general MCP server",
       "author": "swain",
       "merged_to_develop_at": "2026-05-12T11:37:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 53.405833333333334
     },
     {
       "repo": "gp-api",
@@ -6776,8 +6848,8 @@
       "title": "[DATA-1903] DistrictTopIssue jurisdictional flags + voter-issues filter",
       "author": "sanjayr1",
       "merged_to_develop_at": "2026-05-13T20:31:26Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:15Z",
+      "mttd_hours": 20.51361111111111
     },
     {
       "repo": "election-api",
@@ -6785,8 +6857,8 @@
       "title": "feat(positions): expose BallotReady filing fees on position endpoint",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-13T20:06:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:15Z",
+      "mttd_hours": 20.924444444444443
     },
     {
       "repo": "election-api",
@@ -7054,15 +7126,15 @@
     {
       "week_start": "2025-11-10",
       "all_repos": {
-        "mean_hours": 50.1,
-        "median_hours": 50.1,
-        "count": 2
+        "mean_hours": 29.8,
+        "median_hours": 29.8,
+        "count": 1
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 50.1,
-          "median_hours": 50.1,
-          "count": 2
+          "mean_hours": 29.8,
+          "median_hours": 29.8,
+          "count": 1
         }
       }
     },
@@ -7669,15 +7741,25 @@
     {
       "week_start": "2026-05-11",
       "all_repos": {
-        "mean_hours": 3.3,
-        "median_hours": 3.3,
-        "count": 1
+        "mean_hours": 38,
+        "median_hours": 44.2,
+        "count": 16
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 3.3,
-          "median_hours": 3.3,
-          "count": 1
+          "mean_hours": 32.7,
+          "median_hours": 43.4,
+          "count": 5
+        },
+        "gp-api": {
+          "mean_hours": 44.7,
+          "median_hours": 49.1,
+          "count": 9
+        },
+        "election-api": {
+          "mean_hours": 20.7,
+          "median_hours": 20.7,
+          "count": 2
         }
       }
     }
