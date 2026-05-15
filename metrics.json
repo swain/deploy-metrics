@@ -1,7 +1,52 @@
 {
-  "generated_at": "2026-05-14T22:22:48.067Z",
+  "generated_at": "2026-05-15T22:19:09.856Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1832,
+      "title": "briefings: QA pass — nav, back link, section label, feedback row",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T21:16:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1833,
+      "title": "Add generative to SpeechSynthesisEngine type",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T21:03:06Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1830,
+      "title": "Feature/briefings annotations api client",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-15T18:57:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1827,
+      "title": "TTS and STT - Read Aloud / Dictation",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T16:40:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1829,
+      "title": "feat(briefings): wire BriefingsLanding to /v1/meetings",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T16:07:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1828,
@@ -2919,13 +2964,103 @@
       "mttd_hours": 1.0925
     },
     {
-      "repo": "gp-webapp",
-      "number": 1142,
-      "title": "feat: use simpleTable",
+      "repo": "gp-api",
+      "number": 1603,
+      "title": "Switch TTS default to AWS Polly generative engine (Amy, British English)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T22:17:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1598,
+      "title": "feat(briefings): per-agenda-item summary feedback API",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T22:08:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1606,
+      "title": "feat(annotations): OCR fields on AnnotationNoteAttachment",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-15T21:50:43Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1600,
+      "title": "Feature/notes intake body nullable",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-15T20:20:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1597,
+      "title": "artifact feedback schema",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T19:07:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1596,
+      "title": "Feature/briefing annotations api",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-15T18:58:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1590,
+      "title": "TTS and STT - Read Aloud / Dictation",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T16:39:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1595,
+      "title": "fix(meetings): merge projected + actual briefings in list",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T15:58:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1594,
+      "title": "feat(meetings): orchestration — dispatch + chain + cron",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T15:15:40Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1588,
+      "title": "chore(meetings): remove legacy /meetings/briefings POC",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T00:56:26Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1592,
+      "title": "fat: @mcp audit",
       "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-16T15:11:28Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 29.82888888888889
+      "merged_to_develop_at": "2026-05-14T23:22:50Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6439,6 +6574,15 @@
     },
     {
       "repo": "people-api",
+      "number": 195,
+      "title": "draft: IAM role for Airflow to manage people-api RDS resources",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-15T18:29:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
       "number": 192,
       "title": "Eng 10171 claude",
       "author": "tomer-tgp",
@@ -7123,21 +7267,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-11-10",
-      "all_repos": {
-        "mean_hours": 29.8,
-        "median_hours": 29.8,
-        "count": 1
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 29.8,
-          "median_hours": 29.8,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-11-17",
       "all_repos": {
