@@ -1,7 +1,115 @@
 {
-  "generated_at": "2026-05-15T22:19:09.856Z",
+  "generated_at": "2026-05-16T22:15:33.263Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1844,
+      "title": "fix(briefings): QA pass on meeting briefings detail",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T14:26:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1840,
+      "title": "feat(briefings): client-side PDF download",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T04:51:11Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1843,
+      "title": "briefings: add dev-only manual agent dispatch buttons",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T03:32:53Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1842,
+      "title": "Feature/notes intake phase 1",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-16T02:47:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1831,
+      "title": "feat(briefings): wire summary feedback thumbs to gp-api",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-16T02:39:05Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1841,
+      "title": "briefings: drop green accent hover on list rows",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T01:53:26Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1839,
+      "title": "briefings: add empty state when no schedule or briefings yet",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T00:22:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1838,
+      "title": "fix(briefings): show awaiting-agenda modal/page instead of 404",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T23:53:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1837,
+      "title": "briefings: closest-to-today featured, cap upcoming at 5, recolor Briefing ready pill",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T23:46:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1834,
+      "title": "feat(briefings): Ask AI chat surface",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-05-15T23:07:50Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1836,
+      "title": "briefings: render per-section source pills",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T22:40:13Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1835,
+      "title": "briefings: scope Open Sans to briefings routes",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T22:42:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1832,
@@ -2937,31 +3045,130 @@
       "mttd_hours": 19.608888888888888
     },
     {
-      "repo": "gp-webapp",
-      "number": 1146,
-      "title": "[ENG-4387] - completed button conversions",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-17T20:45:26Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 0.2627777777777778
+      "repo": "gp-api",
+      "number": 1621,
+      "title": "docs(meetings): document end-to-end meeting briefings flow",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T05:01:39Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1140,
-      "title": "ArticleSchema update for dateModified",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-11-17T20:25:20Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 0.5977777777777777
+      "repo": "gp-api",
+      "number": 1620,
+      "title": "fix(briefing-chats): surface attachment-only notes to the AI assistant",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T04:48:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1136,
-      "title": "ENG-4904 Migrate polls to use private buckets and s3 service",
+      "repo": "gp-api",
+      "number": 1616,
+      "title": "meetings: gate auto-dispatch behind MEETINGS_AUTOMATION_ENABLED + add manual dispatch endpoint",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T03:45:41Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1615,
+      "title": "meetings: don't persist MeetingBriefing rows for placeholder briefing_status",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T03:26:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1619,
+      "title": "fix(speech): raise STT WebSocket audio rate cap to fit 16 kHz PCM",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-16T03:10:29Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1617,
+      "title": "docs(env): document PUBLIC_API_URL for speech-to-text WS",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-16T02:50:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1614,
+      "title": "Feature/notes intake phase 2",
       "author": "stephtea",
-      "merged_to_develop_at": "2025-11-17T19:55:39Z",
-      "deployed_to_master_at": "2025-11-17T21:01:12Z",
-      "mttd_hours": 1.0925
+      "merged_to_develop_at": "2026-05-16T02:43:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1613,
+      "title": "Drop city requirement from meeting_briefing + meeting_schedule dispatch",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-16T01:10:46Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1612,
+      "title": "feat(annotations): Pulumi for annotation-attachments bucket + Textrac…",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-16T00:33:56Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1611,
+      "title": "meetings(list): drop projected past dates; narrow past window to 4d",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T23:46:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1607,
+      "title": "feat(chats): briefing chat surface",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-05-15T23:52:20Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1610,
+      "title": "fix(meetings): return awaiting_agenda instead of 404 for meetings without briefing",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-15T23:45:53Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1609,
+      "title": "agent-job-types: dereference schemas before composing + adopt new meeting_briefing contract",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T23:27:43Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1599,
+      "title": "meetings: store briefing artifact JSON on MeetingBriefing for synchronous list reads",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-15T22:43:41Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6564,15 +6771,6 @@
       "mttd_hours": 140.9763888888889
     },
     {
-      "repo": "gp-api",
-      "number": 827,
-      "title": "ENG-4904 create s3 service and deprecate awsS3 service",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-17T19:54:59Z",
-      "deployed_to_master_at": "2025-11-17T21:01:07Z",
-      "mttd_hours": 1.1022222222222222
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7270,20 +7468,20 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 79,
-        "median_hours": 91,
-        "count": 34
+        "mean_hours": 89.5,
+        "median_hours": 92.1,
+        "count": 30
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 76.1,
-          "median_hours": 90.5,
-          "count": 23
+          "mean_hours": 87.5,
+          "median_hours": 92.4,
+          "count": 20
         },
         "gp-api": {
-          "mean_hours": 84.7,
-          "median_hours": 92.1,
-          "count": 8
+          "mean_hours": 96.6,
+          "median_hours": 92.2,
+          "count": 7
         },
         "people-api": {
           "mean_hours": 86.2,
