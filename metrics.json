@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T22:15:33.263Z",
+  "generated_at": "2026-05-17T22:17:06.169Z",
   "days_back": 180,
   "prs": [
     {
@@ -3034,15 +3034,6 @@
       "merged_to_develop_at": "2025-11-19T16:23:24Z",
       "deployed_to_master_at": "2025-11-24T17:35:22Z",
       "mttd_hours": 121.19944444444444
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1147,
-      "title": "Add Slack badges",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-18T00:46:41Z",
-      "deployed_to_master_at": "2025-11-18T20:23:13Z",
-      "mttd_hours": 19.608888888888888
     },
     {
       "repo": "gp-api",
@@ -6762,15 +6753,6 @@
       "mttd_hours": 93.76388888888889
     },
     {
-      "repo": "gp-api",
-      "number": 854,
-      "title": "feat: added slack message on peerly job creation",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-11-18T20:36:25Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 140.9763888888889
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7468,20 +7450,20 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 89.5,
+        "mean_hours": 90.1,
         "median_hours": 92.1,
-        "count": 30
+        "count": 28
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 87.5,
-          "median_hours": 92.4,
-          "count": 20
+          "mean_hours": 91,
+          "median_hours": 93.3,
+          "count": 19
         },
         "gp-api": {
-          "mean_hours": 96.6,
-          "median_hours": 92.2,
-          "count": 7
+          "mean_hours": 89.2,
+          "median_hours": 92.1,
+          "count": 6
         },
         "people-api": {
           "mean_hours": 86.2,
