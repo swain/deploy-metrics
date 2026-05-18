@@ -1,7 +1,43 @@
 {
-  "generated_at": "2026-05-17T22:17:06.169Z",
+  "generated_at": "2026-05-18T22:20:09.244Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1850,
+      "title": "briefings: lovable polish — Vaul drawer, panel dock, simplified read-aloud",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-05-18T21:11:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1847,
+      "title": "fix empty state text",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-18T19:21:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1846,
+      "title": "fix(briefings): drop \"View briefing\" CTA from Awaiting agenda dialog",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-18T16:50:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1845,
+      "title": "fix(dashboard): elected officials land on briefings, not polls",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-18T14:57:36Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1844,
@@ -3018,22 +3054,13 @@
       "mttd_hours": 114.65472222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1152,
-      "title": "fix: error message on github action",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-19T21:18:37Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 116.27916666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1150,
-      "title": "[ENG-4387] - Converted more shared files",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-19T16:23:24Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 121.19944444444444
+      "repo": "gp-api",
+      "number": 1625,
+      "title": "fix(briefing-chats): drop topic filter from get_my_notes",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-18T15:10:50Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7158,13 +7185,22 @@
       "mttd_hours": 69.77555555555556
     },
     {
-      "repo": "people-api",
-      "number": 100,
-      "title": "ENG-5872: bump sample limit to 10000",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-19T19:25:06Z",
-      "deployed_to_master_at": "2025-11-24T19:43:21Z",
-      "mttd_hours": 120.30416666666666
+      "repo": "election-api",
+      "number": 170,
+      "title": "[DATA-1922] Drop gp_candidate_id from Candidacy",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-18T19:07:01Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 169,
+      "title": "[DATA-1922] Widen Race and Candidacy schemas for onboarding flow",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-18T18:41:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "election-api",
@@ -7450,15 +7486,15 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 90.1,
-        "median_hours": 92.1,
-        "count": 28
+        "mean_hours": 86.6,
+        "median_hours": 91.4,
+        "count": 25
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 91,
-          "median_hours": 93.3,
-          "count": 19
+          "mean_hours": 87.8,
+          "median_hours": 91.4,
+          "count": 17
         },
         "gp-api": {
           "mean_hours": 89.2,
@@ -7466,9 +7502,9 @@
           "count": 6
         },
         "people-api": {
-          "mean_hours": 86.2,
-          "median_hours": 69.8,
-          "count": 3
+          "mean_hours": 69.2,
+          "median_hours": 69.2,
+          "count": 2
         }
       }
     },
