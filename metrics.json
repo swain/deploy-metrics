@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-05-18T22:20:09.244Z",
+  "generated_at": "2026-05-19T22:26:10.312Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1852,
+      "title": "Onboarding updates: top bar, copy, projection cards, styleguide cleanup",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-19T20:02:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1850,
@@ -2973,85 +2982,13 @@
       "mttd_hours": 90.48694444444445
     },
     {
-      "repo": "gp-webapp",
-      "number": 1160,
-      "title": "fix fetch revalidate calls",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T22:11:47Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 91.39305555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1151,
-      "title": "ENG-5923: fix the recommended option",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T20:15:10Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 93.33666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1156,
-      "title": "ENG-5861,ENG-5863 [part 1]: scaffold poll creation flow and details step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T20:04:40Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 93.51166666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1155,
-      "title": "ENG-5860: scaffold poll creation page",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T20:04:16Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 93.51833333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1139,
-      "title": "Prod <- QA",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T18:00:10Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 95.58666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1158,
-      "title": "Bump validator from 13.15.15 to 13.15.20",
-      "author": "dependabot[bot]",
-      "merged_to_develop_at": "2025-11-20T15:34:46Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 98.01
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1159,
-      "title": "Bump js-yaml from 4.1.0 to 4.1.1",
-      "author": "dependabot[bot]",
-      "merged_to_develop_at": "2025-11-20T14:33:39Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 99.0286111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1157,
-      "title": "feat: experimental tags",
+      "repo": "gp-api",
+      "number": 1593,
+      "title": "feat(tcrCompliance): add createAgenticTcrCompliance endpoint and rela…",
       "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-20T05:07:08Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 108.47055555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1153,
-      "title": "[ENG-4387] - Some more shared files converted",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-19T22:56:05Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 114.65472222222222
+      "merged_to_develop_at": "2026-05-19T03:24:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6727,15 +6664,6 @@
     },
     {
       "repo": "gp-api",
-      "number": 864,
-      "title": "add container insights to get better metrics",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T20:04:55Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 93.50138888888888
-    },
-    {
-      "repo": "gp-api",
       "number": 859,
       "title": "ENG-5512 - Switch P2V electionTypes to come from the election-api, drop unneeded services and tables",
       "author": "oakinh",
@@ -6751,33 +6679,6 @@
       "merged_to_develop_at": "2025-11-20T22:59:20Z",
       "deployed_to_master_at": "2025-11-24T17:35:00Z",
       "mttd_hours": 90.59444444444445
-    },
-    {
-      "repo": "gp-api",
-      "number": 865,
-      "title": "[ENG-5911] - Kill subscription with user delete",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-20T21:34:07Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 92.01472222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 825,
-      "title": "remove unused poll issue analysis handling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T21:23:58Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 92.18388888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 863,
-      "title": "remove unused lambdas",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T19:49:10Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 93.76388888888889
     },
     {
       "repo": "people-api",
@@ -7486,20 +7387,20 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 86.6,
-        "median_hours": 91.4,
-        "count": 25
+        "mean_hours": 75.6,
+        "median_hours": 73.5,
+        "count": 12
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 87.8,
-          "median_hours": 91.4,
-          "count": 17
+          "mean_hours": 75.6,
+          "median_hours": 73.8,
+          "count": 8
         },
         "gp-api": {
-          "mean_hours": 89.2,
-          "median_hours": 92.1,
-          "count": 6
+          "mean_hours": 81.9,
+          "median_hours": 81.9,
+          "count": 2
         },
         "people-api": {
           "mean_hours": 69.2,
