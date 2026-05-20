@@ -1,7 +1,43 @@
 {
-  "generated_at": "2026-05-19T22:26:10.312Z",
+  "generated_at": "2026-05-20T22:30:00.918Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1854,
+      "title": "feat(briefings): hyperlink chat annotations + note marker icon",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-20T21:42:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1853,
+      "title": "styleguide: make CSS the canonical source for design tokens",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-20T20:23:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1626,
+      "title": "styleguide: read colors from CSS custom properties instead of JSON tokens",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-20T16:56:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1595,
+      "title": "styleguide: overhaul Colors stories with Figma token exports",
+      "author": "kmcost",
+      "merged_to_develop_at": "2026-05-20T16:56:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1852,
@@ -2917,69 +2953,6 @@
       "merged_to_develop_at": "2025-11-21T23:28:06Z",
       "deployed_to_master_at": "2025-11-24T17:35:22Z",
       "mttd_hours": 66.1211111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1170,
-      "title": "fix: job page application loading",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-21T22:04:11Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 67.51972222222223
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1166,
-      "title": "feat: new pipeline",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-21T20:42:29Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 68.88138888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1164,
-      "title": "[ENG-4387] - keep on truckin'",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-21T15:53:34Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 73.69666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1165,
-      "title": "ENG-5863: add audience step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-21T15:35:58Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 73.99
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1161,
-      "title": "convert lots of polls files to typescript",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-21T15:35:34Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 73.99666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1162,
-      "title": "ENG-5863: fix error messages on poll details step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-20T23:33:42Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 90.02777777777777
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1163,
-      "title": "fix: infinite loop",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-20T23:06:09Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 90.48694444444445
     },
     {
       "repo": "gp-api",
@@ -6663,24 +6636,6 @@
       "mttd_hours": 216.97583333333333
     },
     {
-      "repo": "gp-api",
-      "number": 859,
-      "title": "ENG-5512 - Switch P2V electionTypes to come from the election-api, drop unneeded services and tables",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-21T16:20:23Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 73.24361111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 860,
-      "title": "Eng 4917 implement area code selection logic in api integration",
-      "author": "awardquick",
-      "merged_to_develop_at": "2025-11-20T22:59:20Z",
-      "deployed_to_master_at": "2025-11-24T17:35:00Z",
-      "mttd_hours": 90.59444444444445
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7077,15 +7032,6 @@
       "mttd_hours": 68.5513888888889
     },
     {
-      "repo": "people-api",
-      "number": 104,
-      "title": "Add New Relic",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-21T21:56:49Z",
-      "deployed_to_master_at": "2025-11-24T19:43:21Z",
-      "mttd_hours": 69.77555555555556
-    },
-    {
       "repo": "election-api",
       "number": 170,
       "title": "[DATA-1922] Drop gp_candidate_id from Candidacy",
@@ -7387,25 +7333,20 @@
     {
       "week_start": "2025-11-17",
       "all_repos": {
-        "mean_hours": 75.6,
-        "median_hours": 73.5,
-        "count": 12
+        "mean_hours": 67.3,
+        "median_hours": 67.3,
+        "count": 2
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 75.6,
-          "median_hours": 73.8,
-          "count": 8
-        },
-        "gp-api": {
-          "mean_hours": 81.9,
-          "median_hours": 81.9,
-          "count": 2
+          "mean_hours": 66.1,
+          "median_hours": 66.1,
+          "count": 1
         },
         "people-api": {
-          "mean_hours": 69.2,
-          "median_hours": 69.2,
-          "count": 2
+          "mean_hours": 68.6,
+          "median_hours": 68.6,
+          "count": 1
         }
       }
     },
