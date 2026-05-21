@@ -1,7 +1,61 @@
 {
-  "generated_at": "2026-05-20T22:30:00.918Z",
+  "generated_at": "2026-05-21T22:28:24.564Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1858,
+      "title": "styleguide(stories): add Accordion, Collapsible, Hover Card disclosure stories",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-21T20:40:58Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1612,
+      "title": "styleguide: add Borders, Icons, Shadows, and Spacing foundation stories",
+      "author": "kmcost",
+      "merged_to_develop_at": "2026-05-21T18:08:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1857,
+      "title": "chore: refresh contacts visual snapshot after Open Sans body font change",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-21T01:28:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1856,
+      "title": "ci(update-snapshots): commit regenerated baselines even when other tests fail",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-21T00:00:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1855,
+      "title": "styleguide: switch app to Open Sans, remove SF Pro and Outfit",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-20T23:38:37Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1599,
+      "title": "styleguide: overhaul Typography stories and add combined Logo story",
+      "author": "kmcost",
+      "merged_to_develop_at": "2026-05-20T22:59:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1854,
@@ -2946,13 +3000,13 @@
       "mttd_hours": 1.4572222222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1172,
-      "title": "[ENG-4387] - More JS 👉 TS conversions",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-21T23:28:06Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 66.1211111111111
+      "repo": "gp-api",
+      "number": 1629,
+      "title": "Eng 7552 submit tcr",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-21T02:21:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7023,15 +7077,6 @@
       "mttd_hours": 2.029166666666667
     },
     {
-      "repo": "people-api",
-      "number": 105,
-      "title": "Run npm i",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-21T23:10:16Z",
-      "deployed_to_master_at": "2025-11-24T19:43:21Z",
-      "mttd_hours": 68.5513888888889
-    },
-    {
       "repo": "election-api",
       "number": 170,
       "title": "[DATA-1922] Drop gp_candidate_id from Candidacy",
@@ -7330,26 +7375,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-11-17",
-      "all_repos": {
-        "mean_hours": 67.3,
-        "median_hours": 67.3,
-        "count": 2
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 66.1,
-          "median_hours": 66.1,
-          "count": 1
-        },
-        "people-api": {
-          "mean_hours": 68.6,
-          "median_hours": 68.6,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-11-24",
       "all_repos": {
