@@ -1,7 +1,43 @@
 {
-  "generated_at": "2026-05-21T22:28:24.564Z",
+  "generated_at": "2026-05-22T22:21:01.753Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1865,
+      "title": "styleguide(switch): off-state track contrast fix",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-22T21:54:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1863,
+      "title": "styleguide: 26 component Playgrounds + 3 component fixes",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-22T20:33:07Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1862,
+      "title": "styleguide(sidebar): drop the page-title header from the story",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-22T02:12:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1860,
+      "title": "styleguide(stories): selection, form input, layout, and sidebar components",
+      "author": "fromjustin",
+      "merged_to_develop_at": "2026-05-22T01:35:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1858,
@@ -2998,6 +3034,15 @@
       "merged_to_develop_at": "2025-11-24T16:07:56Z",
       "deployed_to_master_at": "2025-11-24T17:35:22Z",
       "mttd_hours": 1.4572222222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1630,
+      "title": "feat(tcrCompliance): implement agentic compliance kickoff handling",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-22T19:34:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
