@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-05-22T22:21:01.753Z",
+  "generated_at": "2026-05-23T22:16:37.142Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1866,
+      "title": "Update election filing API route and adjust form data handling",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-23T11:18:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1865,
@@ -3000,40 +3009,13 @@
       "mttd_hours": 195.3047222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1178,
-      "title": "fix: fix action for branch promotion",
+      "repo": "gp-api",
+      "number": 1635,
+      "title": "hotfix: allow website updates without registrant verification gate",
       "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-24T19:40:44Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 218.72972222222222
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1175,
-      "title": "ENG-5866: add image step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-24T18:04:10Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 220.33916666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1174,
-      "title": "ENG-5866: support schedule step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-24T18:03:55Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 220.34333333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1173,
-      "title": "ENG-5863: load intros",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-24T16:07:56Z",
-      "deployed_to_master_at": "2025-11-24T17:35:22Z",
-      "mttd_hours": 1.4572222222222222
+      "merged_to_develop_at": "2026-05-23T03:15:36Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6726,15 +6708,6 @@
       "mttd_hours": 176.4686111111111
     },
     {
-      "repo": "gp-api",
-      "number": 872,
-      "title": "fix: broken tests",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-11-24T21:25:06Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 216.97583333333333
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7095,33 +7068,6 @@
       "mttd_hours": 142.19611111111112
     },
     {
-      "repo": "people-api",
-      "number": 109,
-      "title": "Revert \"Update SST config to add pg_stats and related (#108)\"",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-24T22:08:51Z",
-      "deployed_to_master_at": "2025-12-09T16:23:20Z",
-      "mttd_hours": 354.2413888888889
-    },
-    {
-      "repo": "people-api",
-      "number": 108,
-      "title": "Update SST config to add pg_stats and related",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-24T21:36:31Z",
-      "deployed_to_master_at": "2025-12-09T16:23:20Z",
-      "mttd_hours": 354.78027777777777
-    },
-    {
-      "repo": "people-api",
-      "number": 106,
-      "title": "Fix deploy",
-      "author": "oakinh",
-      "merged_to_develop_at": "2025-11-24T17:41:36Z",
-      "deployed_to_master_at": "2025-11-24T19:43:21Z",
-      "mttd_hours": 2.029166666666667
-    },
-    {
       "repo": "election-api",
       "number": 170,
       "title": "[DATA-1922] Drop gp_candidate_id from Candidacy",
@@ -7423,25 +7369,20 @@
     {
       "week_start": "2025-11-24",
       "all_repos": {
-        "mean_hours": 189.2,
-        "median_hours": 193.5,
-        "count": 16
+        "mean_hours": 179.7,
+        "median_hours": 174.7,
+        "count": 8
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 177.6,
-          "median_hours": 195.3,
-          "count": 7
+          "mean_hours": 194.1,
+          "median_hours": 194.7,
+          "count": 3
         },
         "gp-api": {
-          "mean_hours": 178.7,
-          "median_hours": 171.1,
-          "count": 6
-        },
-        "people-api": {
-          "mean_hours": 237,
-          "median_hours": 354.2,
-          "count": 3
+          "mean_hours": 171,
+          "median_hours": 169.3,
+          "count": 5
         }
       }
     },
