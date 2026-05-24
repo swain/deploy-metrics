@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T22:16:37.142Z",
+  "generated_at": "2026-05-24T22:18:26.683Z",
   "days_back": 180,
   "prs": [
     {
@@ -2982,31 +2982,13 @@
       "mttd_hours": 55.83277777777778
     },
     {
-      "repo": "gp-webapp",
-      "number": 1181,
-      "title": "[ENG-4387] - A couple of missed converted files and fixes a hydration error in dev mode",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-25T22:02:48Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 192.36194444444445
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1180,
-      "title": "[ENG-4387] - Remove all Storybook resources",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-25T19:41:48Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 194.71194444444444
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1179,
-      "title": "[ENG-4387] - continuing ts conversion",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-25T19:06:14Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 195.3047222222222
+      "repo": "gp-api",
+      "number": 1638,
+      "title": "feat(tcrCompliance): enhance compliance model and update service logic",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-24T20:17:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7369,16 +7351,11 @@
     {
       "week_start": "2025-11-24",
       "all_repos": {
-        "mean_hours": 179.7,
-        "median_hours": 174.7,
-        "count": 8
+        "mean_hours": 171,
+        "median_hours": 169.3,
+        "count": 5
       },
       "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 194.1,
-          "median_hours": 194.7,
-          "count": 3
-        },
         "gp-api": {
           "mean_hours": 171,
           "median_hours": 169.3,
