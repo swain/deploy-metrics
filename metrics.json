@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T22:18:26.683Z",
+  "generated_at": "2026-05-25T22:22:07.609Z",
   "days_back": 180,
   "prs": [
     {
@@ -2980,6 +2980,24 @@
       "merged_to_develop_at": "2025-12-01T14:34:33Z",
       "deployed_to_master_at": "2025-12-03T22:24:31Z",
       "mttd_hours": 55.83277777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1637,
+      "title": "Add admin role requirement to positions endpoints",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-25T22:00:20Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1602,
+      "title": "Validate campaign state codes and normalize to uppercase",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-25T20:45:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6654,42 +6672,6 @@
       "mttd_hours": 167.4363888888889
     },
     {
-      "repo": "gp-api",
-      "number": 869,
-      "title": "create poll message bias detection",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-26T21:16:00Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 169.1275
-    },
-    {
-      "repo": "gp-api",
-      "number": 868,
-      "title": "Create LLM service - Deprecate AI service ",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-11-26T21:08:37Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 169.25055555555556
-    },
-    {
-      "repo": "gp-api",
-      "number": 876,
-      "title": "[ENG-6041] - Swaps out deprecated Vercel API endpoint",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-26T17:26:01Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 172.96055555555554
-    },
-    {
-      "repo": "gp-api",
-      "number": 873,
-      "title": "ENG-6057: upload CSVs directly to Slack",
-      "author": "swain",
-      "merged_to_develop_at": "2025-11-26T13:55:32Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 176.4686111111111
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7351,15 +7333,15 @@
     {
       "week_start": "2025-11-24",
       "all_repos": {
-        "mean_hours": 171,
-        "median_hours": 169.3,
-        "count": 5
+        "mean_hours": 167.4,
+        "median_hours": 167.4,
+        "count": 1
       },
       "by_repo": {
         "gp-api": {
-          "mean_hours": 171,
-          "median_hours": 169.3,
-          "count": 5
+          "mean_hours": 167.4,
+          "median_hours": 167.4,
+          "count": 1
         }
       }
     },
