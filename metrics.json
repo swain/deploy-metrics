@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-05-25T22:22:07.609Z",
+  "generated_at": "2026-05-26T22:29:06.713Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1870,
+      "title": "Add campaign committee to campaign update in CommitteeCheckPage",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-26T21:08:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1868,
+      "title": "Feature/briefing single page layout",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-26T19:02:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1866,
@@ -2980,6 +2998,87 @@
       "merged_to_develop_at": "2025-12-01T14:34:33Z",
       "deployed_to_master_at": "2025-12-03T22:24:31Z",
       "mttd_hours": 55.83277777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1650,
+      "title": "Gate daily briefing cron to elected offices created on/after 2026-03-01",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-26T22:07:32Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1647,
+      "title": "Decouple meeting_schedule and meeting_briefings",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-26T22:18:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1649,
+      "title": "remove admin gate",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-26T21:48:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1646,
+      "title": "feat(domains): enhance domain purchase functionality with maxPrice va…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-26T19:12:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1628,
+      "title": "Block Stripe-managed fields from direct API updates",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-26T06:04:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1641,
+      "title": "Prevent Clerk identity rebinding on existing users",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-26T03:55:58Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1644,
+      "title": "feat(domains): implement purchase domain functionality in DomainsCont…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-26T02:20:31Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1640,
+      "title": "Add campaign ID validation to position update/delete",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-26T00:12:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1642,
+      "title": "Validate website status before enriching campaign user",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-25T23:47:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6663,15 +6762,6 @@
       "mttd_hours": 50.43138888888889
     },
     {
-      "repo": "gp-api",
-      "number": 878,
-      "title": "Ravenhurst/fix linting formatting",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-11-26T22:57:28Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 167.4363888888889
-    },
-    {
       "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
@@ -7330,21 +7420,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-11-24",
-      "all_repos": {
-        "mean_hours": 167.4,
-        "median_hours": 167.4,
-        "count": 1
-      },
-      "by_repo": {
-        "gp-api": {
-          "mean_hours": 167.4,
-          "median_hours": 167.4,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-12-01",
       "all_repos": {
