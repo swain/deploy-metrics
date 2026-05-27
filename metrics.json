@@ -1,7 +1,97 @@
 {
-  "generated_at": "2026-05-26T22:29:06.713Z",
+  "generated_at": "2026-05-27T22:31:53.531Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1879,
+      "title": "Briefings: bottom share drawer backed by server-side PDF",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-27T22:19:31Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1878,
+      "title": "Feature/active card notes",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-27T21:41:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1880,
+      "title": "Enhance E2E tests for website management by adding address input hand…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-27T21:12:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1876,
+      "title": "Land EOs on Meetings, not Polls, when switching into an EO org",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-27T19:48:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1877,
+      "title": "fix(org-picker): persist selected org across sessions",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-27T19:50:30Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1873,
+      "title": "Agent job types",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-27T14:20:58Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1874,
+      "title": "Briefings: fire List Viewed and Briefing Viewed analytics events",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-27T13:56:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1851,
+      "title": "ENG-10229 Add hubspot attribution.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-27T13:22:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1872,
+      "title": "Briefings: anchored cycler surfaces replace AskAiSheet",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-05-27T12:59:06Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1871,
+      "title": "Feature/note attachments",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-26T23:08:45Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1870,
@@ -2998,6 +3088,114 @@
       "merged_to_develop_at": "2025-12-01T14:34:33Z",
       "deployed_to_master_at": "2025-12-03T22:24:31Z",
       "mttd_hours": 55.83277777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1657,
+      "title": "meetings: public briefing PDF endpoint (server-side pdfkit)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-27T22:19:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1656,
+      "title": "feat(annotations): accept card-level anchor (json_path only, no offsets)",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-27T21:37:06Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1654,
+      "title": "ENG 10222 strategic llm calls",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-27T21:32:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1631,
+      "title": "Secure signed upload URL generation with validation",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-27T16:39:57Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1622,
+      "title": "Fix impersonation authorization to require admin actorUser",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-27T16:39:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1652,
+      "title": "feat(annotations): raise per-note attachment cap from 1 to 20",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-27T15:57:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1651,
+      "title": "meetings: fire Agenda Picked Up event after briefing row write",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-27T13:56:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1575,
+      "title": "ENG-7571 Sort the selected tasks for the digest email by date asc.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-27T13:21:56Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1627,
+      "title": "Eng-10225 Add back due date to slack message for outreach.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-05-27T13:07:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1605,
+      "title": "Restrict user metadata fields in UpdateMetadata schema",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-27T04:39:30Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1604,
+      "title": "Replace parseInt with Number for type coercion",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-27T03:14:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1601,
+      "title": "Hardcode outreach pricing and remove pricePerContact parameter",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-26T23:29:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -6763,6 +6961,15 @@
     },
     {
       "repo": "people-api",
+      "number": 196,
+      "title": "Constituent Download Refactor",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-27T17:21:53Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
       "number": 195,
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
       "author": "hhkarimi",
@@ -7120,6 +7327,33 @@
       "merged_to_develop_at": "2025-12-03T18:11:34Z",
       "deployed_to_master_at": "2025-12-09T16:23:20Z",
       "mttd_hours": 142.19611111111112
+    },
+    {
+      "repo": "election-api",
+      "number": 173,
+      "title": "[DATA-1922] Use simple-majority (50% + 1) win-number estimate",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-27T19:40:33Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 171,
+      "title": "[DATA-1922] Add campaign-strategy-context endpoint",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-27T18:02:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 172,
+      "title": "feat(races): filing-fee lookup by BallotReady race hash",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-27T16:42:04Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "election-api",
