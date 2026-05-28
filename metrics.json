@@ -1,15 +1,177 @@
 {
-  "generated_at": "2026-05-27T22:31:53.531Z",
+  "generated_at": "2026-05-28T22:32:11.158Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1902,
+      "title": "fix(election-result): redirect winners into briefings",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T22:28:17Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1898,
+      "title": "test: add coverage for campaign-assistant ChatProvider and contacts CRM components",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:51:52Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1897,
+      "title": "test: add unit tests for 4 pure helpers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:51:09Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1894,
+      "title": "fix: stale-closure bug in CreatePoll useEvent analytics call",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:47:43Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1899,
+      "title": "fix(briefings): selection toolbar on full-passage highlights + detail UI polish",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T21:23:49Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 0.6088888888888889
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1901,
+      "title": "Feature/briefing button font size",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T21:02:24Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 0.9658333333333333
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1893,
+      "title": "Feature/briefing stakeholder feedback",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T20:36:43Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 1.393888888888889
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1892,
+      "title": "feat(briefings): instrument Briefing Assistant tab analytics",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T18:55:00Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 3.089166666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1887,
+      "title": "fix(briefings): lock scrollspy during TOC-click smooth-scroll",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T17:54:54Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 4.090833333333333
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1891,
+      "title": "feat(briefings): popover composer for thumbs-down agenda-item feedback",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T16:33:30Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 5.4475
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1886,
+      "title": "feat(dashboard): rename Meetings to Briefing Assistant, show page title in mobile header",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T15:28:16Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 6.534722222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1885,
+      "title": "fix(briefings): suppress scrollspy during TOC-click smooth-scroll",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T15:24:00Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 6.605833333333333
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1875,
+      "title": "Constituent Download Refactor",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T15:25:45Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 6.576666666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1884,
+      "title": "fix(briefings): force PDF download instead of inline open",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T15:18:37Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 6.695555555555556
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1881,
+      "title": "feat(briefings): attachment thumbnails (image preview / file icon) wi…",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T14:59:24Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 7.015833333333333
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1883,
+      "title": "fix(briefings): sort executive summary items by agenda order",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T14:57:03Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 7.055
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1882,
+      "title": "feat(briefings): Lovable parity for note/chat/bug annotation surfaces",
+      "author": "Collin-GP",
+      "merged_to_develop_at": "2026-05-28T13:56:02Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 8.071944444444444
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1869,
+      "title": "fix(onboarding): store BallotReady race hash on details.raceId",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-27T23:15:53Z",
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 22.74111111111111
+    },
     {
       "repo": "gp-webapp",
       "number": 1879,
       "title": "Briefings: bottom share drawer backed by server-side PDF",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-27T22:19:31Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 23.680555555555557
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +179,8 @@
       "title": "Feature/active card notes",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-27T21:41:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 24.308333333333334
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +188,8 @@
       "title": "Enhance E2E tests for website management by adding address input hand…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-27T21:12:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 24.7925
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +197,8 @@
       "title": "Land EOs on Meetings, not Polls, when switching into an EO org",
       "author": "swain",
       "merged_to_develop_at": "2026-05-27T19:48:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 26.201666666666668
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +206,8 @@
       "title": "fix(org-picker): persist selected org across sessions",
       "author": "swain",
       "merged_to_develop_at": "2026-05-27T19:50:30Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 26.164166666666667
     },
     {
       "repo": "gp-webapp",
@@ -53,8 +215,8 @@
       "title": "Agent job types",
       "author": "swain",
       "merged_to_develop_at": "2026-05-27T14:20:58Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 31.656388888888888
     },
     {
       "repo": "gp-webapp",
@@ -62,8 +224,8 @@
       "title": "Briefings: fire List Viewed and Briefing Viewed analytics events",
       "author": "swain",
       "merged_to_develop_at": "2026-05-27T13:56:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 32.05888888888889
     },
     {
       "repo": "gp-webapp",
@@ -71,8 +233,8 @@
       "title": "ENG-10229 Add hubspot attribution.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-27T13:22:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 32.62416666666667
     },
     {
       "repo": "gp-webapp",
@@ -80,8 +242,8 @@
       "title": "Briefings: anchored cycler surfaces replace AskAiSheet",
       "author": "Collin-GP",
       "merged_to_develop_at": "2026-05-27T12:59:06Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 33.020833333333336
     },
     {
       "repo": "gp-webapp",
@@ -89,8 +251,8 @@
       "title": "Feature/note attachments",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-26T23:08:45Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 46.86
     },
     {
       "repo": "gp-webapp",
@@ -98,8 +260,8 @@
       "title": "Add campaign committee to campaign update in CommitteeCheckPage",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-26T21:08:44Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 48.860277777777775
     },
     {
       "repo": "gp-webapp",
@@ -107,8 +269,8 @@
       "title": "Feature/briefing single page layout",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-26T19:02:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 50.965
     },
     {
       "repo": "gp-webapp",
@@ -116,8 +278,8 @@
       "title": "Update election filing API route and adjust form data handling",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-23T11:18:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 130.6913888888889
     },
     {
       "repo": "gp-webapp",
@@ -125,8 +287,8 @@
       "title": "styleguide(switch): off-state track contrast fix",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-22T21:54:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 144.10111111111112
     },
     {
       "repo": "gp-webapp",
@@ -134,8 +296,8 @@
       "title": "styleguide: 26 component Playgrounds + 3 component fixes",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-22T20:33:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 145.45388888888888
     },
     {
       "repo": "gp-webapp",
@@ -143,8 +305,8 @@
       "title": "styleguide(sidebar): drop the page-title header from the story",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-22T02:12:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 163.79972222222221
     },
     {
       "repo": "gp-webapp",
@@ -152,8 +314,8 @@
       "title": "styleguide(stories): selection, form input, layout, and sidebar components",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-22T01:35:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 164.41666666666666
     },
     {
       "repo": "gp-webapp",
@@ -161,8 +323,8 @@
       "title": "styleguide(stories): add Accordion, Collapsible, Hover Card disclosure stories",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-21T20:40:58Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 169.32305555555556
     },
     {
       "repo": "gp-webapp",
@@ -170,8 +332,8 @@
       "title": "styleguide: add Borders, Icons, Shadows, and Spacing foundation stories",
       "author": "kmcost",
       "merged_to_develop_at": "2026-05-21T18:08:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 171.86833333333334
     },
     {
       "repo": "gp-webapp",
@@ -179,8 +341,8 @@
       "title": "chore: refresh contacts visual snapshot after Open Sans body font change",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-21T01:28:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 188.52583333333334
     },
     {
       "repo": "gp-webapp",
@@ -188,8 +350,8 @@
       "title": "ci(update-snapshots): commit regenerated baselines even when other tests fail",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-21T00:00:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 189.99416666666667
     },
     {
       "repo": "gp-webapp",
@@ -197,8 +359,8 @@
       "title": "styleguide: switch app to Open Sans, remove SF Pro and Outfit",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-20T23:38:37Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 190.36222222222221
     },
     {
       "repo": "gp-webapp",
@@ -206,8 +368,8 @@
       "title": "styleguide: overhaul Typography stories and add combined Logo story",
       "author": "kmcost",
       "merged_to_develop_at": "2026-05-20T22:59:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 191.01638888888888
     },
     {
       "repo": "gp-webapp",
@@ -215,8 +377,8 @@
       "title": "feat(briefings): hyperlink chat annotations + note marker icon",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-20T21:42:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 192.29
     },
     {
       "repo": "gp-webapp",
@@ -224,8 +386,8 @@
       "title": "styleguide: make CSS the canonical source for design tokens",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-20T20:23:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 193.615
     },
     {
       "repo": "gp-webapp",
@@ -233,8 +395,8 @@
       "title": "styleguide: read colors from CSS custom properties instead of JSON tokens",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-20T16:56:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 197.06555555555556
     },
     {
       "repo": "gp-webapp",
@@ -242,8 +404,8 @@
       "title": "styleguide: overhaul Colors stories with Figma token exports",
       "author": "kmcost",
       "merged_to_develop_at": "2026-05-20T16:56:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 197.065
     },
     {
       "repo": "gp-webapp",
@@ -251,8 +413,8 @@
       "title": "Onboarding updates: top bar, copy, projection cards, styleguide cleanup",
       "author": "fromjustin",
       "merged_to_develop_at": "2026-05-19T20:02:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 217.96777777777777
     },
     {
       "repo": "gp-webapp",
@@ -260,8 +422,8 @@
       "title": "briefings: lovable polish — Vaul drawer, panel dock, simplified read-aloud",
       "author": "Collin-GP",
       "merged_to_develop_at": "2026-05-18T21:11:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 240.81333333333333
     },
     {
       "repo": "gp-webapp",
@@ -269,8 +431,8 @@
       "title": "fix empty state text",
       "author": "swain",
       "merged_to_develop_at": "2026-05-18T19:21:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 242.64166666666668
     },
     {
       "repo": "gp-webapp",
@@ -278,8 +440,8 @@
       "title": "fix(briefings): drop \"View briefing\" CTA from Awaiting agenda dialog",
       "author": "swain",
       "merged_to_develop_at": "2026-05-18T16:50:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 245.16666666666666
     },
     {
       "repo": "gp-webapp",
@@ -287,8 +449,8 @@
       "title": "fix(dashboard): elected officials land on briefings, not polls",
       "author": "swain",
       "merged_to_develop_at": "2026-05-18T14:57:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 247.04583333333332
     },
     {
       "repo": "gp-webapp",
@@ -296,8 +458,8 @@
       "title": "fix(briefings): QA pass on meeting briefings detail",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T14:26:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 295.55833333333334
     },
     {
       "repo": "gp-webapp",
@@ -305,8 +467,8 @@
       "title": "feat(briefings): client-side PDF download",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T04:51:11Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 305.15277777777777
     },
     {
       "repo": "gp-webapp",
@@ -314,8 +476,8 @@
       "title": "briefings: add dev-only manual agent dispatch buttons",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T03:32:53Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 306.4577777777778
     },
     {
       "repo": "gp-webapp",
@@ -323,8 +485,8 @@
       "title": "Feature/notes intake phase 1",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-16T02:47:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 307.2175
     },
     {
       "repo": "gp-webapp",
@@ -332,8 +494,8 @@
       "title": "feat(briefings): wire summary feedback thumbs to gp-api",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-16T02:39:05Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 307.3544444444444
     },
     {
       "repo": "gp-webapp",
@@ -341,8 +503,8 @@
       "title": "briefings: drop green accent hover on list rows",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T01:53:26Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 308.1152777777778
     },
     {
       "repo": "gp-webapp",
@@ -350,8 +512,8 @@
       "title": "briefings: add empty state when no schedule or briefings yet",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T00:22:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 309.6363888888889
     },
     {
       "repo": "gp-webapp",
@@ -359,8 +521,8 @@
       "title": "fix(briefings): show awaiting-agenda modal/page instead of 404",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T23:53:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 310.11833333333334
     },
     {
       "repo": "gp-webapp",
@@ -368,8 +530,8 @@
       "title": "briefings: closest-to-today featured, cap upcoming at 5, recolor Briefing ready pill",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T23:46:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 310.23
     },
     {
       "repo": "gp-webapp",
@@ -377,8 +539,8 @@
       "title": "feat(briefings): Ask AI chat surface",
       "author": "Collin-GP",
       "merged_to_develop_at": "2026-05-15T23:07:50Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 310.8752777777778
     },
     {
       "repo": "gp-webapp",
@@ -386,8 +548,8 @@
       "title": "briefings: render per-section source pills",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T22:40:13Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 311.3355555555556
     },
     {
       "repo": "gp-webapp",
@@ -395,8 +557,8 @@
       "title": "briefings: scope Open Sans to briefings routes",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T22:42:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 311.2913888888889
     },
     {
       "repo": "gp-webapp",
@@ -404,8 +566,8 @@
       "title": "briefings: QA pass — nav, back link, section label, feedback row",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T21:16:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 312.7261111111111
     },
     {
       "repo": "gp-webapp",
@@ -413,8 +575,8 @@
       "title": "Add generative to SpeechSynthesisEngine type",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T21:03:06Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 312.95416666666665
     },
     {
       "repo": "gp-webapp",
@@ -422,8 +584,8 @@
       "title": "Feature/briefings annotations api client",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-15T18:57:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 315.0416666666667
     },
     {
       "repo": "gp-webapp",
@@ -431,8 +593,8 @@
       "title": "TTS and STT - Read Aloud / Dictation",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T16:40:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 317.33222222222224
     },
     {
       "repo": "gp-webapp",
@@ -440,8 +602,8 @@
       "title": "feat(briefings): wire BriefingsLanding to /v1/meetings",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T16:07:28Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 317.88138888888886
     },
     {
       "repo": "gp-webapp",
@@ -449,8 +611,8 @@
       "title": "feat(briefings): new briefings UI with annotations",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-14T21:53:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 336.11333333333334
     },
     {
       "repo": "gp-webapp",
@@ -3091,12 +3253,237 @@
     },
     {
       "repo": "gp-api",
+      "number": 1689,
+      "title": "fix(deploy): route MEETING_PIPELINE_BUCKET per environment",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T22:29:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1680,
+      "title": "fix: migrate IS_PROD to OTEL_SERVICE_ENVIRONMENT (ENG-10165)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T22:02:58Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1684,
+      "title": "refactor: complete FilesService -> S3Service migration and remove deprecated layer",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:44:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1682,
+      "title": "fix: store isProUpdatedAt as ISO string instead of unix ms",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:43:26Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1679,
+      "title": "test: add unit tests for payments + purchase controllers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:43:13Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1678,
+      "title": "fix: remove debug log and use date-fns in ballotReady.getMonthBounds",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T21:42:59Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1648,
+      "title": "feat(filing-fees): surface BallotReady filing fees on raceTargetMetrics",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-05-28T20:48:30Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 1.1841666666666666
+    },
+    {
+      "repo": "gp-api",
+      "number": 1666,
+      "title": "test: add non-production bypass for campaign verify token submission",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T14:58:33Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 7.016666666666667
+    },
+    {
+      "repo": "gp-api",
+      "number": 1676,
+      "title": "feat(meetings): rename Agenda Picked Up to Briefing Assistant - Agenda Created",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T18:49:30Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 3.1675
+    },
+    {
+      "repo": "gp-api",
+      "number": 1677,
+      "title": "fix(auth): let the STT WebSocket upgrade bypass SessionGuard",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T18:47:32Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 3.200277777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1667,
+      "title": "refactor: restructure GitHub Actions workflow for improved build and …",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T18:03:24Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 3.9358333333333335
+    },
+    {
+      "repo": "gp-api",
+      "number": 1675,
+      "title": "fix(queueConsumer): stop poison-pilling poll analysis on unmapped phones",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T17:29:57Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 4.493333333333333
+    },
+    {
+      "repo": "gp-api",
+      "number": 1674,
+      "title": "feat(artifact-feedback): accept + echo optional comment on agenda-ite…",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T16:33:26Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 5.435277777777777
+    },
+    {
+      "repo": "gp-api",
+      "number": 1669,
+      "title": "feat(artifact-feedback): add optional comment column (VARCHAR(2000))",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T15:22:14Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 6.621944444444445
+    },
+    {
+      "repo": "gp-api",
+      "number": 1653,
+      "title": "Constituent Download Refactor",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-28T15:25:24Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 6.569166666666667
+    },
+    {
+      "repo": "gp-api",
+      "number": 1668,
+      "title": "feat(speech): default TTS voice to Ruth (en-US)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T14:58:37Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 7.015555555555555
+    },
+    {
+      "repo": "gp-api",
+      "number": 1659,
+      "title": "feat(annotations): GET /attachments/:id/download-url returns presigne…",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-28T14:55:13Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 7.072222222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1645,
+      "title": "Prevent prototype pollution in multipart form handling",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-28T06:56:05Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 15.057777777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1636,
+      "title": "Add campaign ownership check to campaign update history delete",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-28T05:49:39Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 16.165
+    },
+    {
+      "repo": "gp-api",
+      "number": 1665,
+      "title": "fix(domains): rename environment variable for domain purchase feature",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T04:35:16Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 17.404722222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1664,
+      "title": "chore: lint",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T03:46:32Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 18.216944444444444
+    },
+    {
+      "repo": "gp-api",
+      "number": 1663,
+      "title": "feat(domains): implement domain pattern expansion and deduplication",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T03:36:28Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 18.384722222222223
+    },
+    {
+      "repo": "gp-api",
+      "number": 1662,
+      "title": "feat(mcp): add NoBodyPostController and update content-type handling",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T01:04:55Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 20.910555555555554
+    },
+    {
+      "repo": "gp-api",
+      "number": 1661,
+      "title": "chore: fallback contact",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-28T00:22:42Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 21.614166666666666
+    },
+    {
+      "repo": "gp-api",
+      "number": 1655,
+      "title": "feat: missing mcps",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-27T23:10:14Z",
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 22.821944444444444
+    },
+    {
+      "repo": "gp-api",
       "number": 1657,
       "title": "meetings: public briefing PDF endpoint (server-side pdfkit)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-27T22:19:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 23.670555555555556
     },
     {
       "repo": "gp-api",
@@ -3104,8 +3491,8 @@
       "title": "feat(annotations): accept card-level anchor (json_path only, no offsets)",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-27T21:37:06Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 24.374166666666667
     },
     {
       "repo": "gp-api",
@@ -3113,8 +3500,8 @@
       "title": "ENG 10222 strategic llm calls",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-27T21:32:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 24.4475
     },
     {
       "repo": "gp-api",
@@ -3122,8 +3509,8 @@
       "title": "Secure signed upload URL generation with validation",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-27T16:39:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 29.326666666666668
     },
     {
       "repo": "gp-api",
@@ -3131,8 +3518,8 @@
       "title": "Fix impersonation authorization to require admin actorUser",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-27T16:39:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 29.337777777777777
     },
     {
       "repo": "gp-api",
@@ -3140,8 +3527,8 @@
       "title": "feat(annotations): raise per-note attachment cap from 1 to 20",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-27T15:57:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 30.02888888888889
     },
     {
       "repo": "gp-api",
@@ -3149,8 +3536,8 @@
       "title": "meetings: fire Agenda Picked Up event after briefing row write",
       "author": "swain",
       "merged_to_develop_at": "2026-05-27T13:56:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 32.05388888888889
     },
     {
       "repo": "gp-api",
@@ -3158,8 +3545,8 @@
       "title": "ENG-7571 Sort the selected tasks for the digest email by date asc.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-27T13:21:56Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 32.62694444444445
     },
     {
       "repo": "gp-api",
@@ -3167,8 +3554,8 @@
       "title": "Eng-10225 Add back due date to slack message for outreach.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-05-27T13:07:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 32.86416666666667
     },
     {
       "repo": "gp-api",
@@ -3176,8 +3563,8 @@
       "title": "Restrict user metadata fields in UpdateMetadata schema",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-27T04:39:30Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 41.33416666666667
     },
     {
       "repo": "gp-api",
@@ -3185,8 +3572,8 @@
       "title": "Replace parseInt with Number for type coercion",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-27T03:14:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 42.742777777777775
     },
     {
       "repo": "gp-api",
@@ -3194,8 +3581,8 @@
       "title": "Hardcode outreach pricing and remove pricePerContact parameter",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-26T23:29:44Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 46.496944444444445
     },
     {
       "repo": "gp-api",
@@ -3203,8 +3590,8 @@
       "title": "Gate daily briefing cron to elected offices created on/after 2026-03-01",
       "author": "swain",
       "merged_to_develop_at": "2026-05-26T22:07:32Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 47.86694444444444
     },
     {
       "repo": "gp-api",
@@ -3212,8 +3599,8 @@
       "title": "Decouple meeting_schedule and meeting_briefings",
       "author": "swain",
       "merged_to_develop_at": "2026-05-26T22:18:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 47.67888888888889
     },
     {
       "repo": "gp-api",
@@ -3221,8 +3608,8 @@
       "title": "remove admin gate",
       "author": "swain",
       "merged_to_develop_at": "2026-05-26T21:48:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 48.185
     },
     {
       "repo": "gp-api",
@@ -3230,8 +3617,8 @@
       "title": "feat(domains): enhance domain purchase functionality with maxPrice va…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-26T19:12:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 50.78666666666667
     },
     {
       "repo": "gp-api",
@@ -3239,8 +3626,8 @@
       "title": "Block Stripe-managed fields from direct API updates",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-26T06:04:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 63.916666666666664
     },
     {
       "repo": "gp-api",
@@ -3248,8 +3635,8 @@
       "title": "Prevent Clerk identity rebinding on existing users",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-26T03:55:58Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 66.05972222222222
     },
     {
       "repo": "gp-api",
@@ -3257,8 +3644,8 @@
       "title": "feat(domains): implement purchase domain functionality in DomainsCont…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-26T02:20:31Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 67.65055555555556
     },
     {
       "repo": "gp-api",
@@ -3266,8 +3653,8 @@
       "title": "Add campaign ID validation to position update/delete",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-26T00:12:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 69.78277777777778
     },
     {
       "repo": "gp-api",
@@ -3275,8 +3662,8 @@
       "title": "Validate website status before enriching campaign user",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-25T23:47:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 70.20222222222222
     },
     {
       "repo": "gp-api",
@@ -3284,8 +3671,8 @@
       "title": "Add admin role requirement to positions endpoints",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-25T22:00:20Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 71.98694444444445
     },
     {
       "repo": "gp-api",
@@ -3293,8 +3680,8 @@
       "title": "Validate campaign state codes and normalize to uppercase",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-25T20:45:57Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 73.22666666666667
     },
     {
       "repo": "gp-api",
@@ -3302,8 +3689,8 @@
       "title": "feat(tcrCompliance): enhance compliance model and update service logic",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-24T20:17:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 97.70388888888888
     },
     {
       "repo": "gp-api",
@@ -3311,8 +3698,8 @@
       "title": "hotfix: allow website updates without registrant verification gate",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-23T03:15:36Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 138.7325
     },
     {
       "repo": "gp-api",
@@ -3320,8 +3707,8 @@
       "title": "feat(tcrCompliance): implement agentic compliance kickoff handling",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-22T19:34:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-22T19:57:23Z",
+      "mttd_hours": 0.37333333333333335
     },
     {
       "repo": "gp-api",
@@ -3329,8 +3716,8 @@
       "title": "Eng 7552 submit tcr",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-21T02:21:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-22T19:57:23Z",
+      "mttd_hours": 41.60027777777778
     },
     {
       "repo": "gp-api",
@@ -3338,8 +3725,8 @@
       "title": "feat(tcrCompliance): add createAgenticTcrCompliance endpoint and rela…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-19T03:24:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-22T19:57:23Z",
+      "mttd_hours": 88.54
     },
     {
       "repo": "gp-api",
@@ -3347,8 +3734,8 @@
       "title": "fix(briefing-chats): drop topic filter from get_my_notes",
       "author": "swain",
       "merged_to_develop_at": "2026-05-18T15:10:50Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 1.7166666666666666
     },
     {
       "repo": "gp-api",
@@ -3356,8 +3743,8 @@
       "title": "docs(meetings): document end-to-end meeting briefings flow",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T05:01:39Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 59.86972222222222
     },
     {
       "repo": "gp-api",
@@ -3365,8 +3752,8 @@
       "title": "fix(briefing-chats): surface attachment-only notes to the AI assistant",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T04:48:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 60.088055555555556
     },
     {
       "repo": "gp-api",
@@ -3374,8 +3761,8 @@
       "title": "meetings: gate auto-dispatch behind MEETINGS_AUTOMATION_ENABLED + add manual dispatch endpoint",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T03:45:41Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 61.13583333333333
     },
     {
       "repo": "gp-api",
@@ -3383,8 +3770,8 @@
       "title": "meetings: don't persist MeetingBriefing rows for placeholder briefing_status",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T03:26:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 61.452222222222225
     },
     {
       "repo": "gp-api",
@@ -3392,8 +3779,8 @@
       "title": "fix(speech): raise STT WebSocket audio rate cap to fit 16 kHz PCM",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-16T03:10:29Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 61.7225
     },
     {
       "repo": "gp-api",
@@ -3401,8 +3788,8 @@
       "title": "docs(env): document PUBLIC_API_URL for speech-to-text WS",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-16T02:50:19Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 62.05861111111111
     },
     {
       "repo": "gp-api",
@@ -3410,8 +3797,8 @@
       "title": "Feature/notes intake phase 2",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-16T02:43:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 62.1675
     },
     {
       "repo": "gp-api",
@@ -3419,8 +3806,8 @@
       "title": "Drop city requirement from meeting_briefing + meeting_schedule dispatch",
       "author": "swain",
       "merged_to_develop_at": "2026-05-16T01:10:46Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 63.717777777777776
     },
     {
       "repo": "gp-api",
@@ -3428,8 +3815,8 @@
       "title": "feat(annotations): Pulumi for annotation-attachments bucket + Textrac…",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-16T00:33:56Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 64.33166666666666
     },
     {
       "repo": "gp-api",
@@ -3437,8 +3824,8 @@
       "title": "meetings(list): drop projected past dates; narrow past window to 4d",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T23:46:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 65.12305555555555
     },
     {
       "repo": "gp-api",
@@ -3446,8 +3833,8 @@
       "title": "feat(chats): briefing chat surface",
       "author": "Collin-GP",
       "merged_to_develop_at": "2026-05-15T23:52:20Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 65.025
     },
     {
       "repo": "gp-api",
@@ -3455,8 +3842,8 @@
       "title": "fix(meetings): return awaiting_agenda instead of 404 for meetings without briefing",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T23:45:53Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 65.1325
     },
     {
       "repo": "gp-api",
@@ -3464,8 +3851,8 @@
       "title": "agent-job-types: dereference schemas before composing + adopt new meeting_briefing contract",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T23:27:43Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 65.43527777777778
     },
     {
       "repo": "gp-api",
@@ -3473,8 +3860,8 @@
       "title": "meetings: store briefing artifact JSON on MeetingBriefing for synchronous list reads",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T22:43:41Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 66.16916666666667
     },
     {
       "repo": "gp-api",
@@ -3482,8 +3869,8 @@
       "title": "Switch TTS default to AWS Polly generative engine (Amy, British English)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T22:17:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 66.60444444444444
     },
     {
       "repo": "gp-api",
@@ -3491,8 +3878,8 @@
       "title": "feat(briefings): per-agenda-item summary feedback API",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T22:08:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 66.75888888888889
     },
     {
       "repo": "gp-api",
@@ -3500,8 +3887,8 @@
       "title": "feat(annotations): OCR fields on AnnotationNoteAttachment",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-15T21:50:43Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 67.05194444444444
     },
     {
       "repo": "gp-api",
@@ -3509,8 +3896,8 @@
       "title": "Feature/notes intake body nullable",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-15T20:20:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 68.55444444444444
     },
     {
       "repo": "gp-api",
@@ -3518,8 +3905,8 @@
       "title": "artifact feedback schema",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T19:07:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 69.76416666666667
     },
     {
       "repo": "gp-api",
@@ -3527,8 +3914,8 @@
       "title": "Feature/briefing annotations api",
       "author": "stephtea",
       "merged_to_develop_at": "2026-05-15T18:58:02Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 69.93
     },
     {
       "repo": "gp-api",
@@ -3536,8 +3923,8 @@
       "title": "TTS and STT - Read Aloud / Dictation",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-15T16:39:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 72.23277777777778
     },
     {
       "repo": "gp-api",
@@ -3545,8 +3932,8 @@
       "title": "fix(meetings): merge projected + actual briefings in list",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T15:58:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 72.91638888888889
     },
     {
       "repo": "gp-api",
@@ -3554,8 +3941,8 @@
       "title": "feat(meetings): orchestration — dispatch + chain + cron",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T15:15:40Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 73.6361111111111
     },
     {
       "repo": "gp-api",
@@ -3563,8 +3950,8 @@
       "title": "chore(meetings): remove legacy /meetings/briefings POC",
       "author": "swain",
       "merged_to_develop_at": "2026-05-15T00:56:26Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 87.95666666666666
     },
     {
       "repo": "gp-api",
@@ -3572,8 +3959,8 @@
       "title": "fat: @mcp audit",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-14T23:22:50Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 89.51666666666667
     },
     {
       "repo": "gp-api",
@@ -3581,8 +3968,8 @@
       "title": "fix(grafana): skip RuleGroup creation for controllers with zero alerts",
       "author": "swain",
       "merged_to_develop_at": "2026-05-14T21:38:28Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 91.25611111111111
     },
     {
       "repo": "gp-api",
@@ -3590,8 +3977,8 @@
       "title": "feat(meetings): /v1/meetings read-side services + endpoints",
       "author": "swain",
       "merged_to_develop_at": "2026-05-14T20:00:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 92.88555555555556
     },
     {
       "repo": "gp-api",
@@ -3599,8 +3986,8 @@
       "title": "Compliance state endpoint for resumable runs",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-14T17:54:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-18T16:53:50Z",
+      "mttd_hours": 94.98972222222223
     },
     {
       "repo": "gp-api",
@@ -3608,8 +3995,8 @@
       "title": "feat(prisma): add meeting briefing + annotation + chat models",
       "author": "swain",
       "merged_to_develop_at": "2026-05-14T16:44:43Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 0.29055555555555557
     },
     {
       "repo": "gp-api",
@@ -3617,8 +4004,8 @@
       "title": "refactor: enhance WebsitesController to enforce content completeness …",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-14T12:02:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 4.998333333333333
     },
     {
       "repo": "gp-api",
@@ -3626,8 +4013,8 @@
       "title": "Add prototype pollution protection to AI content schemas",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-05-14T05:03:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 11.983055555555556
     },
     {
       "repo": "gp-api",
@@ -3635,8 +4022,8 @@
       "title": "Reduce OTel metric cardinality to stop Grafana billing spike",
       "author": "swain",
       "merged_to_develop_at": "2026-05-14T01:23:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 15.638055555555555
     },
     {
       "repo": "gp-api",
@@ -3644,8 +4031,8 @@
       "title": "fix(users): order Clerk test-user cleanup oldest-first",
       "author": "swain",
       "merged_to_develop_at": "2026-05-14T01:24:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-14T17:02:09Z",
+      "mttd_hours": 15.62888888888889
     },
     {
       "repo": "gp-api",
@@ -6965,8 +7352,8 @@
       "title": "Constituent Download Refactor",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-27T17:21:53Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:35Z",
+      "mttd_hours": 28.261666666666667
     },
     {
       "repo": "people-api",
@@ -6974,8 +7361,8 @@
       "title": "draft: IAM role for Airflow to manage people-api RDS resources",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-15T18:29:47Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:35Z",
+      "mttd_hours": 315.13
     },
     {
       "repo": "people-api",
@@ -7334,8 +7721,8 @@
       "title": "[DATA-1922] Use simple-majority (50% + 1) win-number estimate",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-27T19:40:33Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:32Z",
+      "mttd_hours": 25.94972222222222
     },
     {
       "repo": "election-api",
@@ -7343,8 +7730,8 @@
       "title": "[DATA-1922] Add campaign-strategy-context endpoint",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-27T18:02:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:32Z",
+      "mttd_hours": 27.578611111111112
     },
     {
       "repo": "election-api",
@@ -7352,8 +7739,8 @@
       "title": "feat(races): filing-fee lookup by BallotReady race hash",
       "author": "dealvz",
       "merged_to_develop_at": "2026-05-27T16:42:04Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:32Z",
+      "mttd_hours": 28.924444444444443
     },
     {
       "repo": "election-api",
@@ -7361,8 +7748,8 @@
       "title": "[DATA-1922] Drop gp_candidate_id from Candidacy",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-18T19:07:01Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:32Z",
+      "mttd_hours": 242.50861111111112
     },
     {
       "repo": "election-api",
@@ -7370,8 +7757,8 @@
       "title": "[DATA-1922] Widen Race and Candidacy schemas for onboarding flow",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-05-18T18:41:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:37:32Z",
+      "mttd_hours": 242.92583333333334
     },
     {
       "repo": "election-api",
@@ -8207,25 +8594,85 @@
     {
       "week_start": "2026-05-11",
       "all_repos": {
-        "mean_hours": 38,
-        "median_hours": 44.2,
-        "count": 16
+        "mean_hours": 125.6,
+        "median_hours": 65.8,
+        "count": 68
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 32.7,
-          "median_hours": 43.4,
-          "count": 5
+          "mean_hours": 250.8,
+          "median_hours": 309.6,
+          "count": 23
         },
         "gp-api": {
-          "mean_hours": 44.7,
-          "median_hours": 49.1,
-          "count": 9
+          "mean_hours": 57.6,
+          "median_hours": 62.9,
+          "count": 42
+        },
+        "people-api": {
+          "mean_hours": 315.1,
+          "median_hours": 315.1,
+          "count": 1
         },
         "election-api": {
           "mean_hours": 20.7,
           "median_hours": 20.7,
           "count": 2
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-18",
+      "all_repos": {
+        "mean_hours": 167,
+        "median_hours": 189.3,
+        "count": 28
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 191.2,
+          "median_hours": 190.7,
+          "count": 20
+        },
+        "gp-api": {
+          "mean_hours": 61.4,
+          "median_hours": 65.1,
+          "count": 6
+        },
+        "election-api": {
+          "mean_hours": 242.7,
+          "median_hours": 242.7,
+          "count": 2
+        }
+      }
+    },
+    {
+      "week_start": "2026-05-25",
+      "all_repos": {
+        "mean_hours": 26,
+        "median_hours": 24.3,
+        "count": 72
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 18.8,
+          "median_hours": 15.4,
+          "count": 26
+        },
+        "gp-api": {
+          "mean_hours": 30.3,
+          "median_hours": 24.4,
+          "count": 42
+        },
+        "people-api": {
+          "mean_hours": 28.3,
+          "median_hours": 28.3,
+          "count": 1
+        },
+        "election-api": {
+          "mean_hours": 27.5,
+          "median_hours": 27.6,
+          "count": 3
         }
       }
     }
