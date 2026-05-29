@@ -1,15 +1,123 @@
 {
-  "generated_at": "2026-05-28T22:32:11.158Z",
+  "generated_at": "2026-05-29T22:31:11.620Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1917,
+      "title": "Eng 10253 overflow",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T18:09:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1916,
+      "title": "feat(briefings): prefetch read-aloud audio on view",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-29T17:36:28Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1915,
+      "title": "feat: enhance form validation and error handling in TextingCompliance…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T17:23:46Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1914,
+      "title": "fix(AddressAutocomplete): add dropdownClassName prop for scoped dropd…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T16:58:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1895,
+      "title": "fix: rename useVerisons -> useVersions and add error handling",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-29T15:58:19Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1896,
+      "title": "chore: remove always-true isP2pUxEnabled stub",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-29T15:58:01Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1908,
+      "title": "fix(briefings): resolve meeting briefing UI bugs",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T05:28:43Z",
+      "deployed_to_master_at": "2026-05-29T05:37:19Z",
+      "mttd_hours": 0.14333333333333334
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1913,
+      "title": "fix(TextComplianceStep): update styling for completed and disabled st…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T11:43:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1911,
+      "title": "chore: remove website link from menu",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T10:58:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1912,
+      "title": "fix: manage subscription",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T10:55:02Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1907,
+      "title": "test(e2e): fix setupElectedOfficeUser redirect wait",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T22:48:12Z",
+      "deployed_to_master_at": "2026-05-29T05:37:19Z",
+      "mttd_hours": 6.818611111111111
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1903,
+      "title": "Restore email property on all frontend analytics events",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-28T22:38:26Z",
+      "deployed_to_master_at": "2026-05-28T22:41:33Z",
+      "mttd_hours": 0.051944444444444446
+    },
     {
       "repo": "gp-webapp",
       "number": 1902,
       "title": "fix(election-result): redirect winners into briefings",
       "author": "swain",
       "merged_to_develop_at": "2026-05-28T22:28:17Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:41:33Z",
+      "mttd_hours": 0.22111111111111112
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +125,8 @@
       "title": "test: add coverage for campaign-assistant ChatProvider and contacts CRM components",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:51:52Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 0.1413888888888889
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +134,8 @@
       "title": "test: add unit tests for 4 pure helpers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:51:09Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 0.15333333333333332
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +143,8 @@
       "title": "fix: stale-closure bug in CreatePoll useEvent analytics call",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:47:43Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T22:00:21Z",
+      "mttd_hours": 0.21055555555555555
     },
     {
       "repo": "gp-webapp",
@@ -3253,12 +3361,120 @@
     },
     {
       "repo": "gp-api",
+      "number": 1709,
+      "title": "disable MEETINGS_AUTOMATION_ENABLED in prod",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-05-29T21:51:47Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1705,
+      "title": "feat(campaign): add primaryResult field to campaign schema and tests",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T20:01:56Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1692,
+      "title": "Add admin role requirement to top issues endpoints",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-29T18:59:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1703,
+      "title": "fix(meetings): run daily briefing cron on a single replica",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-29T17:50:44Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1704,
+      "title": "feat: update domain registrant to a vercel owner",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T17:48:24Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1683,
+      "title": "refactor: migrate 9 raw Date math sites to date-fns (rules.mdc Rule 28)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-05-29T16:28:03Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1686,
+      "title": "refactor(domains): remove InboundDomainVerificationController and rel…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-29T11:02:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1700,
+      "title": "fix(meetings): throttle daily briefing dispatch into batches",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T05:29:47Z",
+      "deployed_to_master_at": "2026-05-29T05:31:49Z",
+      "mttd_hours": 0.03388888888888889
+    },
+    {
+      "repo": "gp-api",
+      "number": 1698,
+      "title": "fix: resolve meeting dispatch context for override-only orgs",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T04:35:23Z",
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 0.24194444444444443
+    },
+    {
+      "repo": "gp-api",
+      "number": 1697,
+      "title": "Fix develop: provide AgentMcpMarker to MCP discoverability test modules",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T03:49:20Z",
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 1.0094444444444444
+    },
+    {
+      "repo": "gp-api",
+      "number": 1695,
+      "title": "Agent MCP auth via broker-signed JWT (drop Clerk Frontend-API redemption)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T03:29:32Z",
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 1.3394444444444444
+    },
+    {
+      "repo": "gp-api",
+      "number": 1694,
+      "title": "Remove daily-briefing createdAt floor (sweep all elected offices)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-05-29T02:47:10Z",
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 2.0455555555555556
+    },
+    {
+      "repo": "gp-api",
       "number": 1689,
       "title": "fix(deploy): route MEETING_PIPELINE_BUCKET per environment",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T22:29:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 6.334722222222222
     },
     {
       "repo": "gp-api",
@@ -3266,8 +3482,8 @@
       "title": "fix: migrate IS_PROD to OTEL_SERVICE_ENVIRONMENT (ENG-10165)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T22:02:58Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-29T04:49:54Z",
+      "mttd_hours": 6.782222222222222
     },
     {
       "repo": "gp-api",
@@ -3275,8 +3491,8 @@
       "title": "refactor: complete FilesService -> S3Service migration and remove deprecated layer",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:44:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 0.2563888888888889
     },
     {
       "repo": "gp-api",
@@ -3284,8 +3500,8 @@
       "title": "fix: store isProUpdatedAt as ISO string instead of unix ms",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:43:26Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 0.26861111111111113
     },
     {
       "repo": "gp-api",
@@ -3293,8 +3509,8 @@
       "title": "test: add unit tests for payments + purchase controllers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:43:13Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 0.2722222222222222
     },
     {
       "repo": "gp-api",
@@ -3302,8 +3518,8 @@
       "title": "fix: remove debug log and use date-fns in ballotReady.getMonthBounds",
       "author": "oakinh",
       "merged_to_develop_at": "2026-05-28T21:42:59Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-05-28T21:59:33Z",
+      "mttd_hours": 0.2761111111111111
     },
     {
       "repo": "gp-api",
@@ -7717,6 +7933,24 @@
     },
     {
       "repo": "election-api",
+      "number": 178,
+      "title": "[DATA-1937] Correct District voter-stats column comment",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-29T15:34:04Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 176,
+      "title": "[DATA-1937] Add DistrictVoterStats table + surface voter counts",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-05-29T01:23:45Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
       "number": 173,
       "title": "[DATA-1922] Use simple-majority (50% + 1) win-number estimate",
       "author": "hhkarimi",
@@ -8649,20 +8883,20 @@
     {
       "week_start": "2026-05-25",
       "all_repos": {
-        "mean_hours": 26,
-        "median_hours": 24.3,
-        "count": 72
+        "mean_hours": 21.1,
+        "median_hours": 17.8,
+        "count": 90
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 18.8,
-          "median_hours": 15.4,
-          "count": 26
+          "mean_hours": 15,
+          "median_hours": 6.8,
+          "count": 33
         },
         "gp-api": {
-          "mean_hours": 30.3,
-          "median_hours": 24.4,
-          "count": 42
+          "mean_hours": 24.4,
+          "median_hours": 18.4,
+          "count": 53
         },
         "people-api": {
           "mean_hours": 28.3,
