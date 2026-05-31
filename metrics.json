@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-05-30T22:20:16.121Z",
+  "generated_at": "2026-05-31T22:20:07.225Z",
   "days_back": 180,
   "prs": [
-    {
-      "repo": "gp-webapp",
-      "number": 1923,
-      "title": "fix: update PolicyForm component for improved layout",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2026-05-30T20:10:37Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
-    },
     {
       "repo": "gp-webapp",
       "number": 1922,
       "title": "feat: ENG-10269 ENG-10271",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-05-30T18:18:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1923,
+      "title": "fix: update PolicyForm component for improved layout",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-30T20:10:37Z",
       "deployed_to_master_at": null,
       "mttd_hours": null
     },
@@ -3360,31 +3360,22 @@
       "mttd_hours": 20.43722222222222
     },
     {
-      "repo": "gp-webapp",
-      "number": 1188,
-      "title": "[ENG-6042] - domain registration retries",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-02T22:17:38Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 24.114722222222223
+      "repo": "gp-api",
+      "number": 1714,
+      "title": "feat(domains): update supported TLDs and enhance domain search descri…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-05-31T21:09:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1184,
-      "title": "Eng 5944 collin remove ff redirect polls winners",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-02T16:52:32Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 29.533055555555556
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1183,
-      "title": "ENG-5867: add review step",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-02T01:07:38Z",
-      "deployed_to_master_at": "2025-12-03T22:24:31Z",
-      "mttd_hours": 45.28138888888889
+      "repo": "gp-api",
+      "number": 1712,
+      "title": "Add HTTP agent with SSRF protection to website fetches",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-05-31T19:56:55Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7545,42 +7536,6 @@
       "mttd_hours": 23.29888888888889
     },
     {
-      "repo": "gp-api",
-      "number": 886,
-      "title": "[ENG-6042] - Allows for domains that were previously paid for, but failed for some reason, to be re-tried",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-02T22:16:05Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 24.12611111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 883,
-      "title": "Simplify purchase metadata types",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-02T16:59:25Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 29.40388888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 881,
-      "title": "Improve logging for poll queue expansions",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-02T00:32:43Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 45.84888888888889
-    },
-    {
-      "repo": "gp-api",
-      "number": 879,
-      "title": "Remove opinionated requeueing logic for newer poll events",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-01T23:13:56Z",
-      "deployed_to_master_at": "2025-12-03T22:23:39Z",
-      "mttd_hours": 47.161944444444444
-    },
-    {
       "repo": "people-api",
       "number": 196,
       "title": "Constituent Download Refactor",
@@ -8305,20 +8260,20 @@
     {
       "week_start": "2025-12-01",
       "all_repos": {
-        "mean_hours": 26.3,
-        "median_hours": 20.4,
-        "count": 29
+        "mean_hours": 23.5,
+        "median_hours": 5.7,
+        "count": 22
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 21,
-          "median_hours": 13.3,
-          "count": 14
+          "mean_hours": 17.8,
+          "median_hours": 5.7,
+          "count": 11
         },
         "gp-api": {
-          "mean_hours": 23.3,
-          "median_hours": 15.4,
-          "count": 14
+          "mean_hours": 18,
+          "median_hours": 4.2,
+          "count": 10
         },
         "people-api": {
           "mean_hours": 142.2,
