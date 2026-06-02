@@ -1,7 +1,43 @@
 {
-  "generated_at": "2026-06-01T22:43:21.835Z",
+  "generated_at": "2026-06-02T22:40:05.442Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1929,
+      "title": "feat(campaign-plan): post-pledge success page wired to gp-api campaign-strategy endpoints",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-02T20:26:04Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1927,
+      "title": "feat(campaign-assistant): stream AI chat with stop, markdown render & rich copy",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:49:32Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1905,
+      "title": "chore(perf): add scripts/perf/ tooling wrappers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:45:18Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1928,
+      "title": "feat: enhance CandidateProfile component with bio editor and priority…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-02T15:29:50Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1924,
@@ -3253,15 +3289,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1196,
-      "title": "[ENG-5858] Add logic to prevent dupe polls onboarding",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-04T20:37:02Z",
-      "deployed_to_master_at": "2025-12-04T23:17:50Z",
-      "mttd_hours": 2.68
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1201,
       "title": "[ENG-5935] Cap constituent count for polls at 10000 per run",
       "author": "stephtea",
@@ -3333,22 +3360,76 @@
       "mttd_hours": 6.137777777777778
     },
     {
-      "repo": "gp-webapp",
-      "number": 1197,
-      "title": "[ENG-5877] Update poll image upload display size",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-04T20:34:14Z",
-      "deployed_to_master_at": "2025-12-04T23:17:50Z",
-      "mttd_hours": 2.7266666666666666
+      "repo": "gp-api",
+      "number": 1729,
+      "title": "feat(campaign-strategy): post-pledge Campaign Plan backend (Section 2 strategic landscape, Section 6 BR timeline milestones, Section 7 community events)",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-02T20:51:06Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1194,
-      "title": "Filter poll constituency counts to voters with cell phones",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-04T17:35:52Z",
-      "deployed_to_master_at": "2025-12-04T23:17:50Z",
-      "mttd_hours": 5.6994444444444445
+      "repo": "gp-api",
+      "number": 1723,
+      "title": "feat(campaign-chat): SSE streaming endpoint for the campaign AI assistant",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:49:27Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1691,
+      "title": "chore(perf): add scripts/perf/ tooling wrappers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:33:07Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1722,
+      "title": "Meeting briefing imminence gate",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-06-02T14:57:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1717,
+      "title": "ENG 7253 position to zip code",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-02T13:53:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1727,
+      "title": "feat(crm): add HubSpot configuration check in trackCampaign method",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-02T13:24:45Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1713,
+      "title": "Omit sensitive user fields from admin user endpoints",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-06-02T03:32:27Z",
+      "deployed_to_master_at": "2026-06-02T09:00:09Z",
+      "mttd_hours": 5.461666666666667
+    },
+    {
+      "repo": "gp-api",
+      "number": 1721,
+      "title": "feat(admin): add retry functionality to AdminAgentRunsController and …",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-02T02:08:59Z",
+      "deployed_to_master_at": "2026-06-02T09:00:09Z",
+      "mttd_hours": 6.852777777777778
     },
     {
       "repo": "gp-api",
@@ -3356,8 +3437,8 @@
       "title": "feat(admin): add agent runs module and schemas",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-01T20:37:02Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-02T09:00:09Z",
+      "mttd_hours": 12.385277777777778
     },
     {
       "repo": "gp-api",
@@ -7482,67 +7563,13 @@
       "mttd_hours": 0.9052777777777777
     },
     {
-      "repo": "gp-api",
-      "number": 884,
-      "title": "ENG-5856: support purchasing new polls",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-04T22:39:07Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 0.6422222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 889,
-      "title": "ENG-6135 [part 1]: add new isCompleted field to poll prisma",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-04T21:13:39Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 2.066666666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 902,
-      "title": "fix expansion calculation",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-04T20:41:17Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 2.6061111111111113
-    },
-    {
-      "repo": "gp-api",
-      "number": 898,
-      "title": "[ENG-5858] prevent duplicate polls onboarding",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-04T20:36:58Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 2.6780555555555554
-    },
-    {
-      "repo": "gp-api",
-      "number": 894,
-      "title": "Add hasCellPhone filter to contacts stats for SMS-reachable voter counts",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-04T17:34:17Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 5.722777777777778
-    },
-    {
-      "repo": "gp-api",
-      "number": 885,
-      "title": "Introduce optimistic locking update helper",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-04T15:46:41Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 7.516111111111111
-    },
-    {
-      "repo": "gp-api",
-      "number": 891,
-      "title": "Cherry pick fix for area code population in peerly: qa -> development",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-12-03T23:59:43Z",
-      "deployed_to_master_at": "2025-12-04T23:17:39Z",
-      "mttd_hours": 23.29888888888889
+      "repo": "people-api",
+      "number": 198,
+      "title": "chore(perf): add scripts/perf/ tooling wrappers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:33:23Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "people-api",
@@ -7906,12 +7933,39 @@
     },
     {
       "repo": "election-api",
+      "number": 184,
+      "title": "Fix misleading win_number field comment",
+      "author": "hhkarimi",
+      "merged_to_develop_at": "2026-06-02T16:32:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 177,
+      "title": "chore(perf): add scripts/perf/ tooling wrappers",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-02T15:33:39Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 180,
+      "title": "ENG-7253 Position to zipcode endpoint.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-02T13:53:15Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
       "number": 183,
       "title": "Increase Prisma connection pool size to prevent exhaustion",
       "author": "delegate-gp[bot]",
       "merged_to_develop_at": "2026-06-01T22:39:39Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-02T09:00:19Z",
+      "mttd_hours": 10.344444444444445
     },
     {
       "repo": "election-api",
@@ -8269,20 +8323,20 @@
     {
       "week_start": "2025-12-01",
       "all_repos": {
-        "mean_hours": 17.4,
-        "median_hours": 2.7,
-        "count": 19
+        "mean_hours": 30.6,
+        "median_hours": 6.1,
+        "count": 9
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 16.8,
-          "median_hours": 2.7,
-          "count": 9
+          "mean_hours": 23.4,
+          "median_hours": 3.9,
+          "count": 6
         },
         "gp-api": {
-          "mean_hours": 18,
-          "median_hours": 4.2,
-          "count": 10
+          "mean_hours": 45.1,
+          "median_hours": 67,
+          "count": 3
         }
       }
     },
@@ -8899,9 +8953,9 @@
     {
       "week_start": "2026-06-01",
       "all_repos": {
-        "mean_hours": 1,
-        "median_hours": 1,
-        "count": 2
+        "mean_hours": 6.2,
+        "median_hours": 6.2,
+        "count": 6
       },
       "by_repo": {
         "gp-webapp": {
@@ -8910,8 +8964,13 @@
           "count": 1
         },
         "gp-api": {
-          "mean_hours": 1.7,
-          "median_hours": 1.7,
+          "mean_hours": 6.6,
+          "median_hours": 6.2,
+          "count": 4
+        },
+        "election-api": {
+          "mean_hours": 10.3,
+          "median_hours": 10.3,
           "count": 1
         }
       }
