@@ -1,15 +1,69 @@
 {
-  "generated_at": "2026-06-02T22:40:05.442Z",
+  "generated_at": "2026-06-03T22:42:10.732Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1941,
+      "title": "fix(ComplianceModal): gate texting-compliance copy on pro-upgrade1 flag",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-06-03T22:27:21Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1940,
+      "title": "Update sections to reflect new opposition response.",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-03T20:45:08Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1939,
+      "title": "feat: implement funnel view events for compliance flow",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-03T19:26:45Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1935,
+      "title": "feat(ElectionOver): conditionally render debrief section based on cam…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-03T17:48:45Z",
+      "deployed_to_master_at": "2026-06-03T17:59:48Z",
+      "mttd_hours": 0.18416666666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1931,
+      "title": "fix(success): reuse onboarding's local-news cache on the success page",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-03T17:40:47Z",
+      "deployed_to_master_at": "2026-06-03T17:59:48Z",
+      "mttd_hours": 0.3169444444444444
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1934,
+      "title": "Update submodule pointer for ai-rules and change calendar link in Ele…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-03T17:22:11Z",
+      "deployed_to_master_at": "2026-06-03T17:59:48Z",
+      "mttd_hours": 0.6269444444444444
+    },
     {
       "repo": "gp-webapp",
       "number": 1929,
       "title": "feat(campaign-plan): post-pledge success page wired to gp-api campaign-strategy endpoints",
       "author": "dealvz",
       "merged_to_develop_at": "2026-06-02T20:26:04Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:58:58Z",
+      "mttd_hours": 19.548333333333332
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +71,8 @@
       "title": "feat(campaign-assistant): stream AI chat with stop, markdown render & rich copy",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:49:32Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:58:58Z",
+      "mttd_hours": 24.157222222222224
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +80,8 @@
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:45:18Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:58:58Z",
+      "mttd_hours": 24.227777777777778
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +89,8 @@
       "title": "feat: enhance CandidateProfile component with bio editor and priority…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-02T15:29:50Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:58:58Z",
+      "mttd_hours": 24.485555555555557
     },
     {
       "repo": "gp-webapp",
@@ -3324,40 +3378,49 @@
       "mttd_hours": 66.27111111111111
     },
     {
-      "repo": "gp-webapp",
-      "number": 1192,
-      "title": "chore: bump nextjs & react versions to prevent vulnerability",
+      "repo": "gp-api",
+      "number": 1737,
+      "title": "Integrate CAP strategic-landscape (dispatch, persist, retry-with-cap)",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-03T20:44:53Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1693,
+      "title": "Scope S3 uploads to user ID for isolation",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-06-03T06:29:25Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1734,
+      "title": "feat(experiment-runs): introduce AWAITING_RESUME status and new field…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-03T01:36:51Z",
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 14.370555555555555
+    },
+    {
+      "repo": "gp-api",
+      "number": 1730,
+      "title": "feat(experiment-runs): add resume functionality and new fields for ag…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-03T01:24:30Z",
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 14.57638888888889
+    },
+    {
+      "repo": "gp-api",
+      "number": 1731,
+      "title": "fix(community-events): include all district zips up to threshold; drop zip for statewide races",
       "author": "dealvz",
-      "merged_to_develop_at": "2025-12-05T22:03:00Z",
-      "deployed_to_master_at": "2025-12-05T22:24:28Z",
-      "mttd_hours": 0.35777777777777775
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1202,
-      "title": "ENG-6135 [part 4]: remove references to the 'expanding' status",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T21:27:35Z",
-      "deployed_to_master_at": "2025-12-05T22:24:28Z",
-      "mttd_hours": 0.9480555555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1189,
-      "title": "ENG-6134: fix poll pricing displays",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T17:29:42Z",
-      "deployed_to_master_at": "2025-12-05T19:07:08Z",
-      "mttd_hours": 1.623888888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1191,
-      "title": "ENG-6135 [part 2]: update ui to no longer require expanding status",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T12:58:52Z",
-      "deployed_to_master_at": "2025-12-05T19:07:08Z",
-      "mttd_hours": 6.137777777777778
+      "merged_to_develop_at": "2026-06-02T22:49:54Z",
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 17.153055555555557
     },
     {
       "repo": "gp-api",
@@ -3365,8 +3428,8 @@
       "title": "feat(campaign-strategy): post-pledge Campaign Plan backend (Section 2 strategic landscape, Section 6 BR timeline milestones, Section 7 community events)",
       "author": "dealvz",
       "merged_to_develop_at": "2026-06-02T20:51:06Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 19.133055555555554
     },
     {
       "repo": "gp-api",
@@ -3374,8 +3437,8 @@
       "title": "feat(campaign-chat): SSE streaming endpoint for the campaign AI assistant",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:49:27Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 24.160555555555554
     },
     {
       "repo": "gp-api",
@@ -3383,8 +3446,8 @@
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:33:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 24.432777777777776
     },
     {
       "repo": "gp-api",
@@ -3392,8 +3455,8 @@
       "title": "Meeting briefing imminence gate",
       "author": "stephtea",
       "merged_to_develop_at": "2026-06-02T14:57:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 25.031944444444445
     },
     {
       "repo": "gp-api",
@@ -3401,8 +3464,8 @@
       "title": "ENG 7253 position to zip code",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-06-02T13:53:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 26.091666666666665
     },
     {
       "repo": "gp-api",
@@ -3410,8 +3473,8 @@
       "title": "feat(crm): add HubSpot configuration check in trackCampaign method",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-02T13:24:45Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 26.572222222222223
     },
     {
       "repo": "gp-api",
@@ -7536,33 +7599,6 @@
       "mttd_hours": 1.8075
     },
     {
-      "repo": "gp-api",
-      "number": 912,
-      "title": "ENG-6136: support scheduling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T21:41:36Z",
-      "deployed_to_master_at": "2025-12-08T16:44:32Z",
-      "mttd_hours": 67.04888888888888
-    },
-    {
-      "repo": "gp-api",
-      "number": 908,
-      "title": "ENG-6135 [part 3]: drop status column and begin deriving that value",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T21:21:18Z",
-      "deployed_to_master_at": "2025-12-08T16:44:32Z",
-      "mttd_hours": 67.38722222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 911,
-      "title": "fix import syntax",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T18:12:34Z",
-      "deployed_to_master_at": "2025-12-05T19:06:53Z",
-      "mttd_hours": 0.9052777777777777
-    },
-    {
       "repo": "people-api",
       "number": 198,
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
@@ -8323,20 +8359,15 @@
     {
       "week_start": "2025-12-01",
       "all_repos": {
-        "mean_hours": 30.6,
-        "median_hours": 6.1,
-        "count": 9
+        "mean_hours": 65.6,
+        "median_hours": 65.6,
+        "count": 2
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 23.4,
-          "median_hours": 3.9,
-          "count": 6
-        },
-        "gp-api": {
-          "mean_hours": 45.1,
-          "median_hours": 67,
-          "count": 3
+          "mean_hours": 65.6,
+          "median_hours": 65.6,
+          "count": 2
         }
       }
     },
@@ -8953,20 +8984,20 @@
     {
       "week_start": "2026-06-01",
       "all_repos": {
-        "mean_hours": 6.2,
-        "median_hours": 6.2,
-        "count": 6
+        "mean_hours": 14.6,
+        "median_hours": 15.9,
+        "count": 22
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 0.2,
-          "median_hours": 0.2,
-          "count": 1
+          "mean_hours": 11.7,
+          "median_hours": 10.1,
+          "count": 8
         },
         "gp-api": {
-          "mean_hours": 6.6,
-          "median_hours": 6.2,
-          "count": 4
+          "mean_hours": 16.8,
+          "median_hours": 17.2,
+          "count": 13
         },
         "election-api": {
           "mean_hours": 10.3,
