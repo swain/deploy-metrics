@@ -1,15 +1,96 @@
 {
-  "generated_at": "2026-06-03T22:42:10.732Z",
+  "generated_at": "2026-06-04T22:29:52.332Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1952,
+      "title": "refactor(onboarding): migrate final files + remove @mui/@emotion packages (MUI removal PR 3/3)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-04T22:01:49Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1938,
+      "title": "feat(success): redesign campaign plan PDF",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-04T22:05:00Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1949,
+      "title": "refactor(dashboard): migrate off MUI onto @styleguide (MUI removal PR 2/4)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-04T20:59:12Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1951,
+      "title": "Display domain transfer banner on settings page ",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T19:38:48Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1950,
+      "title": "fix(ElectionResultPage): handle updateCampaign failure by throwing an…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T18:14:13Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1943,
+      "title": "refactor(shared): migrate app/shared off MUI onto @styleguide (MUI removal PR 1/4)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-04T16:09:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1946,
+      "title": "feat(Dashboard): update HubSpot domain transfer form URL in WebsiteSu…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T15:19:25Z",
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 1.6791666666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1945,
+      "title": "feat(ElectionFiling): update initial form state handling for campaign…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T14:04:02Z",
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 2.9355555555555557
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1942,
+      "title": "feat(Dashboard): integrate website fetching and sunset modal display",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T00:29:16Z",
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 16.515
+    },
     {
       "repo": "gp-webapp",
       "number": 1941,
       "title": "fix(ComplianceModal): gate texting-compliance copy on pro-upgrade1 flag",
       "author": "patrick-tgp",
       "merged_to_develop_at": "2026-06-03T22:27:21Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 18.546944444444446
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +98,8 @@
       "title": "Update sections to reflect new opposition response.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-06-03T20:45:08Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 20.250555555555554
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +107,8 @@
       "title": "feat: implement funnel view events for compliance flow",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-03T19:26:45Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 21.556944444444444
     },
     {
       "repo": "gp-webapp",
@@ -3360,22 +3441,58 @@
       "mttd_hours": 0.7266666666666667
     },
     {
-      "repo": "gp-webapp",
-      "number": 1203,
-      "title": "[ENG-4387] - More JS 👉 TS conversions",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-06T00:00:55Z",
-      "deployed_to_master_at": "2025-12-08T16:59:22Z",
-      "mttd_hours": 64.97416666666666
+      "repo": "gp-api",
+      "number": 1739,
+      "title": "feat(meetings): add MeetingResourceLocation and thread location hints",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-06-04T21:12:23Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1206,
-      "title": "upgrade further",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-05T22:43:06Z",
-      "deployed_to_master_at": "2025-12-08T16:59:22Z",
-      "mttd_hours": 66.27111111111111
+      "repo": "gp-api",
+      "number": 1743,
+      "title": "feat(campaign-chat): AI assistant quick wins — personalization, link safety, prompt env selection",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:44:40Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1745,
+      "title": "fix(deps): declare @smithy/smithy-client (used directly, was phantom)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:44:14Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1746,
+      "title": "chore(deps): bump typescript to ^5.9 (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:43:45Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1742,
+      "title": "Enhance ElectedOffice service and tests to return existing offices",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T20:21:35Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-api",
+      "number": 1738,
+      "title": "Update domain source handling and contract version",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-04T01:20:27Z",
+      "deployed_to_master_at": "2026-06-04T17:00:31Z",
+      "mttd_hours": 15.667777777777777
     },
     {
       "repo": "gp-api",
@@ -3383,8 +3500,8 @@
       "title": "Integrate CAP strategic-landscape (dispatch, persist, retry-with-cap)",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-06-03T20:44:53Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-04T17:00:31Z",
+      "mttd_hours": 20.260555555555555
     },
     {
       "repo": "gp-api",
@@ -3392,8 +3509,8 @@
       "title": "Scope S3 uploads to user ID for isolation",
       "author": "selta-goodparty",
       "merged_to_develop_at": "2026-06-03T06:29:25Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-03T15:59:05Z",
+      "mttd_hours": 9.494444444444444
     },
     {
       "repo": "gp-api",
@@ -7600,6 +7717,33 @@
     },
     {
       "repo": "people-api",
+      "number": 201,
+      "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:45:31Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
+      "number": 200,
+      "title": "chore(build): use swc builder for nest build (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:45:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
+      "number": 199,
+      "title": "chore(prisma): isolate client into per-package output dir (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:45:10Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "people-api",
       "number": 198,
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
       "author": "oakinh",
@@ -7966,6 +8110,42 @@
       "merged_to_develop_at": "2025-12-09T20:14:30Z",
       "deployed_to_master_at": "2025-12-09T21:44:47Z",
       "mttd_hours": 1.5047222222222223
+    },
+    {
+      "repo": "election-api",
+      "number": 189,
+      "title": "chore(deps): bump typescript to ^5.9 (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T21:05:37Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 187,
+      "title": "chore(prisma): isolate client into per-package output dir (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:46:07Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 188,
+      "title": "chore(build): use swc builder for nest build (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:45:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "election-api",
+      "number": 190,
+      "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-04T20:45:37Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "election-api",
@@ -8356,21 +8536,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-12-01",
-      "all_repos": {
-        "mean_hours": 65.6,
-        "median_hours": 65.6,
-        "count": 2
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 65.6,
-          "median_hours": 65.6,
-          "count": 2
-        }
-      }
-    },
     {
       "week_start": "2025-12-08",
       "all_repos": {
@@ -8984,20 +9149,20 @@
     {
       "week_start": "2026-06-01",
       "all_repos": {
-        "mean_hours": 14.6,
-        "median_hours": 15.9,
-        "count": 22
+        "mean_hours": 14.5,
+        "median_hours": 16.5,
+        "count": 31
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 11.7,
-          "median_hours": 10.1,
-          "count": 8
+          "mean_hours": 12.5,
+          "median_hours": 17.5,
+          "count": 14
         },
         "gp-api": {
-          "mean_hours": 16.8,
-          "median_hours": 17.2,
-          "count": 13
+          "mean_hours": 16.5,
+          "median_hours": 16.4,
+          "count": 16
         },
         "election-api": {
           "mean_hours": 10.3,
