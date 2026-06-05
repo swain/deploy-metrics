@@ -1,15 +1,159 @@
 {
-  "generated_at": "2026-06-04T22:29:52.332Z",
+  "generated_at": "2026-06-05T22:25:13.801Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1977,
+      "title": "fix(dashboard): clarify website sunset modal copy",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-06-05T22:12:54Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1974,
+      "title": "ENG 10315 unify budget volunteers",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-05T21:18:46Z",
+      "deployed_to_master_at": "2026-06-05T21:56:29Z",
+      "mttd_hours": 0.6286111111111111
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1968,
+      "title": "Add the final stuff",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T19:51:58Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 0.3275
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1970,
+      "title": "fix(analytics): update event names for candidate profile and DLC comp…",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-05T19:35:39Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 0.5994444444444444
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1969,
+      "title": "feat(committee-check): add EIN sanity check before form submission",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-05T19:25:11Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 0.7738888888888888
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1963,
+      "title": "fix(buttons): follow-up — vestigial FooterButtonLink prop + acknowledged-button success color",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T17:22:55Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 2.8116666666666665
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1965,
+      "title": "Fix party-select alignment + light-theme the AI chat history drawer",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T17:05:04Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 3.109166666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1964,
+      "title": "Normalize shared typography components to design-system tokens",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T17:04:54Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 3.1119444444444446
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1962,
+      "title": "chore(deps): monorepo-hoisting hygiene (phantom deps, react type pins, dead code)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T16:07:22Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 4.070833333333334
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1961,
+      "title": "refactor(buttons): consolidate all buttons onto the styleguide Button; delete legacy buttons folder",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T15:32:55Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 4.645
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1953,
+      "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T14:57:01Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 5.243333333333333
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1954,
+      "title": "chore(format): upgrade Prettier to v3 + reformat (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T14:56:45Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 5.247777777777777
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1955,
+      "title": "perf(webapp): lazy-load recharts, memoize global providers, drop dead code",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T14:56:35Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 5.250555555555556
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1960,
+      "title": "fix: post-migration visual regressions (modal sizing, TextField className, chat-history color)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T14:21:17Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 5.838888888888889
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1958,
+      "title": "fix(success): remove fabricated community events fallback",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-05T00:04:41Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 20.115555555555556
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1956,
+      "title": "fix(success): reconcile volunteer-hour target with Section 5 time budget",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-04T22:31:25Z",
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 21.67
+    },
     {
       "repo": "gp-webapp",
       "number": 1952,
       "title": "refactor(onboarding): migrate final files + remove @mui/@emotion packages (MUI removal PR 3/3)",
       "author": "swain",
       "merged_to_develop_at": "2026-06-04T22:01:49Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 22.163333333333334
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +161,8 @@
       "title": "feat(success): redesign campaign plan PDF",
       "author": "dealvz",
       "merged_to_develop_at": "2026-06-04T22:05:00Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 22.110277777777778
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +170,8 @@
       "title": "refactor(dashboard): migrate off MUI onto @styleguide (MUI removal PR 2/4)",
       "author": "swain",
       "merged_to_develop_at": "2026-06-04T20:59:12Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 23.206944444444446
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +179,8 @@
       "title": "Display domain transfer banner on settings page ",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-04T19:38:48Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 24.546944444444446
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +188,8 @@
       "title": "fix(ElectionResultPage): handle updateCampaign failure by throwing an…",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-04T18:14:13Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:37Z",
+      "mttd_hours": 25.956666666666667
     },
     {
       "repo": "gp-webapp",
@@ -53,8 +197,8 @@
       "title": "refactor(shared): migrate app/shared off MUI onto @styleguide (MUI removal PR 1/4)",
       "author": "swain",
       "merged_to_develop_at": "2026-06-04T16:09:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-04T17:00:10Z",
+      "mttd_hours": 0.85
     },
     {
       "repo": "gp-webapp",
@@ -3442,12 +3586,84 @@
     },
     {
       "repo": "gp-api",
+      "number": 1757,
+      "title": "chore(migrations): deduplicate elected office entries by keeping the …",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-05T18:36:00Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 1.5947222222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1758,
+      "title": "fix(meetings): use Together-hosted model for agenda hook",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T17:53:49Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 2.2977777777777777
+    },
+    {
+      "repo": "gp-api",
+      "number": 1752,
+      "title": "fix(meetings): route Agenda Created event through AnalyticsService",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-05T17:05:53Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 3.0966666666666667
+    },
+    {
+      "repo": "gp-api",
+      "number": 1753,
+      "title": "fix(deps): align @opentelemetry/* to a single consistent version set (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T16:06:39Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 4.083888888888889
+    },
+    {
+      "repo": "gp-api",
+      "number": 1750,
+      "title": "chore(contracts): decouple enum generation from runtime Prisma client",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T15:49:08Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 4.3758333333333335
+    },
+    {
+      "repo": "gp-api",
+      "number": 1749,
+      "title": "feat(local-news): ground LLM call in Google search for accurate contact info",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-05T15:40:44Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 4.515833333333333
+    },
+    {
+      "repo": "gp-api",
+      "number": 1744,
+      "title": "chore(prisma): isolate client into per-package output dir (monorepo prep)",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T15:30:25Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 4.687777777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1748,
+      "title": "fix(tests): adapt cross-office 403 tests to one-elected-office-per-user",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-05T14:51:27Z",
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 5.3372222222222225
+    },
+    {
+      "repo": "gp-api",
       "number": 1739,
       "title": "feat(meetings): add MeetingResourceLocation and thread location hints",
       "author": "stephtea",
       "merged_to_develop_at": "2026-06-04T21:12:23Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 22.988333333333333
     },
     {
       "repo": "gp-api",
@@ -3455,8 +3671,8 @@
       "title": "feat(campaign-chat): AI assistant quick wins — personalization, link safety, prompt env selection",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:44:40Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 23.450277777777778
     },
     {
       "repo": "gp-api",
@@ -3464,8 +3680,8 @@
       "title": "fix(deps): declare @smithy/smithy-client (used directly, was phantom)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:44:14Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 23.4575
     },
     {
       "repo": "gp-api",
@@ -3473,8 +3689,8 @@
       "title": "chore(deps): bump typescript to ^5.9 (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:43:45Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 23.465555555555557
     },
     {
       "repo": "gp-api",
@@ -3482,8 +3698,8 @@
       "title": "Enhance ElectedOffice service and tests to return existing offices",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-04T20:21:35Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-05T20:11:41Z",
+      "mttd_hours": 23.835
     },
     {
       "repo": "gp-api",
@@ -9149,20 +9365,20 @@
     {
       "week_start": "2026-06-01",
       "all_repos": {
-        "mean_hours": 14.5,
-        "median_hours": 16.5,
-        "count": 31
+        "mean_hours": 12.3,
+        "median_hours": 10.3,
+        "count": 65
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 12.5,
-          "median_hours": 17.5,
-          "count": 14
+          "mean_hours": 10.8,
+          "median_hours": 5.2,
+          "count": 35
         },
         "gp-api": {
-          "mean_hours": 16.5,
-          "median_hours": 16.4,
-          "count": 16
+          "mean_hours": 14.2,
+          "median_hours": 14.6,
+          "count": 29
         },
         "election-api": {
           "mean_hours": 10.3,
