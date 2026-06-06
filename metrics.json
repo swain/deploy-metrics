@@ -1,7 +1,25 @@
 {
-  "generated_at": "2026-06-05T22:25:13.801Z",
+  "generated_at": "2026-06-06T22:22:13.010Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1981,
+      "title": "fix(eng-10306): reject placeholder/SSN EINs in agentic flow + drop green check on bad EIN",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-06T20:36:51Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1979,
+      "title": "fix(campaign-plan): align PDF section order and numbering with on-screen plan",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-06T00:57:16Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1977,
@@ -3567,22 +3585,13 @@
       "mttd_hours": 17.0875
     },
     {
-      "repo": "gp-webapp",
-      "number": 1201,
-      "title": "[ENG-5935] Cap constituent count for polls at 10000 per run",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-08T19:58:26Z",
-      "deployed_to_master_at": "2025-12-09T16:46:39Z",
-      "mttd_hours": 20.80361111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1211,
-      "title": "Fix missing import",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T16:15:46Z",
-      "deployed_to_master_at": "2025-12-08T16:59:22Z",
-      "mttd_hours": 0.7266666666666667
+      "repo": "gp-api",
+      "number": 1764,
+      "title": "fix(experiment-runs): resume parked runs under a new run_id",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-06T03:18:12Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7905,33 +7914,6 @@
       "mttd_hours": 17.900277777777777
     },
     {
-      "repo": "gp-api",
-      "number": 919,
-      "title": "backmerge QA -> develop",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T15:40:29Z",
-      "deployed_to_master_at": "2025-12-08T16:44:32Z",
-      "mttd_hours": 1.0675
-    },
-    {
-      "repo": "gp-api",
-      "number": 916,
-      "title": "Update from master",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T15:17:13Z",
-      "deployed_to_master_at": "2025-12-08T16:44:32Z",
-      "mttd_hours": 1.4552777777777777
-    },
-    {
-      "repo": "gp-api",
-      "number": 917,
-      "title": "ENG-6135: add missing migration",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T14:56:05Z",
-      "deployed_to_master_at": "2025-12-08T16:44:32Z",
-      "mttd_hours": 1.8075
-    },
-    {
       "repo": "people-api",
       "number": 201,
       "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
@@ -8755,20 +8737,20 @@
     {
       "week_start": "2025-12-08",
       "all_repos": {
-        "mean_hours": 17.5,
-        "median_hours": 17.6,
-        "count": 32
+        "mean_hours": 19.8,
+        "median_hours": 17.9,
+        "count": 27
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 21.4,
+          "mean_hours": 22.5,
           "median_hours": 18.1,
-          "count": 21
+          "count": 19
         },
         "gp-api": {
-          "mean_hours": 8.2,
-          "median_hours": 2.3,
-          "count": 8
+          "mean_hours": 12.3,
+          "median_hours": 17.8,
+          "count": 5
         },
         "people-api": {
           "mean_hours": 11.9,
