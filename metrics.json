@@ -1,7 +1,61 @@
 {
-  "generated_at": "2026-06-06T22:22:13.010Z",
+  "generated_at": "2026-06-07T22:22:21.170Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 1987,
+      "title": "ENG-10330: Pro upgrade EIN step (front-end validation)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T14:21:14Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1986,
+      "title": "feat(pro-upgrade3): guidance interstitial (ENG-10329)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T10:20:34Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1985,
+      "title": "ENG-10328: filing-instructions dead-end screen (pro-upgrade3)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T09:14:42Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1984,
+      "title": "ENG-10327: filing-status branch screen (Have you already filed?)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T08:24:00Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1983,
+      "title": "feat(pro-upgrade3): value-prop / paywall wizard entry screen (ENG-10326)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T06:54:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1982,
+      "title": "feat(pro-upgrade3): wizard shell, step-derivation router, and flag (ENG-10322)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T05:06:30Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
+    },
     {
       "repo": "gp-webapp",
       "number": 1981,
@@ -3513,76 +3567,31 @@
       "mttd_hours": 22.876666666666665
     },
     {
-      "repo": "gp-webapp",
-      "number": 1227,
-      "title": "remove client-side redirect usage",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T22:19:01Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 23.516944444444444
+      "repo": "gp-api",
+      "number": 1768,
+      "title": "feat(campaigns): filing office contact on metrics + email-this-to-me (ENG-10325)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T07:29:38Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1223,
-      "title": "ENG-6101: misc final fixes",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T20:02:10Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 25.797777777777778
+      "repo": "gp-api",
+      "number": 1767,
+      "title": "feat(payments): embedded Stripe checkout for Pro subscription [ENG-10324]",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T02:17:22Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
-      "repo": "gp-webapp",
-      "number": 1217,
-      "title": "only show reommended badge if low confidence",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-09T19:30:25Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 26.326944444444443
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1222,
-      "title": "polls onboarding typescript conversion",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-09T18:53:18Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 26.945555555555554
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1218,
-      "title": "ENG-6101: consolidate preview UIs and add scheduling",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T17:38:03Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 28.19972222222222
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1204,
-      "title": "ENG-5868: support poll payment",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T00:51:03Z",
-      "deployed_to_master_at": "2025-12-09T16:46:39Z",
-      "mttd_hours": 15.926666666666666
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1213,
-      "title": "[ENG-5864] Poll Bias Input UX",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-08T22:40:38Z",
-      "deployed_to_master_at": "2025-12-09T16:46:39Z",
-      "mttd_hours": 18.100277777777777
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1216,
-      "title": "ENG-6101: consolidate audience selector UI + other fixups",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T23:41:24Z",
-      "deployed_to_master_at": "2025-12-09T16:46:39Z",
-      "mttd_hours": 17.0875
+      "repo": "gp-api",
+      "number": 1766,
+      "title": "ENG-10323: fire compliance_setup dispatch on payment success, not on submit",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T01:21:05Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "gp-api",
@@ -7878,42 +7887,6 @@
       "mttd_hours": 21.821666666666665
     },
     {
-      "repo": "gp-api",
-      "number": 922,
-      "title": "ENG-6101: fix scheduledDate and estimatedCompletionDate calculation",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T20:53:17Z",
-      "deployed_to_master_at": "2025-12-09T21:54:47Z",
-      "mttd_hours": 1.025
-    },
-    {
-      "repo": "gp-api",
-      "number": 925,
-      "title": "ENG-6101: fix max message lengths",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-09T19:07:15Z",
-      "deployed_to_master_at": "2025-12-09T21:54:47Z",
-      "mttd_hours": 2.792222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 921,
-      "title": "ENG-5868: use a different property for pull purchase type",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-08T22:43:00Z",
-      "deployed_to_master_at": "2025-12-09T16:32:27Z",
-      "mttd_hours": 17.824166666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 907,
-      "title": "[ENG-5935] Cap constituent count for polls at 10000 per run",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-08T22:38:26Z",
-      "deployed_to_master_at": "2025-12-09T16:32:27Z",
-      "mttd_hours": 17.900277777777777
-    },
-    {
       "repo": "people-api",
       "number": 201,
       "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
@@ -8301,13 +8274,13 @@
       "mttd_hours": 22.348055555555554
     },
     {
-      "repo": "people-api",
-      "number": 113,
-      "title": "missed cleanup for Registered_Voter",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-09T20:14:30Z",
-      "deployed_to_master_at": "2025-12-09T21:44:47Z",
-      "mttd_hours": 1.5047222222222223
+      "repo": "election-api",
+      "number": 191,
+      "title": "feat(races): surface filing office contact on by-br-hash-id endpoint (ENG-10325)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T07:13:07Z",
+      "deployed_to_master_at": null,
+      "mttd_hours": null
     },
     {
       "repo": "election-api",
@@ -8737,25 +8710,25 @@
     {
       "week_start": "2025-12-08",
       "all_repos": {
-        "mean_hours": 19.8,
-        "median_hours": 17.9,
-        "count": 27
+        "mean_hours": 22.2,
+        "median_hours": 19.6,
+        "count": 14
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 22.5,
-          "median_hours": 18.1,
-          "count": 19
+          "mean_hours": 22.3,
+          "median_hours": 17.3,
+          "count": 11
         },
         "gp-api": {
-          "mean_hours": 12.3,
-          "median_hours": 17.8,
-          "count": 5
+          "mean_hours": 21.8,
+          "median_hours": 21.8,
+          "count": 1
         },
         "people-api": {
-          "mean_hours": 11.9,
-          "median_hours": 11.9,
-          "count": 2
+          "mean_hours": 22.3,
+          "median_hours": 22.3,
+          "count": 1
         },
         "election-api": {
           "mean_hours": 21.8,
