@@ -1,15 +1,168 @@
 {
-  "generated_at": "2026-06-07T22:22:21.170Z",
+  "generated_at": "2026-06-08T22:30:50.881Z",
   "days_back": 180,
   "prs": [
+    {
+      "repo": "gp-webapp",
+      "number": 2002,
+      "title": "ENG-10337 Add analytics for onboarding flow",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-08T19:09:27Z",
+      "deployed_to_master_at": "2026-06-08T19:26:35Z",
+      "mttd_hours": 0.28555555555555556
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1998,
+      "title": "fix: show localized voter issues as a ranked list",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-08T19:07:35Z",
+      "deployed_to_master_at": "2026-06-08T19:26:35Z",
+      "mttd_hours": 0.31666666666666665
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 2000,
+      "title": "feat(success): add AI disclaimer to campaign plan page and PDF",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-08T19:00:35Z",
+      "deployed_to_master_at": "2026-06-08T19:26:35Z",
+      "mttd_hours": 0.43333333333333335
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 2001,
+      "title": "ENG-10336: Pro upgrade entry banner + locked-items routing",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T18:50:52Z",
+      "deployed_to_master_at": "2026-06-08T19:26:35Z",
+      "mttd_hours": 0.5952777777777778
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1991,
+      "title": "feat(success): use SOS-curated voter deadlines for registration + absentee",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-08T18:16:41Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 0.3047222222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1997,
+      "title": "Updated the banner heading in WebsiteSunsetBanner.tsx from Website discontinued to Our build your own website feature is being discontinued",
+      "author": "patrick-tgp",
+      "merged_to_develop_at": "2026-06-08T18:14:59Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 0.33305555555555555
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1995,
+      "title": "ENG-10335: pro-upgrade3 post-payment compliance status states",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T17:27:31Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 1.1241666666666668
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1994,
+      "title": "test(e2e): fix flaky timing windows and skip data-absent Spanish filter",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T16:48:34Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 1.7733333333333334
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1861,
+      "title": "build(deps): bump js-cookie from 3.0.5 to 3.0.7",
+      "author": "dependabot[bot]",
+      "merged_to_develop_at": "2026-06-08T16:48:02Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 1.7822222222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1959,
+      "title": "chore(deps-dev): bump axios from 1.14.0 to 1.17.0",
+      "author": "dependabot[bot]",
+      "merged_to_develop_at": "2026-06-08T16:08:35Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 2.439722222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1944,
+      "title": "Render briefing AI disclosure as a footer on the detail page",
+      "author": "melecia-gp",
+      "merged_to_develop_at": "2026-06-08T15:55:41Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 2.6547222222222224
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1973,
+      "title": "Admin briefing review mode (impersonation-gated)",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-08T15:58:16Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 2.611666666666667
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1992,
+      "title": "ENG-10334: Pro upgrade success screen (Welcome to Pro)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T15:53:23Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 2.6930555555555555
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1980,
+      "title": "Briefing Agenda upload modal",
+      "author": "stephtea",
+      "merged_to_develop_at": "2026-06-08T15:15:47Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 3.319722222222222
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1990,
+      "title": "feat(pro-upgrade): embedded Stripe checkout payment step [ENG-10333]",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T03:27:29Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 15.124722222222223
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1989,
+      "title": "ENG-10332: Pro upgrade candidate-profile step (bio + policy priorities)",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-08T01:04:22Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 17.51
+    },
+    {
+      "repo": "gp-webapp",
+      "number": 1988,
+      "title": "ENG-10331: Pro upgrade filing-details step",
+      "author": "tomer-tgp",
+      "merged_to_develop_at": "2026-06-07T22:27:11Z",
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 20.129722222222224
+    },
     {
       "repo": "gp-webapp",
       "number": 1987,
       "title": "ENG-10330: Pro upgrade EIN step (front-end validation)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T14:21:14Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 28.22888888888889
     },
     {
       "repo": "gp-webapp",
@@ -17,8 +170,8 @@
       "title": "feat(pro-upgrade3): guidance interstitial (ENG-10329)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T10:20:34Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 32.24
     },
     {
       "repo": "gp-webapp",
@@ -26,8 +179,8 @@
       "title": "ENG-10328: filing-instructions dead-end screen (pro-upgrade3)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T09:14:42Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 33.33777777777778
     },
     {
       "repo": "gp-webapp",
@@ -35,8 +188,8 @@
       "title": "ENG-10327: filing-status branch screen (Have you already filed?)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T08:24:00Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 34.18277777777778
     },
     {
       "repo": "gp-webapp",
@@ -44,8 +197,8 @@
       "title": "feat(pro-upgrade3): value-prop / paywall wizard entry screen (ENG-10326)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T06:54:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 35.67666666666667
     },
     {
       "repo": "gp-webapp",
@@ -53,8 +206,8 @@
       "title": "feat(pro-upgrade3): wizard shell, step-derivation router, and flag (ENG-10322)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T05:06:30Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 37.474444444444444
     },
     {
       "repo": "gp-webapp",
@@ -62,8 +215,8 @@
       "title": "fix(eng-10306): reject placeholder/SSN EINs in agentic flow + drop green check on bad EIN",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-06T20:36:51Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 45.96861111111111
     },
     {
       "repo": "gp-webapp",
@@ -71,8 +224,8 @@
       "title": "fix(campaign-plan): align PDF section order and numbering with on-screen plan",
       "author": "dealvz",
       "merged_to_develop_at": "2026-06-06T00:57:16Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 65.62833333333333
     },
     {
       "repo": "gp-webapp",
@@ -80,8 +233,8 @@
       "title": "fix(dashboard): clarify website sunset modal copy",
       "author": "patrick-tgp",
       "merged_to_develop_at": "2026-06-05T22:12:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:58Z",
+      "mttd_hours": 68.36777777777777
     },
     {
       "repo": "gp-webapp",
@@ -3522,49 +3675,67 @@
       "mttd_hours": 24.663055555555555
     },
     {
-      "repo": "gp-webapp",
-      "number": 1234,
-      "title": "ENG-6170: add tooltips for disabled dates",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-10T22:16:15Z",
-      "deployed_to_master_at": "2025-12-11T15:33:14Z",
-      "mttd_hours": 17.283055555555556
+      "repo": "gp-api",
+      "number": 1773,
+      "title": "fix: localize onboarding voter issues to the office's jurisdiction",
+      "author": "dealvz",
+      "merged_to_develop_at": "2026-06-08T19:08:35Z",
+      "deployed_to_master_at": "2026-06-08T19:26:31Z",
+      "mttd_hours": 0.29888888888888887
     },
     {
-      "repo": "gp-webapp",
-      "number": 1230,
-      "title": "ENG-6163: add create poll analytics",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-10T19:22:52Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 2.452777777777778
+      "repo": "gp-api",
+      "number": 1774,
+      "title": "ENG-10337 Add analytics for onboarding flow",
+      "author": "feliksalbright",
+      "merged_to_develop_at": "2026-06-08T19:03:11Z",
+      "deployed_to_master_at": "2026-06-08T19:26:31Z",
+      "mttd_hours": 0.3888888888888889
     },
     {
-      "repo": "gp-webapp",
-      "number": 1231,
-      "title": "UI fixes per Kaylee to match Figma",
+      "repo": "gp-api",
+      "number": 1711,
+      "title": "Validate voter file filter on outreach creation",
+      "author": "selta-goodparty",
+      "merged_to_develop_at": "2026-06-08T18:18:45Z",
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 0.26694444444444443
+    },
+    {
+      "repo": "gp-api",
+      "number": 1771,
+      "title": "fix(meetings): send briefing analytics dates as epoch ms for HubSpot",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-08T17:19:36Z",
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 1.2527777777777778
+    },
+    {
+      "repo": "gp-api",
+      "number": 1761,
+      "title": "feat(meetings): bulk-dispatch briefings through the product's 5-day imminence gate",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-08T16:01:56Z",
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 2.547222222222222
+    },
+    {
+      "repo": "gp-api",
+      "number": 1760,
+      "title": "Admin briefing review: review annotations + admin briefings endpoint",
+      "author": "swain",
+      "merged_to_develop_at": "2026-06-08T15:17:18Z",
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 3.2911111111111113
+    },
+    {
+      "repo": "gp-api",
+      "number": 1765,
+      "title": "Briefing agenda file upload",
       "author": "stephtea",
-      "merged_to_develop_at": "2025-12-10T19:21:09Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 2.481388888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1229,
-      "title": "add send date validation",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-10T18:18:44Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 3.5216666666666665
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1224,
-      "title": "[ENG-4387] - Mas Conversions",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-09T22:57:26Z",
-      "deployed_to_master_at": "2025-12-10T21:50:02Z",
-      "mttd_hours": 22.876666666666665
+      "merged_to_develop_at": "2026-06-08T15:15:33Z",
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 3.3202777777777777
     },
     {
       "repo": "gp-api",
@@ -3572,8 +3743,8 @@
       "title": "feat(campaigns): filing office contact on metrics + email-this-to-me (ENG-10325)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T07:29:38Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 35.08555555555556
     },
     {
       "repo": "gp-api",
@@ -3581,8 +3752,8 @@
       "title": "feat(payments): embedded Stripe checkout for Pro subscription [ENG-10324]",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T02:17:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 40.29
     },
     {
       "repo": "gp-api",
@@ -3590,8 +3761,8 @@
       "title": "ENG-10323: fire compliance_setup dispatch on payment success, not on submit",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T01:21:05Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 41.22805555555556
     },
     {
       "repo": "gp-api",
@@ -3599,8 +3770,8 @@
       "title": "fix(experiment-runs): resume parked runs under a new run_id",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-06T03:18:12Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:46Z",
+      "mttd_hours": 63.27611111111111
     },
     {
       "repo": "gp-api",
@@ -7888,12 +8059,21 @@
     },
     {
       "repo": "people-api",
+      "number": 202,
+      "title": "fix(deploy): copy generated Prisma client into runtime image",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-08T17:04:35Z",
+      "deployed_to_master_at": "2026-06-08T18:35:01Z",
+      "mttd_hours": 1.5072222222222222
+    },
+    {
+      "repo": "people-api",
       "number": 201,
       "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:45:31Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:35:01Z",
+      "mttd_hours": 93.825
     },
     {
       "repo": "people-api",
@@ -7901,8 +8081,8 @@
       "title": "chore(build): use swc builder for nest build (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:45:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:35:01Z",
+      "mttd_hours": 93.8275
     },
     {
       "repo": "people-api",
@@ -7910,8 +8090,8 @@
       "title": "chore(prisma): isolate client into per-package output dir (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:45:10Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:35:01Z",
+      "mttd_hours": 93.83083333333333
     },
     {
       "repo": "people-api",
@@ -7919,8 +8099,8 @@
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:33:23Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:35:01Z",
+      "mttd_hours": 147.02722222222224
     },
     {
       "repo": "people-api",
@@ -8275,12 +8455,21 @@
     },
     {
       "repo": "election-api",
+      "number": 193,
+      "title": "fix(deploy): restore dist src runtime paths",
+      "author": "oakinh",
+      "merged_to_develop_at": "2026-06-08T16:28:55Z",
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 2.0994444444444444
+    },
+    {
+      "repo": "election-api",
       "number": 191,
       "title": "feat(races): surface filing office contact on by-br-hash-id endpoint (ENG-10325)",
       "author": "tomer-tgp",
       "merged_to_develop_at": "2026-06-07T07:13:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 35.36277777777778
     },
     {
       "repo": "election-api",
@@ -8288,8 +8477,8 @@
       "title": "chore(deps): bump typescript to ^5.9 (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T21:05:37Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 93.48777777777778
     },
     {
       "repo": "election-api",
@@ -8297,8 +8486,8 @@
       "title": "chore(prisma): isolate client into per-package output dir (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:46:07Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 93.81277777777778
     },
     {
       "repo": "election-api",
@@ -8306,8 +8495,8 @@
       "title": "chore(build): use swc builder for nest build (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:45:54Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 93.8163888888889
     },
     {
       "repo": "election-api",
@@ -8315,8 +8504,8 @@
       "title": "chore(lint): migrate to ESLint v9 flat config (monorepo prep)",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-04T20:45:37Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 93.82111111111111
     },
     {
       "repo": "election-api",
@@ -8324,8 +8513,8 @@
       "title": "Fix misleading win_number field comment",
       "author": "hhkarimi",
       "merged_to_develop_at": "2026-06-02T16:32:22Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 146.04194444444445
     },
     {
       "repo": "election-api",
@@ -8333,8 +8522,8 @@
       "title": "chore(perf): add scripts/perf/ tooling wrappers",
       "author": "oakinh",
       "merged_to_develop_at": "2026-06-02T15:33:39Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 147.02055555555555
     },
     {
       "repo": "election-api",
@@ -8342,8 +8531,8 @@
       "title": "ENG-7253 Position to zipcode endpoint.",
       "author": "feliksalbright",
       "merged_to_develop_at": "2026-06-02T13:53:15Z",
-      "deployed_to_master_at": null,
-      "mttd_hours": null
+      "deployed_to_master_at": "2026-06-08T18:34:53Z",
+      "mttd_hours": 148.6938888888889
     },
     {
       "repo": "election-api",
@@ -8710,15 +8899,15 @@
     {
       "week_start": "2025-12-08",
       "all_repos": {
-        "mean_hours": 22.2,
-        "median_hours": 19.6,
-        "count": 14
+        "mean_hours": 29.2,
+        "median_hours": 21.8,
+        "count": 9
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 22.3,
-          "median_hours": 17.3,
-          "count": 11
+          "mean_hours": 32.8,
+          "median_hours": 21.1,
+          "count": 6
         },
         "gp-api": {
           "mean_hours": 21.8,
@@ -9320,24 +9509,59 @@
     {
       "week_start": "2026-06-01",
       "all_repos": {
-        "mean_hours": 12.3,
-        "median_hours": 10.3,
-        "count": 65
+        "mean_hours": 29.2,
+        "median_hours": 20.3,
+        "count": 91
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 10.8,
-          "median_hours": 5.2,
-          "count": 35
+          "mean_hours": 17.3,
+          "median_hours": 19.5,
+          "count": 45
         },
         "gp-api": {
-          "mean_hours": 14.2,
-          "median_hours": 14.6,
-          "count": 29
+          "mean_hours": 17.9,
+          "median_hours": 17.2,
+          "count": 33
+        },
+        "people-api": {
+          "mean_hours": 107.1,
+          "median_hours": 93.8,
+          "count": 4
         },
         "election-api": {
-          "mean_hours": 10.3,
-          "median_hours": 10.3,
+          "mean_hours": 95.8,
+          "median_hours": 93.8,
+          "count": 9
+        }
+      }
+    },
+    {
+      "week_start": "2026-06-08",
+      "all_repos": {
+        "mean_hours": 2.7,
+        "median_hours": 1.8,
+        "count": 25
+      },
+      "by_repo": {
+        "gp-webapp": {
+          "mean_hours": 3.3,
+          "median_hours": 1.8,
+          "count": 16
+        },
+        "gp-api": {
+          "mean_hours": 1.6,
+          "median_hours": 1.3,
+          "count": 7
+        },
+        "people-api": {
+          "mean_hours": 1.5,
+          "median_hours": 1.5,
+          "count": 1
+        },
+        "election-api": {
+          "mean_hours": 2.1,
+          "median_hours": 2.1,
           "count": 1
         }
       }
