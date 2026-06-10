@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T22:30:22.953Z",
+  "generated_at": "2026-06-10T22:35:55.110Z",
   "days_back": 180,
   "prs": [
     {
@@ -3628,42 +3628,6 @@
       "merged_to_develop_at": "2025-12-12T23:46:30Z",
       "deployed_to_master_at": "2025-12-15T17:15:31Z",
       "mttd_hours": 65.48361111111112
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1249,
-      "title": "Convert /contacts to typescript",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-12T17:31:24Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 71.73527777777778
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1244,
-      "title": "remove aggressive client caching which is showing wrong information w…",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-12T16:28:43Z",
-      "deployed_to_master_at": "2025-12-12T16:32:32Z",
-      "mttd_hours": 0.0636111111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1241,
-      "title": "[ENG-5880] Update Contact page styling",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-11T23:20:48Z",
-      "deployed_to_master_at": "2025-12-12T16:32:32Z",
-      "mttd_hours": 17.195555555555554
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1242,
-      "title": "ENG-6188: fix racing request issue in office picker",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-11T23:04:58Z",
-      "deployed_to_master_at": "2025-12-12T16:32:32Z",
-      "mttd_hours": 17.459444444444443
     },
     {
       "repo": "gp-api",
@@ -8863,15 +8827,15 @@
     {
       "week_start": "2025-12-08",
       "all_repos": {
-        "mean_hours": 34.4,
-        "median_hours": 17.5,
-        "count": 5
+        "mean_hours": 65.5,
+        "median_hours": 65.5,
+        "count": 1
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 34.4,
-          "median_hours": 17.5,
-          "count": 5
+          "mean_hours": 65.5,
+          "median_hours": 65.5,
+          "count": 1
         }
       }
     },
