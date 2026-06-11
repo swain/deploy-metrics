@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T22:35:55.110Z",
+  "generated_at": "2026-06-11T22:34:38.484Z",
   "days_back": 180,
   "prs": [
     {
@@ -3619,15 +3619,6 @@
       "merged_to_develop_at": "2025-12-15T14:51:43Z",
       "deployed_to_master_at": "2025-12-15T17:15:31Z",
       "mttd_hours": 2.3966666666666665
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1243,
-      "title": "[ENG-4387] - even more ts",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-12T23:46:30Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 65.48361111111112
     },
     {
       "repo": "gp-api",
@@ -8824,21 +8815,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-12-08",
-      "all_repos": {
-        "mean_hours": 65.5,
-        "median_hours": 65.5,
-        "count": 1
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 65.5,
-          "median_hours": 65.5,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2025-12-15",
       "all_repos": {
