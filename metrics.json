@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T22:30:25.184Z",
+  "generated_at": "2026-06-13T22:22:42.485Z",
   "days_back": 180,
   "prs": [
     {
@@ -3583,42 +3583,6 @@
       "merged_to_develop_at": "2025-12-15T22:36:04Z",
       "deployed_to_master_at": "2025-12-16T19:21:35Z",
       "mttd_hours": 20.75861111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1237,
-      "title": "fix create poll payment padding",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-15T15:59:59Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 1.258888888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1245,
-      "title": "Bump next from 15.5.7 to 15.5.9",
-      "author": "dependabot[bot]",
-      "merged_to_develop_at": "2025-12-15T15:52:26Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 1.3847222222222222
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1207,
-      "title": "ENG-6140 move rerouting logic from dashboard page to dashboard layout…",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-15T15:19:27Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 1.9344444444444444
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1187,
-      "title": "chore(deps): bump validator from 13.15.20 to 13.15.22",
-      "author": "dependabot[bot]",
-      "merged_to_develop_at": "2025-12-15T14:51:43Z",
-      "deployed_to_master_at": "2025-12-15T17:15:31Z",
-      "mttd_hours": 2.3966666666666665
     },
     {
       "repo": "gp-api",
@@ -7986,15 +7950,6 @@
       "mttd_hours": 20.745833333333334
     },
     {
-      "repo": "gp-api",
-      "number": 933,
-      "title": "Use a single log message for queue failures",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-15T15:46:50Z",
-      "deployed_to_master_at": "2025-12-15T17:02:33Z",
-      "mttd_hours": 1.2619444444444445
-    },
-    {
       "repo": "people-api",
       "number": 202,
       "title": "fix(deploy): copy generated Prisma client into runtime image",
@@ -8818,20 +8773,20 @@
     {
       "week_start": "2025-12-15",
       "all_repos": {
-        "mean_hours": 26.3,
-        "median_hours": 17.1,
-        "count": 29
+        "mean_hours": 31.4,
+        "median_hours": 20.2,
+        "count": 24
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 33.9,
-          "median_hours": 20.8,
-          "count": 19
+          "mean_hours": 42.5,
+          "median_hours": 46.6,
+          "count": 15
         },
         "gp-api": {
-          "mean_hours": 11.8,
-          "median_hours": 15.8,
-          "count": 10
+          "mean_hours": 13,
+          "median_hours": 16,
+          "count": 9
         }
       }
     },
