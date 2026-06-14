@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T22:22:42.485Z",
+  "generated_at": "2026-06-14T22:25:01.556Z",
   "days_back": 180,
   "prs": [
     {
@@ -3538,51 +3538,6 @@
       "merged_to_develop_at": "2025-12-17T15:33:52Z",
       "deployed_to_master_at": "2025-12-19T15:35:34Z",
       "mttd_hours": 48.028333333333336
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1253,
-      "title": "dynamically size the selectcontent component so we dont have unreacha…",
-      "author": "Collin-GP",
-      "merged_to_develop_at": "2025-12-16T22:09:20Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 65.43722222222222
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1259,
-      "title": "ENG-6254: Exclude polls pages from Pro upgrade modal",
-      "author": "bryclevgp",
-      "merged_to_develop_at": "2025-12-16T19:32:59Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 68.04305555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1256,
-      "title": "Consolidate contact stats fetching",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-16T17:52:08Z",
-      "deployed_to_master_at": "2025-12-16T19:21:35Z",
-      "mttd_hours": 1.4908333333333332
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1254,
-      "title": "Ravenhurst/eng 4387 trying with claude code cli",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-15T23:43:03Z",
-      "deployed_to_master_at": "2025-12-16T19:21:35Z",
-      "mttd_hours": 19.642222222222223
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1255,
-      "title": "expose SLACK_BOT_TOKEN to playwright tests",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-15T22:36:04Z",
-      "deployed_to_master_at": "2025-12-16T19:21:35Z",
-      "mttd_hours": 20.75861111111111
     },
     {
       "repo": "gp-api",
@@ -7905,51 +7860,6 @@
       "mttd_hours": 23.930833333333332
     },
     {
-      "repo": "gp-api",
-      "number": 939,
-      "title": "Automatically clean up test users",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-16T17:30:35Z",
-      "deployed_to_master_at": "2025-12-16T19:21:23Z",
-      "mttd_hours": 1.8466666666666667
-    },
-    {
-      "repo": "gp-api",
-      "number": 941,
-      "title": "[ENG-6258] - Fixes too-strict validation",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-16T17:13:27Z",
-      "deployed_to_master_at": "2025-12-16T19:21:23Z",
-      "mttd_hours": 2.132222222222222
-    },
-    {
-      "repo": "gp-api",
-      "number": 940,
-      "title": "chore: json column rule",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-12-16T15:53:37Z",
-      "deployed_to_master_at": "2025-12-16T19:21:23Z",
-      "mttd_hours": 3.4627777777777777
-    },
-    {
-      "repo": "gp-api",
-      "number": 909,
-      "title": "Eng 6097 iac",
-      "author": "tomer-tgp",
-      "merged_to_develop_at": "2025-12-16T02:17:52Z",
-      "deployed_to_master_at": "2025-12-16T19:21:23Z",
-      "mttd_hours": 17.058611111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 928,
-      "title": "Registration submissions failing on step 3",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-12-15T22:36:38Z",
-      "deployed_to_master_at": "2025-12-16T19:21:23Z",
-      "mttd_hours": 20.745833333333334
-    },
-    {
       "repo": "people-api",
       "number": 202,
       "title": "fix(deploy): copy generated Prisma client into runtime image",
@@ -8773,20 +8683,20 @@
     {
       "week_start": "2025-12-15",
       "all_repos": {
-        "mean_hours": 31.4,
-        "median_hours": 20.2,
-        "count": 24
+        "mean_hours": 38.1,
+        "median_hours": 32.8,
+        "count": 14
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 42.5,
-          "median_hours": 46.6,
-          "count": 15
+          "mean_hours": 46.2,
+          "median_hours": 47.3,
+          "count": 10
         },
         "gp-api": {
-          "mean_hours": 13,
-          "median_hours": 16,
-          "count": 9
+          "mean_hours": 18,
+          "median_hours": 16.2,
+          "count": 4
         }
       }
     },
