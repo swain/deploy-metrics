@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T22:25:01.556Z",
+  "generated_at": "2026-06-15T22:40:08.192Z",
   "days_back": 180,
   "prs": [
     {
@@ -3511,33 +3511,6 @@
       "merged_to_develop_at": "2025-12-18T20:02:21Z",
       "deployed_to_master_at": "2025-12-19T15:35:34Z",
       "mttd_hours": 19.55361111111111
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1262,
-      "title": "Eng 4064 candidates are adding websites they didnt purchase through good partyorg to compliance form",
-      "author": "awardquick",
-      "merged_to_develop_at": "2025-12-17T21:51:52Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 41.72833333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1260,
-      "title": "[ENG-5912] Update contacts table UI",
-      "author": "stephtea",
-      "merged_to_develop_at": "2025-12-17T17:02:04Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 46.55833333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1261,
-      "title": "[ENG-4387] - ok hopefully cursor is faster",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-17T15:33:52Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 48.028333333333336
     },
     {
       "repo": "gp-api",
@@ -8683,15 +8656,15 @@
     {
       "week_start": "2025-12-15",
       "all_repos": {
-        "mean_hours": 38.1,
-        "median_hours": 32.8,
-        "count": 14
+        "mean_hours": 36.1,
+        "median_hours": 19.6,
+        "count": 11
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 46.2,
-          "median_hours": 47.3,
-          "count": 10
+          "mean_hours": 46.5,
+          "median_hours": 69.4,
+          "count": 7
         },
         "gp-api": {
           "mean_hours": 18,
