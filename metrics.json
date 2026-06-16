@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T22:40:08.192Z",
+  "generated_at": "2026-06-16T22:37:19.575Z",
   "days_back": 180,
   "prs": [
     {
@@ -3502,15 +3502,6 @@
       "merged_to_develop_at": "2025-12-19T15:04:11Z",
       "deployed_to_master_at": "2025-12-19T15:35:34Z",
       "mttd_hours": 0.5230555555555556
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1263,
-      "title": "[ENG-4387] - next batch, lets go",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-18T20:02:21Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 19.55361111111111
     },
     {
       "repo": "gp-api",
@@ -7815,24 +7806,6 @@
       "mttd_hours": 16.02638888888889
     },
     {
-      "repo": "gp-api",
-      "number": 950,
-      "title": "improve slack error logs",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-18T22:32:18Z",
-      "deployed_to_master_at": "2025-12-19T14:55:46Z",
-      "mttd_hours": 16.391111111111112
-    },
-    {
-      "repo": "gp-api",
-      "number": 944,
-      "title": "fix/ENG-5977 peerly outreach jobs do not contain script content",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-12-18T14:59:55Z",
-      "deployed_to_master_at": "2025-12-19T14:55:46Z",
-      "mttd_hours": 23.930833333333332
-    },
-    {
       "repo": "people-api",
       "number": 202,
       "title": "fix(deploy): copy generated Prisma client into runtime image",
@@ -8656,20 +8629,20 @@
     {
       "week_start": "2025-12-15",
       "all_repos": {
-        "mean_hours": 36.1,
-        "median_hours": 19.6,
-        "count": 11
+        "mean_hours": 42.2,
+        "median_hours": 42.7,
+        "count": 8
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 46.5,
-          "median_hours": 69.4,
-          "count": 7
+          "mean_hours": 51,
+          "median_hours": 69.8,
+          "count": 6
         },
         "gp-api": {
-          "mean_hours": 18,
-          "median_hours": 16.2,
-          "count": 4
+          "mean_hours": 15.8,
+          "median_hours": 15.8,
+          "count": 2
         }
       }
     },
