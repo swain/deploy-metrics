@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T22:37:19.575Z",
+  "generated_at": "2026-06-17T22:33:33.161Z",
   "days_back": 180,
   "prs": [
     {
@@ -3406,15 +3406,6 @@
     },
     {
       "repo": "gp-webapp",
-      "number": 1270,
-      "title": "Change localTribeName to officeLevel and add a drop down during registration.",
-      "author": "feliksalbright",
-      "merged_to_develop_at": "2025-12-19T01:13:39Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 14.365277777777777
-    },
-    {
-      "repo": "gp-webapp",
       "number": 1286,
       "title": "ENG-6296: disable 'Complete Purchase' button until payment method selected",
       "author": "swain",
@@ -3457,51 +3448,6 @@
       "merged_to_develop_at": "2025-12-22T15:12:42Z",
       "deployed_to_master_at": "2025-12-22T19:54:27Z",
       "mttd_hours": 4.695833333333334
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1277,
-      "title": "Remove polls caching",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-19T22:28:45Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 69.42833333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1276,
-      "title": "[ENG-4387] - More admin and and other conversions",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-19T21:38:22Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 70.26805555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1268,
-      "title": "add newrelic reporting to the client app",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-19T16:45:33Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 75.14833333333333
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1272,
-      "title": "Add testid for constituent data",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-19T15:49:55Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 76.07555555555555
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1269,
-      "title": "[ENG-4387] - man ai does NOT like this admin area slop code!",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-19T15:04:11Z",
-      "deployed_to_master_at": "2025-12-19T15:35:34Z",
-      "mttd_hours": 0.5230555555555556
     },
     {
       "repo": "gp-api",
@@ -7788,24 +7734,6 @@
       "mttd_hours": 15.98
     },
     {
-      "repo": "gp-api",
-      "number": 952,
-      "title": "Add logs for payment intent creation + failures",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-18T23:27:20Z",
-      "deployed_to_master_at": "2025-12-19T14:55:46Z",
-      "mttd_hours": 15.473888888888888
-    },
-    {
-      "repo": "gp-api",
-      "number": 946,
-      "title": "Add admin auditing",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-18T22:54:11Z",
-      "deployed_to_master_at": "2025-12-19T14:55:46Z",
-      "mttd_hours": 16.02638888888889
-    },
-    {
       "repo": "people-api",
       "number": 202,
       "title": "fix(deploy): copy generated Prisma client into runtime image",
@@ -8626,26 +8554,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-12-15",
-      "all_repos": {
-        "mean_hours": 42.2,
-        "median_hours": 42.7,
-        "count": 8
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 51,
-          "median_hours": 69.8,
-          "count": 6
-        },
-        "gp-api": {
-          "mean_hours": 15.8,
-          "median_hours": 15.8,
-          "count": 2
-        }
-      }
-    },
     {
       "week_start": "2025-12-22",
       "all_repos": {
