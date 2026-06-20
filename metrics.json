@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T22:19:40.642Z",
+  "generated_at": "2026-06-20T22:25:03.391Z",
   "days_back": 180,
   "prs": [
     {
@@ -3403,51 +3403,6 @@
       "merged_to_develop_at": "2025-12-22T23:18:20Z",
       "deployed_to_master_at": "2025-12-23T16:16:06Z",
       "mttd_hours": 16.962777777777777
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1286,
-      "title": "ENG-6296: disable 'Complete Purchase' button until payment method selected",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-22T19:43:18Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 0.18583333333333332
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1284,
-      "title": "polls ui fixes",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-22T18:45:47Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 1.1444444444444444
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1275,
-      "title": "Improve error reporting for poll payments",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-22T17:26:22Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 2.4680555555555554
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1274,
-      "title": "ENG-6295: block users who have messaged their whole constituency",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-22T17:14:17Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 2.6694444444444443
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1273,
-      "title": "Always-defined `Poll` from `PollProvider`",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-22T15:12:42Z",
-      "deployed_to_master_at": "2025-12-22T19:54:27Z",
-      "mttd_hours": 4.695833333333334
     },
     {
       "repo": "gp-api",
@@ -8557,15 +8512,15 @@
     {
       "week_start": "2025-12-22",
       "all_repos": {
-        "mean_hours": 61,
-        "median_hours": 4.7,
-        "count": 11
+        "mean_hours": 110,
+        "median_hours": 16.5,
+        "count": 6
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 65.5,
-          "median_hours": 3.7,
-          "count": 10
+          "mean_hours": 128.8,
+          "median_hours": 17,
+          "count": 5
         },
         "gp-api": {
           "mean_hours": 16,
