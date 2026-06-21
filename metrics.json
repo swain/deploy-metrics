@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T22:25:03.391Z",
+  "generated_at": "2026-06-21T22:25:26.987Z",
   "days_back": 180,
   "prs": [
     {
@@ -3367,42 +3367,6 @@
       "merged_to_develop_at": "2025-12-23T23:02:18Z",
       "deployed_to_master_at": "2026-01-05T16:18:14Z",
       "mttd_hours": 305.2655555555556
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1292,
-      "title": "ENG-6332 add back option to generate ai scripts for sms outreach ampaign",
-      "author": "dealvz",
-      "merged_to_develop_at": "2025-12-23T21:23:06Z",
-      "deployed_to_master_at": "2026-01-05T16:18:14Z",
-      "mttd_hours": 306.9188888888889
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1281,
-      "title": "consolidate issue typing in polls",
-      "author": "swain",
-      "merged_to_develop_at": "2025-12-23T16:08:32Z",
-      "deployed_to_master_at": "2025-12-23T16:16:06Z",
-      "mttd_hours": 0.12611111111111112
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1288,
-      "title": "Updated Domain Purchase Successful message to include copy about Verc…",
-      "author": "patrick-tgp",
-      "merged_to_develop_at": "2025-12-23T01:44:48Z",
-      "deployed_to_master_at": "2025-12-23T16:16:06Z",
-      "mttd_hours": 14.521666666666667
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1287,
-      "title": "ENG-6054 Remove \"MatchingContectField\" from the UI and API request and clarify PIN instructions.",
-      "author": "feliksalbright",
-      "merged_to_develop_at": "2025-12-22T23:18:20Z",
-      "deployed_to_master_at": "2025-12-23T16:16:06Z",
-      "mttd_hours": 16.962777777777777
     },
     {
       "repo": "gp-api",
@@ -7680,15 +7644,6 @@
       "mttd_hours": 164.01166666666666
     },
     {
-      "repo": "gp-api",
-      "number": 956,
-      "title": "ENG-6054 Remove \"MatchingContectField\" from API and database.",
-      "author": "feliksalbright",
-      "merged_to_develop_at": "2025-12-23T00:04:07Z",
-      "deployed_to_master_at": "2025-12-23T16:02:55Z",
-      "mttd_hours": 15.98
-    },
-    {
       "repo": "people-api",
       "number": 202,
       "title": "fix(deploy): copy generated Prisma client into runtime image",
@@ -8512,19 +8467,14 @@
     {
       "week_start": "2025-12-22",
       "all_repos": {
-        "mean_hours": 110,
-        "median_hours": 16.5,
-        "count": 6
+        "mean_hours": 305.3,
+        "median_hours": 305.3,
+        "count": 1
       },
       "by_repo": {
         "gp-webapp": {
-          "mean_hours": 128.8,
-          "median_hours": 17,
-          "count": 5
-        },
-        "gp-api": {
-          "mean_hours": 16,
-          "median_hours": 16,
+          "mean_hours": 305.3,
+          "median_hours": 305.3,
           "count": 1
         }
       }
