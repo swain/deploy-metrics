@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T22:25:26.987Z",
+  "generated_at": "2026-06-22T22:33:07.934Z",
   "days_back": 180,
   "prs": [
     {
@@ -3358,15 +3358,6 @@
       "merged_to_develop_at": "2026-01-05T15:17:00Z",
       "deployed_to_master_at": "2026-01-05T16:18:14Z",
       "mttd_hours": 1.0205555555555557
-    },
-    {
-      "repo": "gp-webapp",
-      "number": 1289,
-      "title": "[ENG-4387] - Get another in before Christmas! 🎄🎅🎁⛄🦌",
-      "author": "RavenHursT",
-      "merged_to_develop_at": "2025-12-23T23:02:18Z",
-      "deployed_to_master_at": "2026-01-05T16:18:14Z",
-      "mttd_hours": 305.2655555555556
     },
     {
       "repo": "gp-api",
@@ -8464,21 +8455,6 @@
     }
   ],
   "weekly_averages": [
-    {
-      "week_start": "2025-12-22",
-      "all_repos": {
-        "mean_hours": 305.3,
-        "median_hours": 305.3,
-        "count": 1
-      },
-      "by_repo": {
-        "gp-webapp": {
-          "mean_hours": 305.3,
-          "median_hours": 305.3,
-          "count": 1
-        }
-      }
-    },
     {
       "week_start": "2026-01-05",
       "all_repos": {
