@@ -48,6 +48,7 @@ test('bots are held out of totals and reported separately', () => {
   assert.equal(h.weeks[0].totals.prs, 1)
   assert.deepEqual(h.weeks[0].contributors.map((c) => c.login), ['alice'])
   assert.equal(h.bots.robot.prs, 1)
+  assert(!h.contributors.includes('robot'))
 })
 
 test('weeks come out in chronological order and carry the contributor index', () => {
@@ -59,4 +60,41 @@ test('weeks come out in chronological order and carry the contributor index', ()
   assert.deepEqual(h.weeks.map((w) => w.week), ['2026-W02', '2026-W03'])
   assert.deepEqual([...h.contributors].sort(), ['alice', 'bob'])
   assert.equal(h.generatedAt, '2026-09-22T00:00:00Z')
+})
+
+test('machine-state detection works globally across weeks', () => {
+  const w02Prs = Array.from({ length: 6 }, (_, i) =>
+    toCached(pr({
+      number: 100 + i, login: 'ci', mergedAt: '2026-01-06T10:00:00Z',
+      changedFiles: 1, additions: 2, deletions: 0,
+      files: [{ path: 'lock.json', additions: 2, deletions: 0, changeType: 'MODIFIED' }],
+    }))
+  )
+  const w03Prs = Array.from({ length: 6 }, (_, i) =>
+    toCached(pr({
+      number: 200 + i, login: 'ci', mergedAt: '2026-01-13T10:00:00Z',
+      changedFiles: 1, additions: 2, deletions: 0,
+      files: [{ path: 'lock.json', additions: 2, deletions: 0, changeType: 'MODIFIED' }],
+    }))
+  )
+  const weeks = new Map([['2026-W02', w02Prs], ['2026-W03', w03Prs]])
+  const h = buildHistory(weeks, new Set(), opts)
+  assert.equal(h.weeks[0].totals.prs, 0, '2026-W02 should have 0 qualifying PRs')
+  assert.equal(h.weeks[1].totals.prs, 0, '2026-W03 should have 0 qualifying PRs')
+  assert(h.machineStateFiles.includes('omni/lock.json'), 'detected file should be in machineStateFiles')
+})
+
+test('a file under the machine-state threshold counts normally', () => {
+  const nineOnly = Array.from({ length: 9 }, (_, i) =>
+    toCached(pr({
+      number: 300 + i, login: 'ci', mergedAt: '2026-01-06T10:00:00Z',
+      changedFiles: 1, additions: 2, deletions: 0,
+      files: [{ path: 'other.json', additions: 2, deletions: 0, changeType: 'MODIFIED' }],
+    }))
+  )
+  const weeks = new Map([['2026-W02', nineOnly]])
+  const h = buildHistory(weeks, new Set(), opts)
+  assert.equal(h.weeks[0].totals.prs, 9, '9 PRs should not be excluded')
+  assert.equal(h.weeks[0].contributors[0].prs, 9)
+  assert(!h.machineStateFiles.includes('omni/other.json'), 'file under threshold should not be detected')
 })
