@@ -159,8 +159,16 @@
   .axis-tick { stroke: var(--axis); stroke-width: 1; }
   .axis-label { fill: var(--muted); font-size: 11px; }
   .series-line { fill: none; stroke: var(--series); stroke-width: 2; }
+  .series-line-partial { fill: none; stroke: var(--series); stroke-width: 2; opacity: 0.4; }
   .series-dot { fill: var(--series); }
+  .series-dot-partial { fill: var(--surface); stroke: var(--series); stroke-width: 2; }
   .reference-line { fill: none; stroke: var(--muted); stroke-width: 1.5; opacity: 0.6; }
+  .partial-note {
+    color: var(--ink-secondary);
+    font-size: 12px;
+    margin: 0 0 16px;
+  }
+  .partial-note[hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -173,6 +181,10 @@
     <p class="generated" id="generated"></p>
     <div class="stats" id="stats"></div>
   </header>
+  <p class="partial-note" id="partialNote" hidden>
+    <strong id="partialWeekLabel"></strong> is still in progress — its rate uses only the
+    working days elapsed so far, and is drawn with a hollow point and a lighter line segment.
+  </p>
   <section class="panel">
     <h2>Qualifying lines per working day</h2>
     <svg id="lines" viewBox="0 0 920 220" role="img" aria-label="Qualifying lines per working day"></svg>
@@ -196,6 +208,8 @@ const els = {
   stale: document.getElementById('stale'),
   generated: document.getElementById('generated'),
   stats: document.getElementById('stats'),
+  partialNote: document.getElementById('partialNote'),
+  partialWeekLabel: document.getElementById('partialWeekLabel'),
 }
 
 let selected = null
@@ -281,12 +295,24 @@ const drawPanel = (svg, weeks, series, referenceSeries) => {
     ? `<path class="reference-line" d="${pathFor(referenceSeries)}"></path>`
     : ''
 
-  const dotsMarkup = series.map((v, i) =>
-    `<circle class="series-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(v).toFixed(1)}" r="2.2"></circle>`
-  ).join('')
+  const dotsMarkup = series.map((v, i) => {
+    const cx = xFor(i).toFixed(1)
+    const cy = yFor(v).toFixed(1)
+    return weeks[i].partial
+      ? `<circle class="series-dot-partial" cx="${cx}" cy="${cy}" r="3.5"></circle>`
+      : `<circle class="series-dot" cx="${cx}" cy="${cy}" r="2.2"></circle>`
+  }).join('')
 
-  svg.innerHTML = gridMarkup + xMarkup + refMarkup +
-    `<path class="series-line" d="${pathFor(series)}"></path>` + dotsMarkup
+  // Only the newest week can be partial (it's the one still filling in), so the
+  // lighter treatment only ever applies to the final segment of the line.
+  const lastPartial = n > 0 && weeks[n - 1].partial
+  const lineMarkup = lastPartial && n > 1
+    ? `<path class="series-line" d="${pathFor(series.slice(0, -1))}"></path>` +
+      `<path class="series-line-partial" d="M${xFor(n - 2).toFixed(1)},${yFor(series[n - 2]).toFixed(1)} ` +
+      `L${xFor(n - 1).toFixed(1)},${yFor(series[n - 1]).toFixed(1)}"></path>`
+    : `<path class="series-line" d="${pathFor(series)}"></path>`
+
+  svg.innerHTML = gridMarkup + xMarkup + refMarkup + lineMarkup + dotsMarkup
 }
 
 const totalsByLogin = new Map()
@@ -352,6 +378,12 @@ els.people.addEventListener('click', (event) => {
 const STALE_MS = 48 * 60 * 60 * 1000
 if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
   els.stale.hidden = false
+}
+
+const lastWeek = HISTORY.weeks[HISTORY.weeks.length - 1]
+if (lastWeek && lastWeek.partial) {
+  els.partialWeekLabel.textContent = lastWeek.week
+  els.partialNote.hidden = false
 }
 
 buildStats()

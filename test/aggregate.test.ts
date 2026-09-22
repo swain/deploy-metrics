@@ -84,6 +84,21 @@ test('machine-state detection works globally across weeks', () => {
   assert(h.machineStateFiles.includes('omni/lock.json'), 'detected file should be in machineStateFiles')
 })
 
+test('the week containing generatedAt is partial and counts only elapsed working days', () => {
+  const weeks = new Map([
+    ['2026-W02', [toCached(pr())]],
+    ['2026-W03', [toCached(pr({ mergedAt: '2026-01-13T10:00:00Z', login: 'bob' }))]],
+  ])
+  const wednesdayOpts = { bots: new Set(['robot']), generatedAt: '2026-01-14T12:00:00Z' }
+  const h = buildHistory(weeks, new Set(), wednesdayOpts)
+  const w02 = h.weeks.find((w) => w.week === '2026-W02')!
+  const w03 = h.weeks.find((w) => w.week === '2026-W03')!
+  assert.equal(w02.workingDays, 5)
+  assert.equal(w02.partial, false)
+  assert.equal(w03.workingDays, 3)
+  assert.equal(w03.partial, true)
+})
+
 test('a file under the machine-state threshold counts normally', () => {
   const nineOnly = Array.from({ length: 9 }, (_, i) =>
     toCached(pr({

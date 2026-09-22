@@ -159,8 +159,16 @@
   .axis-tick { stroke: var(--axis); stroke-width: 1; }
   .axis-label { fill: var(--muted); font-size: 11px; }
   .series-line { fill: none; stroke: var(--series); stroke-width: 2; }
+  .series-line-partial { fill: none; stroke: var(--series); stroke-width: 2; opacity: 0.4; }
   .series-dot { fill: var(--series); }
+  .series-dot-partial { fill: var(--surface); stroke: var(--series); stroke-width: 2; }
   .reference-line { fill: none; stroke: var(--muted); stroke-width: 1.5; opacity: 0.6; }
+  .partial-note {
+    color: var(--ink-secondary);
+    font-size: 12px;
+    margin: 0 0 16px;
+  }
+  .partial-note[hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -173,6 +181,10 @@
     <p class="generated" id="generated"></p>
     <div class="stats" id="stats"></div>
   </header>
+  <p class="partial-note" id="partialNote" hidden>
+    <strong id="partialWeekLabel"></strong> is still in progress — its rate uses only the
+    working days elapsed so far, and is drawn with a hollow point and a lighter line segment.
+  </p>
   <section class="panel">
     <h2>Qualifying lines per working day</h2>
     <svg id="lines" viewBox="0 0 920 220" role="img" aria-label="Qualifying lines per working day"></svg>
@@ -188,7 +200,7 @@
 </div>
 <script>
 const HISTORY = {
- "generatedAt": "2026-09-22T14:50:25.767Z",
+ "generatedAt": "2026-09-22T15:00:33.596Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -225,6 +237,7 @@ const HISTORY = {
   {
    "week": "2026-W02",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 10,
     "lines": 6912,
@@ -287,6 +300,7 @@ const HISTORY = {
   {
    "week": "2026-W03",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 37,
     "lines": 15235,
@@ -363,6 +377,7 @@ const HISTORY = {
   {
    "week": "2026-W04",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 42,
     "lines": 41715,
@@ -432,6 +447,7 @@ const HISTORY = {
   {
    "week": "2026-W05",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 67,
     "lines": 19157,
@@ -529,6 +545,7 @@ const HISTORY = {
   {
    "week": "2026-W06",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 67,
     "lines": 29831,
@@ -619,6 +636,7 @@ const HISTORY = {
   {
    "week": "2026-W07",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 58,
     "lines": 122817,
@@ -730,6 +748,7 @@ const HISTORY = {
   {
    "week": "2026-W08",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 66,
     "lines": 17592,
@@ -841,6 +860,7 @@ const HISTORY = {
   {
    "week": "2026-W09",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 97,
     "lines": 99109,
@@ -966,6 +986,7 @@ const HISTORY = {
   {
    "week": "2026-W10",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 73,
     "lines": 20372,
@@ -1084,6 +1105,7 @@ const HISTORY = {
   {
    "week": "2026-W11",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 71,
     "lines": 123578,
@@ -1188,6 +1210,7 @@ const HISTORY = {
   {
    "week": "2026-W12",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 69,
     "lines": 31079,
@@ -1292,6 +1315,7 @@ const HISTORY = {
   {
    "week": "2026-W13",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 71,
     "lines": 28555,
@@ -1417,6 +1441,7 @@ const HISTORY = {
   {
    "week": "2026-W14",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 54,
     "lines": 14678,
@@ -1514,6 +1539,7 @@ const HISTORY = {
   {
    "week": "2026-W15",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 46,
     "lines": 19005,
@@ -1618,6 +1644,7 @@ const HISTORY = {
   {
    "week": "2026-W16",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 43,
     "lines": 49150,
@@ -1715,6 +1742,7 @@ const HISTORY = {
   {
    "week": "2026-W17",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 87,
     "lines": 52043,
@@ -1833,6 +1861,7 @@ const HISTORY = {
   {
    "week": "2026-W18",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 82,
     "lines": 151769,
@@ -1958,6 +1987,7 @@ const HISTORY = {
   {
    "week": "2026-W19",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 72,
     "lines": 54633,
@@ -2062,6 +2092,7 @@ const HISTORY = {
   {
    "week": "2026-W20",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 114,
     "lines": 87700,
@@ -2180,6 +2211,7 @@ const HISTORY = {
   {
    "week": "2026-W21",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 41,
     "lines": 35491,
@@ -2277,6 +2309,7 @@ const HISTORY = {
   {
    "week": "2026-W22",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 152,
     "lines": 128270,
@@ -2402,6 +2435,7 @@ const HISTORY = {
   {
    "week": "2026-W23",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 150,
     "lines": 91385,
@@ -2534,6 +2568,7 @@ const HISTORY = {
   {
    "week": "2026-W24",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 190,
     "lines": 99811,
@@ -2673,6 +2708,7 @@ const HISTORY = {
   {
    "week": "2026-W25",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 125,
     "lines": 94712,
@@ -2791,6 +2827,7 @@ const HISTORY = {
   {
    "week": "2026-W26",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 212,
     "lines": 83794,
@@ -2930,6 +2967,7 @@ const HISTORY = {
   {
    "week": "2026-W27",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 172,
     "lines": 82082,
@@ -3034,6 +3072,7 @@ const HISTORY = {
   {
    "week": "2026-W28",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 111,
     "lines": 89727,
@@ -3152,6 +3191,7 @@ const HISTORY = {
   {
    "week": "2026-W29",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 168,
     "lines": 80500,
@@ -3263,6 +3303,7 @@ const HISTORY = {
   {
    "week": "2026-W30",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 170,
     "lines": 77777,
@@ -3374,6 +3415,7 @@ const HISTORY = {
   {
    "week": "2026-W31",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 118,
     "lines": 92151,
@@ -3457,6 +3499,7 @@ const HISTORY = {
   {
    "week": "2026-W32",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 112,
     "lines": 219429,
@@ -3540,6 +3583,7 @@ const HISTORY = {
   {
    "week": "2026-W33",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 117,
     "lines": 43835,
@@ -3630,6 +3674,7 @@ const HISTORY = {
   {
    "week": "2026-W34",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 153,
     "lines": 82780,
@@ -3713,6 +3758,7 @@ const HISTORY = {
   {
    "week": "2026-W35",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 220,
     "lines": 128159,
@@ -3824,6 +3870,7 @@ const HISTORY = {
   {
    "week": "2026-W36",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 211,
     "lines": 183276,
@@ -3914,6 +3961,7 @@ const HISTORY = {
   {
    "week": "2026-W37",
    "workingDays": 4,
+   "partial": false,
    "totals": {
     "prs": 113,
     "lines": 79356,
@@ -4011,6 +4059,7 @@ const HISTORY = {
   {
    "week": "2026-W38",
    "workingDays": 5,
+   "partial": false,
    "totals": {
     "prs": 237,
     "lines": 130136,
@@ -4142,7 +4191,8 @@ const HISTORY = {
   },
   {
    "week": "2026-W39",
-   "workingDays": 5,
+   "workingDays": 2,
+   "partial": true,
    "totals": {
     "prs": 58,
     "lines": 129449,
@@ -4258,6 +4308,8 @@ const els = {
   stale: document.getElementById('stale'),
   generated: document.getElementById('generated'),
   stats: document.getElementById('stats'),
+  partialNote: document.getElementById('partialNote'),
+  partialWeekLabel: document.getElementById('partialWeekLabel'),
 }
 
 let selected = null
@@ -4343,12 +4395,24 @@ const drawPanel = (svg, weeks, series, referenceSeries) => {
     ? `<path class="reference-line" d="${pathFor(referenceSeries)}"></path>`
     : ''
 
-  const dotsMarkup = series.map((v, i) =>
-    `<circle class="series-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(v).toFixed(1)}" r="2.2"></circle>`
-  ).join('')
+  const dotsMarkup = series.map((v, i) => {
+    const cx = xFor(i).toFixed(1)
+    const cy = yFor(v).toFixed(1)
+    return weeks[i].partial
+      ? `<circle class="series-dot-partial" cx="${cx}" cy="${cy}" r="3.5"></circle>`
+      : `<circle class="series-dot" cx="${cx}" cy="${cy}" r="2.2"></circle>`
+  }).join('')
 
-  svg.innerHTML = gridMarkup + xMarkup + refMarkup +
-    `<path class="series-line" d="${pathFor(series)}"></path>` + dotsMarkup
+  // Only the newest week can be partial (it's the one still filling in), so the
+  // lighter treatment only ever applies to the final segment of the line.
+  const lastPartial = n > 0 && weeks[n - 1].partial
+  const lineMarkup = lastPartial && n > 1
+    ? `<path class="series-line" d="${pathFor(series.slice(0, -1))}"></path>` +
+      `<path class="series-line-partial" d="M${xFor(n - 2).toFixed(1)},${yFor(series[n - 2]).toFixed(1)} ` +
+      `L${xFor(n - 1).toFixed(1)},${yFor(series[n - 1]).toFixed(1)}"></path>`
+    : `<path class="series-line" d="${pathFor(series)}"></path>`
+
+  svg.innerHTML = gridMarkup + xMarkup + refMarkup + lineMarkup + dotsMarkup
 }
 
 const totalsByLogin = new Map()
@@ -4414,6 +4478,12 @@ els.people.addEventListener('click', (event) => {
 const STALE_MS = 48 * 60 * 60 * 1000
 if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
   els.stale.hidden = false
+}
+
+const lastWeek = HISTORY.weeks[HISTORY.weeks.length - 1]
+if (lastWeek && lastWeek.partial) {
+  els.partialWeekLabel.textContent = lastWeek.week
+  els.partialNote.hidden = false
 }
 
 buildStats()

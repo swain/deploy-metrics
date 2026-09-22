@@ -1,6 +1,6 @@
 import { detectMachineState, isQualifying } from './classify.ts'
 import type { CachedPr } from './classify.ts'
-import { workingDays } from './weeks.ts'
+import { isoWeekKey, weekStartUTC, workingDays } from './weeks.ts'
 
 export interface ContributorWeek {
   login: string
@@ -13,8 +13,26 @@ export interface ContributorWeek {
 export interface WeekSummary {
   week: string
   workingDays: number
+  partial: boolean
   totals: { prs: number; lines: number; added: number; deleted: number; people: number }
   contributors: ContributorWeek[]
+}
+
+const DAY = 86_400_000
+
+// Mon-Fri/holiday count for the current week, stopping at generatedAt's calendar
+// date (inclusive) since later weekdays haven't happened yet. weekStartUTC gives
+// midnight-UTC day boundaries, so comparing raw timestamps against `now` is safe.
+const workingDaysElapsed = (key: string, holidays: Set<string>, now: Date): number => {
+  const start = weekStartUTC(key)
+  let n = 0
+  for (let i = 0; i < 5; i++) {
+    const d = new Date(start.getTime() + i * DAY)
+    if (d.getTime() > now.getTime()) break
+    const dateKey = d.toISOString().slice(0, 10)
+    if (!holidays.has(dateKey)) n++
+  }
+  return n
 }
 
 export interface History {
@@ -35,6 +53,9 @@ export const buildHistory = (
 ): History => {
   const all = [...weeks.values()].flat()
   const machine = detectMachineState(all)
+
+  const now = new Date(options.generatedAt)
+  const currentWeekKey = isoWeekKey(options.generatedAt)
 
   const bots: Record<string, { prs: number; lines: number }> = {}
   const people = new Set<string>()
@@ -62,9 +83,11 @@ export const buildHistory = (
     }
 
     const contributors = [...byLogin.values()].sort((a, b) => b.lines - a.lines)
+    const partial = key === currentWeekKey
     summaries.push({
       week: key,
-      workingDays: workingDays(key, holidays),
+      workingDays: partial ? Math.max(1, workingDaysElapsed(key, holidays, now)) : workingDays(key, holidays),
+      partial,
       totals: {
         prs: contributors.reduce((n, c) => n + c.prs, 0),
         lines: contributors.reduce((n, c) => n + c.lines, 0),
