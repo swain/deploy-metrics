@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync, existsSync, renameSync } from 'node:fs'
 import { join } from 'node:path'
 import { fetchWeek } from './github.ts'
 import { toCached } from './classify.ts'
@@ -27,13 +27,19 @@ for (const key of wanted) {
   if (existsSync(path) && key !== currentWeek) continue
   const rows = (await fetchWeek(weekWindow(key), token)).map(toCached)
   // Write only on success: a partial file would be cached as if it were whole.
-  writeFileSync(path, JSON.stringify(rows))
+  // Write-then-rename so a process killed mid-write can't leave a truncated
+  // file that the next run mistakes for a complete cached week.
+  const tmp = `${path}.tmp`
+  writeFileSync(tmp, JSON.stringify(rows))
+  renameSync(tmp, path)
   console.log(`${key}: ${rows.length} merged pull requests`)
 }
 
 const weeks = new Map<string, CachedPr[]>()
-for (const file of readdirSync(WEEKS_DIR).filter((f) => f.endsWith('.json')).sort()) {
-  weeks.set(file.replace('.json', ''), JSON.parse(readFileSync(join(WEEKS_DIR, file), 'utf8')))
+for (const key of wanted) {
+  const path = join(WEEKS_DIR, `${key}.json`)
+  if (!existsSync(path)) continue
+  weeks.set(key, JSON.parse(readFileSync(path, 'utf8')))
 }
 
 const holidays = new Set<string>(JSON.parse(readFileSync('holidays.json', 'utf8')))
