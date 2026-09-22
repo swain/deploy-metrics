@@ -20,6 +20,8 @@ export interface WeekSummary {
 
 const DAY = 86_400_000
 
+const EXCLUDED_REPOS = new Set(['product-os'])
+
 // Mon-Fri/holiday count for the current week, stopping at generatedAt's calendar
 // date (inclusive) since later weekdays haven't happened yet. weekStartUTC gives
 // midnight-UTC day boundaries, so comparing raw timestamps against `now` is safe.
@@ -43,15 +45,20 @@ export interface History {
   machineStateFiles: string[]
 }
 
-const blank = (login: string): ContributorWeek =>
-  ({ login, prs: 0, lines: 0, addedRaw: 0, deletedRaw: 0 })
+const blank = (login: string): ContributorWeek => ({
+  login,
+  prs: 0,
+  lines: 0,
+  addedRaw: 0,
+  deletedRaw: 0,
+})
 
 export const buildHistory = (
   weeks: Map<string, CachedPr[]>,
   holidays: Set<string>,
   options: { bots: Set<string>; generatedAt: string },
 ): History => {
-  const all = [...weeks.values()].flat()
+  const all = [...weeks.values()].flat().filter((r) => !EXCLUDED_REPOS.has(r.repo))
   const machine = detectMachineState(all)
 
   const now = new Date(options.generatedAt)
@@ -62,7 +69,9 @@ export const buildHistory = (
   const summaries: WeekSummary[] = []
 
   for (const key of [...weeks.keys()].sort()) {
-    const rows = (weeks.get(key) ?? []).filter((r) => isQualifying(r, machine))
+    const rows = (weeks.get(key) ?? [])
+      .filter((r) => !EXCLUDED_REPOS.has(r.repo))
+      .filter((r) => isQualifying(r, machine))
     const byLogin = new Map<string, ContributorWeek>()
 
     for (const row of rows) {

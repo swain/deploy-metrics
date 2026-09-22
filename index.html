@@ -1,205 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Throughput</title>
-<style>
-  :root {
-    --surface: #fcfcfb;
-    --page: #f1f2f3;
-    --ink: #0d0e0f;
-    --ink-secondary: #4f5356;
-    --muted: #83878a;
-    --gridline: #e2e4e5;
-    --axis: #c2c5c7;
-    --series: #2a78d6;
-    --warn-bg: #fff1ee;
-    --warn-border: #d94f2b;
-    --warn-ink: #7a1f0d;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --surface: #191a1b;
-      --page: #0b0c0d;
-      --ink: #ffffff;
-      --ink-secondary: #c0c3c4;
-      --muted: #83878a;
-      --gridline: #2a2c2d;
-      --axis: #3a3c3d;
-      --series: #3987e5;
-      --warn-bg: #2a1510;
-      --warn-border: #d9633f;
-      --warn-ink: #ffb4a0;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  body {
-    margin: 0;
-    background: var(--page);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-variant-numeric: tabular-nums;
-  }
-  .wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 20px 16px 48px;
-  }
-  #stale {
-    background: var(--warn-bg);
-    border: 1px solid var(--warn-border);
-    color: var(--warn-ink);
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 15px;
-  }
-  #stale[hidden] { display: none; }
-  header h1 {
-    font-size: 22px;
-    margin: 0 0 4px;
-  }
-  header .generated {
-    color: var(--muted);
-    font-size: 13px;
-    margin: 0 0 16px;
-  }
-  .stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .stat {
-    background: var(--surface);
-    border: 1px solid var(--gridline);
-    border-radius: 10px;
-    padding: 12px 16px;
-    min-width: 120px;
-    flex: 1 1 120px;
-  }
-  .stat .value {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  .stat .label {
-    color: var(--ink-secondary);
-    font-size: 12px;
-  }
-  .panel {
-    background: var(--surface);
-    border: 1px solid var(--gridline);
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 16px;
-  }
-  .panel h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink-secondary);
-    margin: 0 0 8px;
-  }
-  .panel svg {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .people-section h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink-secondary);
-    margin: 24px 0 8px;
-  }
-  #people {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  #people button {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    background: var(--surface);
-    border: 1px solid var(--gridline);
-    border-radius: 8px;
-    padding: 8px 12px;
-    color: var(--ink);
-    font: inherit;
-    cursor: pointer;
-    text-align: left;
-  }
-  #people button .chip-login {
-    font-weight: 600;
-    font-size: 13px;
-  }
-  #people button .chip-lines {
-    color: var(--muted);
-    font-size: 11px;
-  }
-  #people button[aria-pressed="true"] {
-    border-color: var(--series);
-    background: color-mix(in srgb, var(--series) 12%, var(--surface));
-  }
-  #people button[aria-pressed="true"] .chip-login {
-    color: var(--series);
-  }
-  button:focus-visible {
-    outline: 2px solid var(--series);
-    outline-offset: 2px;
-  }
-  .gridline { stroke: var(--gridline); stroke-width: 1; }
-  .axis-tick { stroke: var(--axis); stroke-width: 1; }
-  .axis-label { fill: var(--muted); font-size: 11px; }
-  .series-line { fill: none; stroke: var(--series); stroke-width: 2; }
-  .series-line-partial { fill: none; stroke: var(--series); stroke-width: 2; opacity: 0.4; }
-  .series-dot { fill: var(--series); }
-  .series-dot-partial { fill: var(--surface); stroke: var(--series); stroke-width: 2; }
-  .reference-line { fill: none; stroke: var(--muted); stroke-width: 1.5; opacity: 0.6; }
-  .partial-note {
-    color: var(--ink-secondary);
-    font-size: 12px;
-    margin: 0 0 16px;
-  }
-  .partial-note[hidden] { display: none; }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <div id="stale" role="alert" hidden>
-    Stale data. The nightly collector has not run in over 48 hours, so these numbers may no longer reflect reality.
-  </div>
-  <header>
-    <h1>Contributor throughput</h1>
-    <p class="generated" id="generated"></p>
-    <div class="stats" id="stats"></div>
-  </header>
-  <p class="partial-note" id="partialNote" hidden>
-    <strong id="partialWeekLabel"></strong> is still in progress; its rate uses only the working days elapsed so far and is drawn with a hollow point and a lighter line segment.
-  </p>
-  <section class="panel">
-    <h2>Qualifying lines per working day</h2>
-    <svg id="lines" viewBox="0 0 920 220" role="img" aria-label="Qualifying lines per working day"></svg>
-  </section>
-  <section class="panel">
-    <h2>Qualifying pull requests per working day</h2>
-    <svg id="prs" viewBox="0 0 920 220" role="img" aria-label="Qualifying pull requests per working day"></svg>
-  </section>
-  <section class="people-section">
-    <h2>Contributors</h2>
-    <div id="people"></div>
-  </section>
-</div>
-<script>
-const HISTORY = {
- "generatedAt": "2026-09-22T16:50:22.574Z",
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Throughput</title>
+    <style>
+      :root {
+        --surface: #fcfcfb;
+        --page: #f1f2f3;
+        --ink: #0d0e0f;
+        --ink-secondary: #4f5356;
+        --muted: #83878a;
+        --gridline: #e2e4e5;
+        --axis: #c2c5c7;
+        --series: #2a78d6;
+        --warn-bg: #fff1ee;
+        --warn-border: #d94f2b;
+        --warn-ink: #7a1f0d;
+        --contrib-0: #2a78d6;
+        --contrib-1: #eb6834;
+        --contrib-2: #1baf7a;
+        --contrib-3: #eda100;
+        --contrib-4: #e87ba4;
+        --contrib-5: #008300;
+        --contrib-6: #4a3aa7;
+        --contrib-7: #e34948;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #191a1b;
+          --page: #0b0c0d;
+          --ink: #ffffff;
+          --ink-secondary: #c0c3c4;
+          --muted: #83878a;
+          --gridline: #2a2c2d;
+          --axis: #3a3c3d;
+          --series: #3987e5;
+          --warn-bg: #2a1510;
+          --warn-border: #d9633f;
+          --warn-ink: #ffb4a0;
+          --contrib-0: #3987e5;
+          --contrib-1: #d95926;
+          --contrib-2: #199e70;
+          --contrib-3: #c98500;
+          --contrib-4: #d55181;
+          --contrib-5: #008300;
+          --contrib-6: #9085e9;
+          --contrib-7: #e66767;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-variant-numeric: tabular-nums;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 20px 16px 48px;
+      }
+      #stale {
+        background: var(--warn-bg);
+        border: 1px solid var(--warn-border);
+        color: var(--warn-ink);
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      #stale[hidden] {
+        display: none;
+      }
+      header h1 {
+        font-size: 22px;
+        margin: 0 0 4px;
+      }
+      header .generated {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0 0 16px;
+      }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .stat {
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 10px;
+        padding: 12px 16px;
+        min-width: 120px;
+        flex: 1 1 120px;
+      }
+      .stat .value {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .stat .label {
+        color: var(--ink-secondary);
+        font-size: 12px;
+      }
+      .block {
+        margin-top: 8px;
+      }
+      .section-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 28px 0 8px;
+      }
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .panel-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink-secondary);
+        margin: 0 0 8px;
+      }
+      .panel svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      #people {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      #people button {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 8px;
+        padding: 8px 12px;
+        color: var(--ink);
+        font: inherit;
+        cursor: pointer;
+        text-align: left;
+      }
+      #people button:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+      #people button .chip-login {
+        font-weight: 600;
+        font-size: 13px;
+      }
+      #people button .chip-lines {
+        color: var(--muted);
+        font-size: 11px;
+      }
+      #people button[aria-pressed='true'] {
+        border-color: var(--chip-color, var(--series));
+        background: color-mix(in srgb, var(--chip-color, var(--series)) 12%, var(--surface));
+      }
+      #people button[aria-pressed='true'] .chip-login {
+        color: var(--chip-color, var(--series));
+      }
+      .cap-note {
+        color: var(--ink-secondary);
+        font-size: 12px;
+        margin: 0 0 12px;
+      }
+      .cap-note[hidden] {
+        display: none;
+      }
+      .selection-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0 0 16px;
+      }
+      .selection-row[hidden] {
+        display: none;
+      }
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--ink-secondary);
+      }
+      .legend-swatch {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+      }
+      .clear-btn {
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 8px;
+        padding: 6px 12px;
+        color: var(--ink);
+        font: inherit;
+        cursor: pointer;
+      }
+      .empty-state {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0 0 16px;
+      }
+      .empty-state[hidden] {
+        display: none;
+      }
+      #contributorCharts[hidden] {
+        display: none;
+      }
+      button:focus-visible {
+        outline: 2px solid var(--series);
+        outline-offset: 2px;
+      }
+      .gridline {
+        stroke: var(--gridline);
+        stroke-width: 1;
+      }
+      .axis-tick {
+        stroke: var(--axis);
+        stroke-width: 1;
+      }
+      .axis-label {
+        fill: var(--muted);
+        font-size: 11px;
+      }
+      .partial-note {
+        color: var(--ink-secondary);
+        font-size: 12px;
+        margin: 0 0 16px;
+      }
+      .partial-note[hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="stale" role="alert" hidden>
+        Stale data. The nightly collector has not run in over 48 hours, so these numbers may no
+        longer reflect reality.
+      </div>
+      <header>
+        <h1>Contributor throughput</h1>
+        <p class="generated" id="generated"></p>
+        <div class="stats" id="stats"></div>
+      </header>
+      <p class="partial-note" id="partialNote" hidden>
+        <strong id="partialWeekLabel"></strong> is still in progress; its rate uses only the working
+        days elapsed so far and is drawn with a hollow point and a lighter line segment.
+      </p>
+
+      <section class="block">
+        <h2 class="section-title">Totals</h2>
+        <section class="panel">
+          <h3 class="panel-title">Qualifying lines per working day</h3>
+          <svg
+            id="totalsLines"
+            viewBox="0 0 920 220"
+            role="img"
+            aria-label="Org-wide qualifying lines per working day"
+          ></svg>
+        </section>
+        <section class="panel">
+          <h3 class="panel-title">Qualifying pull requests per working day</h3>
+          <svg
+            id="totalsPrs"
+            viewBox="0 0 920 220"
+            role="img"
+            aria-label="Org-wide qualifying pull requests per working day"
+          ></svg>
+        </section>
+      </section>
+
+      <section class="block">
+        <h2 class="section-title">By contributor</h2>
+        <div id="people"></div>
+        <p class="cap-note" id="capNote" hidden>
+          8 selected. That is the cap on distinguishable colors. Deselect one to add another.
+        </p>
+        <div class="selection-row" id="selectionRow" hidden>
+          <div class="legend" id="legend"></div>
+          <button type="button" class="clear-btn" id="clearBtn">Clear selection</button>
+        </div>
+        <p class="empty-state" id="emptyState">
+          Select a contributor above to see their throughput.
+        </p>
+        <div id="contributorCharts" hidden>
+          <section class="panel">
+            <h3 class="panel-title">Qualifying lines per working day</h3>
+            <svg
+              id="contribLines"
+              viewBox="0 0 920 220"
+              role="img"
+              aria-label="Qualifying lines per working day by contributor"
+            ></svg>
+          </section>
+          <section class="panel">
+            <h3 class="panel-title">Qualifying pull requests per working day</h3>
+            <svg
+              id="contribPrs"
+              viewBox="0 0 920 220"
+              role="img"
+              aria-label="Qualifying pull requests per working day by contributor"
+            ></svg>
+          </section>
+        </div>
+      </section>
+    </div>
+    <script>
+      const HISTORY = {
+ "generatedAt": "2026-09-22T17:12:02.347Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -1916,11 +2055,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 72,
-    "lines": 54633,
-    "addedRaw": 39127,
-    "deletedRaw": 16581,
-    "people": 13
+    "prs": 71,
+    "lines": 54174,
+    "addedRaw": 38713,
+    "deletedRaw": 16536,
+    "people": 12
    },
    "contributors": [
     {
@@ -1985,13 +2124,6 @@ const HISTORY = {
      "lines": 816,
      "addedRaw": 752,
      "deletedRaw": 64
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 1,
-     "lines": 459,
-     "addedRaw": 414,
-     "deletedRaw": 45
     },
     {
      "login": "patrick-tgp",
@@ -2238,11 +2370,11 @@ const HISTORY = {
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 152,
-    "lines": 128270,
-    "addedRaw": 143805,
-    "deletedRaw": 21267,
-    "people": 16
+    "prs": 151,
+    "lines": 128169,
+    "addedRaw": 143758,
+    "deletedRaw": 21213,
+    "people": 15
    },
    "contributors": [
     {
@@ -2342,13 +2474,6 @@ const HISTORY = {
      "lines": 223,
      "addedRaw": 152,
      "deletedRaw": 71
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 1,
-     "lines": 101,
-     "addedRaw": 47,
-     "deletedRaw": 54
     },
     {
      "login": "tonypham-goodparty",
@@ -2483,11 +2608,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 190,
-    "lines": 99811,
-    "addedRaw": 159199,
-    "deletedRaw": 154957,
-    "people": 18
+    "prs": 185,
+    "lines": 83742,
+    "addedRaw": 143384,
+    "deletedRaw": 154703,
+    "people": 16
    },
    "contributors": [
     {
@@ -2503,13 +2628,6 @@ const HISTORY = {
      "lines": 14717,
      "addedRaw": 10664,
      "deletedRaw": 4055
-    },
-    {
-     "login": "jacknagel-hs",
-     "prs": 2,
-     "lines": 14166,
-     "addedRaw": 14134,
-     "deletedRaw": 32
     },
     {
      "login": "hhkarimi",
@@ -2575,13 +2693,6 @@ const HISTORY = {
      "deletedRaw": 267
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 1903,
-     "addedRaw": 1681,
-     "deletedRaw": 222
-    },
-    {
      "login": "oakinh",
      "prs": 5,
      "lines": 1691,
@@ -2623,10 +2734,10 @@ const HISTORY = {
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 125,
-    "lines": 94712,
-    "addedRaw": 94734,
-    "deletedRaw": 18596,
+    "prs": 116,
+    "lines": 92009,
+    "addedRaw": 92487,
+    "deletedRaw": 18140,
     "people": 15
    },
    "contributors": [
@@ -2680,13 +2791,6 @@ const HISTORY = {
      "deletedRaw": 212
     },
     {
-     "login": "bryclevgp",
-     "prs": 10,
-     "lines": 3005,
-     "addedRaw": 2545,
-     "deletedRaw": 460
-    },
-    {
      "login": "sanjayr1",
      "prs": 8,
      "lines": 2803,
@@ -2722,6 +2826,13 @@ const HISTORY = {
      "deletedRaw": 67
     },
     {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 302,
+     "addedRaw": 298,
+     "deletedRaw": 4
+    },
+    {
      "login": "selta-goodparty",
      "prs": 2,
      "lines": 185,
@@ -2742,11 +2853,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 212,
-    "lines": 83794,
-    "addedRaw": 85436,
-    "deletedRaw": 13176,
-    "people": 18
+    "prs": 203,
+    "lines": 81657,
+    "addedRaw": 83364,
+    "deletedRaw": 12869,
+    "people": 17
    },
    "contributors": [
     {
@@ -2804,13 +2915,6 @@ const HISTORY = {
      "lines": 2346,
      "addedRaw": 1807,
      "deletedRaw": 539
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 9,
-     "lines": 2137,
-     "addedRaw": 2072,
-     "deletedRaw": 307
     },
     {
      "login": "stephtea",
@@ -2882,10 +2986,10 @@ const HISTORY = {
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 172,
-    "lines": 82082,
-    "addedRaw": 62778,
-    "deletedRaw": 22005,
+    "prs": 161,
+    "lines": 80572,
+    "addedRaw": 61401,
+    "deletedRaw": 21872,
     "people": 13
    },
    "contributors": [
@@ -2960,13 +3064,6 @@ const HISTORY = {
      "deletedRaw": 409
     },
     {
-     "login": "bryclevgp",
-     "prs": 12,
-     "lines": 1520,
-     "addedRaw": 1387,
-     "deletedRaw": 133
-    },
-    {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 768,
@@ -2979,6 +3076,13 @@ const HISTORY = {
      "lines": 522,
      "addedRaw": 136,
      "deletedRaw": 810
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 10,
+     "addedRaw": 10,
+     "deletedRaw": 0
     }
    ]
   },
@@ -2987,11 +3091,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 111,
-    "lines": 89727,
-    "addedRaw": 84424,
-    "deletedRaw": 20091,
-    "people": 15
+    "prs": 108,
+    "lines": 89461,
+    "addedRaw": 84214,
+    "deletedRaw": 20035,
+    "people": 14
    },
    "contributors": [
     {
@@ -3072,13 +3176,6 @@ const HISTORY = {
      "deletedRaw": 11
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 266,
-     "addedRaw": 210,
-     "deletedRaw": 56
-    },
-    {
      "login": "nigel-gp",
      "prs": 2,
      "lines": 122,
@@ -3106,11 +3203,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 168,
-    "lines": 80500,
-    "addedRaw": 65893,
-    "deletedRaw": 15266,
-    "people": 14
+    "prs": 163,
+    "lines": 79871,
+    "addedRaw": 65323,
+    "deletedRaw": 15207,
+    "people": 13
    },
    "contributors": [
     {
@@ -3191,13 +3288,6 @@ const HISTORY = {
      "deletedRaw": 152
     },
     {
-     "login": "bryclevgp",
-     "prs": 5,
-     "lines": 631,
-     "addedRaw": 571,
-     "deletedRaw": 60
-    },
-    {
      "login": "danpelota",
      "prs": 1,
      "lines": 570,
@@ -3205,11 +3295,11 @@ const HISTORY = {
      "deletedRaw": 12
     },
     {
-     "login": "jacknagel-hs",
+     "login": "bryclevgp",
      "prs": 1,
-     "lines": 2,
-     "addedRaw": 1,
-     "deletedRaw": 1
+     "lines": 4,
+     "addedRaw": 2,
+     "deletedRaw": 2
     }
    ]
   },
@@ -3218,11 +3308,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 170,
-    "lines": 77777,
-    "addedRaw": 61322,
-    "deletedRaw": 16867,
-    "people": 14
+    "prs": 166,
+    "lines": 77324,
+    "addedRaw": 60938,
+    "deletedRaw": 16798,
+    "people": 12
    },
    "contributors": [
     {
@@ -3303,25 +3393,11 @@ const HISTORY = {
      "deletedRaw": 88
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 451,
-     "addedRaw": 383,
-     "deletedRaw": 68
-    },
-    {
      "login": "danpelota",
      "prs": 4,
      "lines": 275,
      "addedRaw": 183,
      "deletedRaw": 92
-    },
-    {
-     "login": "jacknagel-hs",
-     "prs": 1,
-     "lines": 2,
-     "addedRaw": 1,
-     "deletedRaw": 1
     }
    ]
   },
@@ -3414,10 +3490,10 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 112,
-    "lines": 219429,
-    "addedRaw": 204637,
-    "deletedRaw": 21305,
+    "prs": 111,
+    "lines": 204605,
+    "addedRaw": 189819,
+    "deletedRaw": 21299,
     "people": 10
    },
    "contributors": [
@@ -3434,13 +3510,6 @@ const HISTORY = {
      "lines": 40559,
      "addedRaw": 33268,
      "deletedRaw": 7569
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 6,
-     "lines": 15951,
-     "addedRaw": 15634,
-     "deletedRaw": 317
     },
     {
      "login": "datawithtristan",
@@ -3471,6 +3540,13 @@ const HISTORY = {
      "deletedRaw": 2520
     },
     {
+     "login": "bryclevgp",
+     "prs": 5,
+     "lines": 1127,
+     "addedRaw": 816,
+     "deletedRaw": 311
+    },
+    {
      "login": "danpelota",
      "prs": 4,
      "lines": 682,
@@ -3498,10 +3574,10 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 117,
-    "lines": 43835,
-    "addedRaw": 30023,
-    "deletedRaw": 14057,
+    "prs": 116,
+    "lines": 43651,
+    "addedRaw": 29872,
+    "deletedRaw": 14024,
     "people": 11
    },
    "contributors": [
@@ -3570,10 +3646,10 @@ const HISTORY = {
     },
     {
      "login": "bryclevgp",
-     "prs": 2,
-     "lines": 535,
-     "addedRaw": 484,
-     "deletedRaw": 51
+     "prs": 1,
+     "lines": 351,
+     "addedRaw": 333,
+     "deletedRaw": 18
     },
     {
      "login": "ernestohs",
@@ -3589,10 +3665,10 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 153,
-    "lines": 82780,
-    "addedRaw": 69592,
-    "deletedRaw": 13283,
+    "prs": 152,
+    "lines": 82652,
+    "addedRaw": 69476,
+    "deletedRaw": 13271,
     "people": 10
    },
    "contributors": [
@@ -3661,10 +3737,10 @@ const HISTORY = {
     },
     {
      "login": "bryclevgp",
-     "prs": 3,
-     "lines": 273,
-     "addedRaw": 206,
-     "deletedRaw": 67
+     "prs": 2,
+     "lines": 145,
+     "addedRaw": 90,
+     "deletedRaw": 55
     }
    ]
   },
@@ -3673,10 +3749,10 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 220,
-    "lines": 128159,
-    "addedRaw": 110564,
-    "deletedRaw": 19717,
+    "prs": 219,
+    "lines": 127967,
+    "addedRaw": 110375,
+    "deletedRaw": 19714,
     "people": 14
    },
    "contributors": [
@@ -3738,10 +3814,10 @@ const HISTORY = {
     },
     {
      "login": "bryclevgp",
-     "prs": 3,
-     "lines": 2007,
-     "addedRaw": 1972,
-     "deletedRaw": 35
+     "prs": 2,
+     "lines": 1815,
+     "addedRaw": 1783,
+     "deletedRaw": 32
     },
     {
      "login": "melecia-gp",
@@ -3785,11 +3861,11 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 211,
-    "lines": 183276,
-    "addedRaw": 112133,
-    "deletedRaw": 71301,
-    "people": 11
+    "prs": 209,
+    "lines": 182984,
+    "addedRaw": 111897,
+    "deletedRaw": 71245,
+    "people": 10
    },
    "contributors": [
     {
@@ -3856,13 +3932,6 @@ const HISTORY = {
      "deletedRaw": 124
     },
     {
-     "login": "bryclevgp",
-     "prs": 2,
-     "lines": 292,
-     "addedRaw": 236,
-     "deletedRaw": 56
-    },
-    {
      "login": "emilybgoodpartyorg",
      "prs": 1,
      "lines": 183,
@@ -3876,10 +3945,10 @@ const HISTORY = {
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 113,
-    "lines": 79356,
-    "addedRaw": 52901,
-    "deletedRaw": 28560,
+    "prs": 104,
+    "lines": 76918,
+    "addedRaw": 50839,
+    "deletedRaw": 28184,
     "people": 12
    },
    "contributors": [
@@ -3920,10 +3989,10 @@ const HISTORY = {
     },
     {
      "login": "bryclevgp",
-     "prs": 16,
-     "lines": 6792,
-     "addedRaw": 3267,
-     "deletedRaw": 3525
+     "prs": 7,
+     "lines": 4354,
+     "addedRaw": 1205,
+     "deletedRaw": 3149
     },
     {
      "login": "hhkarimi",
@@ -3974,10 +4043,10 @@ const HISTORY = {
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 237,
-    "lines": 130136,
-    "addedRaw": 120096,
-    "deletedRaw": 10786,
+    "prs": 232,
+    "lines": 128521,
+    "addedRaw": 118525,
+    "deletedRaw": 10742,
     "people": 17
    },
    "contributors": [
@@ -3997,10 +4066,10 @@ const HISTORY = {
     },
     {
      "login": "bryclevgp",
-     "prs": 27,
-     "lines": 21101,
-     "addedRaw": 19504,
-     "deletedRaw": 1601
+     "prs": 22,
+     "lines": 19486,
+     "addedRaw": 17933,
+     "deletedRaw": 1557
     },
     {
      "login": "tomer-tgp",
@@ -4107,10 +4176,10 @@ const HISTORY = {
    "workingDays": 2,
    "partial": true,
    "totals": {
-    "prs": 64,
-    "lines": 131407,
-    "addedRaw": 35632,
-    "deletedRaw": 96412,
+    "prs": 66,
+    "lines": 132112,
+    "addedRaw": 36121,
+    "deletedRaw": 96628,
     "people": 10
    },
    "contributors": [
@@ -4137,17 +4206,17 @@ const HISTORY = {
     },
     {
      "login": "jagoda",
-     "prs": 12,
-     "lines": 3139,
-     "addedRaw": 3190,
-     "deletedRaw": 538
+     "prs": 13,
+     "lines": 3656,
+     "addedRaw": 3515,
+     "deletedRaw": 730
     },
     {
      "login": "tomer-tgp",
-     "prs": 8,
-     "lines": 2023,
-     "addedRaw": 1839,
-     "deletedRaw": 184
+     "prs": 9,
+     "lines": 2211,
+     "addedRaw": 2003,
+     "deletedRaw": 208
     },
     {
      "login": "sanjayr1",
@@ -4214,202 +4283,263 @@ const HISTORY = {
   "gp-data-platform/airflow/astro/requirements.txt",
   "gp-data-platform/dbt/project/seeds/l2_br_match_overrides.csv",
   "gp-data-platform/matcha/uv.lock",
-  "gp-data-platform/requirements_test.txt",
-  "product-os/design-locked-watcher/state.json",
-  "product-os/done-watcher/state.json",
-  "product-os/shipped-watcher/state.json",
-  "product-os/voc-agent/last-run-state.json"
+  "gp-data-platform/requirements_test.txt"
  ]
 };
+      const MAX_SELECTED = 8
 
-const els = {
-  lines: document.getElementById('lines'),
-  prs: document.getElementById('prs'),
-  people: document.getElementById('people'),
-  stale: document.getElementById('stale'),
-  generated: document.getElementById('generated'),
-  stats: document.getElementById('stats'),
-  partialNote: document.getElementById('partialNote'),
-  partialWeekLabel: document.getElementById('partialWeekLabel'),
-}
+      const els = {
+        totalsLines: document.getElementById('totalsLines'),
+        totalsPrs: document.getElementById('totalsPrs'),
+        contribLines: document.getElementById('contribLines'),
+        contribPrs: document.getElementById('contribPrs'),
+        contributorCharts: document.getElementById('contributorCharts'),
+        emptyState: document.getElementById('emptyState'),
+        people: document.getElementById('people'),
+        capNote: document.getElementById('capNote'),
+        selectionRow: document.getElementById('selectionRow'),
+        legend: document.getElementById('legend'),
+        clearBtn: document.getElementById('clearBtn'),
+        stale: document.getElementById('stale'),
+        generated: document.getElementById('generated'),
+        stats: document.getElementById('stats'),
+        partialNote: document.getElementById('partialNote'),
+        partialWeekLabel: document.getElementById('partialWeekLabel'),
+      }
 
-let selected = null
+      // Selection order drives legend/line order. Color assignment is tracked
+      // separately so deselecting one contributor never repaints another's slot.
+      let selectedOrder = []
+      const colorSlots = new Map()
 
-const median = (nums) => {
-  if (nums.length === 0) return 0
-  const sorted = [...nums].sort((a, b) => a - b)
-  const mid = Math.floor(sorted.length / 2)
-  return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
-}
+      const orgRate = (week, metric) => (week.workingDays > 0 ? week.totals[metric] / week.workingDays : 0)
 
-const orgRate = (week, metric) => week.workingDays > 0 ? week.totals[metric] / week.workingDays : 0
+      const contributorRate = (week, login, metric) => {
+        const c = week.contributors.find((row) => row.login === login)
+        if (!c || week.workingDays === 0) return 0
+        return c[metric] / week.workingDays
+      }
 
-const contributorRate = (week, login, metric) => {
-  const c = week.contributors.find((row) => row.login === login)
-  if (!c || week.workingDays === 0) return 0
-  return c[metric] / week.workingDays
-}
+      const niceStep = (max) => {
+        if (max <= 0) return 1
+        const rough = max / 4
+        const mag = Math.pow(10, Math.floor(Math.log10(rough)))
+        const norm = rough / mag
+        const step = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10
+        return step * mag
+      }
 
-const medianRateSeries = (metric) =>
-  HISTORY.weeks.map((week) => {
-    if (week.workingDays === 0 || week.contributors.length === 0) return 0
-    const rates = week.contributors.map((c) => c[metric] / week.workingDays)
-    return median(rates)
-  })
+      const tickIndices = (n, want) => {
+        if (n <= 1) return [0]
+        const count = Math.min(want, n)
+        const out = new Set()
+        for (let i = 0; i < count; i++) out.add(Math.round((i * (n - 1)) / (count - 1)))
+        return [...out].sort((a, b) => a - b)
+      }
 
-const niceStep = (max) => {
-  if (max <= 0) return 1
-  const rough = max / 4
-  const mag = Math.pow(10, Math.floor(Math.log10(rough)))
-  const norm = rough / mag
-  const step = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10
-  return step * mag
-}
+      const fmtNum = (n) => Math.round(n).toLocaleString()
 
-const tickIndices = (n, want) => {
-  if (n <= 1) return [0]
-  const count = Math.min(want, n)
-  const out = new Set()
-  for (let i = 0; i < count; i++) out.add(Math.round((i * (n - 1)) / (count - 1)))
-  return [...out].sort((a, b) => a - b)
-}
+      const drawMultiPanel = (svg, weeks, seriesList) => {
+        const W = 920, H = 220
+        const padL = 48, padR = 14, padT = 14, padB = 26
+        const plotW = W - padL - padR
+        const plotH = H - padT - padB
+        const n = weeks.length
 
-const fmtNum = (n) => Math.round(n).toLocaleString()
+        const allValues = seriesList.flatMap((s) => s.values)
+        const rawMax = Math.max(0, ...allValues)
+        const step = niceStep(rawMax || 1)
+        const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
 
-const drawPanel = (svg, weeks, series, referenceSeries) => {
-  const W = 920, H = 220
-  const padL = 48, padR = 14, padT = 14, padB = 26
-  const plotW = W - padL - padR
-  const plotH = H - padT - padB
-  const n = weeks.length
+        const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
+        const yFor = (v) => padT + plotH - (v / niceMax) * plotH
 
-  const allValues = referenceSeries ? series.concat(referenceSeries) : series
-  const rawMax = Math.max(0, ...allValues)
-  const step = niceStep(rawMax || 1)
-  const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
+        const pathFor = (vals) =>
+          vals.map((v, i) => `${i === 0 ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ')
 
-  const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
-  const yFor = (v) => padT + plotH - (v / niceMax) * plotH
+        const gridTicks = []
+        for (let t = 0; t <= niceMax + 0.0001; t += step) gridTicks.push(t)
 
-  const pathFor = (vals) =>
-    vals.map((v, i) => `${i === 0 ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ')
+        const gridMarkup = gridTicks.map((t) => {
+          const y = yFor(t).toFixed(1)
+          return `<line class="gridline" x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}"></line>` +
+            `<text class="axis-label" x="${padL - 8}" y="${Number(y) + 3}" text-anchor="end">${fmtNum(t)}</text>`
+        }).join('')
 
-  const gridTicks = []
-  for (let t = 0; t <= niceMax + 0.0001; t += step) gridTicks.push(t)
+        const xTicks = tickIndices(n, 9)
+        const xMarkup = xTicks.map((i) => {
+          const x = xFor(i).toFixed(1)
+          const y0 = H - padB
+          const anchor = i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'
+          return `<line class="axis-tick" x1="${x}" x2="${x}" y1="${y0}" y2="${y0 + 4}"></line>` +
+            `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${weeks[i].week.slice(2)}</text>`
+        }).join('')
 
-  const gridMarkup = gridTicks.map((t) => {
-    const y = yFor(t).toFixed(1)
-    return `<line class="gridline" x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}"></line>` +
-      `<text class="axis-label" x="${padL - 8}" y="${Number(y) + 3}" text-anchor="end">${fmtNum(t)}</text>`
-  }).join('')
+        // Only the newest week can be partial (it's the one still filling in), so the
+        // lighter treatment only ever applies to the final segment of each line.
+        const lastPartial = n > 0 && weeks[n - 1].partial
 
-  const xTicks = tickIndices(n, 9)
-  const xMarkup = xTicks.map((i) => {
-    const x = xFor(i).toFixed(1)
-    const y0 = H - padB
-    const anchor = i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'
-    return `<line class="axis-tick" x1="${x}" x2="${x}" y1="${y0}" y2="${y0 + 4}"></line>` +
-      `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${weeks[i].week.slice(2)}</text>`
-  }).join('')
+        const seriesMarkup = seriesList.map(({ color, values }) => {
+          const lineMarkup = lastPartial && n > 1
+            ? `<path fill="none" stroke="${color}" stroke-width="2" d="${pathFor(values.slice(0, -1))}"></path>` +
+              `<path fill="none" stroke="${color}" stroke-width="2" opacity="0.4" ` +
+              `d="M${xFor(n - 2).toFixed(1)},${yFor(values[n - 2]).toFixed(1)} L${xFor(n - 1).toFixed(1)},${yFor(values[n - 1]).toFixed(1)}"></path>`
+            : `<path fill="none" stroke="${color}" stroke-width="2" d="${pathFor(values)}"></path>`
 
-  const refMarkup = referenceSeries
-    ? `<path class="reference-line" d="${pathFor(referenceSeries)}"></path>`
-    : ''
+          const dotsMarkup = values.map((v, i) => {
+            const cx = xFor(i).toFixed(1)
+            const cy = yFor(v).toFixed(1)
+            return weeks[i].partial
+              ? `<circle cx="${cx}" cy="${cy}" r="3.5" fill="var(--surface)" stroke="${color}" stroke-width="2"></circle>`
+              : `<circle cx="${cx}" cy="${cy}" r="2.2" fill="${color}"></circle>`
+          }).join('')
 
-  const dotsMarkup = series.map((v, i) => {
-    const cx = xFor(i).toFixed(1)
-    const cy = yFor(v).toFixed(1)
-    return weeks[i].partial
-      ? `<circle class="series-dot-partial" cx="${cx}" cy="${cy}" r="3.5"></circle>`
-      : `<circle class="series-dot" cx="${cx}" cy="${cy}" r="2.2"></circle>`
-  }).join('')
+          return lineMarkup + dotsMarkup
+        }).join('')
 
-  // Only the newest week can be partial (it's the one still filling in), so the
-  // lighter treatment only ever applies to the final segment of the line.
-  const lastPartial = n > 0 && weeks[n - 1].partial
-  const lineMarkup = lastPartial && n > 1
-    ? `<path class="series-line" d="${pathFor(series.slice(0, -1))}"></path>` +
-      `<path class="series-line-partial" d="M${xFor(n - 2).toFixed(1)},${yFor(series[n - 2]).toFixed(1)} ` +
-      `L${xFor(n - 1).toFixed(1)},${yFor(series[n - 1]).toFixed(1)}"></path>`
-    : `<path class="series-line" d="${pathFor(series)}"></path>`
+        svg.innerHTML = gridMarkup + xMarkup + seriesMarkup
+      }
 
-  svg.innerHTML = gridMarkup + xMarkup + refMarkup + lineMarkup + dotsMarkup
-}
+      const totalsByLogin = new Map()
+      for (const week of HISTORY.weeks) {
+        for (const c of week.contributors) {
+          totalsByLogin.set(c.login, (totalsByLogin.get(c.login) || 0) + c.lines)
+        }
+      }
 
-const totalsByLogin = new Map()
-for (const week of HISTORY.weeks) {
-  for (const c of week.contributors) {
-    totalsByLogin.set(c.login, (totalsByLogin.get(c.login) || 0) + c.lines)
-  }
-}
+      const buildPeople = () => {
+        const people = HISTORY.contributors
+          .map((login) => ({ login, lines: totalsByLogin.get(login) || 0 }))
+          .sort((a, b) => b.lines - a.lines)
 
-const buildPeople = () => {
-  const people = HISTORY.contributors
-    .map((login) => ({ login, lines: totalsByLogin.get(login) || 0 }))
-    .sort((a, b) => b.lines - a.lines)
+        els.people.innerHTML = people.map((p) =>
+          `<button type="button" data-login="${p.login}" aria-pressed="false">` +
+          `<span class="chip-login">${p.login}</span>` +
+          `<span class="chip-lines">${fmtNum(p.lines)} lines</span>` +
+          `</button>`
+        ).join('')
+      }
 
-  els.people.innerHTML = people.map((p) =>
-    `<button type="button" data-login="${p.login}" aria-pressed="false">` +
-    `<span class="chip-login">${p.login}</span>` +
-    `<span class="chip-lines">${fmtNum(p.lines)} lines</span>` +
-    `</button>`
-  ).join('')
-}
+      // Lowest free slot wins, so a freed slot (from a deselect) is reused before
+      // any higher slot, keeping the palette assignment stable and gap-free.
+      const assignSlot = (login) => {
+        const used = new Set(colorSlots.values())
+        for (let i = 0; i < MAX_SELECTED; i++) {
+          if (!used.has(i)) {
+            colorSlots.set(login, i)
+            return
+          }
+        }
+      }
 
-const updateChips = () => {
-  for (const btn of els.people.querySelectorAll('button[data-login]')) {
-    btn.setAttribute('aria-pressed', String(btn.dataset.login === selected))
-  }
-}
+      const toggleContributor = (login) => {
+        if (selectedOrder.includes(login)) {
+          selectedOrder = selectedOrder.filter((l) => l !== login)
+          colorSlots.delete(login)
+          return
+        }
+        if (selectedOrder.length >= MAX_SELECTED) return
+        selectedOrder.push(login)
+        assignSlot(login)
+      }
 
-const buildStats = () => {
-  const totalLines = HISTORY.weeks.reduce((n, w) => n + w.totals.lines, 0)
-  const totalPrs = HISTORY.weeks.reduce((n, w) => n + w.totals.prs, 0)
-  const stats = [
-    { label: 'Weeks tracked', value: HISTORY.weeks.length },
-    { label: 'Contributors', value: HISTORY.contributors.length },
-    { label: 'Qualifying lines', value: fmtNum(totalLines) },
-    { label: 'Qualifying PRs', value: fmtNum(totalPrs) },
-  ]
-  els.stats.innerHTML = stats.map((s) =>
-    `<div class="stat"><div class="value">${s.value}</div><div class="label">${s.label}</div></div>`
-  ).join('')
-  els.generated.textContent = `Generated ${new Date(HISTORY.generatedAt).toLocaleString()}`
-}
+      const updateChips = () => {
+        const atCap = selectedOrder.length >= MAX_SELECTED
+        for (const btn of els.people.querySelectorAll('button[data-login]')) {
+          const login = btn.dataset.login
+          const isSelected = selectedOrder.includes(login)
+          btn.setAttribute('aria-pressed', String(isSelected))
+          btn.disabled = !isSelected && atCap
+          if (isSelected) {
+            btn.style.setProperty('--chip-color', `var(--contrib-${colorSlots.get(login)})`)
+          } else {
+            btn.style.removeProperty('--chip-color')
+          }
+        }
+        els.capNote.hidden = !atCap
+      }
 
-const render = () => {
-  const weeks = HISTORY.weeks
-  const linesSeries = weeks.map((w) => selected ? contributorRate(w, selected, 'lines') : orgRate(w, 'lines'))
-  const prsSeries = weeks.map((w) => selected ? contributorRate(w, selected, 'prs') : orgRate(w, 'prs'))
-  const linesRef = selected ? medianRateSeries('lines') : null
-  const prsRef = selected ? medianRateSeries('prs') : null
-  drawPanel(els.lines, weeks, linesSeries, linesRef)
-  drawPanel(els.prs, weeks, prsSeries, prsRef)
-  updateChips()
-}
+      const updateSelectionUI = () => {
+        const hasSelection = selectedOrder.length > 0
+        els.selectionRow.hidden = !hasSelection
+        els.legend.innerHTML = hasSelection
+          ? selectedOrder.map((login) =>
+              `<span class="legend-item">` +
+              `<span class="legend-swatch" style="background:var(--contrib-${colorSlots.get(login)})"></span>` +
+              `${login}` +
+              `</span>`
+            ).join('')
+          : ''
+      }
 
-els.people.addEventListener('click', (event) => {
-  const btn = event.target.closest('button[data-login]')
-  if (!btn) return
-  const login = btn.dataset.login
-  selected = selected === login ? null : login
-  render()
-})
+      const buildContributorSeries = (metric) =>
+        selectedOrder.map((login) => ({
+          login,
+          color: `var(--contrib-${colorSlots.get(login)})`,
+          values: HISTORY.weeks.map((w) => contributorRate(w, login, metric)),
+        }))
 
-const STALE_MS = 48 * 60 * 60 * 1000
-if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
-  els.stale.hidden = false
-}
+      const renderContributors = () => {
+        updateChips()
+        updateSelectionUI()
+        const hasSelection = selectedOrder.length > 0
+        els.emptyState.hidden = hasSelection
+        els.contributorCharts.hidden = !hasSelection
+        if (!hasSelection) return
+        drawMultiPanel(els.contribLines, HISTORY.weeks, buildContributorSeries('lines'))
+        drawMultiPanel(els.contribPrs, HISTORY.weeks, buildContributorSeries('prs'))
+      }
 
-const lastWeek = HISTORY.weeks[HISTORY.weeks.length - 1]
-if (lastWeek && lastWeek.partial) {
-  els.partialWeekLabel.textContent = lastWeek.week
-  els.partialNote.hidden = false
-}
+      els.people.addEventListener('click', (event) => {
+        const btn = event.target.closest('button[data-login]')
+        if (!btn || btn.disabled) return
+        toggleContributor(btn.dataset.login)
+        renderContributors()
+      })
 
-buildStats()
-buildPeople()
-render()
-</script>
-</body>
+      els.clearBtn.addEventListener('click', () => {
+        selectedOrder = []
+        colorSlots.clear()
+        renderContributors()
+      })
+
+      // Section one is static: rendered once, never touched by contributor selection.
+      const renderTotals = () => {
+        const weeks = HISTORY.weeks
+        drawMultiPanel(els.totalsLines, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'lines')) }])
+        drawMultiPanel(els.totalsPrs, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
+      }
+
+      const buildStats = () => {
+        const totalLines = HISTORY.weeks.reduce((n, w) => n + w.totals.lines, 0)
+        const totalPrs = HISTORY.weeks.reduce((n, w) => n + w.totals.prs, 0)
+        const stats = [
+          { label: 'Weeks tracked', value: HISTORY.weeks.length },
+          { label: 'Contributors', value: HISTORY.contributors.length },
+          { label: 'Qualifying lines', value: fmtNum(totalLines) },
+          { label: 'Qualifying PRs', value: fmtNum(totalPrs) },
+        ]
+        els.stats.innerHTML = stats.map((s) =>
+          `<div class="stat"><div class="value">${s.value}</div><div class="label">${s.label}</div></div>`
+        ).join('')
+        els.generated.textContent = `Generated ${new Date(HISTORY.generatedAt).toLocaleString()}`
+      }
+
+      const STALE_MS = 48 * 60 * 60 * 1000
+      if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
+        els.stale.hidden = false
+      }
+
+      const lastWeek = HISTORY.weeks[HISTORY.weeks.length - 1]
+      if (lastWeek && lastWeek.partial) {
+        els.partialWeekLabel.textContent = lastWeek.week
+        els.partialNote.hidden = false
+      }
+
+      buildStats()
+      buildPeople()
+      renderTotals()
+      renderContributors()
+    </script>
+  </body>
 </html>

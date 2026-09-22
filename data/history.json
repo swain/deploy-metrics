@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T16:50:22.574Z",
+ "generatedAt": "2026-09-22T17:12:02.347Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -1716,11 +1716,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 72,
-    "lines": 54633,
-    "addedRaw": 39127,
-    "deletedRaw": 16581,
-    "people": 13
+    "prs": 71,
+    "lines": 54174,
+    "addedRaw": 38713,
+    "deletedRaw": 16536,
+    "people": 12
    },
    "contributors": [
     {
@@ -1785,13 +1785,6 @@
      "lines": 816,
      "addedRaw": 752,
      "deletedRaw": 64
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 1,
-     "lines": 459,
-     "addedRaw": 414,
-     "deletedRaw": 45
     },
     {
      "login": "patrick-tgp",
@@ -2038,11 +2031,11 @@
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 152,
-    "lines": 128270,
-    "addedRaw": 143805,
-    "deletedRaw": 21267,
-    "people": 16
+    "prs": 151,
+    "lines": 128169,
+    "addedRaw": 143758,
+    "deletedRaw": 21213,
+    "people": 15
    },
    "contributors": [
     {
@@ -2142,13 +2135,6 @@
      "lines": 223,
      "addedRaw": 152,
      "deletedRaw": 71
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 1,
-     "lines": 101,
-     "addedRaw": 47,
-     "deletedRaw": 54
     },
     {
      "login": "tonypham-goodparty",
@@ -2283,11 +2269,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 190,
-    "lines": 99811,
-    "addedRaw": 159199,
-    "deletedRaw": 154957,
-    "people": 18
+    "prs": 185,
+    "lines": 83742,
+    "addedRaw": 143384,
+    "deletedRaw": 154703,
+    "people": 16
    },
    "contributors": [
     {
@@ -2303,13 +2289,6 @@
      "lines": 14717,
      "addedRaw": 10664,
      "deletedRaw": 4055
-    },
-    {
-     "login": "jacknagel-hs",
-     "prs": 2,
-     "lines": 14166,
-     "addedRaw": 14134,
-     "deletedRaw": 32
     },
     {
      "login": "hhkarimi",
@@ -2375,13 +2354,6 @@
      "deletedRaw": 267
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 1903,
-     "addedRaw": 1681,
-     "deletedRaw": 222
-    },
-    {
      "login": "oakinh",
      "prs": 5,
      "lines": 1691,
@@ -2423,10 +2395,10 @@
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 125,
-    "lines": 94712,
-    "addedRaw": 94734,
-    "deletedRaw": 18596,
+    "prs": 116,
+    "lines": 92009,
+    "addedRaw": 92487,
+    "deletedRaw": 18140,
     "people": 15
    },
    "contributors": [
@@ -2480,13 +2452,6 @@
      "deletedRaw": 212
     },
     {
-     "login": "bryclevgp",
-     "prs": 10,
-     "lines": 3005,
-     "addedRaw": 2545,
-     "deletedRaw": 460
-    },
-    {
      "login": "sanjayr1",
      "prs": 8,
      "lines": 2803,
@@ -2522,6 +2487,13 @@
      "deletedRaw": 67
     },
     {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 302,
+     "addedRaw": 298,
+     "deletedRaw": 4
+    },
+    {
      "login": "selta-goodparty",
      "prs": 2,
      "lines": 185,
@@ -2542,11 +2514,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 212,
-    "lines": 83794,
-    "addedRaw": 85436,
-    "deletedRaw": 13176,
-    "people": 18
+    "prs": 203,
+    "lines": 81657,
+    "addedRaw": 83364,
+    "deletedRaw": 12869,
+    "people": 17
    },
    "contributors": [
     {
@@ -2604,13 +2576,6 @@
      "lines": 2346,
      "addedRaw": 1807,
      "deletedRaw": 539
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 9,
-     "lines": 2137,
-     "addedRaw": 2072,
-     "deletedRaw": 307
     },
     {
      "login": "stephtea",
@@ -2682,10 +2647,10 @@
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 172,
-    "lines": 82082,
-    "addedRaw": 62778,
-    "deletedRaw": 22005,
+    "prs": 161,
+    "lines": 80572,
+    "addedRaw": 61401,
+    "deletedRaw": 21872,
     "people": 13
    },
    "contributors": [
@@ -2760,13 +2725,6 @@
      "deletedRaw": 409
     },
     {
-     "login": "bryclevgp",
-     "prs": 12,
-     "lines": 1520,
-     "addedRaw": 1387,
-     "deletedRaw": 133
-    },
-    {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 768,
@@ -2779,6 +2737,13 @@
      "lines": 522,
      "addedRaw": 136,
      "deletedRaw": 810
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 10,
+     "addedRaw": 10,
+     "deletedRaw": 0
     }
    ]
   },
@@ -2787,11 +2752,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 111,
-    "lines": 89727,
-    "addedRaw": 84424,
-    "deletedRaw": 20091,
-    "people": 15
+    "prs": 108,
+    "lines": 89461,
+    "addedRaw": 84214,
+    "deletedRaw": 20035,
+    "people": 14
    },
    "contributors": [
     {
@@ -2872,13 +2837,6 @@
      "deletedRaw": 11
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 266,
-     "addedRaw": 210,
-     "deletedRaw": 56
-    },
-    {
      "login": "nigel-gp",
      "prs": 2,
      "lines": 122,
@@ -2906,11 +2864,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 168,
-    "lines": 80500,
-    "addedRaw": 65893,
-    "deletedRaw": 15266,
-    "people": 14
+    "prs": 163,
+    "lines": 79871,
+    "addedRaw": 65323,
+    "deletedRaw": 15207,
+    "people": 13
    },
    "contributors": [
     {
@@ -2991,13 +2949,6 @@
      "deletedRaw": 152
     },
     {
-     "login": "bryclevgp",
-     "prs": 5,
-     "lines": 631,
-     "addedRaw": 571,
-     "deletedRaw": 60
-    },
-    {
      "login": "danpelota",
      "prs": 1,
      "lines": 570,
@@ -3005,11 +2956,11 @@
      "deletedRaw": 12
     },
     {
-     "login": "jacknagel-hs",
+     "login": "bryclevgp",
      "prs": 1,
-     "lines": 2,
-     "addedRaw": 1,
-     "deletedRaw": 1
+     "lines": 4,
+     "addedRaw": 2,
+     "deletedRaw": 2
     }
    ]
   },
@@ -3018,11 +2969,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 170,
-    "lines": 77777,
-    "addedRaw": 61322,
-    "deletedRaw": 16867,
-    "people": 14
+    "prs": 166,
+    "lines": 77324,
+    "addedRaw": 60938,
+    "deletedRaw": 16798,
+    "people": 12
    },
    "contributors": [
     {
@@ -3103,25 +3054,11 @@
      "deletedRaw": 88
     },
     {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 451,
-     "addedRaw": 383,
-     "deletedRaw": 68
-    },
-    {
      "login": "danpelota",
      "prs": 4,
      "lines": 275,
      "addedRaw": 183,
      "deletedRaw": 92
-    },
-    {
-     "login": "jacknagel-hs",
-     "prs": 1,
-     "lines": 2,
-     "addedRaw": 1,
-     "deletedRaw": 1
     }
    ]
   },
@@ -3214,10 +3151,10 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 112,
-    "lines": 219429,
-    "addedRaw": 204637,
-    "deletedRaw": 21305,
+    "prs": 111,
+    "lines": 204605,
+    "addedRaw": 189819,
+    "deletedRaw": 21299,
     "people": 10
    },
    "contributors": [
@@ -3234,13 +3171,6 @@
      "lines": 40559,
      "addedRaw": 33268,
      "deletedRaw": 7569
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 6,
-     "lines": 15951,
-     "addedRaw": 15634,
-     "deletedRaw": 317
     },
     {
      "login": "datawithtristan",
@@ -3271,6 +3201,13 @@
      "deletedRaw": 2520
     },
     {
+     "login": "bryclevgp",
+     "prs": 5,
+     "lines": 1127,
+     "addedRaw": 816,
+     "deletedRaw": 311
+    },
+    {
      "login": "danpelota",
      "prs": 4,
      "lines": 682,
@@ -3298,10 +3235,10 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 117,
-    "lines": 43835,
-    "addedRaw": 30023,
-    "deletedRaw": 14057,
+    "prs": 116,
+    "lines": 43651,
+    "addedRaw": 29872,
+    "deletedRaw": 14024,
     "people": 11
    },
    "contributors": [
@@ -3370,10 +3307,10 @@
     },
     {
      "login": "bryclevgp",
-     "prs": 2,
-     "lines": 535,
-     "addedRaw": 484,
-     "deletedRaw": 51
+     "prs": 1,
+     "lines": 351,
+     "addedRaw": 333,
+     "deletedRaw": 18
     },
     {
      "login": "ernestohs",
@@ -3389,10 +3326,10 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 153,
-    "lines": 82780,
-    "addedRaw": 69592,
-    "deletedRaw": 13283,
+    "prs": 152,
+    "lines": 82652,
+    "addedRaw": 69476,
+    "deletedRaw": 13271,
     "people": 10
    },
    "contributors": [
@@ -3461,10 +3398,10 @@
     },
     {
      "login": "bryclevgp",
-     "prs": 3,
-     "lines": 273,
-     "addedRaw": 206,
-     "deletedRaw": 67
+     "prs": 2,
+     "lines": 145,
+     "addedRaw": 90,
+     "deletedRaw": 55
     }
    ]
   },
@@ -3473,10 +3410,10 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 220,
-    "lines": 128159,
-    "addedRaw": 110564,
-    "deletedRaw": 19717,
+    "prs": 219,
+    "lines": 127967,
+    "addedRaw": 110375,
+    "deletedRaw": 19714,
     "people": 14
    },
    "contributors": [
@@ -3538,10 +3475,10 @@
     },
     {
      "login": "bryclevgp",
-     "prs": 3,
-     "lines": 2007,
-     "addedRaw": 1972,
-     "deletedRaw": 35
+     "prs": 2,
+     "lines": 1815,
+     "addedRaw": 1783,
+     "deletedRaw": 32
     },
     {
      "login": "melecia-gp",
@@ -3585,11 +3522,11 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 211,
-    "lines": 183276,
-    "addedRaw": 112133,
-    "deletedRaw": 71301,
-    "people": 11
+    "prs": 209,
+    "lines": 182984,
+    "addedRaw": 111897,
+    "deletedRaw": 71245,
+    "people": 10
    },
    "contributors": [
     {
@@ -3656,13 +3593,6 @@
      "deletedRaw": 124
     },
     {
-     "login": "bryclevgp",
-     "prs": 2,
-     "lines": 292,
-     "addedRaw": 236,
-     "deletedRaw": 56
-    },
-    {
      "login": "emilybgoodpartyorg",
      "prs": 1,
      "lines": 183,
@@ -3676,10 +3606,10 @@
    "workingDays": 4,
    "partial": false,
    "totals": {
-    "prs": 113,
-    "lines": 79356,
-    "addedRaw": 52901,
-    "deletedRaw": 28560,
+    "prs": 104,
+    "lines": 76918,
+    "addedRaw": 50839,
+    "deletedRaw": 28184,
     "people": 12
    },
    "contributors": [
@@ -3720,10 +3650,10 @@
     },
     {
      "login": "bryclevgp",
-     "prs": 16,
-     "lines": 6792,
-     "addedRaw": 3267,
-     "deletedRaw": 3525
+     "prs": 7,
+     "lines": 4354,
+     "addedRaw": 1205,
+     "deletedRaw": 3149
     },
     {
      "login": "hhkarimi",
@@ -3774,10 +3704,10 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 237,
-    "lines": 130136,
-    "addedRaw": 120096,
-    "deletedRaw": 10786,
+    "prs": 232,
+    "lines": 128521,
+    "addedRaw": 118525,
+    "deletedRaw": 10742,
     "people": 17
    },
    "contributors": [
@@ -3797,10 +3727,10 @@
     },
     {
      "login": "bryclevgp",
-     "prs": 27,
-     "lines": 21101,
-     "addedRaw": 19504,
-     "deletedRaw": 1601
+     "prs": 22,
+     "lines": 19486,
+     "addedRaw": 17933,
+     "deletedRaw": 1557
     },
     {
      "login": "tomer-tgp",
@@ -3907,10 +3837,10 @@
    "workingDays": 2,
    "partial": true,
    "totals": {
-    "prs": 64,
-    "lines": 131407,
-    "addedRaw": 35632,
-    "deletedRaw": 96412,
+    "prs": 66,
+    "lines": 132112,
+    "addedRaw": 36121,
+    "deletedRaw": 96628,
     "people": 10
    },
    "contributors": [
@@ -3937,17 +3867,17 @@
     },
     {
      "login": "jagoda",
-     "prs": 12,
-     "lines": 3139,
-     "addedRaw": 3190,
-     "deletedRaw": 538
+     "prs": 13,
+     "lines": 3656,
+     "addedRaw": 3515,
+     "deletedRaw": 730
     },
     {
      "login": "tomer-tgp",
-     "prs": 8,
-     "lines": 2023,
-     "addedRaw": 1839,
-     "deletedRaw": 184
+     "prs": 9,
+     "lines": 2211,
+     "addedRaw": 2003,
+     "deletedRaw": 208
     },
     {
      "login": "sanjayr1",
@@ -4014,10 +3944,6 @@
   "gp-data-platform/airflow/astro/requirements.txt",
   "gp-data-platform/dbt/project/seeds/l2_br_match_overrides.csv",
   "gp-data-platform/matcha/uv.lock",
-  "gp-data-platform/requirements_test.txt",
-  "product-os/design-locked-watcher/state.json",
-  "product-os/done-watcher/state.json",
-  "product-os/shipped-watcher/state.json",
-  "product-os/voc-agent/last-run-state.json"
+  "gp-data-platform/requirements_test.txt"
  ]
 }
