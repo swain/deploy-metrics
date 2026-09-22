@@ -250,6 +250,74 @@
       .empty-state[hidden] {
         display: none;
       }
+      .mode-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 16px;
+      }
+      .totals-table-wrap {
+        overflow-x: auto;
+        margin: 0 0 16px;
+      }
+      .totals-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      .totals-table th,
+      .totals-table td {
+        padding: 6px 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--gridline);
+      }
+      .totals-table th {
+        color: var(--ink-secondary);
+        font-weight: 600;
+        font-size: 12px;
+      }
+      .totals-table th.num,
+      .totals-table td.num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      .chart-tooltip {
+        position: fixed;
+        pointer-events: none;
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-size: 12px;
+        line-height: 1.4;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+        z-index: 1000;
+        max-width: 220px;
+      }
+      .chart-tooltip[hidden] {
+        display: none;
+      }
+      .chart-tooltip .tt-name {
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+      .line-series path {
+        transition: opacity 0.1s;
+      }
+      .band-series path {
+        transition: opacity 0.1s;
+      }
+      .series-dim {
+        opacity: 0.28;
+      }
+      .line-series.series-emph path {
+        stroke-width: 3.5;
+      }
+      .band-series.series-emph path.band-fill {
+        stroke: var(--ink);
+        stroke-width: 1.5;
+      }
       #contributorCharts[hidden] {
         display: none;
       }
@@ -380,6 +448,19 @@
 
       <section class="block">
         <h2 class="section-title">By contributor</h2>
+        <div class="totals-table-wrap" id="totalsTableWrap">
+          <table class="totals-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Contributor</th>
+                <th class="num">Qualifying lines</th>
+                <th class="num">Qualifying pull requests</th>
+              </tr>
+            </thead>
+            <tbody id="totalsTableBody"></tbody>
+          </table>
+        </div>
         <div id="people"></div>
         <div class="bulk-actions">
           <button type="button" class="clear-btn" id="selectAllBtn">Select all</button>
@@ -387,6 +468,14 @@
         </div>
         <div class="selection-row" id="selectionRow" hidden>
           <div class="legend" id="legend"></div>
+        </div>
+        <div class="mode-row" id="modeRow" role="group" aria-label="Chart type">
+          <button type="button" class="range-btn" data-mode="lines" aria-pressed="true">
+            Lines
+          </button>
+          <button type="button" class="range-btn" data-mode="stacked" aria-pressed="false">
+            Stacked
+          </button>
         </div>
         <p class="empty-state" id="emptyState">
           Select a contributor above to see their throughput.
@@ -417,6 +506,7 @@
         </div>
       </section>
     </div>
+    <div class="chart-tooltip" id="chartTooltip" hidden></div>
     <script>
       const HISTORY = /*__DATA__*/;
       const MAX_CATEGORICAL = 8
@@ -430,6 +520,7 @@
       ]
       const DEFAULT_RANGE = '90'
       const RANGE_STORAGE_KEY = 'deploy-metrics-range'
+      const CHART_MODE_STORAGE_KEY = 'deploy-metrics-chart-mode'
 
       const els = {
         totalsLines: document.getElementById('totalsLines'),
@@ -441,6 +532,8 @@
         repoSplitRow: document.getElementById('repoSplitRow'),
         emptyState: document.getElementById('emptyState'),
         people: document.getElementById('people'),
+        totalsTableBody: document.getElementById('totalsTableBody'),
+        modeRow: document.getElementById('modeRow'),
         selectionRow: document.getElementById('selectionRow'),
         legend: document.getElementById('legend'),
         selectAllBtn: document.getElementById('selectAllBtn'),
@@ -451,12 +544,18 @@
         stats: document.getElementById('stats'),
         partialNote: document.getElementById('partialNote'),
         partialWeekLabel: document.getElementById('partialWeekLabel'),
+        tooltip: document.getElementById('chartTooltip'),
       }
 
       // Selection order drives legend/line order. Color assignment is tracked
       // separately so deselecting one contributor never repaints another's slot.
       let selectedOrder = []
       const colorSlots = new Map()
+      // Lines vs stacked applies only to the by-contributor charts.
+      let chartMode = 'lines'
+      // Geometry + series data for the panel a pointer last hovered, keyed by
+      // svg element, so the tooltip handler can hit-test without redrawing.
+      const panelMeta = new Map()
 
       // The range the whole page is currently scoped to, and the week list that
       // scope resolves to. Recomputed only when the range changes, not on every
@@ -481,6 +580,24 @@
       const storeRange = (key) => {
         try {
           localStorage.setItem(RANGE_STORAGE_KEY, key)
+        } catch {
+          // Nothing to do: the choice just won't survive a reload.
+        }
+      }
+
+      const loadStoredMode = () => {
+        try {
+          const stored = localStorage.getItem(CHART_MODE_STORAGE_KEY)
+          if (stored === 'lines' || stored === 'stacked') return stored
+        } catch {
+          // Storage unavailable: fall through to default.
+        }
+        return 'lines'
+      }
+
+      const storeMode = (mode) => {
+        try {
+          localStorage.setItem(CHART_MODE_STORAGE_KEY, mode)
         } catch {
           // Nothing to do: the choice just won't survive a reload.
         }
@@ -518,24 +635,9 @@
 
       const fmtNum = (n) => Math.round(n).toLocaleString()
 
-      const drawMultiPanel = (svg, weeksForPanel, seriesList) => {
-        const W = 920, H = 220
-        const padL = 48, padR = 14, padT = 14, padB = 26
-        const plotW = W - padL - padR
-        const plotH = H - padT - padB
-        const n = weeksForPanel.length
-
-        const allValues = seriesList.flatMap((s) => s.values)
-        const rawMax = Math.max(0, ...allValues)
-        const step = niceStep(rawMax || 1)
-        const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
-
-        const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
-        const yFor = (v) => padT + plotH - (v / niceMax) * plotH
-
-        const pathFor = (vals) =>
-          vals.map((v, i) => `${i === 0 ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ')
-
+      // Grid lines and the week-tick x-axis are identical between the line and
+      // stacked renderers; only what's plotted above them differs.
+      const buildGridAndAxisMarkup = (weeksForPanel, niceMax, step, n, xFor, yFor, padL, padR, padB, W, H) => {
         const gridTicks = []
         for (let t = 0; t <= niceMax + 0.0001; t += step) gridTicks.push(t)
 
@@ -554,11 +656,34 @@
             `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${fmtWeekLabel(weeksForPanel[i].weekStart)}</text>`
         }).join('')
 
+        return gridMarkup + xMarkup
+      }
+
+      const drawMultiPanel = (svg, weeksForPanel, seriesList) => {
+        const W = 920, H = 220
+        const padL = 48, padR = 14, padT = 14, padB = 26
+        const plotW = W - padL - padR
+        const plotH = H - padT - padB
+        const n = weeksForPanel.length
+
+        const allValues = seriesList.flatMap((s) => s.values)
+        const rawMax = Math.max(0, ...allValues)
+        const step = niceStep(rawMax || 1)
+        const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
+
+        const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
+        const yFor = (v) => padT + plotH - (v / niceMax) * plotH
+
+        const pathFor = (vals) =>
+          vals.map((v, i) => `${i === 0 ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ')
+
+        const axisMarkup = buildGridAndAxisMarkup(weeksForPanel, niceMax, step, n, xFor, yFor, padL, padR, padB, W, H)
+
         // Only the newest week can be partial (it's the one still filling in), so the
         // lighter treatment only ever applies to the final segment of each line.
         const lastPartial = n > 0 && weeksForPanel[n - 1].partial
 
-        const seriesMarkup = seriesList.map(({ color, values }) => {
+        const seriesMarkup = seriesList.map(({ key, color, values }) => {
           const lineMarkup = lastPartial && n > 1
             ? `<path fill="none" stroke="${color}" stroke-width="2" d="${pathFor(values.slice(0, -1))}"></path>` +
               `<path fill="none" stroke="${color}" stroke-width="2" opacity="0.4" ` +
@@ -573,10 +698,66 @@
               : `<circle cx="${cx}" cy="${cy}" r="2.2" fill="${color}"></circle>`
           }).join('')
 
-          return lineMarkup + dotsMarkup
+          return `<g data-key="${key}" class="line-series">${lineMarkup}${dotsMarkup}</g>`
         }).join('')
 
-        svg.innerHTML = gridMarkup + xMarkup + seriesMarkup
+        svg.innerHTML = axisMarkup + seriesMarkup
+
+        panelMeta.set(svg, { mode: 'lines', n, padL, plotW, padT, plotH, niceMax, yFor, weeksForPanel, entries: seriesList })
+      }
+
+      // Builds a closed polygon for one band between its baseline and top
+      // across indices [start, end), used for both the stable and the
+      // lighter, in-progress-week segment of a stacked area.
+      const buildAreaPath = (xFor, yFor, topArr, baseArr, start, end) => {
+        const pts = []
+        for (let i = start; i < end; i++) pts.push(`${i === start ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(topArr[i]).toFixed(1)}`)
+        for (let i = end - 1; i >= start; i--) pts.push(`L${xFor(i).toFixed(1)},${yFor(baseArr[i]).toFixed(1)}`)
+        pts.push('Z')
+        return pts.join(' ')
+      }
+
+      const drawStackedPanel = (svg, weeksForPanel, bands) => {
+        const W = 920, H = 220
+        const padL = 48, padR = 14, padT = 14, padB = 26
+        const plotW = W - padL - padR
+        const plotH = H - padT - padB
+        const n = weeksForPanel.length
+
+        // Cumulative baselines, bottom band first, so stacking order matches
+        // the array order bands arrive in (already sorted, Other already last).
+        let running = new Array(n).fill(0)
+        const entries = bands.map((band) => {
+          const base = running
+          running = running.map((v, i) => v + band.values[i])
+          return { ...band, base }
+        })
+
+        const rawMax = Math.max(0, ...(n > 0 ? running : []))
+        const step = niceStep(rawMax || 1)
+        const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
+
+        const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
+        const yFor = (v) => padT + plotH - (v / niceMax) * plotH
+
+        const axisMarkup = buildGridAndAxisMarkup(weeksForPanel, niceMax, step, n, xFor, yFor, padL, padR, padB, W, H)
+
+        const lastPartial = n > 0 && weeksForPanel[n - 1].partial
+        const stableEnd = lastPartial && n > 1 ? n - 1 : n
+
+        const bandMarkup = entries.map((band) => {
+          const top = band.values.map((v, i) => band.base[i] + v)
+          const stablePath = stableEnd > 0 ? buildAreaPath(xFor, yFor, top, band.base, 0, stableEnd) : ''
+          const partialPath = lastPartial && n > 1 ? buildAreaPath(xFor, yFor, top, band.base, n - 2, n) : ''
+          return `<g data-key="${band.key}" class="band-series">` +
+            (stablePath ? `<path class="band-fill" d="${stablePath}" fill="${band.color}"></path>` : '') +
+            (partialPath ? `<path class="band-fill" d="${partialPath}" fill="${band.color}" opacity="0.4"></path>` : '') +
+            `</g>`
+        }).join('')
+
+        svg.innerHTML = axisMarkup + bandMarkup
+
+        panelMeta.set(svg, { mode: 'stacked', n, padL, plotW, padT, plotH, niceMax, yFor, weeksForPanel, entries })
       }
 
       // All weeks whose Monday falls within `days` of the most recent week's Monday.
@@ -593,7 +774,10 @@
         const totals = new Map()
         for (const week of weeksInRange) {
           for (const c of week.contributors) {
-            totals.set(c.login, (totals.get(c.login) || 0) + c.lines)
+            const existing = totals.get(c.login) || { lines: 0, prs: 0 }
+            existing.lines += c.lines
+            existing.prs += c.prs
+            totals.set(c.login, existing)
           }
         }
         return totals
@@ -601,7 +785,7 @@
 
       const buildPeople = (totals) => {
         const people = [...totals.entries()]
-          .map(([login, lines]) => ({ login, lines }))
+          .map(([login, t]) => ({ login, lines: t.lines }))
           .sort((a, b) => b.lines - a.lines)
         peopleOrder = people.map((p) => p.login)
 
@@ -610,6 +794,17 @@
           `<span class="chip-login">${p.login}</span>` +
           `<span class="chip-lines">${fmtNum(p.lines)} lines</span>` +
           `</button>`
+        ).join('')
+      }
+
+      // Static reference table, sorted independently of selection. Rebuilt
+      // whenever the range changes, never wired to click/selection state.
+      const buildTotalsTable = (totals) => {
+        const rows = [...totals.entries()]
+          .map(([login, t]) => ({ login, lines: t.lines, prs: t.prs }))
+          .sort((a, b) => b.lines - a.lines)
+        els.totalsTableBody.innerHTML = rows.map((r, i) =>
+          `<tr><td>${i + 1}</td><td>${r.login}</td><td class="num">${fmtNum(r.lines)}</td><td class="num">${fmtNum(r.prs)}</td></tr>`
         ).join('')
       }
 
@@ -666,25 +861,65 @@
         }
       }
 
+      const legendItemHtml = (label, color) =>
+        `<span class="legend-item">` +
+        `<span class="legend-swatch" style="background:${color}"></span>` +
+        `${label}` +
+        `</span>`
+
       const updateSelectionUI = () => {
         const hasSelection = selectedOrder.length > 0
         els.selectionRow.hidden = !hasSelection
-        els.legend.innerHTML = hasSelection
-          ? selectedOrder.map((login) =>
-              `<span class="legend-item">` +
-              `<span class="legend-swatch" style="background:${seriesColorFor(login)}"></span>` +
-              `${login}` +
-              `</span>`
-            ).join('')
-          : ''
+        if (!hasSelection) {
+          els.legend.innerHTML = ''
+          return
+        }
+        if (chartMode === 'stacked') {
+          const shown = selectedOrder.filter((login) => colorSlots.has(login))
+          const overflow = selectedOrder.filter((login) => !colorSlots.has(login))
+          const items = shown.map((login) => legendItemHtml(login, seriesColorFor(login)))
+          if (overflow.length > 0) items.push(legendItemHtml(`Other (${overflow.length})`, 'var(--muted)'))
+          els.legend.innerHTML = items.join('')
+        } else {
+          els.legend.innerHTML = selectedOrder.map((login) => legendItemHtml(login, seriesColorFor(login))).join('')
+        }
       }
 
       const buildContributorSeries = (metric) =>
         selectedOrder.map((login) => ({
-          login,
+          key: login,
+          label: login,
           color: seriesColorFor(login),
           values: weeks.map((w) => contributorRate(w, login, metric)),
         }))
+
+      const sumValues = (arr) => arr.reduce((a, b) => a + b, 0)
+
+      // The 8 contributors holding categorical color slots each get their own
+      // band; everyone past that is summed into one grey "Other" band so the
+      // stack stays readable. Bands sort once by total over the visible range
+      // (largest at the bottom) so they never swap order week to week; Other
+      // always renders last, on top, regardless of its own size.
+      const buildStackedBands = (metric) => {
+        const real = []
+        const overflowLogins = []
+        for (const login of selectedOrder) {
+          if (colorSlots.has(login)) {
+            real.push({
+              key: login,
+              label: login,
+              color: seriesColorFor(login),
+              values: weeks.map((w) => contributorRate(w, login, metric)),
+            })
+          } else {
+            overflowLogins.push(login)
+          }
+        }
+        real.sort((a, b) => sumValues(b.values) - sumValues(a.values))
+        if (overflowLogins.length === 0) return real
+        const otherValues = weeks.map((w) => sumValues(overflowLogins.map((login) => contributorRate(w, login, metric))))
+        return [...real, { key: 'other', label: `Other (${overflowLogins.length})`, color: 'var(--muted)', values: otherValues }]
+      }
 
       // Sums a contributor's per-repo lines over the currently visible weeks (so
       // the split respects the range selector, not a lifetime total), then caps
@@ -782,13 +1017,18 @@
         els.contributorCharts.hidden = !hasSelection
         buildRepoSplit()
         if (!hasSelection) return
-        drawMultiPanel(els.contribLines, weeks, buildContributorSeries('lines'))
-        drawMultiPanel(els.contribPrs, weeks, buildContributorSeries('prs'))
+        if (chartMode === 'stacked') {
+          drawStackedPanel(els.contribLines, weeks, buildStackedBands('lines'))
+          drawStackedPanel(els.contribPrs, weeks, buildStackedBands('prs'))
+        } else {
+          drawMultiPanel(els.contribLines, weeks, buildContributorSeries('lines'))
+          drawMultiPanel(els.contribPrs, weeks, buildContributorSeries('prs'))
+        }
       }
 
       const renderTotals = () => {
-        drawMultiPanel(els.totalsLines, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'lines')) }])
-        drawMultiPanel(els.totalsPrs, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
+        drawMultiPanel(els.totalsLines, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'lines')) }])
+        drawMultiPanel(els.totalsPrs, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
       }
 
       const buildStats = (contributorCount) => {
@@ -811,6 +1051,12 @@
         }
       }
 
+      const updateModeButtons = () => {
+        for (const btn of els.modeRow.querySelectorAll('button[data-mode]')) {
+          btn.setAttribute('aria-pressed', String(btn.dataset.mode === chartMode))
+        }
+      }
+
       // The one entry point for a range change: recomputes the visible weeks, the
       // contributor set and totals that depend on them, drops any selection that
       // fell outside the new range (freeing its color slot), then redraws everything.
@@ -830,6 +1076,7 @@
 
         updateRangeButtons()
         buildStats(activeLogins.size)
+        buildTotalsTable(totals)
         buildPeople(totals)
         renderTotals()
         renderSelection()
@@ -839,6 +1086,15 @@
         const btn = event.target.closest('button[data-login]')
         if (!btn || btn.disabled) return
         toggleContributor(btn.dataset.login)
+        renderSelection()
+      })
+
+      els.modeRow.addEventListener('click', (event) => {
+        const btn = event.target.closest('button[data-mode]')
+        if (!btn || btn.dataset.mode === chartMode) return
+        chartMode = btn.dataset.mode
+        storeMode(chartMode)
+        updateModeButtons()
         renderSelection()
       })
 
@@ -858,6 +1114,108 @@
         applyRange(btn.dataset.range)
       })
 
+      const setEmphasis = (svg, key) => {
+        for (const g of svg.querySelectorAll('g[data-key]')) {
+          const active = key != null && g.dataset.key === key
+          g.classList.toggle('series-emph', active)
+          g.classList.toggle('series-dim', key != null && !active)
+        }
+      }
+
+      const clearEmphasis = (svg) => setEmphasis(svg, null)
+
+      // Shown at the pointer, then pulled back inside the card's edges so it
+      // never clips at the left, right, top or bottom of the panel.
+      const showTooltip = (panelEl, clientX, clientY, html) => {
+        const tip = els.tooltip
+        tip.style.visibility = 'hidden'
+        tip.hidden = false
+        tip.innerHTML = html
+        const panelRect = panelEl.getBoundingClientRect()
+        const tipRect = tip.getBoundingClientRect()
+
+        const minLeft = panelRect.left + 4
+        const maxLeft = Math.max(minLeft, panelRect.right - tipRect.width - 4)
+        const minTop = panelRect.top + 4
+        const maxTop = Math.max(minTop, panelRect.bottom - tipRect.height - 4)
+
+        const left = Math.min(Math.max(clientX + 14, minLeft), maxLeft)
+        const top = Math.min(Math.max(clientY - tipRect.height - 14, minTop), maxTop)
+
+        tip.style.left = `${left}px`
+        tip.style.top = `${top}px`
+        tip.style.visibility = 'visible'
+      }
+
+      // Finds the week column nearest the pointer, then either the nearest
+      // line at that column (lines mode) or the band whose stacked interval
+      // contains the pointer (stacked mode, showing that band's own value,
+      // never the running total).
+      const handlePanelPointer = (svg, evt) => {
+        const meta = panelMeta.get(svg)
+        if (!meta || meta.entries.length === 0 || meta.n === 0) return
+        const rect = svg.getBoundingClientRect()
+        if (rect.width === 0 || rect.height === 0) return
+
+        const svgX = (evt.clientX - rect.left) * (920 / rect.width)
+        const svgY = (evt.clientY - rect.top) * (220 / rect.height)
+        const { n, padL, plotW, yFor } = meta
+        const i = n <= 1 ? 0 : Math.min(n - 1, Math.max(0, Math.round(((svgX - padL) / plotW) * (n - 1))))
+
+        let identified = null
+        if (meta.mode === 'stacked') {
+          for (const e of meta.entries) {
+            const top = e.base[i] + e.values[i]
+            if (svgY <= yFor(e.base[i]) && svgY >= yFor(top)) {
+              identified = e
+              break
+            }
+          }
+          if (!identified) {
+            let bestDist = Infinity
+            for (const e of meta.entries) {
+              const midY = yFor(e.base[i] + e.values[i] / 2)
+              const d = Math.abs(midY - svgY)
+              if (d < bestDist) {
+                bestDist = d
+                identified = e
+              }
+            }
+          }
+        } else {
+          let bestDist = Infinity
+          for (const e of meta.entries) {
+            const d = Math.abs(yFor(e.values[i]) - svgY)
+            if (d < bestDist) {
+              bestDist = d
+              identified = e
+            }
+          }
+        }
+        if (!identified) return
+
+        setEmphasis(svg, identified.key)
+        const week = meta.weeksForPanel[i]
+        const value = identified.values[i]
+        showTooltip(
+          svg.closest('.panel'),
+          evt.clientX,
+          evt.clientY,
+          `<div class="tt-name">${identified.label}</div><div>${fmtWeekLabel(week.weekStart)} &middot; ${fmtNum(value)}</div>`,
+        )
+      }
+
+      const initTooltips = () => {
+        for (const svg of [els.totalsLines, els.totalsPrs, els.contribLines, els.contribPrs]) {
+          svg.addEventListener('pointermove', (evt) => handlePanelPointer(svg, evt))
+          svg.addEventListener('pointerdown', (evt) => handlePanelPointer(svg, evt))
+          svg.addEventListener('pointerleave', () => {
+            clearEmphasis(svg)
+            els.tooltip.hidden = true
+          })
+        }
+      }
+
       const STALE_MS = 48 * 60 * 60 * 1000
       if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
         els.stale.hidden = false
@@ -871,6 +1229,9 @@
         els.partialNote.hidden = false
       }
 
+      chartMode = loadStoredMode()
+      updateModeButtons()
+      initTooltips()
       applyRange(loadStoredRange())
     </script>
   </body>
