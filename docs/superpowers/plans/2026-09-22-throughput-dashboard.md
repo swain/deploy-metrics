@@ -21,7 +21,8 @@
 - Exclusion rules and their names are fixed: `empty`, `promotion`, `revert`, `move`, `deps`, `generated`, `machine`.
 - Machine-state detection threshold: at least **10** sole-file pull requests for that file, median sole size **<= 10** lines.
 - Never a dual-axis chart. Lines and PR counts are separate stacked panels sharing one x-axis.
-- Run tests with `node --import tsx --test test/*.test.ts`.
+- Run tests with `node --import tsx --test test/*.test.ts` (i.e. `npm test`).
+- The package is ESM (`"type": "module"`); imports carry explicit `.ts` extensions.
 - Commit with `--no-verify`. No `Co-Authored-By` trailers.
 
 ---
@@ -32,7 +33,8 @@
 - Create: `src/weeks.ts`
 - Create: `test/weeks.test.ts`
 - Create: `holidays.json`
-- Modify: `package.json` (add `test` script)
+- Create: `tsconfig.json`
+- Modify: `package.json` (add `test` script, `"type": "module"`, `@types/node`)
 
 **Interfaces:**
 - Consumes: nothing.
@@ -144,12 +146,36 @@ Create `holidays.json`:
 ["2026-01-01", "2026-01-19", "2026-02-16", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-11-27", "2026-12-24", "2026-12-25"]
 ```
 
-- [ ] **Step 4: Add the test script**
+- [ ] **Step 4: Configure the package as ESM and add the test script**
 
-In `package.json`, replace the `test` script with:
+`src/collect.ts` uses top-level await, which fails if tsx treats `.ts` as
+CommonJS, so the package must declare itself ESM. In `package.json`: add
+`"type": "module"` at the top level, replace the `test` script with
+`"test": "node --import tsx --test test/*.test.ts"`, and add `@types/node` to
+`dependencies` (this repo keeps tooling in `dependencies`, not `devDependencies`):
+
+```bash
+npm pkg set type=module
+npm pkg set scripts.test="node --import tsx --test test/*.test.ts"
+npm install --save @types/node@^22
+```
+
+Create `tsconfig.json` so a typecheck knows about `fetch` and `node:*`:
 
 ```json
-"test": "node --import tsx --test test/*.test.ts"
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2023", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "types": ["node"]
+  },
+  "include": ["src", "test"]
+}
 ```
 
 - [ ] **Step 5: Run tests to verify they pass**
@@ -160,7 +186,7 @@ Expected: PASS, 5 tests.
 - [ ] **Step 6: Commit**
 
 ```bash
-git add src/weeks.ts test/weeks.test.ts holidays.json package.json
+git add src/weeks.ts test/weeks.test.ts holidays.json package.json package-lock.json tsconfig.json
 git commit --no-verify -m "Add UTC ISO-week bucketing and working-day counting"
 ```
 
@@ -775,7 +801,7 @@ export const fetchWeek = async (
 
 - [ ] **Step 2: Typecheck**
 
-Run: `npx tsc --noEmit --skipLibCheck --allowImportingTsExtensions --module esnext --moduleResolution bundler --target es2022 --strict src/github.ts`
+Run: `npx tsc --noEmit -p tsconfig.json`
 Expected: no errors.
 
 - [ ] **Step 3: Commit**
