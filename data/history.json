@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T17:40:25.721Z",
+ "generatedAt": "2026-09-22T19:24:10.360Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -8113,23 +8113,23 @@
    "workingDays": 2,
    "partial": true,
    "totals": {
-    "prs": 68,
-    "lines": 132296,
-    "addedRaw": 36215,
-    "deletedRaw": 96718,
-    "people": 10
+    "prs": 78,
+    "lines": 138297,
+    "addedRaw": 39755,
+    "deletedRaw": 99179,
+    "people": 12
    },
    "contributors": [
     {
      "login": "fromjustin",
-     "prs": 4,
-     "lines": 96431,
-     "addedRaw": 5998,
-     "deletedRaw": 90434,
+     "prs": 8,
+     "lines": 98870,
+     "addedRaw": 6241,
+     "deletedRaw": 92630,
      "repos": {
       "omni": {
-       "prs": 4,
-       "lines": 96431
+       "prs": 8,
+       "lines": 98870
       }
      }
     },
@@ -8181,6 +8181,19 @@
      }
     },
     {
+     "login": "emilybgoodpartyorg",
+     "prs": 4,
+     "lines": 3322,
+     "addedRaw": 3080,
+     "deletedRaw": 242,
+     "repos": {
+      "gp-marketing": {
+       "prs": 4,
+       "lines": 3322
+      }
+     }
+    },
+    {
      "login": "tomer-tgp",
      "prs": 10,
      "lines": 2257,
@@ -8194,6 +8207,19 @@
      }
     },
     {
+     "login": "bryclevgp",
+     "prs": 4,
+     "lines": 1437,
+     "addedRaw": 1289,
+     "deletedRaw": 148,
+     "repos": {
+      "omni": {
+       "prs": 4,
+       "lines": 1437
+      }
+     }
+    },
+    {
      "login": "sanjayr1",
      "prs": 8,
      "lines": 1272,
@@ -8203,19 +8229,6 @@
       "gp-data-platform": {
        "prs": 8,
        "lines": 1272
-      }
-     }
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 3,
-     "lines": 1246,
-     "addedRaw": 1108,
-     "deletedRaw": 138,
-     "repos": {
-      "omni": {
-       "prs": 3,
-       "lines": 1246
       }
      }
     },
@@ -8257,6 +8270,19 @@
        "lines": 470
       }
      }
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 1,
+     "lines": 49,
+     "addedRaw": 36,
+     "deletedRaw": 13,
+     "repos": {
+      "gp-terraform-dataplatform": {
+       "prs": 1,
+       "lines": 49
+      }
+     }
     }
    ]
   }
@@ -8267,8 +8293,8 @@
    "lines": 683
   },
   "delegate-gp": {
-   "prs": 24,
-   "lines": 8405
+   "prs": 25,
+   "lines": 8407
   },
   "dependabot": {
    "prs": 5,
