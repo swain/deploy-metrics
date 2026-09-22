@@ -136,8 +136,10 @@ additions and deletions. Plus a top-level `generatedAt`.
   bucket, which silently drops or duplicates it at every week boundary.
 - The denominator is that week's weekdays less any holiday in a checked-in
   `holidays.json`, so a short week is not read as a slow one.
-- Bots and accounts below a small volume floor are held out of the org totals
-  and listed separately, so neither distorts the series.
+- Bot accounts are held out of the org totals and reported separately. There is
+  no per-contributor volume floor: the parent report needed one to form a
+  comparable cohort at a single instant, but in a weekly series a light week is
+  a data point, not noise to be filtered.
 
 ## Refresh
 
