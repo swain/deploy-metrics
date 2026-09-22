@@ -62,15 +62,15 @@ alike.
 
 Exclusion rules, any of which disqualifies a pull request:
 
-| Rule | Test |
-| --- | --- |
-| Empty | no changed files |
+| Rule             | Test                                       |
+| ---------------- | ------------------------------------------ |
+| Empty            | no changed files                           |
 | Branch promotion | base and head are both long-lived branches |
-| Revert | title begins `revert` |
-| Pure move | every file is a rename |
-| Dependency only | every file is a lockfile or manifest |
-| Generated only | every file is build output |
-| Machine state | every file is a detected state file |
+| Revert           | title begins `revert`                      |
+| Pure move        | every file is a rename                     |
+| Dependency only  | every file is a lockfile or manifest       |
+| Generated only   | every file is build output                 |
+| Machine state    | every file is a detected state file        |
 
 **Machine state is derived, not listed.** A file that is repeatedly the entire
 diff of a pull request, at trivial size, is a program recording where it got to.
@@ -125,9 +125,13 @@ Roughly 2 MB for a year at current volume.
 
 Per ISO week: the working-day denominator, whether the week is still in
 progress, org totals, and an array of per-contributor rows carrying qualifying
-pull requests, qualifying lines, additions and deletions. Plus, at top level,
-`generatedAt`, the sorted contributor index, the per-bot totals held out of the
-org figures, and `machineStateFiles`.
+pull requests, qualifying lines, additions and deletions. Also `weekStart`,
+that week's Monday as a `YYYY-MM-DD` string, derived once in `aggregate.ts`
+from the `week` key via `weekStartUTC` so the page can label an axis by date
+without reimplementing ISO week arithmetic; `week` itself stays as the map key,
+sort key, and cache filename stem. Plus, at top level, `generatedAt`, the
+sorted contributor index, the per-bot totals held out of the org figures, and
+`machineStateFiles`.
 
 `machineStateFiles` is the one place a file path is committed, and it is a
 deliberate exception to "no file lists are stored". Machine state is derived

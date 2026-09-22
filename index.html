@@ -92,6 +92,28 @@
         font-size: 13px;
         margin: 0 0 16px;
       }
+      .range-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 16px;
+      }
+      .range-btn {
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 8px;
+        padding: 6px 12px;
+        color: var(--ink);
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .range-btn[aria-pressed='true'] {
+        border-color: var(--series);
+        background: color-mix(in srgb, var(--series) 12%, var(--surface));
+        color: var(--series);
+        font-weight: 600;
+      }
       .stats {
         display: flex;
         flex-wrap: wrap;
@@ -272,6 +294,17 @@
       <header>
         <h1>Contributor throughput</h1>
         <p class="generated" id="generated"></p>
+        <div class="range-row" id="rangeRow" role="group" aria-label="Time range">
+          <button type="button" class="range-btn" data-range="all" aria-pressed="false">
+            All time
+          </button>
+          <button type="button" class="range-btn" data-range="90" aria-pressed="false">
+            90 days
+          </button>
+          <button type="button" class="range-btn" data-range="30" aria-pressed="false">
+            30 days
+          </button>
+        </div>
         <div class="stats" id="stats"></div>
       </header>
       <p class="partial-note" id="partialNote" hidden>
@@ -338,7 +371,7 @@
     </div>
     <script>
       const HISTORY = {
- "generatedAt": "2026-09-22T17:12:02.347Z",
+ "generatedAt": "2026-09-22T17:17:33.624Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -372,6 +405,7 @@
  "weeks": [
   {
    "week": "2026-W02",
+   "weekStart": "2026-01-05",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -435,6 +469,7 @@
   },
   {
    "week": "2026-W03",
+   "weekStart": "2026-01-12",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -512,6 +547,7 @@
   },
   {
    "week": "2026-W04",
+   "weekStart": "2026-01-19",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -582,6 +618,7 @@
   },
   {
    "week": "2026-W05",
+   "weekStart": "2026-01-26",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -680,6 +717,7 @@
   },
   {
    "week": "2026-W06",
+   "weekStart": "2026-02-02",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -764,6 +802,7 @@
   },
   {
    "week": "2026-W07",
+   "weekStart": "2026-02-09",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -869,6 +908,7 @@
   },
   {
    "week": "2026-W08",
+   "weekStart": "2026-02-16",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -974,6 +1014,7 @@
   },
   {
    "week": "2026-W09",
+   "weekStart": "2026-02-23",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1093,6 +1134,7 @@
   },
   {
    "week": "2026-W10",
+   "weekStart": "2026-03-02",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1212,6 +1254,7 @@
   },
   {
    "week": "2026-W11",
+   "weekStart": "2026-03-09",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1317,6 +1360,7 @@
   },
   {
    "week": "2026-W12",
+   "weekStart": "2026-03-16",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1415,6 +1459,7 @@
   },
   {
    "week": "2026-W13",
+   "weekStart": "2026-03-23",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1534,6 +1579,7 @@
   },
   {
    "week": "2026-W14",
+   "weekStart": "2026-03-30",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1625,6 +1671,7 @@
   },
   {
    "week": "2026-W15",
+   "weekStart": "2026-04-06",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1730,6 +1777,7 @@
   },
   {
    "week": "2026-W16",
+   "weekStart": "2026-04-13",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1821,6 +1869,7 @@
   },
   {
    "week": "2026-W17",
+   "weekStart": "2026-04-20",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -1933,6 +1982,7 @@
   },
   {
    "week": "2026-W18",
+   "weekStart": "2026-04-27",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2052,6 +2102,7 @@
   },
   {
    "week": "2026-W19",
+   "weekStart": "2026-05-04",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2150,6 +2201,7 @@
   },
   {
    "week": "2026-W20",
+   "weekStart": "2026-05-11",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2269,6 +2321,7 @@
   },
   {
    "week": "2026-W21",
+   "weekStart": "2026-05-18",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2367,6 +2420,7 @@
   },
   {
    "week": "2026-W22",
+   "weekStart": "2026-05-25",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -2486,6 +2540,7 @@
   },
   {
    "week": "2026-W23",
+   "weekStart": "2026-06-01",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2605,6 +2660,7 @@
   },
   {
    "week": "2026-W24",
+   "weekStart": "2026-06-08",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2731,6 +2787,7 @@
   },
   {
    "week": "2026-W25",
+   "weekStart": "2026-06-15",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -2850,6 +2907,7 @@
   },
   {
    "week": "2026-W26",
+   "weekStart": "2026-06-22",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -2983,6 +3041,7 @@
   },
   {
    "week": "2026-W27",
+   "weekStart": "2026-06-29",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -3088,6 +3147,7 @@
   },
   {
    "week": "2026-W28",
+   "weekStart": "2026-07-06",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3200,6 +3260,7 @@
   },
   {
    "week": "2026-W29",
+   "weekStart": "2026-07-13",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3305,6 +3366,7 @@
   },
   {
    "week": "2026-W30",
+   "weekStart": "2026-07-20",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3403,6 +3465,7 @@
   },
   {
    "week": "2026-W31",
+   "weekStart": "2026-07-27",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3487,6 +3550,7 @@
   },
   {
    "week": "2026-W32",
+   "weekStart": "2026-08-03",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3571,6 +3635,7 @@
   },
   {
    "week": "2026-W33",
+   "weekStart": "2026-08-10",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3662,6 +3727,7 @@
   },
   {
    "week": "2026-W34",
+   "weekStart": "2026-08-17",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3746,6 +3812,7 @@
   },
   {
    "week": "2026-W35",
+   "weekStart": "2026-08-24",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3858,6 +3925,7 @@
   },
   {
    "week": "2026-W36",
+   "weekStart": "2026-08-31",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -3942,6 +4010,7 @@
   },
   {
    "week": "2026-W37",
+   "weekStart": "2026-09-07",
    "workingDays": 4,
    "partial": false,
    "totals": {
@@ -4040,6 +4109,7 @@
   },
   {
    "week": "2026-W38",
+   "weekStart": "2026-09-14",
    "workingDays": 5,
    "partial": false,
    "totals": {
@@ -4173,13 +4243,14 @@
   },
   {
    "week": "2026-W39",
+   "weekStart": "2026-09-21",
    "workingDays": 2,
    "partial": true,
    "totals": {
-    "prs": 66,
-    "lines": 132112,
-    "addedRaw": 36121,
-    "deletedRaw": 96628,
+    "prs": 67,
+    "lines": 132158,
+    "addedRaw": 36157,
+    "deletedRaw": 96638,
     "people": 10
    },
    "contributors": [
@@ -4213,10 +4284,10 @@
     },
     {
      "login": "tomer-tgp",
-     "prs": 9,
-     "lines": 2211,
-     "addedRaw": 2003,
-     "deletedRaw": 208
+     "prs": 10,
+     "lines": 2257,
+     "addedRaw": 2039,
+     "deletedRaw": 218
     },
     {
      "login": "sanjayr1",
@@ -4287,6 +4358,15 @@
  ]
 };
       const MAX_SELECTED = 8
+      const DAY_MS = 86400000
+
+      const RANGE_OPTIONS = [
+        { key: 'all', days: null, label: 'All time' },
+        { key: '90', days: 90, label: '90 days' },
+        { key: '30', days: 30, label: '30 days' },
+      ]
+      const DEFAULT_RANGE = '90'
+      const RANGE_STORAGE_KEY = 'deploy-metrics-range'
 
       const els = {
         totalsLines: document.getElementById('totalsLines'),
@@ -4300,6 +4380,7 @@
         selectionRow: document.getElementById('selectionRow'),
         legend: document.getElementById('legend'),
         clearBtn: document.getElementById('clearBtn'),
+        rangeRow: document.getElementById('rangeRow'),
         stale: document.getElementById('stale'),
         generated: document.getElementById('generated'),
         stats: document.getElementById('stats'),
@@ -4311,6 +4392,36 @@
       // separately so deselecting one contributor never repaints another's slot.
       let selectedOrder = []
       const colorSlots = new Map()
+
+      // The range the whole page is currently scoped to, and the week list that
+      // scope resolves to. Recomputed only when the range changes, not on every
+      // contributor click, so toggling a chip never touches the DOM these came from.
+      let currentRange = DEFAULT_RANGE
+      let weeks = []
+      let activeLogins = new Set()
+
+      const loadStoredRange = () => {
+        try {
+          const stored = localStorage.getItem(RANGE_STORAGE_KEY)
+          if (stored && RANGE_OPTIONS.some((r) => r.key === stored)) return stored
+        } catch {
+          // Storage unavailable (private window, blocked site data): fall through to default.
+        }
+        return DEFAULT_RANGE
+      }
+
+      const storeRange = (key) => {
+        try {
+          localStorage.setItem(RANGE_STORAGE_KEY, key)
+        } catch {
+          // Nothing to do: the choice just won't survive a reload.
+        }
+      }
+
+      const fmtWeekLabel = (weekStart) => {
+        const [, month, day] = weekStart.split('-').map(Number)
+        return `${month}/${day}`
+      }
 
       const orgRate = (week, metric) => (week.workingDays > 0 ? week.totals[metric] / week.workingDays : 0)
 
@@ -4339,12 +4450,12 @@
 
       const fmtNum = (n) => Math.round(n).toLocaleString()
 
-      const drawMultiPanel = (svg, weeks, seriesList) => {
+      const drawMultiPanel = (svg, weeksForPanel, seriesList) => {
         const W = 920, H = 220
         const padL = 48, padR = 14, padT = 14, padB = 26
         const plotW = W - padL - padR
         const plotH = H - padT - padB
-        const n = weeks.length
+        const n = weeksForPanel.length
 
         const allValues = seriesList.flatMap((s) => s.values)
         const rawMax = Math.max(0, ...allValues)
@@ -4372,12 +4483,12 @@
           const y0 = H - padB
           const anchor = i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'
           return `<line class="axis-tick" x1="${x}" x2="${x}" y1="${y0}" y2="${y0 + 4}"></line>` +
-            `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${weeks[i].week.slice(2)}</text>`
+            `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${fmtWeekLabel(weeksForPanel[i].weekStart)}</text>`
         }).join('')
 
         // Only the newest week can be partial (it's the one still filling in), so the
         // lighter treatment only ever applies to the final segment of each line.
-        const lastPartial = n > 0 && weeks[n - 1].partial
+        const lastPartial = n > 0 && weeksForPanel[n - 1].partial
 
         const seriesMarkup = seriesList.map(({ color, values }) => {
           const lineMarkup = lastPartial && n > 1
@@ -4389,7 +4500,7 @@
           const dotsMarkup = values.map((v, i) => {
             const cx = xFor(i).toFixed(1)
             const cy = yFor(v).toFixed(1)
-            return weeks[i].partial
+            return weeksForPanel[i].partial
               ? `<circle cx="${cx}" cy="${cy}" r="3.5" fill="var(--surface)" stroke="${color}" stroke-width="2"></circle>`
               : `<circle cx="${cx}" cy="${cy}" r="2.2" fill="${color}"></circle>`
           }).join('')
@@ -4400,16 +4511,29 @@
         svg.innerHTML = gridMarkup + xMarkup + seriesMarkup
       }
 
-      const totalsByLogin = new Map()
-      for (const week of HISTORY.weeks) {
-        for (const c of week.contributors) {
-          totalsByLogin.set(c.login, (totalsByLogin.get(c.login) || 0) + c.lines)
-        }
+      // All weeks whose Monday falls within `days` of the most recent week's Monday.
+      // The anchor is always the latest week in the full history, not the latest
+      // visible one, so the window's meaning doesn't shift as it's narrowed.
+      const computeVisibleWeeks = (rangeKey) => {
+        const opt = RANGE_OPTIONS.find((r) => r.key === rangeKey) ?? RANGE_OPTIONS[1]
+        if (opt.days == null || HISTORY.weeks.length === 0) return HISTORY.weeks
+        const anchor = Date.parse(HISTORY.weeks[HISTORY.weeks.length - 1].weekStart)
+        return HISTORY.weeks.filter((w) => (anchor - Date.parse(w.weekStart)) / DAY_MS <= opt.days)
       }
 
-      const buildPeople = () => {
-        const people = HISTORY.contributors
-          .map((login) => ({ login, lines: totalsByLogin.get(login) || 0 }))
+      const contributorTotalsInRange = (weeksInRange) => {
+        const totals = new Map()
+        for (const week of weeksInRange) {
+          for (const c of week.contributors) {
+            totals.set(c.login, (totals.get(c.login) || 0) + c.lines)
+          }
+        }
+        return totals
+      }
+
+      const buildPeople = (totals) => {
+        const people = [...totals.entries()]
+          .map(([login, lines]) => ({ login, lines }))
           .sort((a, b) => b.lines - a.lines)
 
         els.people.innerHTML = people.map((p) =>
@@ -4476,70 +4600,105 @@
         selectedOrder.map((login) => ({
           login,
           color: `var(--contrib-${colorSlots.get(login)})`,
-          values: HISTORY.weeks.map((w) => contributorRate(w, login, metric)),
+          values: weeks.map((w) => contributorRate(w, login, metric)),
         }))
 
-      const renderContributors = () => {
+      // Redraws only what a contributor toggle or Clear can affect: chip states,
+      // the legend, and the by-contributor charts. Never rebuilds the chip list
+      // itself, so a keyboard user's focus stays put.
+      const renderSelection = () => {
         updateChips()
         updateSelectionUI()
         const hasSelection = selectedOrder.length > 0
         els.emptyState.hidden = hasSelection
         els.contributorCharts.hidden = !hasSelection
         if (!hasSelection) return
-        drawMultiPanel(els.contribLines, HISTORY.weeks, buildContributorSeries('lines'))
-        drawMultiPanel(els.contribPrs, HISTORY.weeks, buildContributorSeries('prs'))
+        drawMultiPanel(els.contribLines, weeks, buildContributorSeries('lines'))
+        drawMultiPanel(els.contribPrs, weeks, buildContributorSeries('prs'))
       }
 
-      els.people.addEventListener('click', (event) => {
-        const btn = event.target.closest('button[data-login]')
-        if (!btn || btn.disabled) return
-        toggleContributor(btn.dataset.login)
-        renderContributors()
-      })
-
-      els.clearBtn.addEventListener('click', () => {
-        selectedOrder = []
-        colorSlots.clear()
-        renderContributors()
-      })
-
-      // Section one is static: rendered once, never touched by contributor selection.
       const renderTotals = () => {
-        const weeks = HISTORY.weeks
         drawMultiPanel(els.totalsLines, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'lines')) }])
         drawMultiPanel(els.totalsPrs, weeks, [{ color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
       }
 
-      const buildStats = () => {
-        const totalLines = HISTORY.weeks.reduce((n, w) => n + w.totals.lines, 0)
-        const totalPrs = HISTORY.weeks.reduce((n, w) => n + w.totals.prs, 0)
+      const buildStats = (contributorCount) => {
+        const totalLines = weeks.reduce((n, w) => n + w.totals.lines, 0)
+        const totalPrs = weeks.reduce((n, w) => n + w.totals.prs, 0)
         const stats = [
-          { label: 'Weeks tracked', value: HISTORY.weeks.length },
-          { label: 'Contributors', value: HISTORY.contributors.length },
+          { label: 'Weeks tracked', value: weeks.length },
+          { label: 'Contributors', value: contributorCount },
           { label: 'Qualifying lines', value: fmtNum(totalLines) },
           { label: 'Qualifying PRs', value: fmtNum(totalPrs) },
         ]
         els.stats.innerHTML = stats.map((s) =>
           `<div class="stat"><div class="value">${s.value}</div><div class="label">${s.label}</div></div>`
         ).join('')
-        els.generated.textContent = `Generated ${new Date(HISTORY.generatedAt).toLocaleString()}`
       }
+
+      const updateRangeButtons = () => {
+        for (const btn of els.rangeRow.querySelectorAll('button[data-range]')) {
+          btn.setAttribute('aria-pressed', String(btn.dataset.range === currentRange))
+        }
+      }
+
+      // The one entry point for a range change: recomputes the visible weeks, the
+      // contributor set and totals that depend on them, drops any selection that
+      // fell outside the new range (freeing its color slot), then redraws everything.
+      const applyRange = (rangeKey) => {
+        currentRange = rangeKey
+        storeRange(rangeKey)
+        weeks = computeVisibleWeeks(rangeKey)
+
+        const totals = contributorTotalsInRange(weeks)
+        activeLogins = new Set(totals.keys())
+
+        const dropped = selectedOrder.filter((login) => !activeLogins.has(login))
+        if (dropped.length > 0) {
+          selectedOrder = selectedOrder.filter((login) => activeLogins.has(login))
+          for (const login of dropped) colorSlots.delete(login)
+        }
+
+        updateRangeButtons()
+        buildStats(activeLogins.size)
+        buildPeople(totals)
+        renderTotals()
+        renderSelection()
+      }
+
+      els.people.addEventListener('click', (event) => {
+        const btn = event.target.closest('button[data-login]')
+        if (!btn || btn.disabled) return
+        toggleContributor(btn.dataset.login)
+        renderSelection()
+      })
+
+      els.clearBtn.addEventListener('click', () => {
+        selectedOrder = []
+        colorSlots.clear()
+        renderSelection()
+      })
+
+      els.rangeRow.addEventListener('click', (event) => {
+        const btn = event.target.closest('button[data-range]')
+        if (!btn || btn.dataset.range === currentRange) return
+        applyRange(btn.dataset.range)
+      })
 
       const STALE_MS = 48 * 60 * 60 * 1000
       if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
         els.stale.hidden = false
       }
 
+      els.generated.textContent = `Generated ${new Date(HISTORY.generatedAt).toLocaleString()}`
+
       const lastWeek = HISTORY.weeks[HISTORY.weeks.length - 1]
       if (lastWeek && lastWeek.partial) {
-        els.partialWeekLabel.textContent = lastWeek.week
+        els.partialWeekLabel.textContent = `week of ${fmtWeekLabel(lastWeek.weekStart)}`
         els.partialNote.hidden = false
       }
 
-      buildStats()
-      buildPeople()
-      renderTotals()
-      renderContributors()
+      applyRange(loadStoredRange())
     </script>
   </body>
 </html>

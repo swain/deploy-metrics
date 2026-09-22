@@ -12,6 +12,7 @@ export interface ContributorWeek {
 
 export interface WeekSummary {
   week: string
+  weekStart: string
   workingDays: number
   partial: boolean
   totals: { prs: number; lines: number; addedRaw: number; deletedRaw: number; people: number }
@@ -104,6 +105,9 @@ export const buildHistory = (
 
     summaries.push({
       week: key,
+      // Derived once here, server-side, so the page never has to reimplement
+      // ISO week arithmetic just to print a date.
+      weekStart: weekStartUTC(key).toISOString().slice(0, 10),
       workingDays: elapsed,
       partial,
       totals: {

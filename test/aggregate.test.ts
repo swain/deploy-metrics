@@ -26,6 +26,7 @@ test('per-contributor rates divide by that week working days', () => {
   const h = buildHistory(weeks, new Set(), opts)
   const week = h.weeks[0]
   assert.equal(week.week, '2026-W02')
+  assert.equal(week.weekStart, '2026-01-05')
   assert.equal(week.workingDays, 5)
   assert.equal(week.totals.lines, 100)
   assert.equal(week.totals.prs, 1)
