@@ -11,6 +11,7 @@ concurrency:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update:
@@ -40,3 +41,12 @@ jobs:
           git diff --cached --quiet && echo "no change" && exit 0
           git commit -m "Refresh throughput data"
           git push
+
+      - name: Report failure
+        if: failure()
+        run: |
+          gh issue create \
+            --title "Throughput collector failed $(date -u +%F)" \
+            --body "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

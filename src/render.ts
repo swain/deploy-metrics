@@ -7,5 +7,5 @@ if (!template.includes('/*__DATA__*/')) {
   throw new Error('dashboard.template.html is missing the /*__DATA__*/ marker')
 }
 
-writeFileSync('index.html', template.replace('/*__DATA__*/', history))
+writeFileSync('index.html', template.replace('/*__DATA__*/', () => history))
 console.log(`index.html written, ${history.length} bytes of data embedded`)

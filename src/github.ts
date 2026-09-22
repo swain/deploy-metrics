@@ -90,7 +90,10 @@ export const fetchWeek = async (
     const data = await gql(SEARCH, { q, after }, token)
     const search = data.search
     if (search.issueCount >= 1000) {
-      throw new Error(`week ${window.from} hit the 1000-result search cap; narrow the window`)
+      throw new Error(
+        `week ${window.from} exceeded the 1000-result search cap; ` +
+        `split this week into two sub-week windows`,
+      )
     }
     for (const node of search.nodes) {
       if (!node || !node.mergedAt) continue

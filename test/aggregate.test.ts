@@ -111,6 +111,19 @@ test('a week whose only elapsed working day is a holiday is omitted, not floored
   assert.equal(h.weeks[0].totals.lines, 100)
 })
 
+test('a settled week where every weekday is a holiday is omitted, not emitted with workingDays: 0', () => {
+  const weeks = new Map([
+    ['2026-W02', [toCached(pr())]],
+    ['2026-W03', [toCached(pr({ mergedAt: '2026-01-13T10:00:00Z', login: 'bob' }))]],
+  ])
+  const shutdownHolidays = new Set([
+    '2026-01-05', '2026-01-06', '2026-01-07', '2026-01-08', '2026-01-09',
+  ])
+  const laterGeneratedAtOpts = { bots: new Set(['robot']), generatedAt: '2026-01-14T12:00:00Z' }
+  const h = buildHistory(weeks, shutdownHolidays, laterGeneratedAtOpts)
+  assert.deepEqual(h.weeks.map((w) => w.week), ['2026-W03'])
+})
+
 test('a file under the machine-state threshold counts normally', () => {
   const nineOnly = Array.from({ length: 9 }, (_, i) =>
     toCached(pr({

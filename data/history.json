@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T15:00:33.596Z",
+ "generatedAt": "2026-09-22T15:24:34.604Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -40,8 +40,8 @@
    "totals": {
     "prs": 10,
     "lines": 6912,
-    "added": 6727,
-    "deleted": 2099,
+    "addedRaw": 6727,
+    "deletedRaw": 2099,
     "people": 7
    },
    "contributors": [
@@ -49,50 +49,50 @@
      "login": "RavenHursT",
      "prs": 2,
      "lines": 4418,
-     "added": 2802,
-     "deleted": 1618
+     "addedRaw": 2802,
+     "deletedRaw": 1618
     },
     {
      "login": "datawithtristan",
      "prs": 1,
      "lines": 803,
-     "added": 539,
-     "deleted": 264
+     "addedRaw": 539,
+     "deletedRaw": 264
     },
     {
      "login": "awardquick",
      "prs": 1,
      "lines": 637,
-     "added": 629,
-     "deleted": 23
+     "addedRaw": 629,
+     "deletedRaw": 23
     },
     {
      "login": "tomer-tgp",
      "prs": 1,
      "lines": 526,
-     "added": 608,
-     "deleted": 10
+     "addedRaw": 608,
+     "deletedRaw": 10
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 363,
-     "added": 1705,
-     "deleted": 126
+     "addedRaw": 1705,
+     "deletedRaw": 126
     },
     {
      "login": "swain",
      "prs": 3,
      "lines": 161,
-     "added": 440,
-     "deleted": 58
+     "addedRaw": 440,
+     "deletedRaw": 58
     },
     {
      "login": "hhkarimi",
      "prs": 1,
      "lines": 4,
-     "added": 4,
-     "deleted": 0
+     "addedRaw": 4,
+     "deletedRaw": 0
     }
    ]
   },
@@ -103,8 +103,8 @@
    "totals": {
     "prs": 37,
     "lines": 15235,
-    "added": 16502,
-    "deleted": 7418,
+    "addedRaw": 16502,
+    "deletedRaw": 7418,
     "people": 9
    },
    "contributors": [
@@ -112,64 +112,64 @@
      "login": "swain",
      "prs": 13,
      "lines": 3864,
-     "added": 5230,
-     "deleted": 4049
+     "addedRaw": 5230,
+     "deletedRaw": 4049
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 3441,
-     "added": 3391,
-     "deleted": 50
+     "addedRaw": 3391,
+     "deletedRaw": 50
     },
     {
      "login": "stephtea",
      "prs": 7,
      "lines": 3376,
-     "added": 4016,
-     "deleted": 2588
+     "addedRaw": 4016,
+     "deletedRaw": 2588
     },
     {
      "login": "RavenHursT",
      "prs": 1,
      "lines": 1509,
-     "added": 1036,
-     "deleted": 473
+     "addedRaw": 1036,
+     "deletedRaw": 473
     },
     {
      "login": "Collin-GP",
      "prs": 2,
      "lines": 1050,
-     "added": 1064,
-     "deleted": 28
+     "addedRaw": 1064,
+     "deletedRaw": 28
     },
     {
      "login": "danpelota",
      "prs": 5,
      "lines": 1001,
-     "added": 995,
-     "deleted": 6
+     "addedRaw": 995,
+     "deletedRaw": 6
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 694,
-     "added": 670,
-     "deleted": 24
+     "addedRaw": 670,
+     "deletedRaw": 24
     },
     {
      "login": "feliksalbright",
      "prs": 1,
      "lines": 194,
-     "added": 11,
-     "deleted": 183
+     "addedRaw": 11,
+     "deletedRaw": 183
     },
     {
      "login": "dealvz",
      "prs": 3,
      "lines": 106,
-     "added": 89,
-     "deleted": 17
+     "addedRaw": 89,
+     "deletedRaw": 17
     }
    ]
   },
@@ -180,8 +180,8 @@
    "totals": {
     "prs": 42,
     "lines": 41715,
-    "added": 46156,
-    "deleted": 41407,
+    "addedRaw": 46156,
+    "deletedRaw": 41407,
     "people": 8
    },
    "contributors": [
@@ -189,57 +189,57 @@
      "login": "RavenHursT",
      "prs": 4,
      "lines": 11940,
-     "added": 6570,
-     "deleted": 5370
+     "addedRaw": 6570,
+     "deletedRaw": 5370
     },
     {
      "login": "swain",
      "prs": 20,
      "lines": 11360,
-     "added": 23294,
-     "deleted": 27958
+     "addedRaw": 23294,
+     "deletedRaw": 27958
     },
     {
      "login": "oakinh",
      "prs": 2,
      "lines": 9573,
-     "added": 7510,
-     "deleted": 2771
+     "addedRaw": 7510,
+     "deletedRaw": 2771
     },
     {
      "login": "tomer-tgp",
      "prs": 3,
      "lines": 4543,
-     "added": 5665,
-     "deleted": 4126
+     "addedRaw": 5665,
+     "deletedRaw": 4126
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 3158,
-     "added": 2052,
-     "deleted": 1106
+     "addedRaw": 2052,
+     "deletedRaw": 1106
     },
     {
      "login": "awardquick",
      "prs": 4,
      "lines": 1097,
-     "added": 1028,
-     "deleted": 69
+     "addedRaw": 1028,
+     "deletedRaw": 69
     },
     {
      "login": "danpelota",
      "prs": 3,
      "lines": 29,
-     "added": 24,
-     "deleted": 5
+     "addedRaw": 24,
+     "deletedRaw": 5
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 15,
-     "added": 13,
-     "deleted": 2
+     "addedRaw": 13,
+     "deletedRaw": 2
     }
    ]
   },
@@ -250,8 +250,8 @@
    "totals": {
     "prs": 67,
     "lines": 19157,
-    "added": 18038,
-    "deleted": 9442,
+    "addedRaw": 18038,
+    "deletedRaw": 9442,
     "people": 12
    },
    "contributors": [
@@ -259,85 +259,85 @@
      "login": "swain",
      "prs": 32,
      "lines": 7246,
-     "added": 3056,
-     "deleted": 4378
+     "addedRaw": 3056,
+     "deletedRaw": 4378
     },
     {
      "login": "tomer-tgp",
      "prs": 3,
      "lines": 4246,
-     "added": 6529,
-     "deleted": 115
+     "addedRaw": 6529,
+     "deletedRaw": 115
     },
     {
      "login": "oakinh",
      "prs": 6,
      "lines": 1789,
-     "added": 1593,
-     "deleted": 206
+     "addedRaw": 1593,
+     "deletedRaw": 206
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 1466,
-     "added": 763,
-     "deleted": 703
+     "addedRaw": 763,
+     "deletedRaw": 703
     },
     {
      "login": "feliksalbright",
      "prs": 3,
      "lines": 1077,
-     "added": 994,
-     "deleted": 83
+     "addedRaw": 994,
+     "deletedRaw": 83
     },
     {
      "login": "RavenHursT",
      "prs": 1,
      "lines": 1010,
-     "added": 0,
-     "deleted": 1010
+     "addedRaw": 0,
+     "deletedRaw": 1010
     },
     {
      "login": "Collin-GP",
      "prs": 4,
      "lines": 967,
-     "added": 4009,
-     "deleted": 2684
+     "addedRaw": 4009,
+     "deletedRaw": 2684
     },
     {
      "login": "hhkarimi",
      "prs": 4,
      "lines": 617,
-     "added": 466,
-     "deleted": 151
+     "addedRaw": 466,
+     "deletedRaw": 151
     },
     {
      "login": "awardquick",
      "prs": 3,
      "lines": 248,
-     "added": 151,
-     "deleted": 98
+     "addedRaw": 151,
+     "deletedRaw": 98
     },
     {
      "login": "danpelota",
      "prs": 3,
      "lines": 239,
-     "added": 236,
-     "deleted": 3
+     "addedRaw": 236,
+     "deletedRaw": 3
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 239,
-     "added": 231,
-     "deleted": 8
+     "addedRaw": 231,
+     "deletedRaw": 8
     },
     {
      "login": "bryclevgp",
      "prs": 2,
      "lines": 13,
-     "added": 10,
-     "deleted": 3
+     "addedRaw": 10,
+     "deletedRaw": 3
     }
    ]
   },
@@ -348,8 +348,8 @@
    "totals": {
     "prs": 67,
     "lines": 29831,
-    "added": 40456,
-    "deleted": 16915,
+    "addedRaw": 40456,
+    "deletedRaw": 16915,
     "people": 11
    },
    "contributors": [
@@ -357,78 +357,78 @@
      "login": "Collin-GP",
      "prs": 9,
      "lines": 7582,
-     "added": 7853,
-     "deleted": 1849
+     "addedRaw": 7853,
+     "deletedRaw": 1849
     },
     {
      "login": "tomer-tgp",
      "prs": 1,
      "lines": 6848,
-     "added": 5115,
-     "deleted": 2771
+     "addedRaw": 5115,
+     "deletedRaw": 2771
     },
     {
      "login": "feliksalbright",
      "prs": 7,
      "lines": 4626,
-     "added": 7673,
-     "deleted": 18
+     "addedRaw": 7673,
+     "deletedRaw": 18
     },
     {
      "login": "swain",
      "prs": 17,
      "lines": 3000,
-     "added": 7277,
-     "deleted": 9349
+     "addedRaw": 7277,
+     "deletedRaw": 9349
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 2433,
-     "added": 2395,
-     "deleted": 38
+     "addedRaw": 2395,
+     "deletedRaw": 38
     },
     {
      "login": "oakinh",
      "prs": 3,
      "lines": 2280,
-     "added": 1642,
-     "deleted": 638
+     "addedRaw": 1642,
+     "deletedRaw": 638
     },
     {
      "login": "stephtea",
      "prs": 7,
      "lines": 1732,
-     "added": 1575,
-     "deleted": 157
+     "addedRaw": 1575,
+     "deletedRaw": 157
     },
     {
      "login": "RavenHursT",
      "prs": 11,
      "lines": 1114,
-     "added": 6781,
-     "deleted": 2010
+     "addedRaw": 6781,
+     "deletedRaw": 2010
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 7,
      "lines": 138,
-     "added": 69,
-     "deleted": 83
+     "addedRaw": 69,
+     "deletedRaw": 83
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 74,
-     "added": 74,
-     "deleted": 0
+     "addedRaw": 74,
+     "deletedRaw": 0
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 4,
-     "added": 2,
-     "deleted": 2
+     "addedRaw": 2,
+     "deletedRaw": 2
     }
    ]
   },
@@ -439,8 +439,8 @@
    "totals": {
     "prs": 58,
     "lines": 122817,
-    "added": 126840,
-    "deleted": 33586,
+    "addedRaw": 126840,
+    "deletedRaw": 33586,
     "people": 14
    },
    "contributors": [
@@ -448,99 +448,99 @@
      "login": "swain",
      "prs": 8,
      "lines": 107660,
-     "added": 101106,
-     "deleted": 6881
+     "addedRaw": 101106,
+     "deletedRaw": 6881
     },
     {
      "login": "dealvz",
      "prs": 2,
      "lines": 2863,
-     "added": 2281,
-     "deleted": 627
+     "addedRaw": 2281,
+     "deletedRaw": 627
     },
     {
      "login": "awardquick",
      "prs": 4,
      "lines": 2563,
-     "added": 2292,
-     "deleted": 271
+     "addedRaw": 2292,
+     "deletedRaw": 271
     },
     {
      "login": "tomer-tgp",
      "prs": 4,
      "lines": 2500,
-     "added": 8270,
-     "deleted": 16656
+     "addedRaw": 8270,
+     "deletedRaw": 16656
     },
     {
      "login": "hhkarimi",
      "prs": 11,
      "lines": 1691,
-     "added": 1522,
-     "deleted": 536
+     "addedRaw": 1522,
+     "deletedRaw": 536
     },
     {
      "login": "feliksalbright",
      "prs": 2,
      "lines": 1250,
-     "added": 7453,
-     "deleted": 7909
+     "addedRaw": 7453,
+     "deletedRaw": 7909
     },
     {
      "login": "sanjayr1",
      "prs": 3,
      "lines": 1249,
-     "added": 1158,
-     "deleted": 91
+     "addedRaw": 1158,
+     "deletedRaw": 91
     },
     {
      "login": "stephtea",
      "prs": 4,
      "lines": 1208,
-     "added": 1085,
-     "deleted": 123
+     "addedRaw": 1085,
+     "deletedRaw": 123
     },
     {
      "login": "RavenHursT",
      "prs": 5,
      "lines": 675,
-     "added": 537,
-     "deleted": 466
+     "addedRaw": 537,
+     "deletedRaw": 466
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 608,
-     "added": 604,
-     "deleted": 4
+     "addedRaw": 604,
+     "deletedRaw": 4
     },
     {
      "login": "selta-goodparty",
      "prs": 7,
      "lines": 259,
-     "added": 259,
-     "deleted": 0
+     "addedRaw": 259,
+     "deletedRaw": 0
     },
     {
      "login": "datawithtristan",
      "prs": 3,
      "lines": 256,
-     "added": 253,
-     "deleted": 3
+     "addedRaw": 253,
+     "deletedRaw": 3
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 2,
      "lines": 33,
-     "added": 19,
-     "deleted": 18
+     "addedRaw": 19,
+     "deletedRaw": 18
     },
     {
      "login": "oakinh",
      "prs": 1,
      "lines": 2,
-     "added": 1,
-     "deleted": 1
+     "addedRaw": 1,
+     "deletedRaw": 1
     }
    ]
   },
@@ -551,8 +551,8 @@
    "totals": {
     "prs": 66,
     "lines": 17592,
-    "added": 22396,
-    "deleted": 13631,
+    "addedRaw": 22396,
+    "deletedRaw": 13631,
     "people": 14
    },
    "contributors": [
@@ -560,99 +560,99 @@
      "login": "tomer-tgp",
      "prs": 16,
      "lines": 8354,
-     "added": 6003,
-     "deleted": 2417
+     "addedRaw": 6003,
+     "deletedRaw": 2417
     },
     {
      "login": "swain",
      "prs": 9,
      "lines": 3121,
-     "added": 5028,
-     "deleted": 3086
+     "addedRaw": 5028,
+     "deletedRaw": 3086
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 1777,
-     "added": 1783,
-     "deleted": 0
+     "addedRaw": 1783,
+     "deletedRaw": 0
     },
     {
      "login": "awardquick",
      "prs": 3,
      "lines": 1237,
-     "added": 6717,
-     "deleted": 7563
+     "addedRaw": 6717,
+     "deletedRaw": 7563
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 1220,
-     "added": 1185,
-     "deleted": 35
+     "addedRaw": 1185,
+     "deletedRaw": 35
     },
     {
      "login": "dealvz",
      "prs": 2,
      "lines": 573,
-     "added": 433,
-     "deleted": 140
+     "addedRaw": 433,
+     "deletedRaw": 140
     },
     {
      "login": "stephtea",
      "prs": 8,
      "lines": 514,
-     "added": 464,
-     "deleted": 50
+     "addedRaw": 464,
+     "deletedRaw": 50
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 223,
-     "added": 116,
-     "deleted": 107
+     "addedRaw": 116,
+     "deletedRaw": 107
     },
     {
      "login": "oakinh",
      "prs": 1,
      "lines": 153,
-     "added": 348,
-     "deleted": 112
+     "addedRaw": 348,
+     "deletedRaw": 112
     },
     {
      "login": "hhkarimi",
      "prs": 6,
      "lines": 142,
-     "added": 128,
-     "deleted": 14
+     "addedRaw": 128,
+     "deletedRaw": 14
     },
     {
      "login": "selta-goodparty",
      "prs": 4,
      "lines": 129,
-     "added": 95,
-     "deleted": 34
+     "addedRaw": 95,
+     "deletedRaw": 34
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 8,
      "lines": 95,
-     "added": 58,
-     "deleted": 53
+     "addedRaw": 58,
+     "deletedRaw": 53
     },
     {
      "login": "patrick-tgp",
      "prs": 3,
      "lines": 27,
-     "added": 16,
-     "deleted": 11
+     "addedRaw": 16,
+     "deletedRaw": 11
     },
     {
      "login": "RavenHursT",
      "prs": 1,
      "lines": 27,
-     "added": 22,
-     "deleted": 9
+     "addedRaw": 22,
+     "deletedRaw": 9
     }
    ]
   },
@@ -663,8 +663,8 @@
    "totals": {
     "prs": 97,
     "lines": 99109,
-    "added": 87305,
-    "deleted": 25510,
+    "addedRaw": 87305,
+    "deletedRaw": 25510,
     "people": 16
    },
    "contributors": [
@@ -672,113 +672,113 @@
      "login": "ernestohs",
      "prs": 4,
      "lines": 73258,
-     "added": 57525,
-     "deleted": 15754
+     "addedRaw": 57525,
+     "deletedRaw": 15754
     },
     {
      "login": "swain",
      "prs": 23,
      "lines": 7226,
-     "added": 11239,
-     "deleted": 3640
+     "addedRaw": 11239,
+     "deletedRaw": 3640
     },
     {
      "login": "hhkarimi",
      "prs": 12,
      "lines": 3774,
-     "added": 4330,
-     "deleted": 1114
+     "addedRaw": 4330,
+     "deletedRaw": 1114
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 2931,
-     "added": 2342,
-     "deleted": 589
+     "addedRaw": 2342,
+     "deletedRaw": 589
     },
     {
      "login": "oakinh",
      "prs": 8,
      "lines": 2475,
-     "added": 2223,
-     "deleted": 252
+     "addedRaw": 2223,
+     "deletedRaw": 252
     },
     {
      "login": "RavenHursT",
      "prs": 12,
      "lines": 2348,
-     "added": 4674,
-     "deleted": 1987
+     "addedRaw": 4674,
+     "deletedRaw": 1987
     },
     {
      "login": "tomer-tgp",
      "prs": 11,
      "lines": 1458,
-     "added": 884,
-     "deleted": 608
+     "addedRaw": 884,
+     "deletedRaw": 608
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 1273,
-     "added": 1257,
-     "deleted": 16
+     "addedRaw": 1257,
+     "deletedRaw": 16
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 1171,
-     "added": 733,
-     "deleted": 438
+     "addedRaw": 733,
+     "deletedRaw": 438
     },
     {
      "login": "dealvz",
      "prs": 3,
      "lines": 1077,
-     "added": 529,
-     "deleted": 549
+     "addedRaw": 529,
+     "deletedRaw": 549
     },
     {
      "login": "Collin-GP",
      "prs": 2,
      "lines": 888,
-     "added": 734,
-     "deleted": 154
+     "addedRaw": 734,
+     "deletedRaw": 154
     },
     {
      "login": "awardquick",
      "prs": 1,
      "lines": 597,
-     "added": 594,
-     "deleted": 3
+     "addedRaw": 594,
+     "deletedRaw": 3
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 335,
-     "added": 1,
-     "deleted": 334
+     "addedRaw": 1,
+     "deletedRaw": 334
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 7,
      "lines": 125,
-     "added": 70,
-     "deleted": 69
+     "addedRaw": 70,
+     "deletedRaw": 69
     },
     {
      "login": "bryclevgp",
      "prs": 1,
      "lines": 116,
-     "added": 114,
-     "deleted": 2
+     "addedRaw": 114,
+     "deletedRaw": 2
     },
     {
      "login": "feliksalbright",
      "prs": 3,
      "lines": 57,
-     "added": 56,
-     "deleted": 1
+     "addedRaw": 56,
+     "deletedRaw": 1
     }
    ]
   },
@@ -789,8 +789,8 @@
    "totals": {
     "prs": 73,
     "lines": 20372,
-    "added": 24908,
-    "deleted": 39430,
+    "addedRaw": 24908,
+    "deletedRaw": 39430,
     "people": 15
    },
    "contributors": [
@@ -798,106 +798,106 @@
      "login": "ernestohs",
      "prs": 9,
      "lines": 8050,
-     "added": 6598,
-     "deleted": 1461
+     "addedRaw": 6598,
+     "deletedRaw": 1461
     },
     {
      "login": "swain",
      "prs": 29,
      "lines": 5623,
-     "added": 9449,
-     "deleted": 9048
+     "addedRaw": 9449,
+     "deletedRaw": 9048
     },
     {
      "login": "Collin-Park",
      "prs": 1,
      "lines": 1790,
-     "added": 1796,
-     "deleted": 0
+     "addedRaw": 1796,
+     "deletedRaw": 0
     },
     {
      "login": "stephtea",
      "prs": 4,
      "lines": 1357,
-     "added": 1178,
-     "deleted": 179
+     "addedRaw": 1178,
+     "deletedRaw": 179
     },
     {
      "login": "hhkarimi",
      "prs": 6,
      "lines": 963,
-     "added": 1145,
-     "deleted": 57
+     "addedRaw": 1145,
+     "deletedRaw": 57
     },
     {
      "login": "oakinh",
      "prs": 6,
      "lines": 836,
-     "added": 3423,
-     "deleted": 369
+     "addedRaw": 3423,
+     "deletedRaw": 369
     },
     {
      "login": "tomer-tgp",
      "prs": 1,
      "lines": 548,
-     "added": 547,
-     "deleted": 39
+     "addedRaw": 547,
+     "deletedRaw": 39
     },
     {
      "login": "awardquick",
      "prs": 2,
      "lines": 288,
-     "added": 257,
-     "deleted": 31
+     "addedRaw": 257,
+     "deletedRaw": 31
     },
     {
      "login": "danpelota",
      "prs": 3,
      "lines": 228,
-     "added": 144,
-     "deleted": 84
+     "addedRaw": 144,
+     "deletedRaw": 84
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 227,
-     "added": 93,
-     "deleted": 134
+     "addedRaw": 93,
+     "deletedRaw": 134
     },
     {
      "login": "bryclevgp",
      "prs": 2,
      "lines": 195,
-     "added": 48,
-     "deleted": 147
+     "addedRaw": 48,
+     "deletedRaw": 147
     },
     {
      "login": "sanjayr1",
      "prs": 5,
      "lines": 185,
-     "added": 177,
-     "deleted": 8
+     "addedRaw": 177,
+     "deletedRaw": 8
     },
     {
      "login": "patrick-tgp",
      "prs": 2,
      "lines": 42,
-     "added": 39,
-     "deleted": 27847
+     "addedRaw": 39,
+     "deletedRaw": 27847
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 27,
-     "added": 9,
-     "deleted": 18
+     "addedRaw": 9,
+     "deletedRaw": 18
     },
     {
      "login": "RavenHursT",
      "prs": 1,
      "lines": 13,
-     "added": 5,
-     "deleted": 8
+     "addedRaw": 5,
+     "deletedRaw": 8
     }
    ]
   },
@@ -908,8 +908,8 @@
    "totals": {
     "prs": 71,
     "lines": 123578,
-    "added": 96715,
-    "deleted": 36455,
+    "addedRaw": 96715,
+    "deletedRaw": 36455,
     "people": 13
    },
    "contributors": [
@@ -917,92 +917,92 @@
      "login": "ernestohs",
      "prs": 10,
      "lines": 67277,
-     "added": 63241,
-     "deleted": 4073
+     "addedRaw": 63241,
+     "deletedRaw": 4073
     },
     {
      "login": "RavenHursT",
      "prs": 5,
      "lines": 27760,
-     "added": 2424,
-     "deleted": 25741
+     "addedRaw": 2424,
+     "deletedRaw": 25741
     },
     {
      "login": "dealvz",
      "prs": 4,
      "lines": 14286,
-     "added": 15252,
-     "deleted": 1803
+     "addedRaw": 15252,
+     "deletedRaw": 1803
     },
     {
      "login": "swain",
      "prs": 19,
      "lines": 3714,
-     "added": 2558,
-     "deleted": 3744
+     "addedRaw": 2558,
+     "deletedRaw": 3744
     },
     {
      "login": "sanjayr1",
      "prs": 5,
      "lines": 2243,
-     "added": 2192,
-     "deleted": 54
+     "addedRaw": 2192,
+     "deletedRaw": 54
     },
     {
      "login": "awardquick",
      "prs": 6,
      "lines": 2166,
-     "added": 5422,
-     "deleted": 219
+     "addedRaw": 5422,
+     "deletedRaw": 219
     },
     {
      "login": "oakinh",
      "prs": 4,
      "lines": 1906,
-     "added": 1619,
-     "deleted": 287
+     "addedRaw": 1619,
+     "deletedRaw": 287
     },
     {
      "login": "feliksalbright",
      "prs": 4,
      "lines": 1608,
-     "added": 1506,
-     "deleted": 102
+     "addedRaw": 1506,
+     "deletedRaw": 102
     },
     {
      "login": "stephtea",
      "prs": 2,
      "lines": 1221,
-     "added": 1159,
-     "deleted": 377
+     "addedRaw": 1159,
+     "deletedRaw": 377
     },
     {
      "login": "Collin-GP",
      "prs": 6,
      "lines": 1218,
-     "added": 1213,
-     "deleted": 5
+     "addedRaw": 1213,
+     "deletedRaw": 5
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 94,
-     "added": 85,
-     "deleted": 9
+     "addedRaw": 85,
+     "deletedRaw": 9
     },
     {
      "login": "patrick-tgp",
      "prs": 2,
      "lines": 75,
-     "added": 38,
-     "deleted": 37
+     "addedRaw": 38,
+     "deletedRaw": 37
     },
     {
      "login": "tomer-tgp",
      "prs": 1,
      "lines": 10,
-     "added": 6,
-     "deleted": 4
+     "addedRaw": 6,
+     "deletedRaw": 4
     }
    ]
   },
@@ -1013,8 +1013,8 @@
    "totals": {
     "prs": 69,
     "lines": 31079,
-    "added": 23095,
-    "deleted": 11425,
+    "addedRaw": 23095,
+    "deletedRaw": 11425,
     "people": 13
    },
    "contributors": [
@@ -1022,92 +1022,92 @@
      "login": "stephtea",
      "prs": 8,
      "lines": 7544,
-     "added": 5523,
-     "deleted": 2612
+     "addedRaw": 5523,
+     "deletedRaw": 2612
     },
     {
      "login": "ernestohs",
      "prs": 6,
      "lines": 5397,
-     "added": 3393,
-     "deleted": 2011
+     "addedRaw": 3393,
+     "deletedRaw": 2011
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 4198,
-     "added": 6544,
-     "deleted": 45
+     "addedRaw": 6544,
+     "deletedRaw": 45
     },
     {
      "login": "RavenHursT",
      "prs": 3,
      "lines": 3971,
-     "added": 77,
-     "deleted": 3896
+     "addedRaw": 77,
+     "deletedRaw": 3896
     },
     {
      "login": "swain",
      "prs": 24,
      "lines": 3149,
-     "added": 2499,
-     "deleted": 1093
+     "addedRaw": 2499,
+     "deletedRaw": 1093
     },
     {
      "login": "oakinh",
      "prs": 7,
      "lines": 2083,
-     "added": 1376,
-     "deleted": 707
+     "addedRaw": 1376,
+     "deletedRaw": 707
     },
     {
      "login": "hhkarimi",
      "prs": 4,
      "lines": 1591,
-     "added": 986,
-     "deleted": 605
+     "addedRaw": 986,
+     "deletedRaw": 605
     },
     {
      "login": "tomer-tgp",
      "prs": 4,
      "lines": 721,
-     "added": 638,
-     "deleted": 84
+     "addedRaw": 638,
+     "deletedRaw": 84
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 720,
-     "added": 709,
-     "deleted": 11
+     "addedRaw": 709,
+     "deletedRaw": 11
     },
     {
      "login": "patrick-tgp",
      "prs": 2,
      "lines": 603,
-     "added": 337,
-     "deleted": 266
+     "addedRaw": 337,
+     "deletedRaw": 266
     },
     {
      "login": "Collin-GP",
      "prs": 3,
      "lines": 502,
-     "added": 495,
-     "deleted": 11
+     "addedRaw": 495,
+     "deletedRaw": 11
     },
     {
      "login": "feliksalbright",
      "prs": 3,
      "lines": 478,
-     "added": 464,
-     "deleted": 14
+     "addedRaw": 464,
+     "deletedRaw": 14
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 1,
      "lines": 122,
-     "added": 54,
-     "deleted": 70
+     "addedRaw": 54,
+     "deletedRaw": 70
     }
    ]
   },
@@ -1118,8 +1118,8 @@
    "totals": {
     "prs": 71,
     "lines": 28555,
-    "added": 31680,
-    "deleted": 9077,
+    "addedRaw": 31680,
+    "deletedRaw": 9077,
     "people": 16
    },
    "contributors": [
@@ -1127,113 +1127,113 @@
      "login": "tomer-tgp",
      "prs": 9,
      "lines": 7840,
-     "added": 6943,
-     "deleted": 903
+     "addedRaw": 6943,
+     "deletedRaw": 903
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 4756,
-     "added": 4400,
-     "deleted": 378
+     "addedRaw": 4400,
+     "deletedRaw": 378
     },
     {
      "login": "swain",
      "prs": 16,
      "lines": 4356,
-     "added": 8325,
-     "deleted": 2460
+     "addedRaw": 8325,
+     "deletedRaw": 2460
     },
     {
      "login": "danpelota",
      "prs": 5,
      "lines": 3195,
-     "added": 5455,
-     "deleted": 3293
+     "addedRaw": 5455,
+     "deletedRaw": 3293
     },
     {
      "login": "stephtea",
      "prs": 7,
      "lines": 2511,
-     "added": 1345,
-     "deleted": 1166
+     "addedRaw": 1345,
+     "deletedRaw": 1166
     },
     {
      "login": "Collin-GP",
      "prs": 2,
      "lines": 1536,
-     "added": 1425,
-     "deleted": 111
+     "addedRaw": 1425,
+     "deletedRaw": 111
     },
     {
      "login": "ernestohs",
      "prs": 6,
      "lines": 1417,
-     "added": 1209,
-     "deleted": 209
+     "addedRaw": 1209,
+     "deletedRaw": 209
     },
     {
      "login": "oakinh",
      "prs": 3,
      "lines": 1088,
-     "added": 942,
-     "deleted": 146
+     "addedRaw": 942,
+     "deletedRaw": 146
     },
     {
      "login": "kmcost",
      "prs": 1,
      "lines": 572,
-     "added": 571,
-     "deleted": 2
+     "addedRaw": 571,
+     "deletedRaw": 2
     },
     {
      "login": "hhkarimi",
      "prs": 6,
      "lines": 530,
-     "added": 324,
-     "deleted": 206
+     "addedRaw": 324,
+     "deletedRaw": 206
     },
     {
      "login": "awardquick",
      "prs": 2,
      "lines": 272,
-     "added": 275,
-     "deleted": 11
+     "addedRaw": 275,
+     "deletedRaw": 11
     },
     {
      "login": "dealvz",
      "prs": 2,
      "lines": 236,
-     "added": 211,
-     "deleted": 25
+     "addedRaw": 211,
+     "deletedRaw": 25
     },
     {
      "login": "feliksalbright",
      "prs": 5,
      "lines": 121,
-     "added": 43,
-     "deleted": 78
+     "addedRaw": 43,
+     "deletedRaw": 78
     },
     {
      "login": "datawithtristan",
      "prs": 1,
      "lines": 110,
-     "added": 110,
-     "deleted": 0
+     "addedRaw": 110,
+     "deletedRaw": 0
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 1,
      "lines": 11,
-     "added": 7,
-     "deleted": 6
+     "addedRaw": 7,
+     "deletedRaw": 6
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 4,
-     "added": 95,
-     "deleted": 83
+     "addedRaw": 95,
+     "deletedRaw": 83
     }
    ]
   },
@@ -1244,8 +1244,8 @@
    "totals": {
     "prs": 54,
     "lines": 14678,
-    "added": 7454,
-    "deleted": 7244,
+    "addedRaw": 7454,
+    "deletedRaw": 7244,
     "people": 12
    },
    "contributors": [
@@ -1253,85 +1253,85 @@
      "login": "swain",
      "prs": 16,
      "lines": 5009,
-     "added": 672,
-     "deleted": 4337
+     "addedRaw": 672,
+     "deletedRaw": 4337
     },
     {
      "login": "tomer-tgp",
      "prs": 11,
      "lines": 2540,
-     "added": 1571,
-     "deleted": 969
+     "addedRaw": 1571,
+     "deletedRaw": 969
     },
     {
      "login": "awardquick",
      "prs": 6,
      "lines": 2274,
-     "added": 1615,
-     "deleted": 677
+     "addedRaw": 1615,
+     "deletedRaw": 677
     },
     {
      "login": "oakinh",
      "prs": 5,
      "lines": 2233,
-     "added": 1438,
-     "deleted": 795
+     "addedRaw": 1438,
+     "deletedRaw": 795
     },
     {
      "login": "sanjayr1",
      "prs": 3,
      "lines": 1348,
-     "added": 1065,
-     "deleted": 283
+     "addedRaw": 1065,
+     "deletedRaw": 283
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 553,
-     "added": 464,
-     "deleted": 89
+     "addedRaw": 464,
+     "deletedRaw": 89
     },
     {
      "login": "feliksalbright",
      "prs": 2,
      "lines": 366,
-     "added": 363,
-     "deleted": 3
+     "addedRaw": 363,
+     "deletedRaw": 3
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 142,
-     "added": 73,
-     "deleted": 69
+     "addedRaw": 73,
+     "deletedRaw": 69
     },
     {
      "login": "melecia-gp",
      "prs": 3,
      "lines": 115,
-     "added": 100,
-     "deleted": 15
+     "addedRaw": 100,
+     "deletedRaw": 15
     },
     {
      "login": "samuelgoodparty",
      "prs": 1,
      "lines": 48,
-     "added": 47,
-     "deleted": 1
+     "addedRaw": 47,
+     "deletedRaw": 1
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 39,
-     "added": 39,
-     "deleted": 0
+     "addedRaw": 39,
+     "deletedRaw": 0
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 1,
      "lines": 11,
-     "added": 7,
-     "deleted": 6
+     "addedRaw": 7,
+     "deletedRaw": 6
     }
    ]
   },
@@ -1342,8 +1342,8 @@
    "totals": {
     "prs": 46,
     "lines": 19005,
-    "added": 13422,
-    "deleted": 5620,
+    "addedRaw": 13422,
+    "deletedRaw": 5620,
     "people": 13
    },
    "contributors": [
@@ -1351,92 +1351,92 @@
      "login": "oakinh",
      "prs": 4,
      "lines": 5391,
-     "added": 1781,
-     "deleted": 3612
+     "addedRaw": 1781,
+     "deletedRaw": 3612
     },
     {
      "login": "ernestohs",
      "prs": 5,
      "lines": 2315,
-     "added": 1889,
-     "deleted": 431
+     "addedRaw": 1889,
+     "deletedRaw": 431
     },
     {
      "login": "feliksalbright",
      "prs": 4,
      "lines": 2232,
-     "added": 2207,
-     "deleted": 55
+     "addedRaw": 2207,
+     "deletedRaw": 55
     },
     {
      "login": "dealvz",
      "prs": 6,
      "lines": 2061,
-     "added": 1892,
-     "deleted": 169
+     "addedRaw": 1892,
+     "deletedRaw": 169
     },
     {
      "login": "tomer-tgp",
      "prs": 11,
      "lines": 1753,
-     "added": 1554,
-     "deleted": 199
+     "addedRaw": 1554,
+     "deletedRaw": 199
     },
     {
      "login": "stephtea",
      "prs": 2,
      "lines": 1626,
-     "added": 1624,
-     "deleted": 2
+     "addedRaw": 1624,
+     "deletedRaw": 2
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 1260,
-     "added": 858,
-     "deleted": 402
+     "addedRaw": 858,
+     "deletedRaw": 402
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 1151,
-     "added": 1043,
-     "deleted": 108
+     "addedRaw": 1043,
+     "deletedRaw": 108
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 1052,
-     "added": 513,
-     "deleted": 539
+     "addedRaw": 513,
+     "deletedRaw": 539
     },
     {
      "login": "swain",
      "prs": 2,
      "lines": 82,
-     "added": 3,
-     "deleted": 79
+     "addedRaw": 3,
+     "deletedRaw": 79
     },
     {
      "login": "RavenHursT",
      "prs": 2,
      "lines": 56,
-     "added": 40,
-     "deleted": 16
+     "addedRaw": 40,
+     "deletedRaw": 16
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 23,
-     "added": 16,
-     "deleted": 7
+     "addedRaw": 16,
+     "deletedRaw": 7
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 3,
-     "added": 2,
-     "deleted": 1
+     "addedRaw": 2,
+     "deletedRaw": 1
     }
    ]
   },
@@ -1447,8 +1447,8 @@
    "totals": {
     "prs": 43,
     "lines": 49150,
-    "added": 28066,
-    "deleted": 35606,
+    "addedRaw": 28066,
+    "deletedRaw": 35606,
     "people": 12
    },
    "contributors": [
@@ -1456,85 +1456,85 @@
      "login": "tomer-tgp",
      "prs": 7,
      "lines": 16457,
-     "added": 11527,
-     "deleted": 17868
+     "addedRaw": 11527,
+     "deletedRaw": 17868
     },
     {
      "login": "RavenHursT",
      "prs": 6,
      "lines": 11394,
-     "added": 3237,
-     "deleted": 9615
+     "addedRaw": 3237,
+     "deletedRaw": 9615
     },
     {
      "login": "ernestohs",
      "prs": 2,
      "lines": 8638,
-     "added": 8077,
-     "deleted": 561
+     "addedRaw": 8077,
+     "deletedRaw": 561
     },
     {
      "login": "oakinh",
      "prs": 4,
      "lines": 3655,
-     "added": 445,
-     "deleted": 3210
+     "addedRaw": 445,
+     "deletedRaw": 3210
     },
     {
      "login": "feliksalbright",
      "prs": 6,
      "lines": 3449,
-     "added": 1085,
-     "deleted": 2364
+     "addedRaw": 1085,
+     "deletedRaw": 2364
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 2041,
-     "added": 1422,
-     "deleted": 619
+     "addedRaw": 1422,
+     "deletedRaw": 619
     },
     {
      "login": "swain",
      "prs": 4,
      "lines": 1601,
-     "added": 623,
-     "deleted": 978
+     "addedRaw": 623,
+     "deletedRaw": 978
     },
     {
      "login": "awardquick",
      "prs": 6,
      "lines": 1294,
-     "added": 1132,
-     "deleted": 286
+     "addedRaw": 1132,
+     "deletedRaw": 286
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 310,
-     "added": 245,
-     "deleted": 65
+     "addedRaw": 245,
+     "deletedRaw": 65
     },
     {
      "login": "stephtea",
      "prs": 1,
      "lines": 197,
-     "added": 191,
-     "deleted": 6
+     "addedRaw": 191,
+     "deletedRaw": 6
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 103,
-     "added": 75,
-     "deleted": 28
+     "addedRaw": 75,
+     "deletedRaw": 28
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 1,
      "lines": 11,
-     "added": 7,
-     "deleted": 6
+     "addedRaw": 7,
+     "deletedRaw": 6
     }
    ]
   },
@@ -1545,8 +1545,8 @@
    "totals": {
     "prs": 87,
     "lines": 52043,
-    "added": 52944,
-    "deleted": 6790,
+    "addedRaw": 52944,
+    "deletedRaw": 6790,
     "people": 15
    },
    "contributors": [
@@ -1554,106 +1554,106 @@
      "login": "ernestohs",
      "prs": 8,
      "lines": 21358,
-     "added": 19636,
-     "deleted": 1738
+     "addedRaw": 19636,
+     "deletedRaw": 1738
     },
     {
      "login": "bryclevgp",
      "prs": 8,
      "lines": 13377,
-     "added": 19857,
-     "deleted": 26
+     "addedRaw": 19857,
+     "deletedRaw": 26
     },
     {
      "login": "swain",
      "prs": 9,
      "lines": 3683,
-     "added": 2432,
-     "deleted": 1260
+     "addedRaw": 2432,
+     "deletedRaw": 1260
     },
     {
      "login": "feliksalbright",
      "prs": 8,
      "lines": 2805,
-     "added": 2605,
-     "deleted": 200
+     "addedRaw": 2605,
+     "deletedRaw": 200
     },
     {
      "login": "tomer-tgp",
      "prs": 13,
      "lines": 2236,
-     "added": 1843,
-     "deleted": 393
+     "addedRaw": 1843,
+     "deletedRaw": 393
     },
     {
      "login": "oakinh",
      "prs": 3,
      "lines": 2124,
-     "added": 800,
-     "deleted": 1340
+     "addedRaw": 800,
+     "deletedRaw": 1340
     },
     {
      "login": "danpelota",
      "prs": 4,
      "lines": 1493,
-     "added": 1238,
-     "deleted": 255
+     "addedRaw": 1238,
+     "deletedRaw": 255
     },
     {
      "login": "dealvz",
      "prs": 12,
      "lines": 1426,
-     "added": 1033,
-     "deleted": 393
+     "addedRaw": 1033,
+     "deletedRaw": 393
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 1190,
-     "added": 887,
-     "deleted": 303
+     "addedRaw": 887,
+     "deletedRaw": 303
     },
     {
      "login": "sanjayr1",
      "prs": 3,
      "lines": 942,
-     "added": 854,
-     "deleted": 88
+     "addedRaw": 854,
+     "deletedRaw": 88
     },
     {
      "login": "RavenHursT",
      "prs": 9,
      "lines": 710,
-     "added": 1130,
-     "deleted": 722
+     "addedRaw": 1130,
+     "deletedRaw": 722
     },
     {
      "login": "awardquick",
      "prs": 4,
      "lines": 625,
-     "added": 583,
-     "deleted": 42
+     "addedRaw": 583,
+     "deletedRaw": 42
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 1,
      "lines": 50,
-     "added": 23,
-     "deleted": 29
+     "addedRaw": 23,
+     "deletedRaw": 29
     },
     {
      "login": "stephtea",
      "prs": 1,
      "lines": 12,
-     "added": 12,
-     "deleted": 0
+     "addedRaw": 12,
+     "deletedRaw": 0
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 12,
-     "added": 11,
-     "deleted": 1
+     "addedRaw": 11,
+     "deletedRaw": 1
     }
    ]
   },
@@ -1664,8 +1664,8 @@
    "totals": {
     "prs": 82,
     "lines": 151769,
-    "added": 139992,
-    "deleted": 13501,
+    "addedRaw": 139992,
+    "deletedRaw": 13501,
     "people": 16
    },
    "contributors": [
@@ -1673,113 +1673,113 @@
      "login": "bryclevgp",
      "prs": 27,
      "lines": 51481,
-     "added": 44725,
-     "deleted": 7513
+     "addedRaw": 44725,
+     "deletedRaw": 7513
     },
     {
      "login": "swain",
      "prs": 5,
      "lines": 31778,
-     "added": 31934,
-     "deleted": 225
+     "addedRaw": 31934,
+     "deletedRaw": 225
     },
     {
      "login": "Collin-GP",
      "prs": 3,
      "lines": 31655,
-     "added": 31956,
-     "deleted": 80
+     "addedRaw": 31956,
+     "deletedRaw": 80
     },
     {
      "login": "ernestohs",
      "prs": 2,
      "lines": 18986,
-     "added": 18918,
-     "deleted": 69
+     "addedRaw": 18918,
+     "deletedRaw": 69
     },
     {
      "login": "oakinh",
      "prs": 5,
      "lines": 5081,
-     "added": 2190,
-     "deleted": 2917
+     "addedRaw": 2190,
+     "deletedRaw": 2917
     },
     {
      "login": "fromjustin",
      "prs": 11,
      "lines": 3419,
-     "added": 2368,
-     "deleted": 1148
+     "addedRaw": 2368,
+     "deletedRaw": 1148
     },
     {
      "login": "sanjayr1",
      "prs": 6,
      "lines": 2360,
-     "added": 1998,
-     "deleted": 362
+     "addedRaw": 1998,
+     "deletedRaw": 362
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 2000,
-     "added": 1844,
-     "deleted": 156
+     "addedRaw": 1844,
+     "deletedRaw": 156
     },
     {
      "login": "tomer-tgp",
      "prs": 4,
      "lines": 1448,
-     "added": 1375,
-     "deleted": 75
+     "addedRaw": 1375,
+     "deletedRaw": 75
     },
     {
      "login": "danpelota",
      "prs": 3,
      "lines": 1194,
-     "added": 1030,
-     "deleted": 164
+     "addedRaw": 1030,
+     "deletedRaw": 164
     },
     {
      "login": "awardquick",
      "prs": 4,
      "lines": 821,
-     "added": 779,
-     "deleted": 103
+     "addedRaw": 779,
+     "deletedRaw": 103
     },
     {
      "login": "RavenHursT",
      "prs": 1,
      "lines": 599,
-     "added": 2,
-     "deleted": 598
+     "addedRaw": 2,
+     "deletedRaw": 598
     },
     {
      "login": "feliksalbright",
      "prs": 2,
      "lines": 511,
-     "added": 460,
-     "deleted": 63
+     "addedRaw": 460,
+     "deletedRaw": 63
     },
     {
      "login": "jacknagel-hs",
      "prs": 3,
      "lines": 391,
-     "added": 388,
-     "deleted": 4
+     "addedRaw": 388,
+     "deletedRaw": 4
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 2,
      "lines": 42,
-     "added": 23,
-     "deleted": 23
+     "addedRaw": 23,
+     "deletedRaw": 23
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 3,
-     "added": 2,
-     "deleted": 1
+     "addedRaw": 2,
+     "deletedRaw": 1
     }
    ]
   },
@@ -1790,8 +1790,8 @@
    "totals": {
     "prs": 72,
     "lines": 54633,
-    "added": 39127,
-    "deleted": 16581,
+    "addedRaw": 39127,
+    "deletedRaw": 16581,
     "people": 13
    },
    "contributors": [
@@ -1799,92 +1799,92 @@
      "login": "Collin-GP",
      "prs": 3,
      "lines": 15828,
-     "added": 8111,
-     "deleted": 7919
+     "addedRaw": 8111,
+     "deletedRaw": 7919
     },
     {
      "login": "dealvz",
      "prs": 11,
      "lines": 11309,
-     "added": 8550,
-     "deleted": 2759
+     "addedRaw": 8550,
+     "deletedRaw": 2759
     },
     {
      "login": "tomer-tgp",
      "prs": 17,
      "lines": 8770,
-     "added": 8434,
-     "deleted": 824
+     "addedRaw": 8434,
+     "deletedRaw": 824
     },
     {
      "login": "fromjustin",
      "prs": 7,
      "lines": 6368,
-     "added": 2914,
-     "deleted": 3510
+     "addedRaw": 2914,
+     "deletedRaw": 3510
     },
     {
      "login": "stephtea",
      "prs": 2,
      "lines": 4452,
-     "added": 4571,
-     "deleted": 11
+     "addedRaw": 4571,
+     "deletedRaw": 11
     },
     {
      "login": "swain",
      "prs": 12,
      "lines": 3184,
-     "added": 2565,
-     "deleted": 818
+     "addedRaw": 2565,
+     "deletedRaw": 818
     },
     {
      "login": "danpelota",
      "prs": 8,
      "lines": 1671,
-     "added": 1482,
-     "deleted": 189
+     "addedRaw": 1482,
+     "deletedRaw": 189
     },
     {
      "login": "hhkarimi",
      "prs": 4,
      "lines": 1405,
-     "added": 987,
-     "deleted": 418
+     "addedRaw": 987,
+     "deletedRaw": 418
     },
     {
      "login": "sanjayr1",
      "prs": 3,
      "lines": 816,
-     "added": 752,
-     "deleted": 64
+     "addedRaw": 752,
+     "deletedRaw": 64
     },
     {
      "login": "bryclevgp",
      "prs": 1,
      "lines": 459,
-     "added": 414,
-     "deleted": 45
+     "addedRaw": 414,
+     "deletedRaw": 45
     },
     {
      "login": "patrick-tgp",
      "prs": 2,
      "lines": 142,
-     "added": 137,
-     "deleted": 5
+     "addedRaw": 137,
+     "deletedRaw": 5
     },
     {
      "login": "oakinh",
      "prs": 1,
      "lines": 117,
-     "added": 114,
-     "deleted": 3
+     "addedRaw": 114,
+     "deletedRaw": 3
     },
     {
      "login": "ernestohs",
      "prs": 1,
      "lines": 112,
-     "added": 96,
-     "deleted": 16
+     "addedRaw": 96,
+     "deletedRaw": 16
     }
    ]
   },
@@ -1895,8 +1895,8 @@
    "totals": {
     "prs": 114,
     "lines": 87700,
-    "added": 96625,
-    "deleted": 17141,
+    "addedRaw": 96625,
+    "deletedRaw": 17141,
     "people": 15
    },
    "contributors": [
@@ -1904,106 +1904,106 @@
      "login": "Collin-GP",
      "prs": 5,
      "lines": 25927,
-     "added": 36539,
-     "deleted": 5752
+     "addedRaw": 36539,
+     "deletedRaw": 5752
     },
     {
      "login": "ernestohs",
      "prs": 7,
      "lines": 13441,
-     "added": 10414,
-     "deleted": 3028
+     "addedRaw": 10414,
+     "deletedRaw": 3028
     },
     {
      "login": "swain",
      "prs": 46,
      "lines": 12440,
-     "added": 15551,
-     "deleted": 4232
+     "addedRaw": 15551,
+     "deletedRaw": 4232
     },
     {
      "login": "stephtea",
      "prs": 8,
      "lines": 9584,
-     "added": 8896,
-     "deleted": 1436
+     "addedRaw": 8896,
+     "deletedRaw": 1436
     },
     {
      "login": "tomer-tgp",
      "prs": 11,
      "lines": 8417,
-     "added": 7671,
-     "deleted": 807
+     "addedRaw": 7671,
+     "deletedRaw": 807
     },
     {
      "login": "oakinh",
      "prs": 10,
      "lines": 5744,
-     "added": 6904,
-     "deleted": 316
+     "addedRaw": 6904,
+     "deletedRaw": 316
     },
     {
      "login": "feliksalbright",
      "prs": 6,
      "lines": 4898,
-     "added": 4254,
-     "deleted": 717
+     "addedRaw": 4254,
+     "deletedRaw": 717
     },
     {
      "login": "melecia-gp",
      "prs": 1,
      "lines": 3134,
-     "added": 2803,
-     "deleted": 331
+     "addedRaw": 2803,
+     "deletedRaw": 331
     },
     {
      "login": "dealvz",
      "prs": 3,
      "lines": 1705,
-     "added": 1536,
-     "deleted": 169
+     "addedRaw": 1536,
+     "deletedRaw": 169
     },
     {
      "login": "sanjayr1",
      "prs": 6,
      "lines": 1007,
-     "added": 798,
-     "deleted": 209
+     "addedRaw": 798,
+     "deletedRaw": 209
     },
     {
      "login": "hhkarimi",
      "prs": 5,
      "lines": 955,
-     "added": 843,
-     "deleted": 112
+     "addedRaw": 843,
+     "deletedRaw": 112
     },
     {
      "login": "bryclevgp",
      "prs": 1,
      "lines": 169,
-     "added": 162,
-     "deleted": 7
+     "addedRaw": 162,
+     "deletedRaw": 7
     },
     {
      "login": "selta-goodparty",
      "prs": 3,
      "lines": 165,
-     "added": 149,
-     "deleted": 16
+     "addedRaw": 149,
+     "deletedRaw": 16
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 94,
-     "added": 92,
-     "deleted": 2
+     "addedRaw": 92,
+     "deletedRaw": 2
     },
     {
      "login": "datawithtristan",
      "prs": 1,
      "lines": 20,
-     "added": 13,
-     "deleted": 7
+     "addedRaw": 13,
+     "deletedRaw": 7
     }
    ]
   },
@@ -2014,8 +2014,8 @@
    "totals": {
     "prs": 41,
     "lines": 35491,
-    "added": 25866,
-    "deleted": 9948,
+    "addedRaw": 25866,
+    "deletedRaw": 9948,
     "people": 12
    },
    "contributors": [
@@ -2023,85 +2023,85 @@
      "login": "fromjustin",
      "prs": 11,
      "lines": 11453,
-     "added": 5353,
-     "deleted": 6360
+     "addedRaw": 5353,
+     "deletedRaw": 6360
     },
     {
      "login": "kmcost",
      "prs": 3,
      "lines": 9241,
-     "added": 7859,
-     "deleted": 1393
+     "addedRaw": 7859,
+     "deletedRaw": 1393
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 6263,
-     "added": 5705,
-     "deleted": 558
+     "addedRaw": 5705,
+     "deletedRaw": 558
     },
     {
      "login": "tomer-tgp",
      "prs": 11,
      "lines": 4692,
-     "added": 4208,
-     "deleted": 536
+     "addedRaw": 4208,
+     "deletedRaw": 536
     },
     {
      "login": "Collin-GP",
      "prs": 3,
      "lines": 1627,
-     "added": 1397,
-     "deleted": 230
+     "addedRaw": 1397,
+     "deletedRaw": 230
     },
     {
      "login": "sanjayr1",
      "prs": 1,
      "lines": 1031,
-     "added": 961,
-     "deleted": 70
+     "addedRaw": 961,
+     "deletedRaw": 70
     },
     {
      "login": "stephtea",
      "prs": 1,
      "lines": 928,
-     "added": 224,
-     "deleted": 704
+     "addedRaw": 224,
+     "deletedRaw": 704
     },
     {
      "login": "swain",
      "prs": 5,
      "lines": 98,
-     "added": 26,
-     "deleted": 72
+     "addedRaw": 26,
+     "deletedRaw": 72
     },
     {
      "login": "hhkarimi",
      "prs": 2,
      "lines": 60,
-     "added": 52,
-     "deleted": 8
+     "addedRaw": 52,
+     "deletedRaw": 8
     },
     {
      "login": "ernestohs",
      "prs": 1,
      "lines": 55,
-     "added": 38,
-     "deleted": 17
+     "addedRaw": 38,
+     "deletedRaw": 17
     },
     {
      "login": "datawithtristan",
      "prs": 1,
      "lines": 36,
-     "added": 36,
-     "deleted": 0
+     "addedRaw": 36,
+     "deletedRaw": 0
     },
     {
      "login": "melecia-gp",
      "prs": 1,
      "lines": 7,
-     "added": 7,
-     "deleted": 0
+     "addedRaw": 7,
+     "deletedRaw": 0
     }
    ]
   },
@@ -2112,8 +2112,8 @@
    "totals": {
     "prs": 152,
     "lines": 128270,
-    "added": 143805,
-    "deleted": 21267,
+    "addedRaw": 143805,
+    "deletedRaw": 21267,
     "people": 16
    },
    "contributors": [
@@ -2121,113 +2121,113 @@
      "login": "swain",
      "prs": 36,
      "lines": 75997,
-     "added": 96408,
-     "deleted": 13219
+     "addedRaw": 96408,
+     "deletedRaw": 13219
     },
     {
      "login": "Collin-GP",
      "prs": 8,
      "lines": 13547,
-     "added": 12181,
-     "deleted": 1392
+     "addedRaw": 12181,
+     "deletedRaw": 1392
     },
     {
      "login": "oakinh",
      "prs": 20,
      "lines": 9863,
-     "added": 8533,
-     "deleted": 2587
+     "addedRaw": 8533,
+     "deletedRaw": 2587
     },
     {
      "login": "tomer-tgp",
      "prs": 30,
      "lines": 7437,
-     "added": 5687,
-     "deleted": 1754
+     "addedRaw": 5687,
+     "deletedRaw": 1754
     },
     {
      "login": "stephtea",
      "prs": 13,
      "lines": 5825,
-     "added": 4760,
-     "deleted": 1073
+     "addedRaw": 4760,
+     "deletedRaw": 1073
     },
     {
      "login": "feliksalbright",
      "prs": 5,
      "lines": 3737,
-     "added": 3815,
-     "deleted": 24
+     "addedRaw": 3815,
+     "deletedRaw": 24
     },
     {
      "login": "hhkarimi",
      "prs": 10,
      "lines": 3134,
-     "added": 2813,
-     "deleted": 321
+     "addedRaw": 2813,
+     "deletedRaw": 321
     },
     {
      "login": "melecia-gp",
      "prs": 2,
      "lines": 2467,
-     "added": 3972,
-     "deleted": 264
+     "addedRaw": 3972,
+     "deletedRaw": 264
     },
     {
      "login": "selta-goodparty",
      "prs": 15,
      "lines": 2188,
-     "added": 2006,
-     "deleted": 182
+     "addedRaw": 2006,
+     "deletedRaw": 182
     },
     {
      "login": "dealvz",
      "prs": 3,
      "lines": 1657,
-     "added": 1537,
-     "deleted": 120
+     "addedRaw": 1537,
+     "deletedRaw": 120
     },
     {
      "login": "ernestohs",
      "prs": 1,
      "lines": 1191,
-     "added": 1140,
-     "deleted": 57
+     "addedRaw": 1140,
+     "deletedRaw": 57
     },
     {
      "login": "sanjayr1",
      "prs": 5,
      "lines": 561,
-     "added": 437,
-     "deleted": 124
+     "addedRaw": 437,
+     "deletedRaw": 124
     },
     {
      "login": "datawithtristan",
      "prs": 1,
      "lines": 283,
-     "added": 283,
-     "deleted": 0
+     "addedRaw": 283,
+     "deletedRaw": 0
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 223,
-     "added": 152,
-     "deleted": 71
+     "addedRaw": 152,
+     "deletedRaw": 71
     },
     {
      "login": "bryclevgp",
      "prs": 1,
      "lines": 101,
-     "added": 47,
-     "deleted": 54
+     "addedRaw": 47,
+     "deletedRaw": 54
     },
     {
      "login": "tonypham-goodparty",
      "prs": 1,
      "lines": 59,
-     "added": 34,
-     "deleted": 25
+     "addedRaw": 34,
+     "deletedRaw": 25
     }
    ]
   },
@@ -2238,8 +2238,8 @@
    "totals": {
     "prs": 150,
     "lines": 91385,
-    "added": 73140,
-    "deleted": 29491,
+    "addedRaw": 73140,
+    "deletedRaw": 29491,
     "people": 17
    },
    "contributors": [
@@ -2247,120 +2247,120 @@
      "login": "ernestohs",
      "prs": 5,
      "lines": 16247,
-     "added": 9358,
-     "deleted": 6895
+     "addedRaw": 9358,
+     "deletedRaw": 6895
     },
     {
      "login": "oakinh",
      "prs": 30,
      "lines": 14564,
-     "added": 12543,
-     "deleted": 4854
+     "addedRaw": 12543,
+     "deletedRaw": 4854
     },
     {
      "login": "dealvz",
      "prs": 11,
      "lines": 13200,
-     "added": 12543,
-     "deleted": 1349
+     "addedRaw": 12543,
+     "deletedRaw": 1349
     },
     {
      "login": "tomer-tgp",
      "prs": 42,
      "lines": 10319,
-     "added": 10489,
-     "deleted": 1095
+     "addedRaw": 10489,
+     "deletedRaw": 1095
     },
     {
      "login": "swain",
      "prs": 18,
      "lines": 10019,
-     "added": 6564,
-     "deleted": 8643
+     "addedRaw": 6564,
+     "deletedRaw": 8643
     },
     {
      "login": "hhkarimi",
      "prs": 10,
      "lines": 8162,
-     "added": 7169,
-     "deleted": 2025
+     "addedRaw": 7169,
+     "deletedRaw": 2025
     },
     {
      "login": "feliksalbright",
      "prs": 6,
      "lines": 6862,
-     "added": 3811,
-     "deleted": 3255
+     "addedRaw": 3811,
+     "deletedRaw": 3255
     },
     {
      "login": "datawithtristan",
      "prs": 5,
      "lines": 3789,
-     "added": 2952,
-     "deleted": 837
+     "addedRaw": 2952,
+     "deletedRaw": 837
     },
     {
      "login": "melecia-gp",
      "prs": 2,
      "lines": 3021,
-     "added": 2891,
-     "deleted": 130
+     "addedRaw": 2891,
+     "deletedRaw": 130
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 2580,
-     "added": 2470,
-     "deleted": 130
+     "addedRaw": 2470,
+     "deletedRaw": 130
     },
     {
      "login": "Collin-GP",
      "prs": 1,
      "lines": 1013,
-     "added": 978,
-     "deleted": 35
+     "addedRaw": 978,
+     "deletedRaw": 35
     },
     {
      "login": "sanjayr1",
      "prs": 2,
      "lines": 520,
-     "added": 466,
-     "deleted": 54
+     "addedRaw": 466,
+     "deletedRaw": 54
     },
     {
      "login": "danpelota",
      "prs": 4,
      "lines": 490,
-     "added": 377,
-     "deleted": 113
+     "addedRaw": 377,
+     "deletedRaw": 113
     },
     {
      "login": "linter-pm",
      "prs": 1,
      "lines": 366,
-     "added": 366,
-     "deleted": 0
+     "addedRaw": 366,
+     "deletedRaw": 0
     },
     {
      "login": "selta-goodparty",
      "prs": 2,
      "lines": 112,
-     "added": 96,
-     "deleted": 16
+     "addedRaw": 96,
+     "deletedRaw": 16
     },
     {
      "login": "patrick-tgp",
      "prs": 3,
      "lines": 76,
-     "added": 40,
-     "deleted": 36
+     "addedRaw": 40,
+     "deletedRaw": 36
     },
     {
      "login": "gp-sdk-release-bot",
      "prs": 3,
      "lines": 45,
-     "added": 27,
-     "deleted": 24
+     "addedRaw": 27,
+     "deletedRaw": 24
     }
    ]
   },
@@ -2371,8 +2371,8 @@
    "totals": {
     "prs": 190,
     "lines": 99811,
-    "added": 159199,
-    "deleted": 154957,
+    "addedRaw": 159199,
+    "deletedRaw": 154957,
     "people": 18
    },
    "contributors": [
@@ -2380,127 +2380,127 @@
      "login": "swain",
      "prs": 38,
      "lines": 30867,
-     "added": 33599,
-     "deleted": 3475
+     "addedRaw": 33599,
+     "deletedRaw": 3475
     },
     {
      "login": "tomer-tgp",
      "prs": 50,
      "lines": 14717,
-     "added": 10664,
-     "deleted": 4055
+     "addedRaw": 10664,
+     "deletedRaw": 4055
     },
     {
      "login": "jacknagel-hs",
      "prs": 2,
      "lines": 14166,
-     "added": 14134,
-     "deleted": 32
+     "addedRaw": 14134,
+     "deletedRaw": 32
     },
     {
      "login": "hhkarimi",
      "prs": 11,
      "lines": 6369,
-     "added": 12545,
-     "deleted": 10215
+     "addedRaw": 12545,
+     "deletedRaw": 10215
     },
     {
      "login": "feliksalbright",
      "prs": 16,
      "lines": 5708,
-     "added": 3711,
-     "deleted": 1999
+     "addedRaw": 3711,
+     "deletedRaw": 1999
     },
     {
      "login": "danpelota",
      "prs": 7,
      "lines": 4796,
-     "added": 6745,
-     "deleted": 169
+     "addedRaw": 6745,
+     "deletedRaw": 169
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 4591,
-     "added": 4444,
-     "deleted": 147
+     "addedRaw": 4444,
+     "deletedRaw": 147
     },
     {
      "login": "dealvz",
      "prs": 6,
      "lines": 3122,
-     "added": 3017,
-     "deleted": 105
+     "addedRaw": 3017,
+     "deletedRaw": 105
     },
     {
      "login": "kmcost",
      "prs": 4,
      "lines": 2964,
-     "added": 1548,
-     "deleted": 1416
+     "addedRaw": 1548,
+     "deletedRaw": 1416
     },
     {
      "login": "selta-goodparty",
      "prs": 15,
      "lines": 2406,
-     "added": 2260,
-     "deleted": 146
+     "addedRaw": 2260,
+     "deletedRaw": 146
     },
     {
      "login": "datawithtristan",
      "prs": 7,
      "lines": 2013,
-     "added": 1882,
-     "deleted": 133
+     "addedRaw": 1882,
+     "deletedRaw": 133
     },
     {
      "login": "ernestohs",
      "prs": 8,
      "lines": 1950,
-     "added": 1710,
-     "deleted": 267
+     "addedRaw": 1710,
+     "deletedRaw": 267
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 1903,
-     "added": 1681,
-     "deleted": 222
+     "addedRaw": 1681,
+     "deletedRaw": 222
     },
     {
      "login": "oakinh",
      "prs": 5,
      "lines": 1691,
-     "added": 59301,
-     "deleted": 131974
+     "addedRaw": 59301,
+     "deletedRaw": 131974
     },
     {
      "login": "melecia-gp",
      "prs": 3,
      "lines": 1042,
-     "added": 765,
-     "deleted": 277
+     "addedRaw": 765,
+     "deletedRaw": 277
     },
     {
      "login": "eugenebazdyriev",
      "prs": 3,
      "lines": 890,
-     "added": 600,
-     "deleted": 290
+     "addedRaw": 600,
+     "deletedRaw": 290
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 577,
-     "added": 562,
-     "deleted": 15
+     "addedRaw": 562,
+     "deletedRaw": 15
     },
     {
      "login": "patrick-tgp",
      "prs": 3,
      "lines": 39,
-     "added": 31,
-     "deleted": 20
+     "addedRaw": 31,
+     "deletedRaw": 20
     }
    ]
   },
@@ -2511,8 +2511,8 @@
    "totals": {
     "prs": 125,
     "lines": 94712,
-    "added": 94734,
-    "deleted": 18596,
+    "addedRaw": 94734,
+    "deletedRaw": 18596,
     "people": 15
    },
    "contributors": [
@@ -2520,106 +2520,106 @@
      "login": "Collin-GP",
      "prs": 3,
      "lines": 17537,
-     "added": 17057,
-     "deleted": 480
+     "addedRaw": 17057,
+     "deletedRaw": 480
     },
     {
      "login": "tomer-tgp",
      "prs": 53,
      "lines": 16157,
-     "added": 16082,
-     "deleted": 10460
+     "addedRaw": 16082,
+     "deletedRaw": 10460
     },
     {
      "login": "swain",
      "prs": 10,
      "lines": 14741,
-     "added": 20749,
-     "deleted": 2200
+     "addedRaw": 20749,
+     "deletedRaw": 2200
     },
     {
      "login": "stephtea",
      "prs": 5,
      "lines": 14120,
-     "added": 12911,
-     "deleted": 1209
+     "addedRaw": 12911,
+     "deletedRaw": 1209
     },
     {
      "login": "oakinh",
      "prs": 7,
      "lines": 8486,
-     "added": 7499,
-     "deleted": 1006
+     "addedRaw": 7499,
+     "deletedRaw": 1006
     },
     {
      "login": "danpelota",
      "prs": 2,
      "lines": 6510,
-     "added": 6508,
-     "deleted": 2
+     "addedRaw": 6508,
+     "deletedRaw": 2
     },
     {
      "login": "feliksalbright",
      "prs": 5,
      "lines": 3950,
-     "added": 3738,
-     "deleted": 212
+     "addedRaw": 3738,
+     "deletedRaw": 212
     },
     {
      "login": "bryclevgp",
      "prs": 10,
      "lines": 3005,
-     "added": 2545,
-     "deleted": 460
+     "addedRaw": 2545,
+     "deletedRaw": 460
     },
     {
      "login": "sanjayr1",
      "prs": 8,
      "lines": 2803,
-     "added": 2751,
-     "deleted": 52
+     "addedRaw": 2751,
+     "deletedRaw": 52
     },
     {
      "login": "kmcost",
      "prs": 5,
      "lines": 2794,
-     "added": 1658,
-     "deleted": 1136
+     "addedRaw": 1658,
+     "deletedRaw": 1136
     },
     {
      "login": "eugenebazdyriev",
      "prs": 6,
      "lines": 2534,
-     "added": 1631,
-     "deleted": 909
+     "addedRaw": 1631,
+     "deletedRaw": 909
     },
     {
      "login": "hhkarimi",
      "prs": 3,
      "lines": 1386,
-     "added": 1032,
-     "deleted": 354
+     "addedRaw": 1032,
+     "deletedRaw": 354
     },
     {
      "login": "datawithtristan",
      "prs": 4,
      "lines": 321,
-     "added": 254,
-     "deleted": 67
+     "addedRaw": 254,
+     "deletedRaw": 67
     },
     {
      "login": "selta-goodparty",
      "prs": 2,
      "lines": 185,
-     "added": 181,
-     "deleted": 4
+     "addedRaw": 181,
+     "deletedRaw": 4
     },
     {
      "login": "ernestohs",
      "prs": 2,
      "lines": 183,
-     "added": 138,
-     "deleted": 45
+     "addedRaw": 138,
+     "deletedRaw": 45
     }
    ]
   },
@@ -2630,8 +2630,8 @@
    "totals": {
     "prs": 212,
     "lines": 83794,
-    "added": 85436,
-    "deleted": 13176,
+    "addedRaw": 85436,
+    "deletedRaw": 13176,
     "people": 18
    },
    "contributors": [
@@ -2639,127 +2639,127 @@
      "login": "tomer-tgp",
      "prs": 92,
      "lines": 28025,
-     "added": 30393,
-     "deleted": 2038
+     "addedRaw": 30393,
+     "deletedRaw": 2038
     },
     {
      "login": "swain",
      "prs": 29,
      "lines": 10977,
-     "added": 8482,
-     "deleted": 3236
+     "addedRaw": 8482,
+     "deletedRaw": 3236
     },
     {
      "login": "hhkarimi",
      "prs": 5,
      "lines": 8876,
-     "added": 6036,
-     "deleted": 2975
+     "addedRaw": 6036,
+     "deletedRaw": 2975
     },
     {
      "login": "datawithtristan",
      "prs": 7,
      "lines": 7202,
-     "added": 6630,
-     "deleted": 572
+     "addedRaw": 6630,
+     "deletedRaw": 572
     },
     {
      "login": "oakinh",
      "prs": 16,
      "lines": 7089,
-     "added": 6427,
-     "deleted": 681
+     "addedRaw": 6427,
+     "deletedRaw": 681
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 6215,
-     "added": 7763,
-     "deleted": 560
+     "addedRaw": 7763,
+     "deletedRaw": 560
     },
     {
      "login": "kmcost",
      "prs": 4,
      "lines": 2702,
-     "added": 2228,
-     "deleted": 474
+     "addedRaw": 2228,
+     "deletedRaw": 474
     },
     {
      "login": "eugenebazdyriev",
      "prs": 9,
      "lines": 2346,
-     "added": 1807,
-     "deleted": 539
+     "addedRaw": 1807,
+     "deletedRaw": 539
     },
     {
      "login": "bryclevgp",
      "prs": 9,
      "lines": 2137,
-     "added": 2072,
-     "deleted": 307
+     "addedRaw": 2072,
+     "deletedRaw": 307
     },
     {
      "login": "stephtea",
      "prs": 8,
      "lines": 1912,
-     "added": 1271,
-     "deleted": 641
+     "addedRaw": 1271,
+     "deletedRaw": 641
     },
     {
      "login": "selta-goodparty",
      "prs": 9,
      "lines": 1558,
-     "added": 1394,
-     "deleted": 164
+     "addedRaw": 1394,
+     "deletedRaw": 164
     },
     {
      "login": "danpelota",
      "prs": 6,
      "lines": 1537,
-     "added": 1415,
-     "deleted": 136
+     "addedRaw": 1415,
+     "deletedRaw": 136
     },
     {
      "login": "Collin-GP",
      "prs": 6,
      "lines": 1091,
-     "added": 629,
-     "deleted": 462
+     "addedRaw": 629,
+     "deletedRaw": 462
     },
     {
      "login": "feliksalbright",
      "prs": 4,
      "lines": 986,
-     "added": 7915,
-     "deleted": 139
+     "addedRaw": 7915,
+     "deletedRaw": 139
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 673,
-     "added": 595,
-     "deleted": 78
+     "addedRaw": 595,
+     "deletedRaw": 78
     },
     {
      "login": "samuelgoodparty",
      "prs": 1,
      "lines": 238,
-     "added": 153,
-     "deleted": 85
+     "addedRaw": 153,
+     "deletedRaw": 85
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 204,
-     "added": 204,
-     "deleted": 85
+     "addedRaw": 204,
+     "deletedRaw": 85
     },
     {
      "login": "ernestohs",
      "prs": 1,
      "lines": 26,
-     "added": 22,
-     "deleted": 4
+     "addedRaw": 22,
+     "deletedRaw": 4
     }
    ]
   },
@@ -2770,8 +2770,8 @@
    "totals": {
     "prs": 172,
     "lines": 82082,
-    "added": 62778,
-    "deleted": 22005,
+    "addedRaw": 62778,
+    "deletedRaw": 22005,
     "people": 13
    },
    "contributors": [
@@ -2779,92 +2779,92 @@
      "login": "tomer-tgp",
      "prs": 74,
      "lines": 20449,
-     "added": 16721,
-     "deleted": 4847
+     "addedRaw": 16721,
+     "deletedRaw": 4847
     },
     {
      "login": "danpelota",
      "prs": 4,
      "lines": 15410,
-     "added": 9043,
-     "deleted": 6367
+     "addedRaw": 9043,
+     "deletedRaw": 6367
     },
     {
      "login": "swain",
      "prs": 24,
      "lines": 10880,
-     "added": 9082,
-     "deleted": 2226
+     "addedRaw": 9082,
+     "deletedRaw": 2226
     },
     {
      "login": "datawithtristan",
      "prs": 8,
      "lines": 8178,
-     "added": 5027,
-     "deleted": 3204
+     "addedRaw": 5027,
+     "deletedRaw": 3204
     },
     {
      "login": "dealvz",
      "prs": 8,
      "lines": 8103,
-     "added": 6844,
-     "deleted": 1259
+     "addedRaw": 6844,
+     "deletedRaw": 1259
     },
     {
      "login": "feliksalbright",
      "prs": 7,
      "lines": 6010,
-     "added": 4872,
-     "deleted": 1138
+     "addedRaw": 4872,
+     "deletedRaw": 1138
     },
     {
      "login": "oakinh",
      "prs": 12,
      "lines": 3699,
-     "added": 2992,
-     "deleted": 1342
+     "addedRaw": 2992,
+     "deletedRaw": 1342
     },
     {
      "login": "eugenebazdyriev",
      "prs": 2,
      "lines": 2908,
-     "added": 2807,
-     "deleted": 101
+     "addedRaw": 2807,
+     "deletedRaw": 101
     },
     {
      "login": "ernestohs",
      "prs": 5,
      "lines": 1833,
-     "added": 1716,
-     "deleted": 159
+     "addedRaw": 1716,
+     "deletedRaw": 159
     },
     {
      "login": "hhkarimi",
      "prs": 6,
      "lines": 1802,
-     "added": 1393,
-     "deleted": 409
+     "addedRaw": 1393,
+     "deletedRaw": 409
     },
     {
      "login": "bryclevgp",
      "prs": 12,
      "lines": 1520,
-     "added": 1387,
-     "deleted": 133
+     "addedRaw": 1387,
+     "deletedRaw": 133
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 768,
-     "added": 758,
-     "deleted": 10
+     "addedRaw": 758,
+     "deletedRaw": 10
     },
     {
      "login": "kmcost",
      "prs": 6,
      "lines": 522,
-     "added": 136,
-     "deleted": 810
+     "addedRaw": 136,
+     "deletedRaw": 810
     }
    ]
   },
@@ -2875,8 +2875,8 @@
    "totals": {
     "prs": 111,
     "lines": 89727,
-    "added": 84424,
-    "deleted": 20091,
+    "addedRaw": 84424,
+    "deletedRaw": 20091,
     "people": 15
    },
    "contributors": [
@@ -2884,106 +2884,106 @@
      "login": "ernestohs",
      "prs": 9,
      "lines": 42130,
-     "added": 41327,
-     "deleted": 830
+     "addedRaw": 41327,
+     "deletedRaw": 830
     },
     {
      "login": "tomer-tgp",
      "prs": 31,
      "lines": 11652,
-     "added": 11678,
-     "deleted": 14071
+     "addedRaw": 11678,
+     "deletedRaw": 14071
     },
     {
      "login": "Collin-GP",
      "prs": 6,
      "lines": 9153,
-     "added": 8828,
-     "deleted": 364
+     "addedRaw": 8828,
+     "deletedRaw": 364
     },
     {
      "login": "sanjayr1",
      "prs": 13,
      "lines": 5562,
-     "added": 4069,
-     "deleted": 1493
+     "addedRaw": 4069,
+     "deletedRaw": 1493
     },
     {
      "login": "oakinh",
      "prs": 6,
      "lines": 4725,
-     "added": 3178,
-     "deleted": 1548
+     "addedRaw": 3178,
+     "deletedRaw": 1548
     },
     {
      "login": "dealvz",
      "prs": 11,
      "lines": 4658,
-     "added": 4349,
-     "deleted": 309
+     "addedRaw": 4349,
+     "deletedRaw": 309
     },
     {
      "login": "danpelota",
      "prs": 11,
      "lines": 4603,
-     "added": 3617,
-     "deleted": 986
+     "addedRaw": 3617,
+     "deletedRaw": 986
     },
     {
      "login": "stephtea",
      "prs": 6,
      "lines": 4305,
-     "added": 4067,
-     "deleted": 238
+     "addedRaw": 4067,
+     "deletedRaw": 238
     },
     {
      "login": "swain",
      "prs": 6,
      "lines": 1721,
-     "added": 2238,
-     "deleted": 107
+     "addedRaw": 2238,
+     "deletedRaw": 107
     },
     {
      "login": "hhkarimi",
      "prs": 4,
      "lines": 467,
-     "added": 458,
-     "deleted": 9
+     "addedRaw": 458,
+     "deletedRaw": 9
     },
     {
      "login": "feliksalbright",
      "prs": 1,
      "lines": 313,
-     "added": 302,
-     "deleted": 11
+     "addedRaw": 302,
+     "deletedRaw": 11
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 266,
-     "added": 210,
-     "deleted": 56
+     "addedRaw": 210,
+     "deletedRaw": 56
     },
     {
      "login": "nigel-gp",
      "prs": 2,
      "lines": 122,
-     "added": 77,
-     "deleted": 45
+     "addedRaw": 77,
+     "deletedRaw": 45
     },
     {
      "login": "samuelgoodparty",
      "prs": 1,
      "lines": 46,
-     "added": 24,
-     "deleted": 22
+     "addedRaw": 24,
+     "deletedRaw": 22
     },
     {
      "login": "eugenebazdyriev",
      "prs": 1,
      "lines": 4,
-     "added": 2,
-     "deleted": 2
+     "addedRaw": 2,
+     "deletedRaw": 2
     }
    ]
   },
@@ -2994,8 +2994,8 @@
    "totals": {
     "prs": 168,
     "lines": 80500,
-    "added": 65893,
-    "deleted": 15266,
+    "addedRaw": 65893,
+    "deletedRaw": 15266,
     "people": 14
    },
    "contributors": [
@@ -3003,99 +3003,99 @@
      "login": "tomer-tgp",
      "prs": 57,
      "lines": 35937,
-     "added": 30365,
-     "deleted": 5576
+     "addedRaw": 30365,
+     "deletedRaw": 5576
     },
     {
      "login": "hhkarimi",
      "prs": 13,
      "lines": 10385,
-     "added": 7890,
-     "deleted": 2985
+     "addedRaw": 7890,
+     "deletedRaw": 2985
     },
     {
      "login": "Collin-GP",
      "prs": 13,
      "lines": 8738,
-     "added": 8269,
-     "deleted": 469
+     "addedRaw": 8269,
+     "deletedRaw": 469
     },
     {
      "login": "stephtea",
      "prs": 16,
      "lines": 6623,
-     "added": 5381,
-     "deleted": 1325
+     "addedRaw": 5381,
+     "deletedRaw": 1325
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 3631,
-     "added": 845,
-     "deleted": 2831
+     "addedRaw": 845,
+     "deletedRaw": 2831
     },
     {
      "login": "swain",
      "prs": 15,
      "lines": 3353,
-     "added": 2795,
-     "deleted": 558
+     "addedRaw": 2795,
+     "deletedRaw": 558
     },
     {
      "login": "datawithtristan",
      "prs": 17,
      "lines": 3220,
-     "added": 2637,
-     "deleted": 583
+     "addedRaw": 2637,
+     "deletedRaw": 583
     },
     {
      "login": "feliksalbright",
      "prs": 1,
      "lines": 2770,
-     "added": 2770,
-     "deleted": 0
+     "addedRaw": 2770,
+     "deletedRaw": 0
     },
     {
      "login": "dealvz",
      "prs": 10,
      "lines": 1808,
-     "added": 1517,
-     "deleted": 328
+     "addedRaw": 1517,
+     "deletedRaw": 328
     },
     {
      "login": "ernestohs",
      "prs": 3,
      "lines": 1581,
-     "added": 1195,
-     "deleted": 386
+     "addedRaw": 1195,
+     "deletedRaw": 386
     },
     {
      "login": "oakinh",
      "prs": 12,
      "lines": 1251,
-     "added": 1099,
-     "deleted": 152
+     "addedRaw": 1099,
+     "deletedRaw": 152
     },
     {
      "login": "bryclevgp",
      "prs": 5,
      "lines": 631,
-     "added": 571,
-     "deleted": 60
+     "addedRaw": 571,
+     "deletedRaw": 60
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 570,
-     "added": 558,
-     "deleted": 12
+     "addedRaw": 558,
+     "deletedRaw": 12
     },
     {
      "login": "jacknagel-hs",
      "prs": 1,
      "lines": 2,
-     "added": 1,
-     "deleted": 1
+     "addedRaw": 1,
+     "deletedRaw": 1
     }
    ]
   },
@@ -3106,8 +3106,8 @@
    "totals": {
     "prs": 170,
     "lines": 77777,
-    "added": 61322,
-    "deleted": 16867,
+    "addedRaw": 61322,
+    "deletedRaw": 16867,
     "people": 14
    },
    "contributors": [
@@ -3115,99 +3115,99 @@
      "login": "tomer-tgp",
      "prs": 42,
      "lines": 19328,
-     "added": 12639,
-     "deleted": 6689
+     "addedRaw": 12639,
+     "deletedRaw": 6689
     },
     {
      "login": "datawithtristan",
      "prs": 23,
      "lines": 12308,
-     "added": 11274,
-     "deleted": 1423
+     "addedRaw": 11274,
+     "deletedRaw": 1423
     },
     {
      "login": "Collin-GP",
      "prs": 8,
      "lines": 11160,
-     "added": 10495,
-     "deleted": 671
+     "addedRaw": 10495,
+     "deletedRaw": 671
     },
     {
      "login": "dealvz",
      "prs": 5,
      "lines": 8927,
-     "added": 5924,
-     "deleted": 3003
+     "addedRaw": 5924,
+     "deletedRaw": 3003
     },
     {
      "login": "swain",
      "prs": 24,
      "lines": 8086,
-     "added": 5230,
-     "deleted": 2865
+     "addedRaw": 5230,
+     "deletedRaw": 2865
     },
     {
      "login": "oakinh",
      "prs": 22,
      "lines": 4757,
-     "added": 4050,
-     "deleted": 707
+     "addedRaw": 4050,
+     "deletedRaw": 707
     },
     {
      "login": "sanjayr1",
      "prs": 4,
      "lines": 4092,
-     "added": 4030,
-     "deleted": 62
+     "addedRaw": 4030,
+     "deletedRaw": 62
     },
     {
      "login": "feliksalbright",
      "prs": 3,
      "lines": 3350,
-     "added": 2926,
-     "deleted": 424
+     "addedRaw": 2926,
+     "deletedRaw": 424
     },
     {
      "login": "stephtea",
      "prs": 14,
      "lines": 2360,
-     "added": 2026,
-     "deleted": 334
+     "addedRaw": 2026,
+     "deletedRaw": 334
     },
     {
      "login": "hhkarimi",
      "prs": 12,
      "lines": 1951,
-     "added": 1519,
-     "deleted": 440
+     "addedRaw": 1519,
+     "deletedRaw": 440
     },
     {
      "login": "ernestohs",
      "prs": 5,
      "lines": 730,
-     "added": 642,
-     "deleted": 88
+     "addedRaw": 642,
+     "deletedRaw": 88
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 451,
-     "added": 383,
-     "deleted": 68
+     "addedRaw": 383,
+     "deletedRaw": 68
     },
     {
      "login": "danpelota",
      "prs": 4,
      "lines": 275,
-     "added": 183,
-     "deleted": 92
+     "addedRaw": 183,
+     "deletedRaw": 92
     },
     {
      "login": "jacknagel-hs",
      "prs": 1,
      "lines": 2,
-     "added": 1,
-     "deleted": 1
+     "addedRaw": 1,
+     "deletedRaw": 1
     }
    ]
   },
@@ -3218,8 +3218,8 @@
    "totals": {
     "prs": 118,
     "lines": 92151,
-    "added": 70162,
-    "deleted": 23933,
+    "addedRaw": 70162,
+    "deletedRaw": 23933,
     "people": 10
    },
    "contributors": [
@@ -3227,71 +3227,71 @@
      "login": "swain",
      "prs": 12,
      "lines": 23672,
-     "added": 6805,
-     "deleted": 17423
+     "addedRaw": 6805,
+     "deletedRaw": 17423
     },
     {
      "login": "ernestohs",
      "prs": 2,
      "lines": 18740,
-     "added": 17825,
-     "deleted": 916
+     "addedRaw": 17825,
+     "deletedRaw": 916
     },
     {
      "login": "tomer-tgp",
      "prs": 47,
      "lines": 18519,
-     "added": 16934,
-     "deleted": 1585
+     "addedRaw": 16934,
+     "deletedRaw": 1585
     },
     {
      "login": "Collin-GP",
      "prs": 6,
      "lines": 7362,
-     "added": 7832,
-     "deleted": 85
+     "addedRaw": 7832,
+     "deletedRaw": 85
     },
     {
      "login": "feliksalbright",
      "prs": 7,
      "lines": 7054,
-     "added": 7786,
-     "deleted": 82
+     "addedRaw": 7786,
+     "deletedRaw": 82
     },
     {
      "login": "oakinh",
      "prs": 6,
      "lines": 6982,
-     "added": 6788,
-     "deleted": 206
+     "addedRaw": 6788,
+     "deletedRaw": 206
     },
     {
      "login": "dealvz",
      "prs": 7,
      "lines": 5093,
-     "added": 2074,
-     "deleted": 3019
+     "addedRaw": 2074,
+     "deletedRaw": 3019
     },
     {
      "login": "hhkarimi",
      "prs": 21,
      "lines": 2751,
-     "added": 2231,
-     "deleted": 522
+     "addedRaw": 2231,
+     "deletedRaw": 522
     },
     {
      "login": "datawithtristan",
      "prs": 9,
      "lines": 1878,
-     "added": 1788,
-     "deleted": 90
+     "addedRaw": 1788,
+     "deletedRaw": 90
     },
     {
      "login": "sanjayr1",
      "prs": 1,
      "lines": 100,
-     "added": 99,
-     "deleted": 5
+     "addedRaw": 99,
+     "deletedRaw": 5
     }
    ]
   },
@@ -3302,8 +3302,8 @@
    "totals": {
     "prs": 112,
     "lines": 219429,
-    "added": 204637,
-    "deleted": 21305,
+    "addedRaw": 204637,
+    "deletedRaw": 21305,
     "people": 10
    },
    "contributors": [
@@ -3311,71 +3311,71 @@
      "login": "swain",
      "prs": 32,
      "lines": 143952,
-     "added": 139845,
-     "deleted": 9735
+     "addedRaw": 139845,
+     "deletedRaw": 9735
     },
     {
      "login": "oakinh",
      "prs": 22,
      "lines": 40559,
-     "added": 33268,
-     "deleted": 7569
+     "addedRaw": 33268,
+     "deletedRaw": 7569
     },
     {
      "login": "bryclevgp",
      "prs": 6,
      "lines": 15951,
-     "added": 15634,
-     "deleted": 317
+     "addedRaw": 15634,
+     "deletedRaw": 317
     },
     {
      "login": "datawithtristan",
      "prs": 22,
      "lines": 6864,
-     "added": 6521,
-     "deleted": 343
+     "addedRaw": 6521,
+     "deletedRaw": 343
     },
     {
      "login": "melecia-gp",
      "prs": 6,
      "lines": 4584,
-     "added": 4199,
-     "deleted": 385
+     "addedRaw": 4199,
+     "deletedRaw": 385
     },
     {
      "login": "stephtea",
      "prs": 8,
      "lines": 3519,
-     "added": 3912,
-     "deleted": 214
+     "addedRaw": 3912,
+     "deletedRaw": 214
     },
     {
      "login": "hhkarimi",
      "prs": 8,
      "lines": 2986,
-     "added": 466,
-     "deleted": 2520
+     "addedRaw": 466,
+     "deletedRaw": 2520
     },
     {
      "login": "danpelota",
      "prs": 4,
      "lines": 682,
-     "added": 520,
-     "deleted": 162
+     "addedRaw": 520,
+     "deletedRaw": 162
     },
     {
      "login": "ernestohs",
      "prs": 3,
      "lines": 298,
-     "added": 255,
-     "deleted": 43
+     "addedRaw": 255,
+     "deletedRaw": 43
     },
     {
      "login": "patrick-tgp",
      "prs": 1,
      "lines": 34,
-     "added": 17,
-     "deleted": 17
+     "addedRaw": 17,
+     "deletedRaw": 17
     }
    ]
   },
@@ -3386,8 +3386,8 @@
    "totals": {
     "prs": 117,
     "lines": 43835,
-    "added": 30023,
-    "deleted": 14057,
+    "addedRaw": 30023,
+    "deletedRaw": 14057,
     "people": 11
    },
    "contributors": [
@@ -3395,78 +3395,78 @@
      "login": "oakinh",
      "prs": 41,
      "lines": 12741,
-     "added": 11179,
-     "deleted": 1605
+     "addedRaw": 11179,
+     "deletedRaw": 1605
     },
     {
      "login": "danpelota",
      "prs": 7,
      "lines": 7094,
-     "added": 1649,
-     "deleted": 5467
+     "addedRaw": 1649,
+     "deletedRaw": 5467
     },
     {
      "login": "swain",
      "prs": 7,
      "lines": 5512,
-     "added": 3229,
-     "deleted": 2283
+     "addedRaw": 3229,
+     "deletedRaw": 2283
     },
     {
      "login": "datawithtristan",
      "prs": 13,
      "lines": 4866,
-     "added": 4712,
-     "deleted": 181
+     "addedRaw": 4712,
+     "deletedRaw": 181
     },
     {
      "login": "hhkarimi",
      "prs": 15,
      "lines": 4113,
-     "added": 1984,
-     "deleted": 2131
+     "addedRaw": 1984,
+     "deletedRaw": 2131
     },
     {
      "login": "feliksalbright",
      "prs": 1,
      "lines": 3383,
-     "added": 2502,
-     "deleted": 1032
+     "addedRaw": 2502,
+     "deletedRaw": 1032
     },
     {
      "login": "sanjayr1",
      "prs": 11,
      "lines": 2687,
-     "added": 2260,
-     "deleted": 427
+     "addedRaw": 2260,
+     "deletedRaw": 427
     },
     {
      "login": "stephtea",
      "prs": 16,
      "lines": 2311,
-     "added": 1466,
-     "deleted": 845
+     "addedRaw": 1466,
+     "deletedRaw": 845
     },
     {
      "login": "melecia-gp",
      "prs": 3,
      "lines": 548,
-     "added": 525,
-     "deleted": 23
+     "addedRaw": 525,
+     "deletedRaw": 23
     },
     {
      "login": "bryclevgp",
      "prs": 2,
      "lines": 535,
-     "added": 484,
-     "deleted": 51
+     "addedRaw": 484,
+     "deletedRaw": 51
     },
     {
      "login": "ernestohs",
      "prs": 1,
      "lines": 45,
-     "added": 33,
-     "deleted": 12
+     "addedRaw": 33,
+     "deletedRaw": 12
     }
    ]
   },
@@ -3477,8 +3477,8 @@
    "totals": {
     "prs": 153,
     "lines": 82780,
-    "added": 69592,
-    "deleted": 13283,
+    "addedRaw": 69592,
+    "deletedRaw": 13283,
     "people": 10
    },
    "contributors": [
@@ -3486,71 +3486,71 @@
      "login": "oakinh",
      "prs": 60,
      "lines": 35301,
-     "added": 31109,
-     "deleted": 4192
+     "addedRaw": 31109,
+     "deletedRaw": 4192
     },
     {
      "login": "tomer-tgp",
      "prs": 19,
      "lines": 14159,
-     "added": 13208,
-     "deleted": 953
+     "addedRaw": 13208,
+     "deletedRaw": 953
     },
     {
      "login": "dealvz",
      "prs": 2,
      "lines": 8947,
-     "added": 7461,
-     "deleted": 1486
+     "addedRaw": 7461,
+     "deletedRaw": 1486
     },
     {
      "login": "swain",
      "prs": 15,
      "lines": 7498,
-     "added": 6664,
-     "deleted": 835
+     "addedRaw": 6664,
+     "deletedRaw": 835
     },
     {
      "login": "stephtea",
      "prs": 8,
      "lines": 6082,
-     "added": 3773,
-     "deleted": 2311
+     "addedRaw": 3773,
+     "deletedRaw": 2311
     },
     {
      "login": "sanjayr1",
      "prs": 18,
      "lines": 5396,
-     "added": 3016,
-     "deleted": 2401
+     "addedRaw": 3016,
+     "deletedRaw": 2401
     },
     {
      "login": "hhkarimi",
      "prs": 12,
      "lines": 3417,
-     "added": 2981,
-     "deleted": 505
+     "addedRaw": 2981,
+     "deletedRaw": 505
     },
     {
      "login": "danpelota",
      "prs": 9,
      "lines": 879,
-     "added": 524,
-     "deleted": 355
+     "addedRaw": 524,
+     "deletedRaw": 355
     },
     {
      "login": "datawithtristan",
      "prs": 7,
      "lines": 828,
-     "added": 650,
-     "deleted": 178
+     "addedRaw": 650,
+     "deletedRaw": 178
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 273,
-     "added": 206,
-     "deleted": 67
+     "addedRaw": 206,
+     "deletedRaw": 67
     }
    ]
   },
@@ -3561,8 +3561,8 @@
    "totals": {
     "prs": 220,
     "lines": 128159,
-    "added": 110564,
-    "deleted": 19717,
+    "addedRaw": 110564,
+    "deletedRaw": 19717,
     "people": 14
    },
    "contributors": [
@@ -3570,99 +3570,99 @@
      "login": "oakinh",
      "prs": 74,
      "lines": 41550,
-     "added": 36514,
-     "deleted": 5087
+     "addedRaw": 36514,
+     "deletedRaw": 5087
     },
     {
      "login": "stephtea",
      "prs": 35,
      "lines": 20708,
-     "added": 20401,
-     "deleted": 771
+     "addedRaw": 20401,
+     "deletedRaw": 771
     },
     {
      "login": "sanjayr1",
      "prs": 14,
      "lines": 20142,
-     "added": 15479,
-     "deleted": 5960
+     "addedRaw": 15479,
+     "deletedRaw": 5960
     },
     {
      "login": "swain",
      "prs": 24,
      "lines": 14445,
-     "added": 13473,
-     "deleted": 972
+     "addedRaw": 13473,
+     "deletedRaw": 972
     },
     {
      "login": "tomer-tgp",
      "prs": 33,
      "lines": 12401,
-     "added": 10671,
-     "deleted": 1730
+     "addedRaw": 10671,
+     "deletedRaw": 1730
     },
     {
      "login": "danpelota",
      "prs": 18,
      "lines": 5749,
-     "added": 2116,
-     "deleted": 3939
+     "addedRaw": 2116,
+     "deletedRaw": 3939
     },
     {
      "login": "dealvz",
      "prs": 1,
      "lines": 5214,
-     "added": 5119,
-     "deleted": 95
+     "addedRaw": 5119,
+     "deletedRaw": 95
     },
     {
      "login": "hhkarimi",
      "prs": 7,
      "lines": 4388,
-     "added": 3808,
-     "deleted": 584
+     "addedRaw": 3808,
+     "deletedRaw": 584
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 2007,
-     "added": 1972,
-     "deleted": 35
+     "addedRaw": 1972,
+     "deletedRaw": 35
     },
     {
      "login": "melecia-gp",
      "prs": 6,
      "lines": 914,
-     "added": 756,
-     "deleted": 158
+     "addedRaw": 756,
+     "deletedRaw": 158
     },
     {
      "login": "emilybgoodpartyorg",
      "prs": 1,
      "lines": 229,
-     "added": 30,
-     "deleted": 199
+     "addedRaw": 30,
+     "deletedRaw": 199
     },
     {
      "login": "datawithtristan",
      "prs": 2,
      "lines": 226,
-     "added": 136,
-     "deleted": 90
+     "addedRaw": 136,
+     "deletedRaw": 90
     },
     {
      "login": "jagoda",
      "prs": 1,
      "lines": 162,
-     "added": 77,
-     "deleted": 85
+     "addedRaw": 77,
+     "deletedRaw": 85
     },
     {
      "login": "fromjustin",
      "prs": 1,
      "lines": 24,
-     "added": 12,
-     "deleted": 12
+     "addedRaw": 12,
+     "deletedRaw": 12
     }
    ]
   },
@@ -3673,8 +3673,8 @@
    "totals": {
     "prs": 211,
     "lines": 183276,
-    "added": 112133,
-    "deleted": 71301,
+    "addedRaw": 112133,
+    "deletedRaw": 71301,
     "people": 11
    },
    "contributors": [
@@ -3682,78 +3682,78 @@
      "login": "oakinh",
      "prs": 26,
      "lines": 57298,
-     "added": 33045,
-     "deleted": 24289
+     "addedRaw": 33045,
+     "deletedRaw": 24289
     },
     {
      "login": "tomer-tgp",
      "prs": 88,
      "lines": 52229,
-     "added": 36727,
-     "deleted": 15502
+     "addedRaw": 36727,
+     "deletedRaw": 15502
     },
     {
      "login": "swain",
      "prs": 24,
      "lines": 36563,
-     "added": 14999,
-     "deleted": 21645
+     "addedRaw": 14999,
+     "deletedRaw": 21645
     },
     {
      "login": "stephtea",
      "prs": 29,
      "lines": 14498,
-     "added": 12028,
-     "deleted": 2470
+     "addedRaw": 12028,
+     "deletedRaw": 2470
     },
     {
      "login": "dealvz",
      "prs": 7,
      "lines": 7039,
-     "added": 5824,
-     "deleted": 1215
+     "addedRaw": 5824,
+     "deletedRaw": 1215
     },
     {
      "login": "hhkarimi",
      "prs": 14,
      "lines": 6417,
-     "added": 2366,
-     "deleted": 4053
+     "addedRaw": 2366,
+     "deletedRaw": 4053
     },
     {
      "login": "fromjustin",
      "prs": 1,
      "lines": 4767,
-     "added": 2931,
-     "deleted": 1836
+     "addedRaw": 2931,
+     "deletedRaw": 1836
     },
     {
      "login": "sanjayr1",
      "prs": 16,
      "lines": 2631,
-     "added": 2553,
-     "deleted": 111
+     "addedRaw": 2553,
+     "deletedRaw": 111
     },
     {
      "login": "danpelota",
      "prs": 3,
      "lines": 1359,
-     "added": 1241,
-     "deleted": 124
+     "addedRaw": 1241,
+     "deletedRaw": 124
     },
     {
      "login": "bryclevgp",
      "prs": 2,
      "lines": 292,
-     "added": 236,
-     "deleted": 56
+     "addedRaw": 236,
+     "deletedRaw": 56
     },
     {
      "login": "emilybgoodpartyorg",
      "prs": 1,
      "lines": 183,
-     "added": 183,
-     "deleted": 0
+     "addedRaw": 183,
+     "deletedRaw": 0
     }
    ]
   },
@@ -3764,8 +3764,8 @@
    "totals": {
     "prs": 113,
     "lines": 79356,
-    "added": 52901,
-    "deleted": 28560,
+    "addedRaw": 52901,
+    "deletedRaw": 28560,
     "people": 12
    },
    "contributors": [
@@ -3773,85 +3773,85 @@
      "login": "swain",
      "prs": 6,
      "lines": 18248,
-     "added": 3209,
-     "deleted": 15039
+     "addedRaw": 3209,
+     "deletedRaw": 15039
     },
     {
      "login": "tomer-tgp",
      "prs": 26,
      "lines": 14289,
-     "added": 14033,
-     "deleted": 300
+     "addedRaw": 14033,
+     "deletedRaw": 300
     },
     {
      "login": "datawithtristan",
      "prs": 9,
      "lines": 13591,
-     "added": 13129,
-     "deleted": 462
+     "addedRaw": 13129,
+     "deletedRaw": 462
     },
     {
      "login": "sanjayr1",
      "prs": 12,
      "lines": 11018,
-     "added": 6057,
-     "deleted": 7022
+     "addedRaw": 6057,
+     "deletedRaw": 7022
     },
     {
      "login": "oakinh",
      "prs": 8,
      "lines": 9364,
-     "added": 8967,
-     "deleted": 397
+     "addedRaw": 8967,
+     "deletedRaw": 397
     },
     {
      "login": "bryclevgp",
      "prs": 16,
      "lines": 6792,
-     "added": 3267,
-     "deleted": 3525
+     "addedRaw": 3267,
+     "deletedRaw": 3525
     },
     {
      "login": "hhkarimi",
      "prs": 17,
      "lines": 2369,
-     "added": 1350,
-     "deleted": 1019
+     "addedRaw": 1350,
+     "deletedRaw": 1019
     },
     {
      "login": "fromjustin",
      "prs": 2,
      "lines": 1543,
-     "added": 919,
-     "deleted": 624
+     "addedRaw": 919,
+     "deletedRaw": 624
     },
     {
      "login": "dealvz",
      "prs": 6,
      "lines": 984,
-     "added": 916,
-     "deleted": 68
+     "addedRaw": 916,
+     "deletedRaw": 68
     },
     {
      "login": "stephtea",
      "prs": 3,
      "lines": 537,
-     "added": 499,
-     "deleted": 38
+     "addedRaw": 499,
+     "deletedRaw": 38
     },
     {
      "login": "danpelota",
      "prs": 5,
      "lines": 434,
-     "added": 386,
-     "deleted": 48
+     "addedRaw": 386,
+     "deletedRaw": 48
     },
     {
      "login": "emilybgoodpartyorg",
      "prs": 3,
      "lines": 187,
-     "added": 169,
-     "deleted": 18
+     "addedRaw": 169,
+     "deletedRaw": 18
     }
    ]
   },
@@ -3862,8 +3862,8 @@
    "totals": {
     "prs": 237,
     "lines": 130136,
-    "added": 120096,
-    "deleted": 10786,
+    "addedRaw": 120096,
+    "deletedRaw": 10786,
     "people": 17
    },
    "contributors": [
@@ -3871,120 +3871,120 @@
      "login": "oakinh",
      "prs": 66,
      "lines": 38093,
-     "added": 35992,
-     "deleted": 2188
+     "addedRaw": 35992,
+     "deletedRaw": 2188
     },
     {
      "login": "emilybgoodpartyorg",
      "prs": 22,
      "lines": 35242,
-     "added": 33954,
-     "deleted": 1288
+     "addedRaw": 33954,
+     "deletedRaw": 1288
     },
     {
      "login": "bryclevgp",
      "prs": 27,
      "lines": 21101,
-     "added": 19504,
-     "deleted": 1601
+     "addedRaw": 19504,
+     "deletedRaw": 1601
     },
     {
      "login": "tomer-tgp",
      "prs": 35,
      "lines": 9797,
-     "added": 8730,
-     "deleted": 1069
+     "addedRaw": 8730,
+     "deletedRaw": 1069
     },
     {
      "login": "dealvz",
      "prs": 18,
      "lines": 8687,
-     "added": 7928,
-     "deleted": 759
+     "addedRaw": 7928,
+     "deletedRaw": 759
     },
     {
      "login": "sanjayr1",
      "prs": 24,
      "lines": 6011,
-     "added": 3986,
-     "deleted": 2027
+     "addedRaw": 3986,
+     "deletedRaw": 2027
     },
     {
      "login": "hhkarimi",
      "prs": 11,
      "lines": 2766,
-     "added": 2708,
-     "deleted": 58
+     "addedRaw": 2708,
+     "deletedRaw": 58
     },
     {
      "login": "stephtea",
      "prs": 6,
      "lines": 2105,
-     "added": 2017,
-     "deleted": 88
+     "addedRaw": 2017,
+     "deletedRaw": 88
     },
     {
      "login": "jagoda",
      "prs": 7,
      "lines": 1636,
-     "added": 1530,
-     "deleted": 106
+     "addedRaw": 1530,
+     "deletedRaw": 106
     },
     {
      "login": "fromjustin",
      "prs": 8,
      "lines": 1563,
-     "added": 930,
-     "deleted": 1284
+     "addedRaw": 930,
+     "deletedRaw": 1284
     },
     {
      "login": "datawithtristan",
      "prs": 4,
      "lines": 815,
-     "added": 762,
-     "deleted": 53
+     "addedRaw": 762,
+     "deletedRaw": 53
     },
     {
      "login": "nigel-gp",
      "prs": 1,
      "lines": 736,
-     "added": 636,
-     "deleted": 100
+     "addedRaw": 636,
+     "deletedRaw": 100
     },
     {
      "login": "jacknagel-hs",
      "prs": 1,
      "lines": 682,
-     "added": 630,
-     "deleted": 52
+     "addedRaw": 630,
+     "deletedRaw": 52
     },
     {
      "login": "melecia-gp",
      "prs": 4,
      "lines": 544,
-     "added": 514,
-     "deleted": 30
+     "addedRaw": 514,
+     "deletedRaw": 30
     },
     {
      "login": "danpelota",
      "prs": 1,
      "lines": 228,
-     "added": 172,
-     "deleted": 56
+     "addedRaw": 172,
+     "deletedRaw": 56
     },
     {
      "login": "samuelgoodparty",
      "prs": 1,
      "lines": 98,
-     "added": 93,
-     "deleted": 5
+     "addedRaw": 93,
+     "deletedRaw": 5
     },
     {
      "login": "swain",
      "prs": 1,
      "lines": 32,
-     "added": 10,
-     "deleted": 22
+     "addedRaw": 10,
+     "deletedRaw": 22
     }
    ]
   },
@@ -3993,10 +3993,10 @@
    "workingDays": 2,
    "partial": true,
    "totals": {
-    "prs": 58,
-    "lines": 129449,
-    "added": 33486,
-    "deleted": 96011,
+    "prs": 59,
+    "lines": 129844,
+    "addedRaw": 33878,
+    "deletedRaw": 96014,
     "people": 10
    },
    "contributors": [
@@ -4004,71 +4004,71 @@
      "login": "fromjustin",
      "prs": 4,
      "lines": 96431,
-     "added": 5998,
-     "deleted": 90434
+     "addedRaw": 5998,
+     "deletedRaw": 90434
     },
     {
      "login": "stephtea",
      "prs": 20,
      "lines": 16617,
-     "added": 15976,
-     "deleted": 641
+     "addedRaw": 15976,
+     "deletedRaw": 641
     },
     {
      "login": "datawithtristan",
      "prs": 5,
      "lines": 8595,
-     "added": 4698,
-     "deleted": 3944
+     "addedRaw": 4698,
+     "deletedRaw": 3944
     },
     {
      "login": "tomer-tgp",
      "prs": 8,
      "lines": 2023,
-     "added": 1839,
-     "deleted": 184
+     "addedRaw": 1839,
+     "deletedRaw": 184
     },
     {
      "login": "jagoda",
      "prs": 7,
      "lines": 1576,
-     "added": 1436,
-     "deleted": 140
+     "addedRaw": 1436,
+     "deletedRaw": 140
     },
     {
      "login": "sanjayr1",
      "prs": 8,
      "lines": 1272,
-     "added": 1155,
-     "deleted": 117
+     "addedRaw": 1155,
+     "deletedRaw": 117
     },
     {
      "login": "bryclevgp",
      "prs": 3,
      "lines": 1246,
-     "added": 1108,
-     "deleted": 138
+     "addedRaw": 1108,
+     "deletedRaw": 138
     },
     {
      "login": "dealvz",
-     "prs": 1,
-     "lines": 613,
-     "added": 487,
-     "deleted": 126
+     "prs": 2,
+     "lines": 1008,
+     "addedRaw": 879,
+     "deletedRaw": 129
     },
     {
      "login": "samuelgoodparty",
      "prs": 1,
      "lines": 606,
-     "added": 320,
-     "deleted": 286
+     "addedRaw": 320,
+     "deletedRaw": 286
     },
     {
      "login": "melecia-gp",
      "prs": 1,
      "lines": 470,
-     "added": 469,
-     "deleted": 1
+     "addedRaw": 469,
+     "deletedRaw": 1
     }
    ]
   }

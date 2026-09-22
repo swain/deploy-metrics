@@ -123,9 +123,18 @@ Roughly 2 MB for a year at current volume.
 
 ### `data/history.json` — what the page reads
 
-Per ISO week: the working-day denominator, org totals, and an array of
-per-contributor rows carrying qualifying pull requests, qualifying lines,
-additions and deletions. Plus a top-level `generatedAt`.
+Per ISO week: the working-day denominator, whether the week is still in
+progress, org totals, and an array of per-contributor rows carrying qualifying
+pull requests, qualifying lines, additions and deletions. Plus, at top level,
+`generatedAt`, the sorted contributor index, the per-bot totals held out of the
+org figures, and `machineStateFiles`.
+
+`machineStateFiles` is the one place a file path is committed, and it is a
+deliberate exception to "no file lists are stored". Machine state is derived
+rather than enumerated, so without the resulting list the rule cannot be
+audited: there is no way to see what the detector caught, or to notice it
+catching something hand-maintained. The paths are bot state files and CI
+configuration, never attributed to a contributor.
 
 ## Aggregation
 
@@ -197,3 +206,11 @@ and the six known state files. The network layer is not tested.
 - **One large import can swamp a week.** A cross-repo relocation arrives as
   pure additions and no rename filter catches it, because the files came from a
   different repository.
+- **A week could exceed the search cap.** `search(type: ISSUE)` returns at most
+  1,000 results however it is paged, and the collector throws rather than
+  accepting a capped page. At 2026 volume a week is around 240 merges, so the
+  ceiling is several years out at current growth, but it is a hard stop when it
+  arrives: every nightly run aborts at the same week until the window is split.
+  The remedy is to fetch that week as two windows (Monday to Wednesday, Thursday
+  to Sunday) and concatenate, which the cache format already tolerates because a
+  week file is just an array of rows.

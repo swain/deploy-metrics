@@ -6,15 +6,15 @@ export interface ContributorWeek {
   login: string
   prs: number
   lines: number
-  added: number
-  deleted: number
+  addedRaw: number
+  deletedRaw: number
 }
 
 export interface WeekSummary {
   week: string
   workingDays: number
   partial: boolean
-  totals: { prs: number; lines: number; added: number; deleted: number; people: number }
+  totals: { prs: number; lines: number; addedRaw: number; deletedRaw: number; people: number }
   contributors: ContributorWeek[]
 }
 
@@ -44,7 +44,7 @@ export interface History {
 }
 
 const blank = (login: string): ContributorWeek =>
-  ({ login, prs: 0, lines: 0, added: 0, deleted: 0 })
+  ({ login, prs: 0, lines: 0, addedRaw: 0, deletedRaw: 0 })
 
 export const buildHistory = (
   weeks: Map<string, CachedPr[]>,
@@ -76,8 +76,8 @@ export const buildHistory = (
       const entry = byLogin.get(row.login) ?? blank(row.login)
       entry.prs += 1
       entry.lines += row.qlocBase
-      entry.added += row.added
-      entry.deleted += row.deleted
+      entry.addedRaw += row.added
+      entry.deletedRaw += row.deleted
       byLogin.set(row.login, entry)
       people.add(row.login)
     }
@@ -86,10 +86,12 @@ export const buildHistory = (
     const partial = key === currentWeekKey
     const elapsed = partial ? workingDaysElapsed(key, holidays, now) : workingDays(key, holidays)
 
-    // A partial week with zero elapsed working days (every weekday so far is a
-    // holiday) has no rate yet - plotting it would mean dividing by a working
-    // day that never happened. It reappears once a real working day lands.
-    if (partial && elapsed === 0) continue
+    // A week with zero working days has no rate. For the in-progress week that
+    // means no weekday has elapsed yet; for a settled week it means every
+    // weekday was a holiday. Either way, plotting it would divide by a working
+    // day that never happened, so the week is omitted rather than given an
+    // invented denominator.
+    if (elapsed === 0) continue
 
     summaries.push({
       week: key,
@@ -98,8 +100,8 @@ export const buildHistory = (
       totals: {
         prs: contributors.reduce((n, c) => n + c.prs, 0),
         lines: contributors.reduce((n, c) => n + c.lines, 0),
-        added: contributors.reduce((n, c) => n + c.added, 0),
-        deleted: contributors.reduce((n, c) => n + c.deleted, 0),
+        addedRaw: contributors.reduce((n, c) => n + c.addedRaw, 0),
+        deletedRaw: contributors.reduce((n, c) => n + c.deletedRaw, 0),
         people: contributors.length,
       },
       contributors,

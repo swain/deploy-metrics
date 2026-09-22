@@ -20,11 +20,17 @@ const currentWeek = isoWeekKey(new Date().toISOString())
 const wanted = weeksBetween(START_WEEK, currentWeek)
 mkdirSync(WEEKS_DIR, { recursive: true })
 
+// The last time a week is fetched as "current" is Sunday 22:00 UTC, two hours
+// before the ISO week closes, so a merge in that window is never seen as
+// current and would otherwise be skipped forever once the file exists. Treat
+// the two most recent weeks as unsettled so both get refetched.
+const unsettled = new Set(wanted.slice(-2))
+
 for (const key of wanted) {
   const path = join(WEEKS_DIR, `${key}.json`)
   // A finished week never changes, so it is fetched once. The current week is
   // always refetched, because it is still filling up.
-  if (existsSync(path) && key !== currentWeek) continue
+  if (existsSync(path) && !unsettled.has(key)) continue
   const rows = (await fetchWeek(weekWindow(key), token)).map(toCached)
   // Write only on success: a partial file would be cached as if it were whole.
   // Write-then-rename so a process killed mid-write can't leave a truncated
