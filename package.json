@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "GH_TOKEN=${GH_TOKEN} npx tsx update.ts --local",
+    "collect": "tsx src/collect.ts",
+    "render": "tsx src/render.ts",
+    "build": "npm run collect && npm run render",
+    "open": "npm run render && open index.html",
     "test": "node --import tsx --test test/*.test.ts"
   },
   "repository": {
