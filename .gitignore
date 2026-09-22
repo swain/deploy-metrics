@@ -3,3 +3,5 @@ dist/
 .remember
 .worktrees/
 .superpowers/
+.vercel
+.vercel-out/
