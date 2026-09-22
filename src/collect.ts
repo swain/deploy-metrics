@@ -7,7 +7,7 @@ import { buildHistory } from './aggregate.ts'
 import { isoWeekKey, weekWindow, weeksBetween } from './weeks.ts'
 
 const START_WEEK = '2026-W02'
-const BOTS = new Set(['omni-automaton', 'delegate-gp', 'dependabot', 'github-actions', 'claude'])
+const BOTS = new Set(['omni-automaton', 'delegate-gp', 'dependabot', 'github-actions', 'claude', 'gp-sdk-release-bot', 'linter-pm'])
 const WEEKS_DIR = 'data/weeks'
 
 const token = process.env.GH_TOKEN
