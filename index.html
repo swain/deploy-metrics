@@ -2,242 +2,4423 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Time To Deploy Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Throughput</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; max-width: 1200px; margin: 0 auto; }
-  h1 { font-size: 28px; margin-bottom: 4px; color: #f0f6fc; }
-  .subtitle { color: #8b949e; font-size: 14px; margin-bottom: 24px; }
-  .description { color: #c9d1d9; font-size: 14px; line-height: 1.6; margin-bottom: 32px; max-width: 720px; }
-  .stats { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
-  .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; min-width: 200px; }
-  .stat-card .label { font-size: 12px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-  .stat-card .value { font-size: 32px; font-weight: 700; color: #f0f6fc; }
-  .stat-card .unit { font-size: 14px; color: #8b949e; }
-  .stat-card .trend { font-size: 14px; margin-top: 4px; }
-  .trend.down { color: #3fb950; }
-  .trend.up { color: #f85149; }
-  .trend.flat { color: #8b949e; }
-  .chart-container { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; margin-bottom: 32px; }
-  .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-  .chart-title { font-size: 16px; font-weight: 600; color: #f0f6fc; }
-  .range-btns { display: flex; gap: 4px; }
-  .range-btn { padding: 5px 12px; border-radius: 6px; border: 1px solid #30363d; background: transparent; color: #8b949e; cursor: pointer; font-size: 13px; }
-  .range-btn.active { background: #21262d; color: #f0f6fc; border-color: #58a6ff; }
-  .range-btn:hover { border-color: #58a6ff; }
-  details { margin-bottom: 32px; }
-  summary { font-size: 16px; font-weight: 600; color: #8b949e; cursor: pointer; padding: 12px 0; }
-  summary:hover { color: #f0f6fc; }
-  table { width: 100%; border-collapse: collapse; background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; margin-top: 12px; }
-  th { text-align: left; padding: 10px 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #8b949e; border-bottom: 1px solid #30363d; background: #161b22; position: sticky; top: 0; }
-  td { padding: 8px 12px; font-size: 13px; border-bottom: 1px solid #21262d; }
-  tr:last-child td { border-bottom: none; }
-  .pending { color: #8b949e; font-style: italic; }
+  :root {
+    --surface: #fcfcfb;
+    --page: #f1f2f3;
+    --ink: #0d0e0f;
+    --ink-secondary: #4f5356;
+    --muted: #83878a;
+    --gridline: #e2e4e5;
+    --axis: #c2c5c7;
+    --series: #2a78d6;
+    --warn-bg: #fff1ee;
+    --warn-border: #d94f2b;
+    --warn-ink: #7a1f0d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface: #191a1b;
+      --page: #0b0c0d;
+      --ink: #ffffff;
+      --ink-secondary: #c0c3c4;
+      --muted: #83878a;
+      --gridline: #2a2c2d;
+      --axis: #3a3c3d;
+      --series: #3987e5;
+      --warn-bg: #2a1510;
+      --warn-border: #d9633f;
+      --warn-ink: #ffb4a0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px 16px 48px;
+  }
+  #stale {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-ink);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  #stale[hidden] { display: none; }
+  header h1 {
+    font-size: 22px;
+    margin: 0 0 4px;
+  }
+  header .generated {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 16px;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--gridline);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 120px;
+    flex: 1 1 120px;
+  }
+  .stat .value {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .stat .label {
+    color: var(--ink-secondary);
+    font-size: 12px;
+  }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--gridline);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .panel h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    margin: 0 0 8px;
+  }
+  .panel svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .people-section h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    margin: 24px 0 8px;
+  }
+  #people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  #people button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    background: var(--surface);
+    border: 1px solid var(--gridline);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+  }
+  #people button .chip-login {
+    font-weight: 600;
+    font-size: 13px;
+  }
+  #people button .chip-lines {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  #people button[aria-pressed="true"] {
+    border-color: var(--series);
+    background: color-mix(in srgb, var(--series) 12%, var(--surface));
+  }
+  #people button[aria-pressed="true"] .chip-login {
+    color: var(--series);
+  }
+  button:focus-visible {
+    outline: 2px solid var(--series);
+    outline-offset: 2px;
+  }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .axis-tick { stroke: var(--axis); stroke-width: 1; }
+  .axis-label { fill: var(--muted); font-size: 11px; }
+  .series-line { fill: none; stroke: var(--series); stroke-width: 2; }
+  .series-dot { fill: var(--series); }
+  .reference-line { fill: none; stroke: var(--muted); stroke-width: 1.5; opacity: 0.6; }
 </style>
 </head>
 <body>
-<h1>Time to Deploy</h1>
-<p class="subtitle" id="subtitle">Loading...</p>
-<p class="description">
-  <strong>TTD (Time to Deploy)</strong> measures how long it takes for a pull request to go from being merged into <code>develop</code> to being deployed to production via <code>master</code>.
-  This tracks the full promotion cycle across all repositories: develop &rarr; qa &rarr; master.
-  The chart shows a 4-week rolling average to smooth out weekly variation from weekends and release cadence.
-</p>
-
-<div class="stats" id="stats"></div>
-
-<div class="chart-container">
-  <div class="chart-header">
-    <div class="chart-title">TTD Over Time (4-week rolling avg, hours)</div>
-    <div class="range-btns" id="range-btns">
-      <button class="range-btn" data-days="30">30d</button>
-      <button class="range-btn" data-days="60">60d</button>
-      <button class="range-btn active" data-days="90">90d</button>
-      <button class="range-btn" data-days="180">180d</button>
-    </div>
+<div class="wrap">
+  <div id="stale" role="alert" hidden>
+    Stale data. The nightly collector has not run in over 48 hours, so these numbers may no longer reflect reality.
   </div>
-  <canvas id="chart" height="100"></canvas>
+  <header>
+    <h1>Contributor throughput</h1>
+    <p class="generated" id="generated"></p>
+    <div class="stats" id="stats"></div>
+  </header>
+  <section class="panel">
+    <h2>Qualifying lines per working day</h2>
+    <svg id="lines" viewBox="0 0 920 220" role="img" aria-label="Qualifying lines per working day"></svg>
+  </section>
+  <section class="panel">
+    <h2>Qualifying pull requests per working day</h2>
+    <svg id="prs" viewBox="0 0 920 220" role="img" aria-label="Qualifying pull requests per working day"></svg>
+  </section>
+  <section class="people-section">
+    <h2>Contributors</h2>
+    <div id="people"></div>
+  </section>
 </div>
-
-<details>
-  <summary>PR Details</summary>
-  <table>
-    <thead><tr><th>Repo</th><th>PR</th><th>Author</th><th>Merged to develop</th><th>Deployed to master</th><th>TTD</th></tr></thead>
-    <tbody id="pr-table"></tbody>
-  </table>
-</details>
-
 <script>
-let chart = null
-let allData = null
-
-const formatDuration = (hours) => {
-  if (hours === null || isNaN(hours)) return '-'
-  return Math.round(hours) + 'h'
-}
-
-const rollingAvg = (arr, window) => {
-  return arr.map((_, i) => {
-    const start = Math.max(0, i - window + 1)
-    const slice = arr.slice(start, i + 1).filter(v => v !== null)
-    return slice.length > 0 ? Math.round(slice.reduce((s, v) => s + v, 0) / slice.length * 10) / 10 : null
-  })
-}
-
-fetch('metrics.json?t=' + Date.now())
-  .then(r => r.json())
-  .then(data => {
-    allData = data
-    document.getElementById('subtitle').textContent =
-      'Last updated: ' + new Date(data.generated_at).toLocaleString()
-    renderAll(90)
-    document.getElementById('range-btns').addEventListener('click', e => {
-      const btn = e.target.closest('.range-btn')
-      if (!btn) return
-      document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'))
-      btn.classList.add('active')
-      renderAll(parseInt(btn.dataset.days))
-    })
-  })
-
-function renderAll(days) {
-  const cutoff = new Date(Date.now() - days * 86400000).toISOString()
-  const filteredPRs = allData.prs.filter(p => p.merged_to_develop_at >= cutoff)
-  const allWeeks = allData.weekly_averages
-  const allMean = rollingAvg(allWeeks.map(w => w.all_repos.mean_hours), 4)
-  const allMedian = rollingAvg(allWeeks.map(w => w.all_repos.median_hours), 4)
-  const startIdx = allWeeks.findIndex(w => w.week_start >= cutoff.slice(0, 10))
-  const meanData = allMean.slice(startIdx)
-  const medianData = allMedian.slice(startIdx)
-  const labels = allWeeks.slice(startIdx).map(w => w.week_start)
-  renderStats(filteredPRs, meanData, medianData)
-  renderChart(labels, meanData, medianData)
-  renderTable(filteredPRs)
-}
-
-function renderStats(prs, meanData, medianData) {
-  const deployed = prs.filter(p => p.mttd_hours !== null)
-  const pending = prs.filter(p => p.mttd_hours === null)
-  const avgHours = deployed.length > 0
-    ? deployed.reduce((s, p) => s + p.mttd_hours, 0) / deployed.length
-    : null
-  const medianHours = deployed.length > 0
-    ? (() => {
-        const sorted = deployed.map(p => p.mttd_hours).sort((a, b) => a - b)
-        const mid = Math.floor(sorted.length / 2)
-        return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
-      })()
-    : null
-
-  const trendHtml = (first, last) => {
-    if (first === null || last === null) return ''
-    const diff = Math.round(last - first)
-    const cls = diff < 0 ? 'down' : diff > 0 ? 'up' : 'flat'
-    const arrow = diff < 0 ? 'down ' : diff > 0 ? 'up ' : '~ '
-    return '<div class="trend ' + cls + '">' + arrow + Math.abs(diff) + 'h over interval</div>'
-  }
-
-  const firstMean = meanData.length > 0 ? meanData[0] : null
-  const lastMean = meanData.length > 0 ? meanData[meanData.length - 1] : null
-  const firstMedian = medianData.length > 0 ? medianData[0] : null
-  const lastMedian = medianData.length > 0 ? medianData[medianData.length - 1] : null
-
-  document.getElementById('stats').innerHTML =
-    '<div class="stat-card"><div class="label">Mean TTD</div>' +
-    '<div class="value">' + formatDuration(avgHours) + '</div>' +
-    trendHtml(firstMean, lastMean) + '</div>' +
-    '<div class="stat-card"><div class="label">Median TTD</div>' +
-    '<div class="value">' + formatDuration(medianHours) + '</div>' +
-    trendHtml(firstMedian, lastMedian) + '</div>' +
-    '<div class="stat-card"><div class="label">PRs Measured</div>' +
-    '<div class="value">' + deployed.length + '</div>' +
-    '<div class="unit">' + pending.length + ' pending</div></div>'
-}
-
-function renderChart(labels, meanData, medianData) {
-
-  const datasets = [{
-    label: 'Mean (4-wk rolling)',
-    data: meanData,
-    borderColor: '#58a6ff',
-    backgroundColor: 'rgba(88,166,255,0.1)',
-    borderWidth: 2,
-    tension: 0.3,
-    fill: true,
-    pointRadius: 3,
-  }, {
-    label: 'Median (4-wk rolling)',
-    data: medianData,
-    borderColor: '#3fb950',
-    borderWidth: 2,
-    tension: 0.3,
-    pointRadius: 3,
-    borderDash: [5, 3],
-  }]
-
-  if (chart) {
-    chart.data.labels = labels
-    chart.data.datasets = datasets
-    chart.update()
-    return
-  }
-
-  chart = new Chart(document.getElementById('chart').getContext('2d'), {
-    type: 'line',
-    data: { labels, datasets },
-    options: {
-      responsive: true,
-      interaction: { mode: 'index', intersect: false },
-      scales: {
-        x: {
-          grid: { color: '#21262d' },
-          ticks: { color: '#8b949e' },
-        },
-        y: {
-          beginAtZero: true,
-          grid: { color: '#21262d' },
-          ticks: { color: '#8b949e', callback: v => v + 'h' },
-          title: { display: true, text: 'Hours', color: '#8b949e' },
-        },
-      },
-      plugins: {
-        legend: { labels: { color: '#c9d1d9' } },
-        tooltip: {
-          callbacks: {
-            label: ctx => ctx.dataset.label + ': ' + ctx.parsed.y + 'h',
-          },
-        },
-      },
+const HISTORY = {
+ "generatedAt": "2026-09-22T14:50:25.767Z",
+ "contributors": [
+  "Collin-GP",
+  "Collin-Park",
+  "RavenHursT",
+  "awardquick",
+  "bryclevgp",
+  "danpelota",
+  "datawithtristan",
+  "dealvz",
+  "emilybgoodpartyorg",
+  "ernestohs",
+  "eugenebazdyriev",
+  "feliksalbright",
+  "fromjustin",
+  "gp-sdk-release-bot",
+  "hhkarimi",
+  "jacknagel-hs",
+  "jagoda",
+  "kmcost",
+  "linter-pm",
+  "melecia-gp",
+  "nigel-gp",
+  "oakinh",
+  "patrick-tgp",
+  "samuelgoodparty",
+  "sanjayr1",
+  "selta-goodparty",
+  "stephtea",
+  "swain",
+  "tomer-tgp",
+  "tonypham-goodparty"
+ ],
+ "weeks": [
+  {
+   "week": "2026-W02",
+   "workingDays": 5,
+   "totals": {
+    "prs": 10,
+    "lines": 6912,
+    "added": 6727,
+    "deleted": 2099,
+    "people": 7
+   },
+   "contributors": [
+    {
+     "login": "RavenHursT",
+     "prs": 2,
+     "lines": 4418,
+     "added": 2802,
+     "deleted": 1618
     },
-  })
+    {
+     "login": "datawithtristan",
+     "prs": 1,
+     "lines": 803,
+     "added": 539,
+     "deleted": 264
+    },
+    {
+     "login": "awardquick",
+     "prs": 1,
+     "lines": 637,
+     "added": 629,
+     "deleted": 23
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 1,
+     "lines": 526,
+     "added": 608,
+     "deleted": 10
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 363,
+     "added": 1705,
+     "deleted": 126
+    },
+    {
+     "login": "swain",
+     "prs": 3,
+     "lines": 161,
+     "added": 440,
+     "deleted": 58
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 1,
+     "lines": 4,
+     "added": 4,
+     "deleted": 0
+    }
+   ]
+  },
+  {
+   "week": "2026-W03",
+   "workingDays": 5,
+   "totals": {
+    "prs": 37,
+    "lines": 15235,
+    "added": 16502,
+    "deleted": 7418,
+    "people": 9
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 13,
+     "lines": 3864,
+     "added": 5230,
+     "deleted": 4049
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 3441,
+     "added": 3391,
+     "deleted": 50
+    },
+    {
+     "login": "stephtea",
+     "prs": 7,
+     "lines": 3376,
+     "added": 4016,
+     "deleted": 2588
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 1,
+     "lines": 1509,
+     "added": 1036,
+     "deleted": 473
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 2,
+     "lines": 1050,
+     "added": 1064,
+     "deleted": 28
+    },
+    {
+     "login": "danpelota",
+     "prs": 5,
+     "lines": 1001,
+     "added": 995,
+     "deleted": 6
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 694,
+     "added": 670,
+     "deleted": 24
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 1,
+     "lines": 194,
+     "added": 11,
+     "deleted": 183
+    },
+    {
+     "login": "dealvz",
+     "prs": 3,
+     "lines": 106,
+     "added": 89,
+     "deleted": 17
+    }
+   ]
+  },
+  {
+   "week": "2026-W04",
+   "workingDays": 4,
+   "totals": {
+    "prs": 42,
+    "lines": 41715,
+    "added": 46156,
+    "deleted": 41407,
+    "people": 8
+   },
+   "contributors": [
+    {
+     "login": "RavenHursT",
+     "prs": 4,
+     "lines": 11940,
+     "added": 6570,
+     "deleted": 5370
+    },
+    {
+     "login": "swain",
+     "prs": 20,
+     "lines": 11360,
+     "added": 23294,
+     "deleted": 27958
+    },
+    {
+     "login": "oakinh",
+     "prs": 2,
+     "lines": 9573,
+     "added": 7510,
+     "deleted": 2771
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 3,
+     "lines": 4543,
+     "added": 5665,
+     "deleted": 4126
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 3158,
+     "added": 2052,
+     "deleted": 1106
+    },
+    {
+     "login": "awardquick",
+     "prs": 4,
+     "lines": 1097,
+     "added": 1028,
+     "deleted": 69
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 29,
+     "added": 24,
+     "deleted": 5
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 15,
+     "added": 13,
+     "deleted": 2
+    }
+   ]
+  },
+  {
+   "week": "2026-W05",
+   "workingDays": 5,
+   "totals": {
+    "prs": 67,
+    "lines": 19157,
+    "added": 18038,
+    "deleted": 9442,
+    "people": 12
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 32,
+     "lines": 7246,
+     "added": 3056,
+     "deleted": 4378
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 3,
+     "lines": 4246,
+     "added": 6529,
+     "deleted": 115
+    },
+    {
+     "login": "oakinh",
+     "prs": 6,
+     "lines": 1789,
+     "added": 1593,
+     "deleted": 206
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 1466,
+     "added": 763,
+     "deleted": 703
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 3,
+     "lines": 1077,
+     "added": 994,
+     "deleted": 83
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 1,
+     "lines": 1010,
+     "added": 0,
+     "deleted": 1010
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 4,
+     "lines": 967,
+     "added": 4009,
+     "deleted": 2684
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 4,
+     "lines": 617,
+     "added": 466,
+     "deleted": 151
+    },
+    {
+     "login": "awardquick",
+     "prs": 3,
+     "lines": 248,
+     "added": 151,
+     "deleted": 98
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 239,
+     "added": 236,
+     "deleted": 3
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 239,
+     "added": 231,
+     "deleted": 8
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 2,
+     "lines": 13,
+     "added": 10,
+     "deleted": 3
+    }
+   ]
+  },
+  {
+   "week": "2026-W06",
+   "workingDays": 5,
+   "totals": {
+    "prs": 67,
+    "lines": 29831,
+    "added": 40456,
+    "deleted": 16915,
+    "people": 11
+   },
+   "contributors": [
+    {
+     "login": "Collin-GP",
+     "prs": 9,
+     "lines": 7582,
+     "added": 7853,
+     "deleted": 1849
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 1,
+     "lines": 6848,
+     "added": 5115,
+     "deleted": 2771
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 7,
+     "lines": 4626,
+     "added": 7673,
+     "deleted": 18
+    },
+    {
+     "login": "swain",
+     "prs": 17,
+     "lines": 3000,
+     "added": 7277,
+     "deleted": 9349
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 2433,
+     "added": 2395,
+     "deleted": 38
+    },
+    {
+     "login": "oakinh",
+     "prs": 3,
+     "lines": 2280,
+     "added": 1642,
+     "deleted": 638
+    },
+    {
+     "login": "stephtea",
+     "prs": 7,
+     "lines": 1732,
+     "added": 1575,
+     "deleted": 157
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 11,
+     "lines": 1114,
+     "added": 6781,
+     "deleted": 2010
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 7,
+     "lines": 138,
+     "added": 69,
+     "deleted": 83
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 74,
+     "added": 74,
+     "deleted": 0
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 4,
+     "added": 2,
+     "deleted": 2
+    }
+   ]
+  },
+  {
+   "week": "2026-W07",
+   "workingDays": 5,
+   "totals": {
+    "prs": 58,
+    "lines": 122817,
+    "added": 126840,
+    "deleted": 33586,
+    "people": 14
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 8,
+     "lines": 107660,
+     "added": 101106,
+     "deleted": 6881
+    },
+    {
+     "login": "dealvz",
+     "prs": 2,
+     "lines": 2863,
+     "added": 2281,
+     "deleted": 627
+    },
+    {
+     "login": "awardquick",
+     "prs": 4,
+     "lines": 2563,
+     "added": 2292,
+     "deleted": 271
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 4,
+     "lines": 2500,
+     "added": 8270,
+     "deleted": 16656
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 11,
+     "lines": 1691,
+     "added": 1522,
+     "deleted": 536
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 2,
+     "lines": 1250,
+     "added": 7453,
+     "deleted": 7909
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 3,
+     "lines": 1249,
+     "added": 1158,
+     "deleted": 91
+    },
+    {
+     "login": "stephtea",
+     "prs": 4,
+     "lines": 1208,
+     "added": 1085,
+     "deleted": 123
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 5,
+     "lines": 675,
+     "added": 537,
+     "deleted": 466
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 608,
+     "added": 604,
+     "deleted": 4
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 7,
+     "lines": 259,
+     "added": 259,
+     "deleted": 0
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 3,
+     "lines": 256,
+     "added": 253,
+     "deleted": 3
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 2,
+     "lines": 33,
+     "added": 19,
+     "deleted": 18
+    },
+    {
+     "login": "oakinh",
+     "prs": 1,
+     "lines": 2,
+     "added": 1,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W08",
+   "workingDays": 4,
+   "totals": {
+    "prs": 66,
+    "lines": 17592,
+    "added": 22396,
+    "deleted": 13631,
+    "people": 14
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 16,
+     "lines": 8354,
+     "added": 6003,
+     "deleted": 2417
+    },
+    {
+     "login": "swain",
+     "prs": 9,
+     "lines": 3121,
+     "added": 5028,
+     "deleted": 3086
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 1777,
+     "added": 1783,
+     "deleted": 0
+    },
+    {
+     "login": "awardquick",
+     "prs": 3,
+     "lines": 1237,
+     "added": 6717,
+     "deleted": 7563
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 1220,
+     "added": 1185,
+     "deleted": 35
+    },
+    {
+     "login": "dealvz",
+     "prs": 2,
+     "lines": 573,
+     "added": 433,
+     "deleted": 140
+    },
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 514,
+     "added": 464,
+     "deleted": 50
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 223,
+     "added": 116,
+     "deleted": 107
+    },
+    {
+     "login": "oakinh",
+     "prs": 1,
+     "lines": 153,
+     "added": 348,
+     "deleted": 112
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 6,
+     "lines": 142,
+     "added": 128,
+     "deleted": 14
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 4,
+     "lines": 129,
+     "added": 95,
+     "deleted": 34
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 8,
+     "lines": 95,
+     "added": 58,
+     "deleted": 53
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 3,
+     "lines": 27,
+     "added": 16,
+     "deleted": 11
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 1,
+     "lines": 27,
+     "added": 22,
+     "deleted": 9
+    }
+   ]
+  },
+  {
+   "week": "2026-W09",
+   "workingDays": 5,
+   "totals": {
+    "prs": 97,
+    "lines": 99109,
+    "added": 87305,
+    "deleted": 25510,
+    "people": 16
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 4,
+     "lines": 73258,
+     "added": 57525,
+     "deleted": 15754
+    },
+    {
+     "login": "swain",
+     "prs": 23,
+     "lines": 7226,
+     "added": 11239,
+     "deleted": 3640
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 12,
+     "lines": 3774,
+     "added": 4330,
+     "deleted": 1114
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 2931,
+     "added": 2342,
+     "deleted": 589
+    },
+    {
+     "login": "oakinh",
+     "prs": 8,
+     "lines": 2475,
+     "added": 2223,
+     "deleted": 252
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 12,
+     "lines": 2348,
+     "added": 4674,
+     "deleted": 1987
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 11,
+     "lines": 1458,
+     "added": 884,
+     "deleted": 608
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 1273,
+     "added": 1257,
+     "deleted": 16
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 1171,
+     "added": 733,
+     "deleted": 438
+    },
+    {
+     "login": "dealvz",
+     "prs": 3,
+     "lines": 1077,
+     "added": 529,
+     "deleted": 549
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 2,
+     "lines": 888,
+     "added": 734,
+     "deleted": 154
+    },
+    {
+     "login": "awardquick",
+     "prs": 1,
+     "lines": 597,
+     "added": 594,
+     "deleted": 3
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 335,
+     "added": 1,
+     "deleted": 334
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 7,
+     "lines": 125,
+     "added": 70,
+     "deleted": 69
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 116,
+     "added": 114,
+     "deleted": 2
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 3,
+     "lines": 57,
+     "added": 56,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W10",
+   "workingDays": 5,
+   "totals": {
+    "prs": 73,
+    "lines": 20372,
+    "added": 24908,
+    "deleted": 39430,
+    "people": 15
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 9,
+     "lines": 8050,
+     "added": 6598,
+     "deleted": 1461
+    },
+    {
+     "login": "swain",
+     "prs": 29,
+     "lines": 5623,
+     "added": 9449,
+     "deleted": 9048
+    },
+    {
+     "login": "Collin-Park",
+     "prs": 1,
+     "lines": 1790,
+     "added": 1796,
+     "deleted": 0
+    },
+    {
+     "login": "stephtea",
+     "prs": 4,
+     "lines": 1357,
+     "added": 1178,
+     "deleted": 179
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 6,
+     "lines": 963,
+     "added": 1145,
+     "deleted": 57
+    },
+    {
+     "login": "oakinh",
+     "prs": 6,
+     "lines": 836,
+     "added": 3423,
+     "deleted": 369
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 1,
+     "lines": 548,
+     "added": 547,
+     "deleted": 39
+    },
+    {
+     "login": "awardquick",
+     "prs": 2,
+     "lines": 288,
+     "added": 257,
+     "deleted": 31
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 228,
+     "added": 144,
+     "deleted": 84
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 227,
+     "added": 93,
+     "deleted": 134
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 2,
+     "lines": 195,
+     "added": 48,
+     "deleted": 147
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 5,
+     "lines": 185,
+     "added": 177,
+     "deleted": 8
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 2,
+     "lines": 42,
+     "added": 39,
+     "deleted": 27847
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 27,
+     "added": 9,
+     "deleted": 18
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 1,
+     "lines": 13,
+     "added": 5,
+     "deleted": 8
+    }
+   ]
+  },
+  {
+   "week": "2026-W11",
+   "workingDays": 5,
+   "totals": {
+    "prs": 71,
+    "lines": 123578,
+    "added": 96715,
+    "deleted": 36455,
+    "people": 13
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 10,
+     "lines": 67277,
+     "added": 63241,
+     "deleted": 4073
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 5,
+     "lines": 27760,
+     "added": 2424,
+     "deleted": 25741
+    },
+    {
+     "login": "dealvz",
+     "prs": 4,
+     "lines": 14286,
+     "added": 15252,
+     "deleted": 1803
+    },
+    {
+     "login": "swain",
+     "prs": 19,
+     "lines": 3714,
+     "added": 2558,
+     "deleted": 3744
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 5,
+     "lines": 2243,
+     "added": 2192,
+     "deleted": 54
+    },
+    {
+     "login": "awardquick",
+     "prs": 6,
+     "lines": 2166,
+     "added": 5422,
+     "deleted": 219
+    },
+    {
+     "login": "oakinh",
+     "prs": 4,
+     "lines": 1906,
+     "added": 1619,
+     "deleted": 287
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 4,
+     "lines": 1608,
+     "added": 1506,
+     "deleted": 102
+    },
+    {
+     "login": "stephtea",
+     "prs": 2,
+     "lines": 1221,
+     "added": 1159,
+     "deleted": 377
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 6,
+     "lines": 1218,
+     "added": 1213,
+     "deleted": 5
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 94,
+     "added": 85,
+     "deleted": 9
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 2,
+     "lines": 75,
+     "added": 38,
+     "deleted": 37
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 1,
+     "lines": 10,
+     "added": 6,
+     "deleted": 4
+    }
+   ]
+  },
+  {
+   "week": "2026-W12",
+   "workingDays": 5,
+   "totals": {
+    "prs": 69,
+    "lines": 31079,
+    "added": 23095,
+    "deleted": 11425,
+    "people": 13
+   },
+   "contributors": [
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 7544,
+     "added": 5523,
+     "deleted": 2612
+    },
+    {
+     "login": "ernestohs",
+     "prs": 6,
+     "lines": 5397,
+     "added": 3393,
+     "deleted": 2011
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 4198,
+     "added": 6544,
+     "deleted": 45
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 3,
+     "lines": 3971,
+     "added": 77,
+     "deleted": 3896
+    },
+    {
+     "login": "swain",
+     "prs": 24,
+     "lines": 3149,
+     "added": 2499,
+     "deleted": 1093
+    },
+    {
+     "login": "oakinh",
+     "prs": 7,
+     "lines": 2083,
+     "added": 1376,
+     "deleted": 707
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 4,
+     "lines": 1591,
+     "added": 986,
+     "deleted": 605
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 4,
+     "lines": 721,
+     "added": 638,
+     "deleted": 84
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 720,
+     "added": 709,
+     "deleted": 11
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 2,
+     "lines": 603,
+     "added": 337,
+     "deleted": 266
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 3,
+     "lines": 502,
+     "added": 495,
+     "deleted": 11
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 3,
+     "lines": 478,
+     "added": 464,
+     "deleted": 14
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 1,
+     "lines": 122,
+     "added": 54,
+     "deleted": 70
+    }
+   ]
+  },
+  {
+   "week": "2026-W13",
+   "workingDays": 5,
+   "totals": {
+    "prs": 71,
+    "lines": 28555,
+    "added": 31680,
+    "deleted": 9077,
+    "people": 16
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 9,
+     "lines": 7840,
+     "added": 6943,
+     "deleted": 903
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 4756,
+     "added": 4400,
+     "deleted": 378
+    },
+    {
+     "login": "swain",
+     "prs": 16,
+     "lines": 4356,
+     "added": 8325,
+     "deleted": 2460
+    },
+    {
+     "login": "danpelota",
+     "prs": 5,
+     "lines": 3195,
+     "added": 5455,
+     "deleted": 3293
+    },
+    {
+     "login": "stephtea",
+     "prs": 7,
+     "lines": 2511,
+     "added": 1345,
+     "deleted": 1166
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 2,
+     "lines": 1536,
+     "added": 1425,
+     "deleted": 111
+    },
+    {
+     "login": "ernestohs",
+     "prs": 6,
+     "lines": 1417,
+     "added": 1209,
+     "deleted": 209
+    },
+    {
+     "login": "oakinh",
+     "prs": 3,
+     "lines": 1088,
+     "added": 942,
+     "deleted": 146
+    },
+    {
+     "login": "kmcost",
+     "prs": 1,
+     "lines": 572,
+     "added": 571,
+     "deleted": 2
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 6,
+     "lines": 530,
+     "added": 324,
+     "deleted": 206
+    },
+    {
+     "login": "awardquick",
+     "prs": 2,
+     "lines": 272,
+     "added": 275,
+     "deleted": 11
+    },
+    {
+     "login": "dealvz",
+     "prs": 2,
+     "lines": 236,
+     "added": 211,
+     "deleted": 25
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 5,
+     "lines": 121,
+     "added": 43,
+     "deleted": 78
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 1,
+     "lines": 110,
+     "added": 110,
+     "deleted": 0
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 1,
+     "lines": 11,
+     "added": 7,
+     "deleted": 6
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 4,
+     "added": 95,
+     "deleted": 83
+    }
+   ]
+  },
+  {
+   "week": "2026-W14",
+   "workingDays": 5,
+   "totals": {
+    "prs": 54,
+    "lines": 14678,
+    "added": 7454,
+    "deleted": 7244,
+    "people": 12
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 16,
+     "lines": 5009,
+     "added": 672,
+     "deleted": 4337
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 11,
+     "lines": 2540,
+     "added": 1571,
+     "deleted": 969
+    },
+    {
+     "login": "awardquick",
+     "prs": 6,
+     "lines": 2274,
+     "added": 1615,
+     "deleted": 677
+    },
+    {
+     "login": "oakinh",
+     "prs": 5,
+     "lines": 2233,
+     "added": 1438,
+     "deleted": 795
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 3,
+     "lines": 1348,
+     "added": 1065,
+     "deleted": 283
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 553,
+     "added": 464,
+     "deleted": 89
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 2,
+     "lines": 366,
+     "added": 363,
+     "deleted": 3
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 142,
+     "added": 73,
+     "deleted": 69
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 3,
+     "lines": 115,
+     "added": 100,
+     "deleted": 15
+    },
+    {
+     "login": "samuelgoodparty",
+     "prs": 1,
+     "lines": 48,
+     "added": 47,
+     "deleted": 1
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 39,
+     "added": 39,
+     "deleted": 0
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 1,
+     "lines": 11,
+     "added": 7,
+     "deleted": 6
+    }
+   ]
+  },
+  {
+   "week": "2026-W15",
+   "workingDays": 5,
+   "totals": {
+    "prs": 46,
+    "lines": 19005,
+    "added": 13422,
+    "deleted": 5620,
+    "people": 13
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 4,
+     "lines": 5391,
+     "added": 1781,
+     "deleted": 3612
+    },
+    {
+     "login": "ernestohs",
+     "prs": 5,
+     "lines": 2315,
+     "added": 1889,
+     "deleted": 431
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 4,
+     "lines": 2232,
+     "added": 2207,
+     "deleted": 55
+    },
+    {
+     "login": "dealvz",
+     "prs": 6,
+     "lines": 2061,
+     "added": 1892,
+     "deleted": 169
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 11,
+     "lines": 1753,
+     "added": 1554,
+     "deleted": 199
+    },
+    {
+     "login": "stephtea",
+     "prs": 2,
+     "lines": 1626,
+     "added": 1624,
+     "deleted": 2
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 1260,
+     "added": 858,
+     "deleted": 402
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 1151,
+     "added": 1043,
+     "deleted": 108
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 1052,
+     "added": 513,
+     "deleted": 539
+    },
+    {
+     "login": "swain",
+     "prs": 2,
+     "lines": 82,
+     "added": 3,
+     "deleted": 79
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 2,
+     "lines": 56,
+     "added": 40,
+     "deleted": 16
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 23,
+     "added": 16,
+     "deleted": 7
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 3,
+     "added": 2,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W16",
+   "workingDays": 5,
+   "totals": {
+    "prs": 43,
+    "lines": 49150,
+    "added": 28066,
+    "deleted": 35606,
+    "people": 12
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 7,
+     "lines": 16457,
+     "added": 11527,
+     "deleted": 17868
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 6,
+     "lines": 11394,
+     "added": 3237,
+     "deleted": 9615
+    },
+    {
+     "login": "ernestohs",
+     "prs": 2,
+     "lines": 8638,
+     "added": 8077,
+     "deleted": 561
+    },
+    {
+     "login": "oakinh",
+     "prs": 4,
+     "lines": 3655,
+     "added": 445,
+     "deleted": 3210
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 6,
+     "lines": 3449,
+     "added": 1085,
+     "deleted": 2364
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 2041,
+     "added": 1422,
+     "deleted": 619
+    },
+    {
+     "login": "swain",
+     "prs": 4,
+     "lines": 1601,
+     "added": 623,
+     "deleted": 978
+    },
+    {
+     "login": "awardquick",
+     "prs": 6,
+     "lines": 1294,
+     "added": 1132,
+     "deleted": 286
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 310,
+     "added": 245,
+     "deleted": 65
+    },
+    {
+     "login": "stephtea",
+     "prs": 1,
+     "lines": 197,
+     "added": 191,
+     "deleted": 6
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 103,
+     "added": 75,
+     "deleted": 28
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 1,
+     "lines": 11,
+     "added": 7,
+     "deleted": 6
+    }
+   ]
+  },
+  {
+   "week": "2026-W17",
+   "workingDays": 5,
+   "totals": {
+    "prs": 87,
+    "lines": 52043,
+    "added": 52944,
+    "deleted": 6790,
+    "people": 15
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 8,
+     "lines": 21358,
+     "added": 19636,
+     "deleted": 1738
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 8,
+     "lines": 13377,
+     "added": 19857,
+     "deleted": 26
+    },
+    {
+     "login": "swain",
+     "prs": 9,
+     "lines": 3683,
+     "added": 2432,
+     "deleted": 1260
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 8,
+     "lines": 2805,
+     "added": 2605,
+     "deleted": 200
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 13,
+     "lines": 2236,
+     "added": 1843,
+     "deleted": 393
+    },
+    {
+     "login": "oakinh",
+     "prs": 3,
+     "lines": 2124,
+     "added": 800,
+     "deleted": 1340
+    },
+    {
+     "login": "danpelota",
+     "prs": 4,
+     "lines": 1493,
+     "added": 1238,
+     "deleted": 255
+    },
+    {
+     "login": "dealvz",
+     "prs": 12,
+     "lines": 1426,
+     "added": 1033,
+     "deleted": 393
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 1190,
+     "added": 887,
+     "deleted": 303
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 3,
+     "lines": 942,
+     "added": 854,
+     "deleted": 88
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 9,
+     "lines": 710,
+     "added": 1130,
+     "deleted": 722
+    },
+    {
+     "login": "awardquick",
+     "prs": 4,
+     "lines": 625,
+     "added": 583,
+     "deleted": 42
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 1,
+     "lines": 50,
+     "added": 23,
+     "deleted": 29
+    },
+    {
+     "login": "stephtea",
+     "prs": 1,
+     "lines": 12,
+     "added": 12,
+     "deleted": 0
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 12,
+     "added": 11,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W18",
+   "workingDays": 5,
+   "totals": {
+    "prs": 82,
+    "lines": 151769,
+    "added": 139992,
+    "deleted": 13501,
+    "people": 16
+   },
+   "contributors": [
+    {
+     "login": "bryclevgp",
+     "prs": 27,
+     "lines": 51481,
+     "added": 44725,
+     "deleted": 7513
+    },
+    {
+     "login": "swain",
+     "prs": 5,
+     "lines": 31778,
+     "added": 31934,
+     "deleted": 225
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 3,
+     "lines": 31655,
+     "added": 31956,
+     "deleted": 80
+    },
+    {
+     "login": "ernestohs",
+     "prs": 2,
+     "lines": 18986,
+     "added": 18918,
+     "deleted": 69
+    },
+    {
+     "login": "oakinh",
+     "prs": 5,
+     "lines": 5081,
+     "added": 2190,
+     "deleted": 2917
+    },
+    {
+     "login": "fromjustin",
+     "prs": 11,
+     "lines": 3419,
+     "added": 2368,
+     "deleted": 1148
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 6,
+     "lines": 2360,
+     "added": 1998,
+     "deleted": 362
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 2000,
+     "added": 1844,
+     "deleted": 156
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 4,
+     "lines": 1448,
+     "added": 1375,
+     "deleted": 75
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 1194,
+     "added": 1030,
+     "deleted": 164
+    },
+    {
+     "login": "awardquick",
+     "prs": 4,
+     "lines": 821,
+     "added": 779,
+     "deleted": 103
+    },
+    {
+     "login": "RavenHursT",
+     "prs": 1,
+     "lines": 599,
+     "added": 2,
+     "deleted": 598
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 2,
+     "lines": 511,
+     "added": 460,
+     "deleted": 63
+    },
+    {
+     "login": "jacknagel-hs",
+     "prs": 3,
+     "lines": 391,
+     "added": 388,
+     "deleted": 4
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 2,
+     "lines": 42,
+     "added": 23,
+     "deleted": 23
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 3,
+     "added": 2,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W19",
+   "workingDays": 5,
+   "totals": {
+    "prs": 72,
+    "lines": 54633,
+    "added": 39127,
+    "deleted": 16581,
+    "people": 13
+   },
+   "contributors": [
+    {
+     "login": "Collin-GP",
+     "prs": 3,
+     "lines": 15828,
+     "added": 8111,
+     "deleted": 7919
+    },
+    {
+     "login": "dealvz",
+     "prs": 11,
+     "lines": 11309,
+     "added": 8550,
+     "deleted": 2759
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 17,
+     "lines": 8770,
+     "added": 8434,
+     "deleted": 824
+    },
+    {
+     "login": "fromjustin",
+     "prs": 7,
+     "lines": 6368,
+     "added": 2914,
+     "deleted": 3510
+    },
+    {
+     "login": "stephtea",
+     "prs": 2,
+     "lines": 4452,
+     "added": 4571,
+     "deleted": 11
+    },
+    {
+     "login": "swain",
+     "prs": 12,
+     "lines": 3184,
+     "added": 2565,
+     "deleted": 818
+    },
+    {
+     "login": "danpelota",
+     "prs": 8,
+     "lines": 1671,
+     "added": 1482,
+     "deleted": 189
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 4,
+     "lines": 1405,
+     "added": 987,
+     "deleted": 418
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 3,
+     "lines": 816,
+     "added": 752,
+     "deleted": 64
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 459,
+     "added": 414,
+     "deleted": 45
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 2,
+     "lines": 142,
+     "added": 137,
+     "deleted": 5
+    },
+    {
+     "login": "oakinh",
+     "prs": 1,
+     "lines": 117,
+     "added": 114,
+     "deleted": 3
+    },
+    {
+     "login": "ernestohs",
+     "prs": 1,
+     "lines": 112,
+     "added": 96,
+     "deleted": 16
+    }
+   ]
+  },
+  {
+   "week": "2026-W20",
+   "workingDays": 5,
+   "totals": {
+    "prs": 114,
+    "lines": 87700,
+    "added": 96625,
+    "deleted": 17141,
+    "people": 15
+   },
+   "contributors": [
+    {
+     "login": "Collin-GP",
+     "prs": 5,
+     "lines": 25927,
+     "added": 36539,
+     "deleted": 5752
+    },
+    {
+     "login": "ernestohs",
+     "prs": 7,
+     "lines": 13441,
+     "added": 10414,
+     "deleted": 3028
+    },
+    {
+     "login": "swain",
+     "prs": 46,
+     "lines": 12440,
+     "added": 15551,
+     "deleted": 4232
+    },
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 9584,
+     "added": 8896,
+     "deleted": 1436
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 11,
+     "lines": 8417,
+     "added": 7671,
+     "deleted": 807
+    },
+    {
+     "login": "oakinh",
+     "prs": 10,
+     "lines": 5744,
+     "added": 6904,
+     "deleted": 316
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 6,
+     "lines": 4898,
+     "added": 4254,
+     "deleted": 717
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 1,
+     "lines": 3134,
+     "added": 2803,
+     "deleted": 331
+    },
+    {
+     "login": "dealvz",
+     "prs": 3,
+     "lines": 1705,
+     "added": 1536,
+     "deleted": 169
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 6,
+     "lines": 1007,
+     "added": 798,
+     "deleted": 209
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 5,
+     "lines": 955,
+     "added": 843,
+     "deleted": 112
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 169,
+     "added": 162,
+     "deleted": 7
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 3,
+     "lines": 165,
+     "added": 149,
+     "deleted": 16
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 94,
+     "added": 92,
+     "deleted": 2
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 1,
+     "lines": 20,
+     "added": 13,
+     "deleted": 7
+    }
+   ]
+  },
+  {
+   "week": "2026-W21",
+   "workingDays": 5,
+   "totals": {
+    "prs": 41,
+    "lines": 35491,
+    "added": 25866,
+    "deleted": 9948,
+    "people": 12
+   },
+   "contributors": [
+    {
+     "login": "fromjustin",
+     "prs": 11,
+     "lines": 11453,
+     "added": 5353,
+     "deleted": 6360
+    },
+    {
+     "login": "kmcost",
+     "prs": 3,
+     "lines": 9241,
+     "added": 7859,
+     "deleted": 1393
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 6263,
+     "added": 5705,
+     "deleted": 558
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 11,
+     "lines": 4692,
+     "added": 4208,
+     "deleted": 536
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 3,
+     "lines": 1627,
+     "added": 1397,
+     "deleted": 230
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 1,
+     "lines": 1031,
+     "added": 961,
+     "deleted": 70
+    },
+    {
+     "login": "stephtea",
+     "prs": 1,
+     "lines": 928,
+     "added": 224,
+     "deleted": 704
+    },
+    {
+     "login": "swain",
+     "prs": 5,
+     "lines": 98,
+     "added": 26,
+     "deleted": 72
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 2,
+     "lines": 60,
+     "added": 52,
+     "deleted": 8
+    },
+    {
+     "login": "ernestohs",
+     "prs": 1,
+     "lines": 55,
+     "added": 38,
+     "deleted": 17
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 1,
+     "lines": 36,
+     "added": 36,
+     "deleted": 0
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 1,
+     "lines": 7,
+     "added": 7,
+     "deleted": 0
+    }
+   ]
+  },
+  {
+   "week": "2026-W22",
+   "workingDays": 4,
+   "totals": {
+    "prs": 152,
+    "lines": 128270,
+    "added": 143805,
+    "deleted": 21267,
+    "people": 16
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 36,
+     "lines": 75997,
+     "added": 96408,
+     "deleted": 13219
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 8,
+     "lines": 13547,
+     "added": 12181,
+     "deleted": 1392
+    },
+    {
+     "login": "oakinh",
+     "prs": 20,
+     "lines": 9863,
+     "added": 8533,
+     "deleted": 2587
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 30,
+     "lines": 7437,
+     "added": 5687,
+     "deleted": 1754
+    },
+    {
+     "login": "stephtea",
+     "prs": 13,
+     "lines": 5825,
+     "added": 4760,
+     "deleted": 1073
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 5,
+     "lines": 3737,
+     "added": 3815,
+     "deleted": 24
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 10,
+     "lines": 3134,
+     "added": 2813,
+     "deleted": 321
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 2,
+     "lines": 2467,
+     "added": 3972,
+     "deleted": 264
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 15,
+     "lines": 2188,
+     "added": 2006,
+     "deleted": 182
+    },
+    {
+     "login": "dealvz",
+     "prs": 3,
+     "lines": 1657,
+     "added": 1537,
+     "deleted": 120
+    },
+    {
+     "login": "ernestohs",
+     "prs": 1,
+     "lines": 1191,
+     "added": 1140,
+     "deleted": 57
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 5,
+     "lines": 561,
+     "added": 437,
+     "deleted": 124
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 1,
+     "lines": 283,
+     "added": 283,
+     "deleted": 0
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 223,
+     "added": 152,
+     "deleted": 71
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 1,
+     "lines": 101,
+     "added": 47,
+     "deleted": 54
+    },
+    {
+     "login": "tonypham-goodparty",
+     "prs": 1,
+     "lines": 59,
+     "added": 34,
+     "deleted": 25
+    }
+   ]
+  },
+  {
+   "week": "2026-W23",
+   "workingDays": 5,
+   "totals": {
+    "prs": 150,
+    "lines": 91385,
+    "added": 73140,
+    "deleted": 29491,
+    "people": 17
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 5,
+     "lines": 16247,
+     "added": 9358,
+     "deleted": 6895
+    },
+    {
+     "login": "oakinh",
+     "prs": 30,
+     "lines": 14564,
+     "added": 12543,
+     "deleted": 4854
+    },
+    {
+     "login": "dealvz",
+     "prs": 11,
+     "lines": 13200,
+     "added": 12543,
+     "deleted": 1349
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 42,
+     "lines": 10319,
+     "added": 10489,
+     "deleted": 1095
+    },
+    {
+     "login": "swain",
+     "prs": 18,
+     "lines": 10019,
+     "added": 6564,
+     "deleted": 8643
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 10,
+     "lines": 8162,
+     "added": 7169,
+     "deleted": 2025
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 6,
+     "lines": 6862,
+     "added": 3811,
+     "deleted": 3255
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 5,
+     "lines": 3789,
+     "added": 2952,
+     "deleted": 837
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 2,
+     "lines": 3021,
+     "added": 2891,
+     "deleted": 130
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 2580,
+     "added": 2470,
+     "deleted": 130
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 1,
+     "lines": 1013,
+     "added": 978,
+     "deleted": 35
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 2,
+     "lines": 520,
+     "added": 466,
+     "deleted": 54
+    },
+    {
+     "login": "danpelota",
+     "prs": 4,
+     "lines": 490,
+     "added": 377,
+     "deleted": 113
+    },
+    {
+     "login": "linter-pm",
+     "prs": 1,
+     "lines": 366,
+     "added": 366,
+     "deleted": 0
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 2,
+     "lines": 112,
+     "added": 96,
+     "deleted": 16
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 3,
+     "lines": 76,
+     "added": 40,
+     "deleted": 36
+    },
+    {
+     "login": "gp-sdk-release-bot",
+     "prs": 3,
+     "lines": 45,
+     "added": 27,
+     "deleted": 24
+    }
+   ]
+  },
+  {
+   "week": "2026-W24",
+   "workingDays": 5,
+   "totals": {
+    "prs": 190,
+    "lines": 99811,
+    "added": 159199,
+    "deleted": 154957,
+    "people": 18
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 38,
+     "lines": 30867,
+     "added": 33599,
+     "deleted": 3475
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 50,
+     "lines": 14717,
+     "added": 10664,
+     "deleted": 4055
+    },
+    {
+     "login": "jacknagel-hs",
+     "prs": 2,
+     "lines": 14166,
+     "added": 14134,
+     "deleted": 32
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 11,
+     "lines": 6369,
+     "added": 12545,
+     "deleted": 10215
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 16,
+     "lines": 5708,
+     "added": 3711,
+     "deleted": 1999
+    },
+    {
+     "login": "danpelota",
+     "prs": 7,
+     "lines": 4796,
+     "added": 6745,
+     "deleted": 169
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 4591,
+     "added": 4444,
+     "deleted": 147
+    },
+    {
+     "login": "dealvz",
+     "prs": 6,
+     "lines": 3122,
+     "added": 3017,
+     "deleted": 105
+    },
+    {
+     "login": "kmcost",
+     "prs": 4,
+     "lines": 2964,
+     "added": 1548,
+     "deleted": 1416
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 15,
+     "lines": 2406,
+     "added": 2260,
+     "deleted": 146
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 7,
+     "lines": 2013,
+     "added": 1882,
+     "deleted": 133
+    },
+    {
+     "login": "ernestohs",
+     "prs": 8,
+     "lines": 1950,
+     "added": 1710,
+     "deleted": 267
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 1903,
+     "added": 1681,
+     "deleted": 222
+    },
+    {
+     "login": "oakinh",
+     "prs": 5,
+     "lines": 1691,
+     "added": 59301,
+     "deleted": 131974
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 3,
+     "lines": 1042,
+     "added": 765,
+     "deleted": 277
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 3,
+     "lines": 890,
+     "added": 600,
+     "deleted": 290
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 577,
+     "added": 562,
+     "deleted": 15
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 3,
+     "lines": 39,
+     "added": 31,
+     "deleted": 20
+    }
+   ]
+  },
+  {
+   "week": "2026-W25",
+   "workingDays": 4,
+   "totals": {
+    "prs": 125,
+    "lines": 94712,
+    "added": 94734,
+    "deleted": 18596,
+    "people": 15
+   },
+   "contributors": [
+    {
+     "login": "Collin-GP",
+     "prs": 3,
+     "lines": 17537,
+     "added": 17057,
+     "deleted": 480
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 53,
+     "lines": 16157,
+     "added": 16082,
+     "deleted": 10460
+    },
+    {
+     "login": "swain",
+     "prs": 10,
+     "lines": 14741,
+     "added": 20749,
+     "deleted": 2200
+    },
+    {
+     "login": "stephtea",
+     "prs": 5,
+     "lines": 14120,
+     "added": 12911,
+     "deleted": 1209
+    },
+    {
+     "login": "oakinh",
+     "prs": 7,
+     "lines": 8486,
+     "added": 7499,
+     "deleted": 1006
+    },
+    {
+     "login": "danpelota",
+     "prs": 2,
+     "lines": 6510,
+     "added": 6508,
+     "deleted": 2
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 5,
+     "lines": 3950,
+     "added": 3738,
+     "deleted": 212
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 10,
+     "lines": 3005,
+     "added": 2545,
+     "deleted": 460
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 8,
+     "lines": 2803,
+     "added": 2751,
+     "deleted": 52
+    },
+    {
+     "login": "kmcost",
+     "prs": 5,
+     "lines": 2794,
+     "added": 1658,
+     "deleted": 1136
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 6,
+     "lines": 2534,
+     "added": 1631,
+     "deleted": 909
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 3,
+     "lines": 1386,
+     "added": 1032,
+     "deleted": 354
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 4,
+     "lines": 321,
+     "added": 254,
+     "deleted": 67
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 2,
+     "lines": 185,
+     "added": 181,
+     "deleted": 4
+    },
+    {
+     "login": "ernestohs",
+     "prs": 2,
+     "lines": 183,
+     "added": 138,
+     "deleted": 45
+    }
+   ]
+  },
+  {
+   "week": "2026-W26",
+   "workingDays": 5,
+   "totals": {
+    "prs": 212,
+    "lines": 83794,
+    "added": 85436,
+    "deleted": 13176,
+    "people": 18
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 92,
+     "lines": 28025,
+     "added": 30393,
+     "deleted": 2038
+    },
+    {
+     "login": "swain",
+     "prs": 29,
+     "lines": 10977,
+     "added": 8482,
+     "deleted": 3236
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 5,
+     "lines": 8876,
+     "added": 6036,
+     "deleted": 2975
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 7,
+     "lines": 7202,
+     "added": 6630,
+     "deleted": 572
+    },
+    {
+     "login": "oakinh",
+     "prs": 16,
+     "lines": 7089,
+     "added": 6427,
+     "deleted": 681
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 6215,
+     "added": 7763,
+     "deleted": 560
+    },
+    {
+     "login": "kmcost",
+     "prs": 4,
+     "lines": 2702,
+     "added": 2228,
+     "deleted": 474
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 9,
+     "lines": 2346,
+     "added": 1807,
+     "deleted": 539
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 9,
+     "lines": 2137,
+     "added": 2072,
+     "deleted": 307
+    },
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 1912,
+     "added": 1271,
+     "deleted": 641
+    },
+    {
+     "login": "selta-goodparty",
+     "prs": 9,
+     "lines": 1558,
+     "added": 1394,
+     "deleted": 164
+    },
+    {
+     "login": "danpelota",
+     "prs": 6,
+     "lines": 1537,
+     "added": 1415,
+     "deleted": 136
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 6,
+     "lines": 1091,
+     "added": 629,
+     "deleted": 462
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 4,
+     "lines": 986,
+     "added": 7915,
+     "deleted": 139
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 673,
+     "added": 595,
+     "deleted": 78
+    },
+    {
+     "login": "samuelgoodparty",
+     "prs": 1,
+     "lines": 238,
+     "added": 153,
+     "deleted": 85
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 204,
+     "added": 204,
+     "deleted": 85
+    },
+    {
+     "login": "ernestohs",
+     "prs": 1,
+     "lines": 26,
+     "added": 22,
+     "deleted": 4
+    }
+   ]
+  },
+  {
+   "week": "2026-W27",
+   "workingDays": 4,
+   "totals": {
+    "prs": 172,
+    "lines": 82082,
+    "added": 62778,
+    "deleted": 22005,
+    "people": 13
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 74,
+     "lines": 20449,
+     "added": 16721,
+     "deleted": 4847
+    },
+    {
+     "login": "danpelota",
+     "prs": 4,
+     "lines": 15410,
+     "added": 9043,
+     "deleted": 6367
+    },
+    {
+     "login": "swain",
+     "prs": 24,
+     "lines": 10880,
+     "added": 9082,
+     "deleted": 2226
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 8,
+     "lines": 8178,
+     "added": 5027,
+     "deleted": 3204
+    },
+    {
+     "login": "dealvz",
+     "prs": 8,
+     "lines": 8103,
+     "added": 6844,
+     "deleted": 1259
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 7,
+     "lines": 6010,
+     "added": 4872,
+     "deleted": 1138
+    },
+    {
+     "login": "oakinh",
+     "prs": 12,
+     "lines": 3699,
+     "added": 2992,
+     "deleted": 1342
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 2,
+     "lines": 2908,
+     "added": 2807,
+     "deleted": 101
+    },
+    {
+     "login": "ernestohs",
+     "prs": 5,
+     "lines": 1833,
+     "added": 1716,
+     "deleted": 159
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 6,
+     "lines": 1802,
+     "added": 1393,
+     "deleted": 409
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 12,
+     "lines": 1520,
+     "added": 1387,
+     "deleted": 133
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 768,
+     "added": 758,
+     "deleted": 10
+    },
+    {
+     "login": "kmcost",
+     "prs": 6,
+     "lines": 522,
+     "added": 136,
+     "deleted": 810
+    }
+   ]
+  },
+  {
+   "week": "2026-W28",
+   "workingDays": 5,
+   "totals": {
+    "prs": 111,
+    "lines": 89727,
+    "added": 84424,
+    "deleted": 20091,
+    "people": 15
+   },
+   "contributors": [
+    {
+     "login": "ernestohs",
+     "prs": 9,
+     "lines": 42130,
+     "added": 41327,
+     "deleted": 830
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 31,
+     "lines": 11652,
+     "added": 11678,
+     "deleted": 14071
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 6,
+     "lines": 9153,
+     "added": 8828,
+     "deleted": 364
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 13,
+     "lines": 5562,
+     "added": 4069,
+     "deleted": 1493
+    },
+    {
+     "login": "oakinh",
+     "prs": 6,
+     "lines": 4725,
+     "added": 3178,
+     "deleted": 1548
+    },
+    {
+     "login": "dealvz",
+     "prs": 11,
+     "lines": 4658,
+     "added": 4349,
+     "deleted": 309
+    },
+    {
+     "login": "danpelota",
+     "prs": 11,
+     "lines": 4603,
+     "added": 3617,
+     "deleted": 986
+    },
+    {
+     "login": "stephtea",
+     "prs": 6,
+     "lines": 4305,
+     "added": 4067,
+     "deleted": 238
+    },
+    {
+     "login": "swain",
+     "prs": 6,
+     "lines": 1721,
+     "added": 2238,
+     "deleted": 107
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 4,
+     "lines": 467,
+     "added": 458,
+     "deleted": 9
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 1,
+     "lines": 313,
+     "added": 302,
+     "deleted": 11
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 266,
+     "added": 210,
+     "deleted": 56
+    },
+    {
+     "login": "nigel-gp",
+     "prs": 2,
+     "lines": 122,
+     "added": 77,
+     "deleted": 45
+    },
+    {
+     "login": "samuelgoodparty",
+     "prs": 1,
+     "lines": 46,
+     "added": 24,
+     "deleted": 22
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 1,
+     "lines": 4,
+     "added": 2,
+     "deleted": 2
+    }
+   ]
+  },
+  {
+   "week": "2026-W29",
+   "workingDays": 5,
+   "totals": {
+    "prs": 168,
+    "lines": 80500,
+    "added": 65893,
+    "deleted": 15266,
+    "people": 14
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 57,
+     "lines": 35937,
+     "added": 30365,
+     "deleted": 5576
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 13,
+     "lines": 10385,
+     "added": 7890,
+     "deleted": 2985
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 13,
+     "lines": 8738,
+     "added": 8269,
+     "deleted": 469
+    },
+    {
+     "login": "stephtea",
+     "prs": 16,
+     "lines": 6623,
+     "added": 5381,
+     "deleted": 1325
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 3631,
+     "added": 845,
+     "deleted": 2831
+    },
+    {
+     "login": "swain",
+     "prs": 15,
+     "lines": 3353,
+     "added": 2795,
+     "deleted": 558
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 17,
+     "lines": 3220,
+     "added": 2637,
+     "deleted": 583
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 1,
+     "lines": 2770,
+     "added": 2770,
+     "deleted": 0
+    },
+    {
+     "login": "dealvz",
+     "prs": 10,
+     "lines": 1808,
+     "added": 1517,
+     "deleted": 328
+    },
+    {
+     "login": "ernestohs",
+     "prs": 3,
+     "lines": 1581,
+     "added": 1195,
+     "deleted": 386
+    },
+    {
+     "login": "oakinh",
+     "prs": 12,
+     "lines": 1251,
+     "added": 1099,
+     "deleted": 152
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 5,
+     "lines": 631,
+     "added": 571,
+     "deleted": 60
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 570,
+     "added": 558,
+     "deleted": 12
+    },
+    {
+     "login": "jacknagel-hs",
+     "prs": 1,
+     "lines": 2,
+     "added": 1,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W30",
+   "workingDays": 5,
+   "totals": {
+    "prs": 170,
+    "lines": 77777,
+    "added": 61322,
+    "deleted": 16867,
+    "people": 14
+   },
+   "contributors": [
+    {
+     "login": "tomer-tgp",
+     "prs": 42,
+     "lines": 19328,
+     "added": 12639,
+     "deleted": 6689
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 23,
+     "lines": 12308,
+     "added": 11274,
+     "deleted": 1423
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 8,
+     "lines": 11160,
+     "added": 10495,
+     "deleted": 671
+    },
+    {
+     "login": "dealvz",
+     "prs": 5,
+     "lines": 8927,
+     "added": 5924,
+     "deleted": 3003
+    },
+    {
+     "login": "swain",
+     "prs": 24,
+     "lines": 8086,
+     "added": 5230,
+     "deleted": 2865
+    },
+    {
+     "login": "oakinh",
+     "prs": 22,
+     "lines": 4757,
+     "added": 4050,
+     "deleted": 707
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 4,
+     "lines": 4092,
+     "added": 4030,
+     "deleted": 62
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 3,
+     "lines": 3350,
+     "added": 2926,
+     "deleted": 424
+    },
+    {
+     "login": "stephtea",
+     "prs": 14,
+     "lines": 2360,
+     "added": 2026,
+     "deleted": 334
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 12,
+     "lines": 1951,
+     "added": 1519,
+     "deleted": 440
+    },
+    {
+     "login": "ernestohs",
+     "prs": 5,
+     "lines": 730,
+     "added": 642,
+     "deleted": 88
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 451,
+     "added": 383,
+     "deleted": 68
+    },
+    {
+     "login": "danpelota",
+     "prs": 4,
+     "lines": 275,
+     "added": 183,
+     "deleted": 92
+    },
+    {
+     "login": "jacknagel-hs",
+     "prs": 1,
+     "lines": 2,
+     "added": 1,
+     "deleted": 1
+    }
+   ]
+  },
+  {
+   "week": "2026-W31",
+   "workingDays": 5,
+   "totals": {
+    "prs": 118,
+    "lines": 92151,
+    "added": 70162,
+    "deleted": 23933,
+    "people": 10
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 12,
+     "lines": 23672,
+     "added": 6805,
+     "deleted": 17423
+    },
+    {
+     "login": "ernestohs",
+     "prs": 2,
+     "lines": 18740,
+     "added": 17825,
+     "deleted": 916
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 47,
+     "lines": 18519,
+     "added": 16934,
+     "deleted": 1585
+    },
+    {
+     "login": "Collin-GP",
+     "prs": 6,
+     "lines": 7362,
+     "added": 7832,
+     "deleted": 85
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 7,
+     "lines": 7054,
+     "added": 7786,
+     "deleted": 82
+    },
+    {
+     "login": "oakinh",
+     "prs": 6,
+     "lines": 6982,
+     "added": 6788,
+     "deleted": 206
+    },
+    {
+     "login": "dealvz",
+     "prs": 7,
+     "lines": 5093,
+     "added": 2074,
+     "deleted": 3019
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 21,
+     "lines": 2751,
+     "added": 2231,
+     "deleted": 522
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 9,
+     "lines": 1878,
+     "added": 1788,
+     "deleted": 90
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 1,
+     "lines": 100,
+     "added": 99,
+     "deleted": 5
+    }
+   ]
+  },
+  {
+   "week": "2026-W32",
+   "workingDays": 5,
+   "totals": {
+    "prs": 112,
+    "lines": 219429,
+    "added": 204637,
+    "deleted": 21305,
+    "people": 10
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 32,
+     "lines": 143952,
+     "added": 139845,
+     "deleted": 9735
+    },
+    {
+     "login": "oakinh",
+     "prs": 22,
+     "lines": 40559,
+     "added": 33268,
+     "deleted": 7569
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 6,
+     "lines": 15951,
+     "added": 15634,
+     "deleted": 317
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 22,
+     "lines": 6864,
+     "added": 6521,
+     "deleted": 343
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 6,
+     "lines": 4584,
+     "added": 4199,
+     "deleted": 385
+    },
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 3519,
+     "added": 3912,
+     "deleted": 214
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 8,
+     "lines": 2986,
+     "added": 466,
+     "deleted": 2520
+    },
+    {
+     "login": "danpelota",
+     "prs": 4,
+     "lines": 682,
+     "added": 520,
+     "deleted": 162
+    },
+    {
+     "login": "ernestohs",
+     "prs": 3,
+     "lines": 298,
+     "added": 255,
+     "deleted": 43
+    },
+    {
+     "login": "patrick-tgp",
+     "prs": 1,
+     "lines": 34,
+     "added": 17,
+     "deleted": 17
+    }
+   ]
+  },
+  {
+   "week": "2026-W33",
+   "workingDays": 5,
+   "totals": {
+    "prs": 117,
+    "lines": 43835,
+    "added": 30023,
+    "deleted": 14057,
+    "people": 11
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 41,
+     "lines": 12741,
+     "added": 11179,
+     "deleted": 1605
+    },
+    {
+     "login": "danpelota",
+     "prs": 7,
+     "lines": 7094,
+     "added": 1649,
+     "deleted": 5467
+    },
+    {
+     "login": "swain",
+     "prs": 7,
+     "lines": 5512,
+     "added": 3229,
+     "deleted": 2283
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 13,
+     "lines": 4866,
+     "added": 4712,
+     "deleted": 181
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 15,
+     "lines": 4113,
+     "added": 1984,
+     "deleted": 2131
+    },
+    {
+     "login": "feliksalbright",
+     "prs": 1,
+     "lines": 3383,
+     "added": 2502,
+     "deleted": 1032
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 11,
+     "lines": 2687,
+     "added": 2260,
+     "deleted": 427
+    },
+    {
+     "login": "stephtea",
+     "prs": 16,
+     "lines": 2311,
+     "added": 1466,
+     "deleted": 845
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 3,
+     "lines": 548,
+     "added": 525,
+     "deleted": 23
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 2,
+     "lines": 535,
+     "added": 484,
+     "deleted": 51
+    },
+    {
+     "login": "ernestohs",
+     "prs": 1,
+     "lines": 45,
+     "added": 33,
+     "deleted": 12
+    }
+   ]
+  },
+  {
+   "week": "2026-W34",
+   "workingDays": 5,
+   "totals": {
+    "prs": 153,
+    "lines": 82780,
+    "added": 69592,
+    "deleted": 13283,
+    "people": 10
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 60,
+     "lines": 35301,
+     "added": 31109,
+     "deleted": 4192
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 19,
+     "lines": 14159,
+     "added": 13208,
+     "deleted": 953
+    },
+    {
+     "login": "dealvz",
+     "prs": 2,
+     "lines": 8947,
+     "added": 7461,
+     "deleted": 1486
+    },
+    {
+     "login": "swain",
+     "prs": 15,
+     "lines": 7498,
+     "added": 6664,
+     "deleted": 835
+    },
+    {
+     "login": "stephtea",
+     "prs": 8,
+     "lines": 6082,
+     "added": 3773,
+     "deleted": 2311
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 18,
+     "lines": 5396,
+     "added": 3016,
+     "deleted": 2401
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 12,
+     "lines": 3417,
+     "added": 2981,
+     "deleted": 505
+    },
+    {
+     "login": "danpelota",
+     "prs": 9,
+     "lines": 879,
+     "added": 524,
+     "deleted": 355
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 7,
+     "lines": 828,
+     "added": 650,
+     "deleted": 178
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 273,
+     "added": 206,
+     "deleted": 67
+    }
+   ]
+  },
+  {
+   "week": "2026-W35",
+   "workingDays": 5,
+   "totals": {
+    "prs": 220,
+    "lines": 128159,
+    "added": 110564,
+    "deleted": 19717,
+    "people": 14
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 74,
+     "lines": 41550,
+     "added": 36514,
+     "deleted": 5087
+    },
+    {
+     "login": "stephtea",
+     "prs": 35,
+     "lines": 20708,
+     "added": 20401,
+     "deleted": 771
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 14,
+     "lines": 20142,
+     "added": 15479,
+     "deleted": 5960
+    },
+    {
+     "login": "swain",
+     "prs": 24,
+     "lines": 14445,
+     "added": 13473,
+     "deleted": 972
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 33,
+     "lines": 12401,
+     "added": 10671,
+     "deleted": 1730
+    },
+    {
+     "login": "danpelota",
+     "prs": 18,
+     "lines": 5749,
+     "added": 2116,
+     "deleted": 3939
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 5214,
+     "added": 5119,
+     "deleted": 95
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 7,
+     "lines": 4388,
+     "added": 3808,
+     "deleted": 584
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 2007,
+     "added": 1972,
+     "deleted": 35
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 6,
+     "lines": 914,
+     "added": 756,
+     "deleted": 158
+    },
+    {
+     "login": "emilybgoodpartyorg",
+     "prs": 1,
+     "lines": 229,
+     "added": 30,
+     "deleted": 199
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 2,
+     "lines": 226,
+     "added": 136,
+     "deleted": 90
+    },
+    {
+     "login": "jagoda",
+     "prs": 1,
+     "lines": 162,
+     "added": 77,
+     "deleted": 85
+    },
+    {
+     "login": "fromjustin",
+     "prs": 1,
+     "lines": 24,
+     "added": 12,
+     "deleted": 12
+    }
+   ]
+  },
+  {
+   "week": "2026-W36",
+   "workingDays": 5,
+   "totals": {
+    "prs": 211,
+    "lines": 183276,
+    "added": 112133,
+    "deleted": 71301,
+    "people": 11
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 26,
+     "lines": 57298,
+     "added": 33045,
+     "deleted": 24289
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 88,
+     "lines": 52229,
+     "added": 36727,
+     "deleted": 15502
+    },
+    {
+     "login": "swain",
+     "prs": 24,
+     "lines": 36563,
+     "added": 14999,
+     "deleted": 21645
+    },
+    {
+     "login": "stephtea",
+     "prs": 29,
+     "lines": 14498,
+     "added": 12028,
+     "deleted": 2470
+    },
+    {
+     "login": "dealvz",
+     "prs": 7,
+     "lines": 7039,
+     "added": 5824,
+     "deleted": 1215
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 14,
+     "lines": 6417,
+     "added": 2366,
+     "deleted": 4053
+    },
+    {
+     "login": "fromjustin",
+     "prs": 1,
+     "lines": 4767,
+     "added": 2931,
+     "deleted": 1836
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 16,
+     "lines": 2631,
+     "added": 2553,
+     "deleted": 111
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 1359,
+     "added": 1241,
+     "deleted": 124
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 2,
+     "lines": 292,
+     "added": 236,
+     "deleted": 56
+    },
+    {
+     "login": "emilybgoodpartyorg",
+     "prs": 1,
+     "lines": 183,
+     "added": 183,
+     "deleted": 0
+    }
+   ]
+  },
+  {
+   "week": "2026-W37",
+   "workingDays": 4,
+   "totals": {
+    "prs": 113,
+    "lines": 79356,
+    "added": 52901,
+    "deleted": 28560,
+    "people": 12
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 6,
+     "lines": 18248,
+     "added": 3209,
+     "deleted": 15039
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 26,
+     "lines": 14289,
+     "added": 14033,
+     "deleted": 300
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 9,
+     "lines": 13591,
+     "added": 13129,
+     "deleted": 462
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 12,
+     "lines": 11018,
+     "added": 6057,
+     "deleted": 7022
+    },
+    {
+     "login": "oakinh",
+     "prs": 8,
+     "lines": 9364,
+     "added": 8967,
+     "deleted": 397
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 16,
+     "lines": 6792,
+     "added": 3267,
+     "deleted": 3525
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 17,
+     "lines": 2369,
+     "added": 1350,
+     "deleted": 1019
+    },
+    {
+     "login": "fromjustin",
+     "prs": 2,
+     "lines": 1543,
+     "added": 919,
+     "deleted": 624
+    },
+    {
+     "login": "dealvz",
+     "prs": 6,
+     "lines": 984,
+     "added": 916,
+     "deleted": 68
+    },
+    {
+     "login": "stephtea",
+     "prs": 3,
+     "lines": 537,
+     "added": 499,
+     "deleted": 38
+    },
+    {
+     "login": "danpelota",
+     "prs": 5,
+     "lines": 434,
+     "added": 386,
+     "deleted": 48
+    },
+    {
+     "login": "emilybgoodpartyorg",
+     "prs": 3,
+     "lines": 187,
+     "added": 169,
+     "deleted": 18
+    }
+   ]
+  },
+  {
+   "week": "2026-W38",
+   "workingDays": 5,
+   "totals": {
+    "prs": 237,
+    "lines": 130136,
+    "added": 120096,
+    "deleted": 10786,
+    "people": 17
+   },
+   "contributors": [
+    {
+     "login": "oakinh",
+     "prs": 66,
+     "lines": 38093,
+     "added": 35992,
+     "deleted": 2188
+    },
+    {
+     "login": "emilybgoodpartyorg",
+     "prs": 22,
+     "lines": 35242,
+     "added": 33954,
+     "deleted": 1288
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 27,
+     "lines": 21101,
+     "added": 19504,
+     "deleted": 1601
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 35,
+     "lines": 9797,
+     "added": 8730,
+     "deleted": 1069
+    },
+    {
+     "login": "dealvz",
+     "prs": 18,
+     "lines": 8687,
+     "added": 7928,
+     "deleted": 759
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 24,
+     "lines": 6011,
+     "added": 3986,
+     "deleted": 2027
+    },
+    {
+     "login": "hhkarimi",
+     "prs": 11,
+     "lines": 2766,
+     "added": 2708,
+     "deleted": 58
+    },
+    {
+     "login": "stephtea",
+     "prs": 6,
+     "lines": 2105,
+     "added": 2017,
+     "deleted": 88
+    },
+    {
+     "login": "jagoda",
+     "prs": 7,
+     "lines": 1636,
+     "added": 1530,
+     "deleted": 106
+    },
+    {
+     "login": "fromjustin",
+     "prs": 8,
+     "lines": 1563,
+     "added": 930,
+     "deleted": 1284
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 4,
+     "lines": 815,
+     "added": 762,
+     "deleted": 53
+    },
+    {
+     "login": "nigel-gp",
+     "prs": 1,
+     "lines": 736,
+     "added": 636,
+     "deleted": 100
+    },
+    {
+     "login": "jacknagel-hs",
+     "prs": 1,
+     "lines": 682,
+     "added": 630,
+     "deleted": 52
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 4,
+     "lines": 544,
+     "added": 514,
+     "deleted": 30
+    },
+    {
+     "login": "danpelota",
+     "prs": 1,
+     "lines": 228,
+     "added": 172,
+     "deleted": 56
+    },
+    {
+     "login": "samuelgoodparty",
+     "prs": 1,
+     "lines": 98,
+     "added": 93,
+     "deleted": 5
+    },
+    {
+     "login": "swain",
+     "prs": 1,
+     "lines": 32,
+     "added": 10,
+     "deleted": 22
+    }
+   ]
+  },
+  {
+   "week": "2026-W39",
+   "workingDays": 5,
+   "totals": {
+    "prs": 58,
+    "lines": 129449,
+    "added": 33486,
+    "deleted": 96011,
+    "people": 10
+   },
+   "contributors": [
+    {
+     "login": "fromjustin",
+     "prs": 4,
+     "lines": 96431,
+     "added": 5998,
+     "deleted": 90434
+    },
+    {
+     "login": "stephtea",
+     "prs": 20,
+     "lines": 16617,
+     "added": 15976,
+     "deleted": 641
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 5,
+     "lines": 8595,
+     "added": 4698,
+     "deleted": 3944
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 8,
+     "lines": 2023,
+     "added": 1839,
+     "deleted": 184
+    },
+    {
+     "login": "jagoda",
+     "prs": 7,
+     "lines": 1576,
+     "added": 1436,
+     "deleted": 140
+    },
+    {
+     "login": "sanjayr1",
+     "prs": 8,
+     "lines": 1272,
+     "added": 1155,
+     "deleted": 117
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 3,
+     "lines": 1246,
+     "added": 1108,
+     "deleted": 138
+    },
+    {
+     "login": "dealvz",
+     "prs": 1,
+     "lines": 613,
+     "added": 487,
+     "deleted": 126
+    },
+    {
+     "login": "samuelgoodparty",
+     "prs": 1,
+     "lines": 606,
+     "added": 320,
+     "deleted": 286
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 1,
+     "lines": 470,
+     "added": 469,
+     "deleted": 1
+    }
+   ]
+  }
+ ],
+ "bots": {
+  "delegate-gp": {
+   "prs": 24,
+   "lines": 8405
+  },
+  "dependabot": {
+   "prs": 5,
+   "lines": 26
+  },
+  "omni-automaton": {
+   "prs": 23,
+   "lines": 4965
+  }
+ },
+ "machineStateFiles": [
+  "gp-api/.github/workflows/main.yml",
+  "gp-data-platform/airflow/astro/requirements.txt",
+  "gp-data-platform/dbt/project/seeds/l2_br_match_overrides.csv",
+  "gp-data-platform/matcha/uv.lock",
+  "gp-data-platform/requirements_test.txt",
+  "product-os/design-locked-watcher/state.json",
+  "product-os/done-watcher/state.json",
+  "product-os/shipped-watcher/state.json",
+  "product-os/voc-agent/last-run-state.json"
+ ]
+};
+
+const els = {
+  lines: document.getElementById('lines'),
+  prs: document.getElementById('prs'),
+  people: document.getElementById('people'),
+  stale: document.getElementById('stale'),
+  generated: document.getElementById('generated'),
+  stats: document.getElementById('stats'),
 }
 
-function renderTable(prs) {
-  const sorted = [...prs].sort((a, b) =>
-    new Date(b.merged_to_develop_at).getTime() - new Date(a.merged_to_develop_at).getTime()
-  )
-  const formatDate = (iso) => {
-    if (!iso) return '<span class="pending">pending</span>'
-    const d = new Date(iso)
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ' ' +
-      d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
-  }
-  document.getElementById('pr-table').innerHTML = sorted
-    .map(pr =>
-      '<tr>' +
-      '<td>' + pr.repo + '</td>' +
-      '<td><a href="https://github.com/thegoodparty/' + pr.repo + '/pull/' + pr.number +
-        '" target="_blank" style="color:#58a6ff;text-decoration:none">#' + pr.number + '</a> ' + pr.title + '</td>' +
-      '<td>' + pr.author + '</td>' +
-      '<td>' + formatDate(pr.merged_to_develop_at) + '</td>' +
-      '<td>' + formatDate(pr.deployed_to_master_at) + '</td>' +
-      '<td>' + formatDuration(pr.mttd_hours) + '</td>' +
-      '</tr>'
-    )
-    .join('')
+let selected = null
+
+const median = (nums) => {
+  if (nums.length === 0) return 0
+  const sorted = [...nums].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
 }
+
+const orgRate = (week, metric) => week.workingDays > 0 ? week.totals[metric] / week.workingDays : 0
+
+const contributorRate = (week, login, metric) => {
+  const c = week.contributors.find((row) => row.login === login)
+  if (!c || week.workingDays === 0) return 0
+  return c[metric] / week.workingDays
+}
+
+const medianRateSeries = (metric) =>
+  HISTORY.weeks.map((week) => {
+    if (week.workingDays === 0 || week.contributors.length === 0) return 0
+    const rates = week.contributors.map((c) => c[metric] / week.workingDays)
+    return median(rates)
+  })
+
+const niceStep = (max) => {
+  if (max <= 0) return 1
+  const rough = max / 4
+  const mag = Math.pow(10, Math.floor(Math.log10(rough)))
+  const norm = rough / mag
+  const step = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10
+  return step * mag
+}
+
+const tickIndices = (n, want) => {
+  if (n <= 1) return [0]
+  const count = Math.min(want, n)
+  const out = new Set()
+  for (let i = 0; i < count; i++) out.add(Math.round((i * (n - 1)) / (count - 1)))
+  return [...out].sort((a, b) => a - b)
+}
+
+const fmtNum = (n) => Math.round(n).toLocaleString()
+
+const drawPanel = (svg, weeks, series, referenceSeries) => {
+  const W = 920, H = 220
+  const padL = 48, padR = 14, padT = 14, padB = 26
+  const plotW = W - padL - padR
+  const plotH = H - padT - padB
+  const n = weeks.length
+
+  const allValues = referenceSeries ? series.concat(referenceSeries) : series
+  const rawMax = Math.max(0, ...allValues)
+  const step = niceStep(rawMax || 1)
+  const niceMax = Math.max(step, Math.ceil((rawMax || 1) / step) * step)
+
+  const xFor = (i) => padL + (n <= 1 ? plotW / 2 : (i / (n - 1)) * plotW)
+  const yFor = (v) => padT + plotH - (v / niceMax) * plotH
+
+  const pathFor = (vals) =>
+    vals.map((v, i) => `${i === 0 ? 'M' : 'L'}${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ')
+
+  const gridTicks = []
+  for (let t = 0; t <= niceMax + 0.0001; t += step) gridTicks.push(t)
+
+  const gridMarkup = gridTicks.map((t) => {
+    const y = yFor(t).toFixed(1)
+    return `<line class="gridline" x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}"></line>` +
+      `<text class="axis-label" x="${padL - 8}" y="${Number(y) + 3}" text-anchor="end">${fmtNum(t)}</text>`
+  }).join('')
+
+  const xTicks = tickIndices(n, 9)
+  const xMarkup = xTicks.map((i) => {
+    const x = xFor(i).toFixed(1)
+    const y0 = H - padB
+    const anchor = i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'
+    return `<line class="axis-tick" x1="${x}" x2="${x}" y1="${y0}" y2="${y0 + 4}"></line>` +
+      `<text class="axis-label" x="${x}" y="${y0 + 16}" text-anchor="${anchor}">${weeks[i].week.slice(2)}</text>`
+  }).join('')
+
+  const refMarkup = referenceSeries
+    ? `<path class="reference-line" d="${pathFor(referenceSeries)}"></path>`
+    : ''
+
+  const dotsMarkup = series.map((v, i) =>
+    `<circle class="series-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(v).toFixed(1)}" r="2.2"></circle>`
+  ).join('')
+
+  svg.innerHTML = gridMarkup + xMarkup + refMarkup +
+    `<path class="series-line" d="${pathFor(series)}"></path>` + dotsMarkup
+}
+
+const totalsByLogin = new Map()
+for (const week of HISTORY.weeks) {
+  for (const c of week.contributors) {
+    totalsByLogin.set(c.login, (totalsByLogin.get(c.login) || 0) + c.lines)
+  }
+}
+
+const buildPeople = () => {
+  const people = HISTORY.contributors
+    .map((login) => ({ login, lines: totalsByLogin.get(login) || 0 }))
+    .sort((a, b) => b.lines - a.lines)
+
+  els.people.innerHTML = people.map((p) =>
+    `<button type="button" data-login="${p.login}" aria-pressed="false">` +
+    `<span class="chip-login">${p.login}</span>` +
+    `<span class="chip-lines">${fmtNum(p.lines)} lines</span>` +
+    `</button>`
+  ).join('')
+}
+
+const updateChips = () => {
+  for (const btn of els.people.querySelectorAll('button[data-login]')) {
+    btn.setAttribute('aria-pressed', String(btn.dataset.login === selected))
+  }
+}
+
+const buildStats = () => {
+  const totalLines = HISTORY.weeks.reduce((n, w) => n + w.totals.lines, 0)
+  const totalPrs = HISTORY.weeks.reduce((n, w) => n + w.totals.prs, 0)
+  const stats = [
+    { label: 'Weeks tracked', value: HISTORY.weeks.length },
+    { label: 'Contributors', value: HISTORY.contributors.length },
+    { label: 'Qualifying lines', value: fmtNum(totalLines) },
+    { label: 'Qualifying PRs', value: fmtNum(totalPrs) },
+  ]
+  els.stats.innerHTML = stats.map((s) =>
+    `<div class="stat"><div class="value">${s.value}</div><div class="label">${s.label}</div></div>`
+  ).join('')
+  els.generated.textContent = `Generated ${new Date(HISTORY.generatedAt).toLocaleString()}`
+}
+
+const render = () => {
+  const weeks = HISTORY.weeks
+  const linesSeries = weeks.map((w) => selected ? contributorRate(w, selected, 'lines') : orgRate(w, 'lines'))
+  const prsSeries = weeks.map((w) => selected ? contributorRate(w, selected, 'prs') : orgRate(w, 'prs'))
+  const linesRef = selected ? medianRateSeries('lines') : null
+  const prsRef = selected ? medianRateSeries('prs') : null
+  drawPanel(els.lines, weeks, linesSeries, linesRef)
+  drawPanel(els.prs, weeks, prsSeries, prsRef)
+  updateChips()
+}
+
+els.people.addEventListener('click', (event) => {
+  const btn = event.target.closest('button[data-login]')
+  if (!btn) return
+  const login = btn.dataset.login
+  selected = selected === login ? null : login
+  render()
+})
+
+const STALE_MS = 48 * 60 * 60 * 1000
+if (Date.now() - Date.parse(HISTORY.generatedAt) > STALE_MS) {
+  els.stale.hidden = false
+}
+
+buildStats()
+buildPeople()
+render()
 </script>
 </body>
 </html>
