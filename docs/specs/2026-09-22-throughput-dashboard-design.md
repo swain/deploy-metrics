@@ -94,16 +94,30 @@ Two committed shapes, both derived. No file lists are ever stored.
 One file per ISO week, one row per merged pull request:
 
 ```
-{ repo, number, login, mergedAt, qualifying, reasons[], qloc, added, deleted,
-  soleFile, soleLines }
+{ repo, number, login, mergedAt, reasons[], qlocBase, added, deleted,
+  changedFiles, soleFile, soleLines }
 ```
 
+The cache holds only the part of the verdict a single week can decide.
+`reasons` carries every exclusion except machine state, and `qlocBase` is the
+line count over files that are not lockfiles, manifests or build output.
+
 `soleFile` and `soleLines` are populated only when the pull request changed
-exactly one file. They exist so that global machine-state detection can run
-across all weeks without refetching any diffs, which is the one piece of the
-classification that cannot be decided from a single week in isolation. A pull
-request that merely touches a state file alongside real work is unaffected,
-since the rule only excludes it when the state file is the entire diff.
+exactly one file. They are what lets global machine-state detection run across
+all weeks without refetching any diffs, which is the one piece of the
+classification that cannot be decided from a single week in isolation.
+
+Finishing the verdict at aggregate time is then a lookup, not a recount:
+
+```
+qualifying = reasons.length === 0 && !(soleFile && machineSet.has(soleFile))
+qloc       = qlocBase
+```
+
+`qloc` needs no machine-state subtraction, because a state file only ever
+affects the verdict when it is the entire diff, and in that case the whole pull
+request is already excluded. A pull request that merely touches a state file
+alongside real work keeps its lines, which are trivial by construction.
 
 Roughly 2 MB for a year at current volume.
 
@@ -133,7 +147,13 @@ Nightly on the existing cron. The first run backfills from 2026-01-05, about
 
 ## Dashboard
 
-`index.html`, static, reads `data/history.json`, no build step.
+`dashboard.template.html` is the editable source; the run writes `index.html`
+with the data injected in place of a `/*__DATA__*/` marker. Both are committed.
+
+The data is **embedded rather than fetched**, because `fetch()` against a
+`file://` URL is blocked, and this dashboard is opened as a local file now that
+Pages is off. Embedding means double-clicking the file works, offline, with no
+server and no CDN. Charts are hand-rolled inline SVG for the same reason.
 
 Two panels stacked on one shared x-axis: qualifying lines per working day, and
 qualifying pull requests per working day. Never a dual axis — the two measures
