@@ -3,6 +3,16 @@ name: Update throughput
 on:
   schedule:
     - cron: "0 22 * * *"
+  # Republish when the page or the pipeline changes, not just nightly. A push
+  # made by this job's own GITHUB_TOKEN does not retrigger a workflow, so the
+  # commit step below cannot loop back into here.
+  push:
+    branches: [main]
+    paths:
+      - "dashboard.template.html"
+      - "src/**"
+      - "holidays.json"
+      - ".github/workflows/update.yml"
   workflow_dispatch: {}
 
 concurrency:
