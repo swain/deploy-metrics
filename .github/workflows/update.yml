@@ -12,6 +12,8 @@ concurrency:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 jobs:
   update:
@@ -42,6 +44,20 @@ jobs:
           git commit -m "Refresh throughput data"
           git push
 
+      # Only the rendered page is published. Serving the repo root would put the
+      # week caches and the source at the public URL, and the page needs neither
+      # because it embeds its own data.
+      - name: Stage the page for Pages
+        run: |
+          mkdir -p .pages
+          cp index.html .pages/index.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .pages
+
       - name: Report failure
         if: failure()
         run: |
@@ -50,3 +66,13 @@ jobs:
             --body "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

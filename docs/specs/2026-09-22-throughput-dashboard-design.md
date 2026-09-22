@@ -89,7 +89,7 @@ re-carries lines that already arrived in the pull requests that fed it.
 
 Two committed shapes, both derived. No file lists are ever stored.
 
-### `data/weeks/<iso-week>.json` — the fetch cache
+### `data/weeks/<iso-week>.json`: the fetch cache
 
 One file per ISO week, one row per merged pull request:
 
@@ -121,7 +121,7 @@ alongside real work keeps its lines, which are trivial by construction.
 
 Roughly 2 MB for a year at current volume.
 
-### `data/history.json` — what the page reads
+### `data/history.json`: what the page reads
 
 Per ISO week: the working-day denominator, whether the week is still in
 progress, org totals, and an array of per-contributor rows carrying qualifying
@@ -170,7 +170,7 @@ Pages is off. Embedding means double-clicking the file works, offline, with no
 server and no CDN. Charts are hand-rolled inline SVG for the same reason.
 
 Two panels stacked on one shared x-axis: qualifying lines per working day, and
-qualifying pull requests per working day. Never a dual axis — the two measures
+qualifying pull requests per working day. Never a dual axis. The two measures
 have unrelated scales, and overlaying them invents a correlation.
 
 Below the panels, the contributor list. Clicking a contributor filters both
