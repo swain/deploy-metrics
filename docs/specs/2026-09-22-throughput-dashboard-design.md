@@ -129,8 +129,11 @@ additions and deletions. Plus a top-level `generatedAt`.
 
 ## Aggregation
 
-- Weeks are ISO weeks, keyed `YYYY-Www`, attributed by merge date in
-  America/New_York.
+- Weeks are ISO weeks, keyed `YYYY-Www`, attributed by merge date in **UTC**.
+  UTC rather than Eastern so that the bucket boundary and the GitHub query
+  window are the same instant. Under a local-time bucket, a pull request merged
+  Sunday evening Eastern falls in Monday's UTC query window but Sunday's local
+  bucket, which silently drops or duplicates it at every week boundary.
 - The denominator is that week's weekdays less any holiday in a checked-in
   `holidays.json`, so a short week is not read as a slow one.
 - Bots and accounts below a small volume floor are held out of the org totals
