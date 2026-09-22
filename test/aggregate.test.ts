@@ -99,6 +99,18 @@ test('the week containing generatedAt is partial and counts only elapsed working
   assert.equal(w03.partial, true)
 })
 
+test('a week whose only elapsed working day is a holiday is omitted, not floored to 1', () => {
+  const weeks = new Map([
+    ['2026-W02', [toCached(pr())]],
+    ['2026-W03', [toCached(pr({ mergedAt: '2026-01-12T10:00:00Z', login: 'bob' }))]],
+  ])
+  const holidayMondayOpts = { bots: new Set(['robot']), generatedAt: '2026-01-12T12:00:00Z' }
+  const h = buildHistory(weeks, new Set(['2026-01-12']), holidayMondayOpts)
+  assert.deepEqual(h.weeks.map((w) => w.week), ['2026-W02'])
+  assert.equal(h.weeks[0].workingDays, 5)
+  assert.equal(h.weeks[0].totals.lines, 100)
+})
+
 test('a file under the machine-state threshold counts normally', () => {
   const nineOnly = Array.from({ length: 9 }, (_, i) =>
     toCached(pr({

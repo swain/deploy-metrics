@@ -84,9 +84,16 @@ export const buildHistory = (
 
     const contributors = [...byLogin.values()].sort((a, b) => b.lines - a.lines)
     const partial = key === currentWeekKey
+    const elapsed = partial ? workingDaysElapsed(key, holidays, now) : workingDays(key, holidays)
+
+    // A partial week with zero elapsed working days (every weekday so far is a
+    // holiday) has no rate yet - plotting it would mean dividing by a working
+    // day that never happened. It reappears once a real working day lands.
+    if (partial && elapsed === 0) continue
+
     summaries.push({
       week: key,
-      workingDays: partial ? Math.max(1, workingDaysElapsed(key, holidays, now)) : workingDays(key, holidays),
+      workingDays: elapsed,
       partial,
       totals: {
         prs: contributors.reduce((n, c) => n + c.prs, 0),
