@@ -1,5 +1,7 @@
 import type { RawPr, RawFile } from './classify.ts'
 
+class FatalError extends Error {}
+
 const ENDPOINT = 'https://api.github.com/graphql'
 const ORG = 'thegoodparty'
 
@@ -44,16 +46,17 @@ const gql = async (query: string, variables: Record<string, unknown>, token: str
       })
       if (!res.ok) {
         if ([429, 500, 502, 503].includes(res.status)) { await sleep(5000 * (attempt + 1)); continue }
-        throw new Error(`GitHub HTTP ${res.status}`)
+        throw new FatalError(`GitHub HTTP ${res.status}`)
       }
       const body = await res.json()
-      if (body.errors && !body.data) {
+      if (body.errors) {
         const message = JSON.stringify(body.errors).slice(0, 200)
         if (message.includes('RATE_LIMITED')) { await sleep(30_000); continue }
-        throw new Error(`GitHub GraphQL: ${message}`)
+        throw new FatalError(`GitHub GraphQL: ${message}`)
       }
       return body.data
     } catch (error) {
+      if (error instanceof FatalError) throw error
       if (attempt === 5) throw error
       await sleep(5000 * (attempt + 1))
     }
@@ -64,12 +67,14 @@ const gql = async (query: string, variables: Record<string, unknown>, token: str
 const pageFiles = async (repo: string, number: number, after: string, token: string): Promise<RawFile[]> => {
   const out: RawFile[] = []
   let cursor: string | null = after
-  for (let guard = 0; guard < 60 && cursor; guard++) {
+  let guard = 0
+  for (; guard < 60 && cursor; guard++) {
     const data = await gql(FILES, { repo, number, after: cursor }, token)
     const files = data.repository.pullRequest.files
     out.push(...files.nodes)
     cursor = files.pageInfo.hasNextPage ? files.pageInfo.endCursor : null
   }
+  if (guard >= 60) throw new FatalError(`${repo}#${number}: more file pages than the pager allows`)
   return out
 }
 
