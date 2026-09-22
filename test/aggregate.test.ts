@@ -205,6 +205,45 @@ test('a settled week where every weekday is a holiday is omitted, not emitted wi
   )
 })
 
+test('the repos map sums to the same lines and prs as the contributor total', () => {
+  const weeks = new Map([
+    [
+      '2026-W02',
+      [
+        toCached(pr({ repo: 'omni' })),
+        toCached(
+          pr({
+            number: 2,
+            repo: 'gp-api',
+            additions: 20,
+            deletions: 10,
+            files: [{ path: 'src/b.ts', additions: 20, deletions: 10, changeType: 'MODIFIED' }],
+          }),
+        ),
+      ],
+    ],
+  ])
+  const h = buildHistory(weeks, new Set(), opts)
+  const alice = h.weeks[0].contributors[0]
+  const repoLines = Object.values(alice.repos).reduce((n, r) => n + r.lines, 0)
+  const repoPrs = Object.values(alice.repos).reduce((n, r) => n + r.prs, 0)
+  assert.equal(repoLines, alice.lines)
+  assert.equal(repoPrs, alice.prs)
+  assert.equal(alice.repos.omni.lines, 100)
+  assert.equal(alice.repos.omni.prs, 1)
+  assert.equal(alice.repos['gp-api'].lines, 30)
+  assert.equal(alice.repos['gp-api'].prs, 1)
+})
+
+test('an excluded repo never appears in the repos map', () => {
+  const weeks = new Map([
+    ['2026-W02', [toCached(pr()), toCached(pr({ number: 2, repo: 'product-os', login: 'alice' }))]],
+  ])
+  const h = buildHistory(weeks, new Set(), opts)
+  const alice = h.weeks[0].contributors[0]
+  assert(!('product-os' in alice.repos))
+})
+
 test('a file under the machine-state threshold counts normally', () => {
   const nineOnly = Array.from({ length: 9 }, (_, i) =>
     toCached(

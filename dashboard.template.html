@@ -183,10 +183,6 @@
         cursor: pointer;
         text-align: left;
       }
-      #people button:disabled {
-        opacity: 0.4;
-        cursor: not-allowed;
-      }
       #people button .chip-login {
         font-weight: 600;
         font-size: 13px;
@@ -202,13 +198,11 @@
       #people button[aria-pressed='true'] .chip-login {
         color: var(--chip-color, var(--series));
       }
-      .cap-note {
-        color: var(--ink-secondary);
-        font-size: 12px;
+      .bulk-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
         margin: 0 0 12px;
-      }
-      .cap-note[hidden] {
-        display: none;
       }
       .selection-row {
         display: flex;
@@ -258,6 +252,56 @@
       }
       #contributorCharts[hidden] {
         display: none;
+      }
+      #repoSplit[hidden] {
+        display: none;
+      }
+      .repo-split-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .repo-split-item {
+        background: var(--surface);
+        border: 1px solid var(--gridline);
+        border-radius: 10px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1 1 240px;
+        min-width: 0;
+        max-width: 100%;
+      }
+      .repo-split-item svg {
+        flex: 0 0 auto;
+        width: 88px;
+        height: 88px;
+      }
+      .repo-split-login {
+        font-weight: 700;
+        font-size: 13px;
+        margin: 0 0 6px;
+      }
+      .repo-split-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        color: var(--ink-secondary);
+        min-width: 0;
+      }
+      .repo-split-list li {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .repo-split-swatch {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex: 0 0 auto;
       }
       button:focus-visible {
         outline: 2px solid var(--series);
@@ -337,12 +381,12 @@
       <section class="block">
         <h2 class="section-title">By contributor</h2>
         <div id="people"></div>
-        <p class="cap-note" id="capNote" hidden>
-          8 selected. That is the cap on distinguishable colors. Deselect one to add another.
-        </p>
+        <div class="bulk-actions">
+          <button type="button" class="clear-btn" id="selectAllBtn">Select all</button>
+          <button type="button" class="clear-btn" id="deselectAllBtn">Deselect all</button>
+        </div>
         <div class="selection-row" id="selectionRow" hidden>
           <div class="legend" id="legend"></div>
-          <button type="button" class="clear-btn" id="clearBtn">Clear selection</button>
         </div>
         <p class="empty-state" id="emptyState">
           Select a contributor above to see their throughput.
@@ -367,12 +411,17 @@
             ></svg>
           </section>
         </div>
+        <div id="repoSplit" hidden>
+          <h3 class="panel-title">Repo split (qualifying lines, current range)</h3>
+          <div class="repo-split-row" id="repoSplitRow"></div>
+        </div>
       </section>
     </div>
     <script>
       const HISTORY = /*__DATA__*/;
-      const MAX_SELECTED = 8
+      const MAX_CATEGORICAL = 8
       const DAY_MS = 86400000
+      const REPO_OTHER = 'Other'
 
       const RANGE_OPTIONS = [
         { key: 'all', days: null, label: 'All time' },
@@ -388,12 +437,14 @@
         contribLines: document.getElementById('contribLines'),
         contribPrs: document.getElementById('contribPrs'),
         contributorCharts: document.getElementById('contributorCharts'),
+        repoSplit: document.getElementById('repoSplit'),
+        repoSplitRow: document.getElementById('repoSplitRow'),
         emptyState: document.getElementById('emptyState'),
         people: document.getElementById('people'),
-        capNote: document.getElementById('capNote'),
         selectionRow: document.getElementById('selectionRow'),
         legend: document.getElementById('legend'),
-        clearBtn: document.getElementById('clearBtn'),
+        selectAllBtn: document.getElementById('selectAllBtn'),
+        deselectAllBtn: document.getElementById('deselectAllBtn'),
         rangeRow: document.getElementById('rangeRow'),
         stale: document.getElementById('stale'),
         generated: document.getElementById('generated'),
@@ -413,6 +464,9 @@
       let currentRange = DEFAULT_RANGE
       let weeks = []
       let activeLogins = new Set()
+      // Chip display order (by lines desc, current range). Select all walks this
+      // so it adds contributors in the same order a person clicking top-down would.
+      let peopleOrder = []
 
       const loadStoredRange = () => {
         try {
@@ -549,6 +603,7 @@
         const people = [...totals.entries()]
           .map(([login, lines]) => ({ login, lines }))
           .sort((a, b) => b.lines - a.lines)
+        peopleOrder = people.map((p) => p.login)
 
         els.people.innerHTML = people.map((p) =>
           `<button type="button" data-login="${p.login}" aria-pressed="false">` +
@@ -559,10 +614,12 @@
       }
 
       // Lowest free slot wins, so a freed slot (from a deselect) is reused before
-      // any higher slot, keeping the palette assignment stable and gap-free.
+      // any higher slot, keeping the palette assignment stable and gap-free. Once
+      // all 8 categorical slots are taken, later contributors get no slot at all
+      // and render in the muted grey token instead of a 9th invented hue.
       const assignSlot = (login) => {
         const used = new Set(colorSlots.values())
-        for (let i = 0; i < MAX_SELECTED; i++) {
+        for (let i = 0; i < MAX_CATEGORICAL; i++) {
           if (!used.has(i)) {
             colorSlots.set(login, i)
             return
@@ -570,31 +627,43 @@
         }
       }
 
+      const seriesColorFor = (login) =>
+        colorSlots.has(login) ? `var(--contrib-${colorSlots.get(login)})` : 'var(--muted)'
+
       const toggleContributor = (login) => {
         if (selectedOrder.includes(login)) {
           selectedOrder = selectedOrder.filter((l) => l !== login)
           colorSlots.delete(login)
           return
         }
-        if (selectedOrder.length >= MAX_SELECTED) return
         selectedOrder.push(login)
         assignSlot(login)
       }
 
+      const selectAll = () => {
+        for (const login of peopleOrder) {
+          if (selectedOrder.includes(login)) continue
+          selectedOrder.push(login)
+          assignSlot(login)
+        }
+      }
+
+      const deselectAll = () => {
+        selectedOrder = []
+        colorSlots.clear()
+      }
+
       const updateChips = () => {
-        const atCap = selectedOrder.length >= MAX_SELECTED
         for (const btn of els.people.querySelectorAll('button[data-login]')) {
           const login = btn.dataset.login
           const isSelected = selectedOrder.includes(login)
           btn.setAttribute('aria-pressed', String(isSelected))
-          btn.disabled = !isSelected && atCap
           if (isSelected) {
-            btn.style.setProperty('--chip-color', `var(--contrib-${colorSlots.get(login)})`)
+            btn.style.setProperty('--chip-color', seriesColorFor(login))
           } else {
             btn.style.removeProperty('--chip-color')
           }
         }
-        els.capNote.hidden = !atCap
       }
 
       const updateSelectionUI = () => {
@@ -603,7 +672,7 @@
         els.legend.innerHTML = hasSelection
           ? selectedOrder.map((login) =>
               `<span class="legend-item">` +
-              `<span class="legend-swatch" style="background:var(--contrib-${colorSlots.get(login)})"></span>` +
+              `<span class="legend-swatch" style="background:${seriesColorFor(login)}"></span>` +
               `${login}` +
               `</span>`
             ).join('')
@@ -613,19 +682,105 @@
       const buildContributorSeries = (metric) =>
         selectedOrder.map((login) => ({
           login,
-          color: `var(--contrib-${colorSlots.get(login)})`,
+          color: seriesColorFor(login),
           values: weeks.map((w) => contributorRate(w, login, metric)),
         }))
 
-      // Redraws only what a contributor toggle or Clear can affect: chip states,
-      // the legend, and the by-contributor charts. Never rebuilds the chip list
-      // itself, so a keyboard user's focus stays put.
+      // Sums a contributor's per-repo lines over the currently visible weeks (so
+      // the split respects the range selector, not a lifetime total), then caps
+      // it at 6 slices: the top 5 repos by lines, plus everything else folded
+      // into one grey "Other". Colors are assigned by rank within the top 5
+      // before the final sort, so "Other" moving around by value never bumps a
+      // real repo into a different hue.
+      const contributorRepoTotals = (login, weeksInRange) => {
+        const totals = {}
+        for (const week of weeksInRange) {
+          const c = week.contributors.find((row) => row.login === login)
+          if (!c) continue
+          for (const [repo, stats] of Object.entries(c.repos)) {
+            totals[repo] = (totals[repo] || 0) + stats.lines
+          }
+        }
+        return totals
+      }
+
+      const repoSlicesFor = (repoTotals) => {
+        const entries = Object.entries(repoTotals).sort((a, b) => b[1] - a[1])
+        const top = entries.slice(0, 5).map(([repo, lines], i) => ({ repo, lines, color: `var(--contrib-${i})` }))
+        const rest = entries.slice(5)
+        if (rest.length === 0) return top.sort((a, b) => b.lines - a.lines)
+        const otherLines = rest.reduce((n, [, v]) => n + v, 0)
+        return [...top, { repo: REPO_OTHER, lines: otherLines, color: 'var(--muted)' }].sort((a, b) => b.lines - a.lines)
+      }
+
+      const polarToCartesian = (cx, cy, r, angle) => ({
+        x: cx + r * Math.cos(angle - Math.PI / 2),
+        y: cy + r * Math.sin(angle - Math.PI / 2),
+      })
+
+      const arcPath = (cx, cy, r, startAngle, endAngle) => {
+        const start = polarToCartesian(cx, cy, r, startAngle)
+        const end = polarToCartesian(cx, cy, r, endAngle)
+        const largeArc = endAngle - startAngle > Math.PI ? 1 : 0
+        return `M${cx},${cy} L${start.x.toFixed(2)},${start.y.toFixed(2)} A${r},${r} 0 ${largeArc} 1 ${end.x.toFixed(2)},${end.y.toFixed(2)} Z`
+      }
+
+      const drawPie = (svg, slices, total) => {
+        const cx = 44, cy = 44, r = 42
+        let angle = 0
+        svg.innerHTML = slices.map((s) => {
+          const frac = total > 0 ? s.lines / total : 0
+          const start = angle
+          angle += frac * Math.PI * 2
+          if (frac <= 0) return ''
+          // A slice covering the whole pie has no distinguishable arc endpoints.
+          if (frac >= 0.9999) return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${s.color}"></circle>`
+          return `<path d="${arcPath(cx, cy, r, start, angle)}" fill="${s.color}"></path>`
+        }).join('')
+      }
+
+      const pct = (n, total) => (total > 0 ? ((n / total) * 100).toFixed(1) : '0.0')
+
+      // Hidden entirely with nothing selected, rather than an empty row of pies.
+      const buildRepoSplit = () => {
+        if (selectedOrder.length === 0) {
+          els.repoSplit.hidden = true
+          els.repoSplitRow.innerHTML = ''
+          return
+        }
+        els.repoSplit.hidden = false
+        const items = selectedOrder.map((login) => {
+          const slices = repoSlicesFor(contributorRepoTotals(login, weeks))
+          const total = slices.reduce((n, s) => n + s.lines, 0)
+          return { login, slices, total }
+        })
+        els.repoSplitRow.innerHTML = items.map(({ login, slices, total }) => {
+          const list = slices.map((s) =>
+            `<li><span class="repo-split-swatch" style="background:${s.color}"></span>` +
+            `<span>${s.repo}, ${pct(s.lines, total)}%, ${fmtNum(s.lines)}</span></li>`
+          ).join('')
+          return `<div class="repo-split-item">` +
+            `<svg id="pie-${login}" viewBox="0 0 88 88" role="img" aria-label="${login}'s qualifying lines by repo"></svg>` +
+            `<div><p class="repo-split-login" style="color:${seriesColorFor(login)}">${login}</p>` +
+            `<ul class="repo-split-list">${list}</ul></div>` +
+            `</div>`
+        }).join('')
+        for (const { login, slices, total } of items) {
+          drawPie(document.getElementById(`pie-${login}`), slices, total)
+        }
+      }
+
+      // Redraws only what a contributor toggle, Select all or Deselect all can
+      // affect: chip states, the legend, the by-contributor charts and the repo
+      // split row. Never rebuilds the chip list itself, so a keyboard user's
+      // focus stays put.
       const renderSelection = () => {
         updateChips()
         updateSelectionUI()
         const hasSelection = selectedOrder.length > 0
         els.emptyState.hidden = hasSelection
         els.contributorCharts.hidden = !hasSelection
+        buildRepoSplit()
         if (!hasSelection) return
         drawMultiPanel(els.contribLines, weeks, buildContributorSeries('lines'))
         drawMultiPanel(els.contribPrs, weeks, buildContributorSeries('prs'))
@@ -687,9 +842,13 @@
         renderSelection()
       })
 
-      els.clearBtn.addEventListener('click', () => {
-        selectedOrder = []
-        colorSlots.clear()
+      els.selectAllBtn.addEventListener('click', () => {
+        selectAll()
+        renderSelection()
+      })
+
+      els.deselectAllBtn.addEventListener('click', () => {
+        deselectAll()
         renderSelection()
       })
 

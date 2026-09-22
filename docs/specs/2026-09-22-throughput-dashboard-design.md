@@ -125,7 +125,12 @@ Roughly 2 MB for a year at current volume.
 
 Per ISO week: the working-day denominator, whether the week is still in
 progress, org totals, and an array of per-contributor rows carrying qualifying
-pull requests, qualifying lines, additions and deletions. Also `weekStart`,
+pull requests, qualifying lines, additions and deletions. Each contributor row
+also carries `repos`, a `{ [repo]: { prs, lines } }` breakdown of that same
+week's qualifying pull requests and lines by repo, so the split respects
+whatever time range the page has selected rather than being a lifetime total.
+`repos[*].lines` summed always equals that row's `lines`, and likewise for
+`prs`; an excluded repo (`product-os`) never appears as a key. Also `weekStart`,
 that week's Monday as a `YYYY-MM-DD` string, derived once in `aggregate.ts`
 from the `week` key via `weekStartUTC` so the page can label an axis by date
 without reimplementing ISO week arithmetic; `week` itself stays as the map key,

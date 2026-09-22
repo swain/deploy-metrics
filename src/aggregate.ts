@@ -8,6 +8,7 @@ export interface ContributorWeek {
   lines: number
   addedRaw: number
   deletedRaw: number
+  repos: Record<string, { prs: number; lines: number }>
 }
 
 export interface WeekSummary {
@@ -52,6 +53,7 @@ const blank = (login: string): ContributorWeek => ({
   lines: 0,
   addedRaw: 0,
   deletedRaw: 0,
+  repos: {},
 })
 
 export const buildHistory = (
@@ -88,6 +90,10 @@ export const buildHistory = (
       entry.lines += row.qlocBase
       entry.addedRaw += row.added
       entry.deletedRaw += row.deleted
+      const repoEntry = entry.repos[row.repo] ?? { prs: 0, lines: 0 }
+      repoEntry.prs += 1
+      repoEntry.lines += row.qlocBase
+      entry.repos[row.repo] = repoEntry
       byLogin.set(row.login, entry)
       people.add(row.login)
     }
