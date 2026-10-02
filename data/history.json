@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T22:05:38.658Z",
+ "generatedAt": "2026-10-02T22:05:57.240Z",
  "contributors": [
   "Collin-GP",
   "Collin-Park",
@@ -8329,30 +8329,30 @@
   {
    "week": "2026-W40",
    "weekStart": "2026-09-28",
-   "workingDays": 4,
+   "workingDays": 5,
    "partial": true,
    "totals": {
-    "prs": 308,
-    "lines": 340260,
-    "addedRaw": 291682,
-    "deletedRaw": 49686,
-    "people": 15
+    "prs": 378,
+    "lines": 402458,
+    "addedRaw": 344115,
+    "deletedRaw": 59469,
+    "people": 17
    },
    "contributors": [
     {
      "login": "swain",
-     "prs": 108,
-     "lines": 146852,
-     "addedRaw": 115943,
-     "deletedRaw": 31271,
+     "prs": 112,
+     "lines": 158967,
+     "addedRaw": 128038,
+     "deletedRaw": 31309,
      "repos": {
       "omni": {
-       "prs": 28,
-       "lines": 31575
+       "prs": 30,
+       "lines": 31600
       },
       "ops": {
-       "prs": 75,
-       "lines": 114750
+       "prs": 77,
+       "lines": 126840
       },
       "gp-terraform-dataplatform": {
        "prs": 1,
@@ -8366,31 +8366,44 @@
     },
     {
      "login": "stephtea",
-     "prs": 28,
-     "lines": 79889,
-     "addedRaw": 77948,
-     "deletedRaw": 1941,
+     "prs": 45,
+     "lines": 93329,
+     "addedRaw": 88941,
+     "deletedRaw": 4388,
      "repos": {
       "omni": {
-       "prs": 28,
-       "lines": 79889
+       "prs": 45,
+       "lines": 93329
       }
      }
     },
     {
      "login": "datawithtristan",
-     "prs": 40,
-     "lines": 44237,
-     "addedRaw": 37867,
-     "deletedRaw": 6370,
+     "prs": 53,
+     "lines": 53106,
+     "addedRaw": 43929,
+     "deletedRaw": 9177,
      "repos": {
       "gp-data-platform": {
-       "prs": 18,
-       "lines": 8428
+       "prs": 25,
+       "lines": 9049
       },
       "omni": {
-       "prs": 22,
-       "lines": 35809
+       "prs": 28,
+       "lines": 44057
+      }
+     }
+    },
+    {
+     "login": "bryclevgp",
+     "prs": 25,
+     "lines": 27238,
+     "addedRaw": 22084,
+     "deletedRaw": 5154,
+     "repos": {
+      "omni": {
+       "prs": 25,
+       "lines": 27238
       }
      }
     },
@@ -8409,31 +8422,18 @@
     },
     {
      "login": "tomer-tgp",
-     "prs": 31,
-     "lines": 14766,
-     "addedRaw": 13344,
-     "deletedRaw": 2111,
+     "prs": 41,
+     "lines": 16719,
+     "addedRaw": 15010,
+     "deletedRaw": 2398,
      "repos": {
       "omni": {
-       "prs": 27,
-       "lines": 13363
+       "prs": 36,
+       "lines": 15309
       },
       "gp-marketing": {
-       "prs": 4,
-       "lines": 1403
-      }
-     }
-    },
-    {
-     "login": "bryclevgp",
-     "prs": 8,
-     "lines": 7785,
-     "addedRaw": 6088,
-     "deletedRaw": 1697,
-     "repos": {
-      "omni": {
-       "prs": 8,
-       "lines": 7785
+       "prs": 5,
+       "lines": 1410
       }
      }
     },
@@ -8452,14 +8452,44 @@
     },
     {
      "login": "dealvz",
-     "prs": 12,
-     "lines": 4932,
-     "addedRaw": 4228,
-     "deletedRaw": 711,
+     "prs": 13,
+     "lines": 5370,
+     "addedRaw": 4646,
+     "deletedRaw": 731,
      "repos": {
       "omni": {
-       "prs": 12,
-       "lines": 4932
+       "prs": 13,
+       "lines": 5370
+      }
+     }
+    },
+    {
+     "login": "melecia-gp",
+     "prs": 4,
+     "lines": 4662,
+     "addedRaw": 4127,
+     "deletedRaw": 535,
+     "repos": {
+      "chat-bench": {
+       "prs": 3,
+       "lines": 4655
+      },
+      "omni": {
+       "prs": 1,
+       "lines": 7
+      }
+     }
+    },
+    {
+     "login": "bugboss-gp",
+     "prs": 19,
+     "lines": 4416,
+     "addedRaw": 3769,
+     "deletedRaw": 647,
+     "repos": {
+      "omni": {
+       "prs": 19,
+       "lines": 4416
       }
      }
     },
@@ -8502,19 +8532,6 @@
      }
     },
     {
-     "login": "bugboss-gp",
-     "prs": 18,
-     "lines": 4062,
-     "addedRaw": 3596,
-     "deletedRaw": 466,
-     "repos": {
-      "omni": {
-       "prs": 18,
-       "lines": 4062
-      }
-     }
-    },
-    {
      "login": "nigel-gp",
      "prs": 1,
      "lines": 1003,
@@ -8524,6 +8541,19 @@
       "gp-data-platform": {
        "prs": 1,
        "lines": 1003
+      }
+     }
+    },
+    {
+     "login": "danpelota",
+     "prs": 3,
+     "lines": 914,
+     "addedRaw": 903,
+     "deletedRaw": 11,
+     "repos": {
+      "gp-data-platform": {
+       "prs": 3,
+       "lines": 914
       }
      }
     },
@@ -8595,8 +8625,8 @@
    "lines": 38409
   },
   "github-actions": {
-   "prs": 2,
-   "lines": 44
+   "prs": 3,
+   "lines": 72
   }
  },
  "machineStateFiles": [
