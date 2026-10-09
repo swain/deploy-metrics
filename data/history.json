@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T22:05:35.809Z",
+ "generatedAt": "2026-10-09T22:06:03.154Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -11,6 +11,7 @@
   "danpelota",
   "datawithtristan",
   "dealvz",
+  "delegate-gp-bot",
   "emilybgoodpartyorg",
   "ernestohs",
   "eugenebazdyriev",
@@ -8606,14 +8607,14 @@
   {
    "week": "2026-W41",
    "weekStart": "2026-10-05",
-   "workingDays": 4,
+   "workingDays": 5,
    "partial": true,
    "totals": {
-    "prs": 251,
-    "lines": 379793,
-    "addedRaw": 255620,
-    "deletedRaw": 128173,
-    "people": 16
+    "prs": 324,
+    "lines": 425829,
+    "addedRaw": 291390,
+    "deletedRaw": 138449,
+    "people": 18
    },
    "contributors": [
     {
@@ -8631,95 +8632,108 @@
     },
     {
      "login": "swain",
-     "prs": 32,
-     "lines": 101229,
-     "addedRaw": 12574,
-     "deletedRaw": 92587,
+     "prs": 45,
+     "lines": 107727,
+     "addedRaw": 14062,
+     "deletedRaw": 97603,
      "repos": {
       "ops": {
-       "prs": 13,
-       "lines": 97440
+       "prs": 21,
+       "lines": 98279
       },
       "fleet": {
        "prs": 9,
        "lines": 246
       },
       "omni": {
-       "prs": 10,
-       "lines": 3543
+       "prs": 15,
+       "lines": 9202
       }
      }
     },
     {
      "login": "melecia-gp",
-     "prs": 22,
-     "lines": 56849,
-     "addedRaw": 55844,
-     "deletedRaw": 1039,
+     "prs": 29,
+     "lines": 61214,
+     "addedRaw": 59736,
+     "deletedRaw": 1512,
      "repos": {
       "omni": {
-       "prs": 14,
-       "lines": 6378
+       "prs": 18,
+       "lines": 7701
       },
       "ai-rules": {
        "prs": 1,
        "lines": 2
       },
       "chat-bench": {
-       "prs": 7,
-       "lines": 50469
+       "prs": 10,
+       "lines": 53511
       }
      }
     },
     {
      "login": "emilybgoodpartyorg",
-     "prs": 55,
-     "lines": 31828,
-     "addedRaw": 23218,
-     "deletedRaw": 8610,
+     "prs": 62,
+     "lines": 34938,
+     "addedRaw": 26196,
+     "deletedRaw": 8742,
      "repos": {
       "gp-marketing": {
-       "prs": 55,
-       "lines": 31828
+       "prs": 62,
+       "lines": 34938
       }
      }
     },
     {
      "login": "stephtea",
-     "prs": 36,
-     "lines": 20685,
-     "addedRaw": 19100,
-     "deletedRaw": 1585,
+     "prs": 52,
+     "lines": 31730,
+     "addedRaw": 29705,
+     "deletedRaw": 2025,
      "repos": {
       "omni": {
-       "prs": 36,
-       "lines": 20685
+       "prs": 52,
+       "lines": 31730
+      }
+     }
+    },
+    {
+     "login": "fromjustin",
+     "prs": 12,
+     "lines": 17223,
+     "addedRaw": 13688,
+     "deletedRaw": 3535,
+     "repos": {
+      "omni": {
+       "prs": 12,
+       "lines": 17223
       }
      }
     },
     {
      "login": "bryclevgp",
-     "prs": 17,
-     "lines": 13632,
-     "addedRaw": 11626,
-     "deletedRaw": 2008,
+     "prs": 22,
+     "lines": 14704,
+     "addedRaw": 12492,
+     "deletedRaw": 2214,
      "repos": {
       "omni": {
-       "prs": 17,
-       "lines": 13632
+       "prs": 22,
+       "lines": 14704
       }
      }
     },
     {
      "login": "datawithtristan",
-     "prs": 18,
-     "lines": 7016,
-     "addedRaw": 6776,
-     "deletedRaw": 240,
+     "prs": 21,
+     "lines": 7465,
+     "addedRaw": 6787,
+     "deletedRaw": 678,
      "repos": {
       "omni": {
-       "prs": 7,
-       "lines": 5663
+       "prs": 10,
+       "lines": 6112
       },
       "gp-data-platform": {
        "prs": 11,
@@ -8728,15 +8742,32 @@
      }
     },
     {
-     "login": "fromjustin",
-     "prs": 7,
-     "lines": 5814,
-     "addedRaw": 3936,
-     "deletedRaw": 1878,
+     "login": "jagoda",
+     "prs": 21,
+     "lines": 4683,
+     "addedRaw": 4048,
+     "deletedRaw": 635,
+     "repos": {
+      "ops": {
+       "prs": 14,
+       "lines": 2637
+      },
+      "gp-pi": {
+       "prs": 7,
+       "lines": 2046
+      }
+     }
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 15,
+     "lines": 3534,
+     "addedRaw": 3155,
+     "deletedRaw": 383,
      "repos": {
       "omni": {
-       "prs": 7,
-       "lines": 5814
+       "prs": 15,
+       "lines": 3534
       }
      }
     },
@@ -8754,32 +8785,28 @@
      }
     },
     {
-     "login": "jagoda",
-     "prs": 19,
-     "lines": 2971,
-     "addedRaw": 2398,
-     "deletedRaw": 573,
+     "login": "eugenebazdyriev",
+     "prs": 1,
+     "lines": 2417,
+     "addedRaw": 1398,
+     "deletedRaw": 1019,
      "repos": {
-      "ops": {
-       "prs": 13,
-       "lines": 1795
-      },
-      "gp-pi": {
-       "prs": 6,
-       "lines": 1176
+      "omni": {
+       "prs": 1,
+       "lines": 2417
       }
      }
     },
     {
-     "login": "tomer-tgp",
-     "prs": 10,
-     "lines": 1057,
-     "addedRaw": 962,
-     "deletedRaw": 99,
+     "login": "hhkarimi",
+     "prs": 2,
+     "lines": 1348,
+     "addedRaw": 1305,
+     "deletedRaw": 43,
      "repos": {
-      "omni": {
-       "prs": 10,
-       "lines": 1057
+      "gp-data-platform": {
+       "prs": 2,
+       "lines": 1348
       }
      }
     },
@@ -8797,15 +8824,19 @@
      }
     },
     {
-     "login": "hhkarimi",
-     "prs": 1,
-     "lines": 815,
-     "addedRaw": 772,
-     "deletedRaw": 43,
+     "login": "delegate-gp-bot",
+     "prs": 6,
+     "lines": 850,
+     "addedRaw": 302,
+     "deletedRaw": 548,
      "repos": {
-      "gp-data-platform": {
-       "prs": 1,
-       "lines": 815
+      "gp-pi": {
+       "prs": 3,
+       "lines": 681
+      },
+      "ops": {
+       "prs": 3,
+       "lines": 169
       }
      }
     },
@@ -8824,14 +8855,14 @@
     },
     {
      "login": "jacknagel-hs",
-     "prs": 1,
-     "lines": 45,
-     "addedRaw": 37,
-     "deletedRaw": 8,
+     "prs": 3,
+     "lines": 144,
+     "addedRaw": 139,
+     "deletedRaw": 9,
      "repos": {
       "gp-marketing": {
-       "prs": 1,
-       "lines": 45
+       "prs": 3,
+       "lines": 144
       }
      }
     },
@@ -8857,8 +8888,8 @@
    "lines": 683
   },
   "delegate-gp": {
-   "prs": 32,
-   "lines": 9277
+   "prs": 34,
+   "lines": 10862
   },
   "dependabot": {
    "prs": 5,
