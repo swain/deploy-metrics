@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T22:04:18.802Z",
+ "generatedAt": "2026-11-07T22:04:01.823Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -9750,10 +9750,10 @@
    "workingDays": 5,
    "partial": true,
    "totals": {
-    "prs": 219,
-    "lines": 157310,
-    "addedRaw": 143782,
-    "deletedRaw": 24484,
+    "prs": 232,
+    "lines": 165401,
+    "addedRaw": 149610,
+    "deletedRaw": 27521,
     "people": 16
    },
    "contributors": [
@@ -9789,18 +9789,18 @@
     },
     {
      "login": "swain",
-     "prs": 36,
-     "lines": 12599,
-     "addedRaw": 11149,
-     "deletedRaw": 6115,
+     "prs": 49,
+     "lines": 20690,
+     "addedRaw": 16977,
+     "deletedRaw": 9152,
      "repos": {
       "omni": {
-       "prs": 29,
-       "lines": 11709
+       "prs": 40,
+       "lines": 19720
       },
       "ops": {
-       "prs": 4,
-       "lines": 805
+       "prs": 5,
+       "lines": 834
       },
       "fleet": {
        "prs": 1,
@@ -9813,6 +9813,10 @@
       "ai-rules": {
        "prs": 1,
        "lines": 29
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 51
       }
      }
     },
