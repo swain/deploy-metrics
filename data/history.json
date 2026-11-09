@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T22:03:48.244Z",
+ "generatedAt": "2026-11-09T22:04:03.968Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -9748,7 +9748,7 @@
    "week": "2026-W45",
    "weekStart": "2026-11-02",
    "workingDays": 5,
-   "partial": true,
+   "partial": false,
    "totals": {
     "prs": 232,
     "lines": 165401,
@@ -10022,6 +10022,34 @@
       "omni": {
        "prs": 1,
        "lines": 18
+      }
+     }
+    }
+   ]
+  },
+  {
+   "week": "2026-W46",
+   "weekStart": "2026-11-09",
+   "workingDays": 1,
+   "partial": true,
+   "totals": {
+    "prs": 7,
+    "lines": 3028,
+    "addedRaw": 2154,
+    "deletedRaw": 875,
+    "people": 1
+   },
+   "contributors": [
+    {
+     "login": "swain",
+     "prs": 7,
+     "lines": 3028,
+     "addedRaw": 2154,
+     "deletedRaw": 875,
+     "repos": {
+      "omni": {
+       "prs": 7,
+       "lines": 3028
       }
      }
     }
