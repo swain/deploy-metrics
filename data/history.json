@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T22:03:47.197Z",
+ "generatedAt": "2026-11-12T22:04:12.972Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -10031,43 +10031,47 @@
   {
    "week": "2026-W46",
    "weekStart": "2026-11-09",
-   "workingDays": 3,
+   "workingDays": 4,
    "partial": true,
    "totals": {
-    "prs": 65,
-    "lines": 63880,
-    "addedRaw": 46583,
-    "deletedRaw": 18438,
-    "people": 11
+    "prs": 108,
+    "lines": 101424,
+    "addedRaw": 70534,
+    "deletedRaw": 32076,
+    "people": 12
    },
    "contributors": [
     {
      "login": "swain",
-     "prs": 28,
-     "lines": 26794,
-     "addedRaw": 12527,
-     "deletedRaw": 15407,
+     "prs": 56,
+     "lines": 58335,
+     "addedRaw": 30679,
+     "deletedRaw": 28841,
      "repos": {
-      "omni": {
-       "prs": 25,
-       "lines": 24062
-      },
       "ops": {
-       "prs": 3,
-       "lines": 2732
+       "prs": 5,
+       "lines": 3393
+      },
+      "omni": {
+       "prs": 50,
+       "lines": 54937
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 5
       }
      }
     },
     {
      "login": "sanjayr1",
-     "prs": 1,
-     "lines": 18636,
-     "addedRaw": 18636,
-     "deletedRaw": 0,
+     "prs": 3,
+     "lines": 18690,
+     "addedRaw": 18685,
+     "deletedRaw": 5,
      "repos": {
       "gp-data-platform": {
-       "prs": 1,
-       "lines": 18636
+       "prs": 3,
+       "lines": 18690
       }
      }
     },
@@ -10081,6 +10085,36 @@
       "omni": {
        "prs": 4,
        "lines": 4620
+      }
+     }
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 6,
+     "lines": 4437,
+     "addedRaw": 4410,
+     "deletedRaw": 27,
+     "repos": {
+      "gp-data-platform": {
+       "prs": 6,
+       "lines": 4437
+      }
+     }
+    },
+    {
+     "login": "emilybgoodpartyorg",
+     "prs": 4,
+     "lines": 3650,
+     "addedRaw": 3584,
+     "deletedRaw": 66,
+     "repos": {
+      "gp-seo": {
+       "prs": 1,
+       "lines": 3195
+      },
+      "gp-marketing": {
+       "prs": 3,
+       "lines": 455
       }
      }
     },
@@ -10102,28 +10136,28 @@
      }
     },
     {
-     "login": "emilybgoodpartyorg",
-     "prs": 1,
-     "lines": 3195,
-     "addedRaw": 3170,
-     "deletedRaw": 25,
+     "login": "bryclevgp",
+     "prs": 7,
+     "lines": 2728,
+     "addedRaw": 2282,
+     "deletedRaw": 446,
      "repos": {
-      "gp-seo": {
-       "prs": 1,
-       "lines": 3195
+      "omni": {
+       "prs": 7,
+       "lines": 2728
       }
      }
     },
     {
      "login": "tomer-tgp",
-     "prs": 9,
-     "lines": 2453,
-     "addedRaw": 2228,
-     "deletedRaw": 225,
+     "prs": 12,
+     "lines": 2499,
+     "addedRaw": 2258,
+     "deletedRaw": 241,
      "repos": {
       "ops": {
-       "prs": 6,
-       "lines": 808
+       "prs": 9,
+       "lines": 854
       },
       "omni": {
        "prs": 3,
@@ -10132,15 +10166,15 @@
      }
     },
     {
-     "login": "bryclevgp",
-     "prs": 6,
-     "lines": 2397,
-     "addedRaw": 1958,
-     "deletedRaw": 439,
+     "login": "eugenebazdyriev",
+     "prs": 4,
+     "lines": 1298,
+     "addedRaw": 1128,
+     "deletedRaw": 170,
      "repos": {
       "omni": {
-       "prs": 6,
-       "lines": 2397
+       "prs": 4,
+       "lines": 1298
       }
      }
     },
@@ -10175,28 +10209,15 @@
      }
     },
     {
-     "login": "datawithtristan",
-     "prs": 2,
-     "lines": 380,
-     "addedRaw": 380,
-     "deletedRaw": 0,
+     "login": "hhkarimi",
+     "prs": 1,
+     "lines": 118,
+     "addedRaw": 117,
+     "deletedRaw": 1,
      "repos": {
-      "gp-data-platform": {
-       "prs": 2,
-       "lines": 380
-      }
-     }
-    },
-    {
-     "login": "eugenebazdyriev",
-     "prs": 3,
-     "lines": 356,
-     "addedRaw": 293,
-     "deletedRaw": 63,
-     "repos": {
-      "omni": {
-       "prs": 3,
-       "lines": 356
+      "gp-terraform-dataplatform": {
+       "prs": 1,
+       "lines": 118
       }
      }
     }
@@ -10209,8 +10230,8 @@
    "lines": 683
   },
   "delegate-gp": {
-   "prs": 185,
-   "lines": 46833
+   "prs": 186,
+   "lines": 46843
   },
   "dependabot": {
    "prs": 5,
