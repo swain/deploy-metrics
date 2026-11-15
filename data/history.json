@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T22:03:56.961Z",
+ "generatedAt": "2026-11-15T22:03:41.091Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -10034,10 +10034,10 @@
    "workingDays": 5,
    "partial": true,
    "totals": {
-    "prs": 158,
-    "lines": 120386,
-    "addedRaw": 87194,
-    "deletedRaw": 34393,
+    "prs": 161,
+    "lines": 120854,
+    "addedRaw": 87594,
+    "deletedRaw": 34461,
     "people": 12
    },
    "contributors": [
@@ -10081,18 +10081,18 @@
     },
     {
      "login": "tomer-tgp",
-     "prs": 30,
-     "lines": 9260,
-     "addedRaw": 8240,
-     "deletedRaw": 1022,
+     "prs": 33,
+     "lines": 9728,
+     "addedRaw": 8640,
+     "deletedRaw": 1090,
      "repos": {
       "ops": {
        "prs": 10,
        "lines": 865
       },
       "omni": {
-       "prs": 20,
-       "lines": 8395
+       "prs": 23,
+       "lines": 8863
       }
      }
     },
@@ -10234,8 +10234,8 @@
    "lines": 683
   },
   "delegate-gp": {
-   "prs": 187,
-   "lines": 47205
+   "prs": 188,
+   "lines": 47325
   },
   "dependabot": {
    "prs": 5,
