@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T22:03:54.846Z",
+ "generatedAt": "2026-11-18T22:03:52.172Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -10230,130 +10230,163 @@
   {
    "week": "2026-W47",
    "weekStart": "2026-11-16",
-   "workingDays": 2,
+   "workingDays": 3,
    "partial": true,
    "totals": {
-    "prs": 48,
-    "lines": 36362,
-    "addedRaw": 32933,
-    "deletedRaw": 3687,
-    "people": 10
+    "prs": 109,
+    "lines": 68145,
+    "addedRaw": 62173,
+    "deletedRaw": 6239,
+    "people": 12
    },
    "contributors": [
     {
-     "login": "dealvz",
-     "prs": 9,
-     "lines": 9694,
-     "addedRaw": 9640,
-     "deletedRaw": 75,
-     "repos": {
-      "omni": {
-       "prs": 9,
-       "lines": 9694
-      }
-     }
-    },
-    {
      "login": "swain",
-     "prs": 11,
-     "lines": 9205,
-     "addedRaw": 6759,
-     "deletedRaw": 2446,
+     "prs": 27,
+     "lines": 22940,
+     "addedRaw": 18910,
+     "deletedRaw": 4030,
      "repos": {
       "ops": {
        "prs": 6,
        "lines": 6445
       },
       "omni": {
-       "prs": 5,
-       "lines": 2760
+       "prs": 20,
+       "lines": 16453
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 42
       }
      }
     },
     {
-     "login": "emilybgoodpartyorg",
-     "prs": 6,
-     "lines": 4162,
-     "addedRaw": 4105,
-     "deletedRaw": 57,
+     "login": "dealvz",
+     "prs": 14,
+     "lines": 10032,
+     "addedRaw": 9890,
+     "deletedRaw": 163,
      "repos": {
-      "gp-marketing": {
-       "prs": 2,
-       "lines": 27
+      "omni": {
+       "prs": 14,
+       "lines": 10032
+      }
+     }
+    },
+    {
+     "login": "jagoda",
+     "prs": 12,
+     "lines": 9513,
+     "addedRaw": 9184,
+     "deletedRaw": 329,
+     "repos": {
+      "ops": {
+       "prs": 6,
+       "lines": 3952
       },
-      "gp-seo": {
+      "gp-pi": {
+       "prs": 6,
+       "lines": 5561
+      }
+     }
+    },
+    {
+     "login": "eugenebazdyriev",
+     "prs": 4,
+     "lines": 7136,
+     "addedRaw": 6771,
+     "deletedRaw": 365,
+     "repos": {
+      "omni": {
        "prs": 4,
-       "lines": 4135
+       "lines": 7136
       }
      }
     },
     {
      "login": "sanjayr1",
-     "prs": 2,
-     "lines": 3693,
-     "addedRaw": 3888,
-     "deletedRaw": 8,
+     "prs": 9,
+     "lines": 5181,
+     "addedRaw": 5313,
+     "deletedRaw": 71,
      "repos": {
       "ops": {
        "prs": 1,
        "lines": 3513
       },
       "gp-terraform-dataplatform": {
-       "prs": 1,
-       "lines": 180
-      }
-     }
-    },
-    {
-     "login": "jagoda",
-     "prs": 6,
-     "lines": 3638,
-     "addedRaw": 3436,
-     "deletedRaw": 202,
-     "repos": {
-      "gp-pi": {
-       "prs": 4,
-       "lines": 2281
+       "prs": 3,
+       "lines": 678
       },
-      "ops": {
-       "prs": 2,
-       "lines": 1357
+      "gp-data-platform": {
+       "prs": 4,
+       "lines": 246
+      },
+      "gp-pi": {
+       "prs": 1,
+       "lines": 744
       }
      }
     },
     {
-     "login": "eugenebazdyriev",
-     "prs": 2,
-     "lines": 2859,
-     "addedRaw": 2553,
-     "deletedRaw": 306,
+     "login": "emilybgoodpartyorg",
+     "prs": 8,
+     "lines": 5013,
+     "addedRaw": 4878,
+     "deletedRaw": 135,
      "repos": {
-      "omni": {
+      "gp-marketing": {
        "prs": 2,
-       "lines": 2859
+       "lines": 27
+      },
+      "gp-seo": {
+       "prs": 6,
+       "lines": 4986
       }
      }
     },
     {
-     "login": "tomer-tgp",
-     "prs": 2,
-     "lines": 1024,
-     "addedRaw": 647,
-     "deletedRaw": 411,
+     "login": "danpelota",
+     "prs": 8,
+     "lines": 2682,
+     "addedRaw": 2296,
+     "deletedRaw": 389,
      "repos": {
+      "gp-data-platform": {
+       "prs": 8,
+       "lines": 2682
+      }
+     }
+    },
+    {
+     "login": "datawithtristan",
+     "prs": 8,
+     "lines": 1676,
+     "addedRaw": 1508,
+     "deletedRaw": 168,
+     "repos": {
+      "gp-data-platform": {
+       "prs": 6,
+       "lines": 875
+      },
       "omni": {
        "prs": 2,
-       "lines": 1024
+       "lines": 801
       }
      }
     },
     {
      "login": "hhkarimi",
-     "prs": 5,
-     "lines": 811,
-     "addedRaw": 776,
-     "deletedRaw": 35,
+     "prs": 8,
+     "lines": 1621,
+     "addedRaw": 1565,
+     "deletedRaw": 56,
      "repos": {
+      "gp-data-platform": {
+       "prs": 5,
+       "lines": 949
+      },
       "ops": {
        "prs": 1,
        "lines": 206
@@ -10365,10 +10398,23 @@
       "omni": {
        "prs": 1,
        "lines": 322
+      }
+     }
+    },
+    {
+     "login": "tomer-tgp",
+     "prs": 6,
+     "lines": 1199,
+     "addedRaw": 786,
+     "deletedRaw": 447,
+     "repos": {
+      "omni": {
+       "prs": 4,
+       "lines": 1077
       },
-      "gp-data-platform": {
+      "ops": {
        "prs": 2,
-       "lines": 139
+       "lines": 122
       }
      }
     },
@@ -10386,19 +10432,15 @@
      }
     },
     {
-     "login": "datawithtristan",
+     "login": "jacknagel-hs",
      "prs": 4,
-     "lines": 624,
-     "addedRaw": 549,
-     "deletedRaw": 75,
+     "lines": 500,
+     "addedRaw": 492,
+     "deletedRaw": 14,
      "repos": {
-      "gp-data-platform": {
-       "prs": 3,
-       "lines": 150
-      },
-      "omni": {
-       "prs": 1,
-       "lines": 474
+      "gp-marketing": {
+       "prs": 4,
+       "lines": 500
       }
      }
     }
@@ -10411,8 +10453,8 @@
    "lines": 683
   },
   "delegate-gp": {
-   "prs": 189,
-   "lines": 47335
+   "prs": 193,
+   "lines": 47616
   },
   "dependabot": {
    "prs": 5,
