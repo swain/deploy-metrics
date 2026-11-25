@@ -7,8 +7,8 @@ Contributor throughput dashboard for the `thegoodparty` GitHub org.
 Qualifying merged pull requests, added lines, and removed lines per
 contributor, per working day, across the org. Results are bucketed into ISO
 weeks so the series is longitudinal, so you can watch throughput trend week
-over week rather than seeing a single snapshot. Bot activity has its own table
-for the selected range and stays out of contributor totals.
+over week rather than seeing a single snapshot. `delegate-gp` appears in the
+contributor list and totals. Other known bot logins stay out of both.
 
 The metric definitions (what counts as a qualifying PR, how lines are
 counted, how working days are derived) live in

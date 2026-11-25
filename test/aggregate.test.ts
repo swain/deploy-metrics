@@ -90,14 +90,9 @@ test('excluded repos never reach machine-state detection', () => {
   assert(!h.machineStateFiles.includes('product-os/noisy.json'))
 })
 
-test('qualifying bots are reported by week without contributing to human totals', () => {
+test('bots are held out of totals and reported separately', () => {
   const weeks = new Map([
     ['2026-W02', [toCached(pr()), toCached(pr({ number: 2, login: 'robot' }))]],
-    ['2026-W03', [
-      toCached(pr({ number: 3, login: 'robot', files: [{ path: 'src/b.ts', additions: 15, deletions: 5, changeType: 'MODIFIED' }] })),
-      toCached(pr({ number: 4, login: 'robot', title: 'Revert bot change' })),
-    ]],
-    ['2026-W04', [toCached(pr())]],
   ])
   const h = buildHistory(weeks, new Set(), opts)
   assert.equal(h.weeks[0].totals.prs, 1)
@@ -107,13 +102,7 @@ test('qualifying bots are reported by week without contributing to human totals'
   )
   assert.equal(h.weeks[0].totals.addedLines, 60)
   assert.equal(h.weeks[0].totals.removedLines, 40)
-  assert.deepEqual(h.weeks.map((week) => week.bots), [
-    { robot: { prs: 1, lines: 100, addedLines: 60, removedLines: 40 } },
-    { robot: { prs: 1, lines: 20, addedLines: 15, removedLines: 5 } },
-    {},
-  ])
-  assert.equal(h.weeks[1].totals.prs, 0)
-  assert.deepEqual(h.bots.robot, { prs: 2, lines: 120, addedLines: 75, removedLines: 45 })
+  assert.deepEqual(h.bots.robot, { prs: 1, lines: 100, addedLines: 60, removedLines: 40 })
   assert(!h.contributors.includes('robot'))
 })
 

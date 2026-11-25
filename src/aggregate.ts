@@ -23,7 +23,6 @@ export interface WeekSummary {
   partial: boolean
   totals: Counts & { addedRaw: number; deletedRaw: number; people: number }
   contributors: ContributorWeek[]
-  bots: Record<string, Counts>
 }
 
 const DAY = 86_400_000
@@ -90,12 +89,12 @@ export const buildHistory = (
       .filter((r) => !EXCLUDED_REPOS.has(r.repo))
       .filter((r) => isQualifying(r, machine))
     const byLogin = new Map<string, ContributorWeek>()
-    const weekBots: Record<string, Counts> = {}
 
     for (const row of rows) {
       if (options.bots.has(row.login)) {
-        countPr(bots[row.login] ??= blankCounts(), row)
-        countPr(weekBots[row.login] ??= blankCounts(), row)
+        const bot = bots[row.login] ?? blankCounts()
+        countPr(bot, row)
+        bots[row.login] = bot
         continue
       }
       const entry = byLogin.get(row.login) ?? blank(row.login)
@@ -137,7 +136,6 @@ export const buildHistory = (
         people: contributors.length,
       },
       contributors,
-      bots: weekBots,
     })
   }
 
