@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-25T15:36:30.436Z",
+ "generatedAt": "2026-11-25T15:58:34.643Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -10,6 +10,7 @@
   "danpelota",
   "datawithtristan",
   "dealvz",
+  "delegate-gp",
   "delegate-gp-bot",
   "emilybgoodpartyorg",
   "ernestohs",
@@ -3457,13 +3458,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 54,
-    "lines": 14678,
-    "addedLines": 7444,
-    "removedLines": 7234,
-    "addedRaw": 7454,
-    "deletedRaw": 7244,
-    "people": 12
+    "prs": 55,
+    "lines": 14680,
+    "addedLines": 7445,
+    "removedLines": 7235,
+    "addedRaw": 7455,
+    "deletedRaw": 7245,
+    "people": 13
    },
    "contributors": [
     {
@@ -3703,6 +3704,23 @@
        "lines": 11,
        "addedLines": 6,
        "removedLines": 5
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 2,
+     "addedLines": 1,
+     "removedLines": 1,
+     "addedRaw": 1,
+     "deletedRaw": 1,
+     "repos": {
+      "gp-api": {
+       "prs": 1,
+       "lines": 2,
+       "addedLines": 1,
+       "removedLines": 1
       }
      }
     }
@@ -3982,13 +4000,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 43,
-    "lines": 49150,
-    "addedLines": 21635,
-    "removedLines": 27515,
-    "addedRaw": 28066,
-    "deletedRaw": 35606,
-    "people": 12
+    "prs": 44,
+    "lines": 49160,
+    "addedLines": 21642,
+    "removedLines": 27518,
+    "addedRaw": 28073,
+    "deletedRaw": 35609,
+    "people": 13
    },
    "contributors": [
     {
@@ -4260,6 +4278,23 @@
        "removedLines": 5
       }
      }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 10,
+     "addedLines": 7,
+     "removedLines": 3,
+     "addedRaw": 7,
+     "deletedRaw": 3,
+     "repos": {
+      "ops": {
+       "prs": 1,
+       "lines": 10,
+       "addedLines": 7,
+       "removedLines": 3
+      }
+     }
     }
    ]
   },
@@ -4269,13 +4304,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 79,
-    "lines": 38666,
-    "addedLines": 32478,
-    "removedLines": 6188,
-    "addedRaw": 33087,
-    "deletedRaw": 6764,
-    "people": 14
+    "prs": 81,
+    "lines": 38692,
+    "addedLines": 32479,
+    "removedLines": 6213,
+    "addedRaw": 33088,
+    "deletedRaw": 6789,
+    "people": 15
    },
    "contributors": [
     {
@@ -4533,6 +4568,23 @@
        "lines": 50,
        "addedLines": 22,
        "removedLines": 28
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 2,
+     "lines": 26,
+     "addedLines": 1,
+     "removedLines": 25,
+     "addedRaw": 1,
+     "deletedRaw": 25,
+     "repos": {
+      "gp-api": {
+       "prs": 2,
+       "lines": 26,
+       "addedLines": 1,
+       "removedLines": 25
       }
      }
     },
@@ -4899,13 +4951,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 69,
-    "lines": 50370,
-    "addedLines": 36566,
-    "removedLines": 13804,
-    "addedRaw": 37223,
-    "deletedRaw": 14222,
-    "people": 12
+    "prs": 70,
+    "lines": 50960,
+    "addedLines": 37153,
+    "removedLines": 13807,
+    "addedRaw": 37810,
+    "deletedRaw": 14225,
+    "people": 13
    },
    "contributors": [
     {
@@ -5160,6 +5212,23 @@
        "lines": 816,
        "addedLines": 752,
        "removedLines": 64
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 590,
+     "addedLines": 587,
+     "removedLines": 3,
+     "addedRaw": 587,
+     "deletedRaw": 3,
+     "repos": {
+      "ai-rules": {
+       "prs": 1,
+       "lines": 590,
+       "addedLines": 587,
+       "removedLines": 3
       }
      }
     },
@@ -6245,13 +6314,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 149,
-    "lines": 91019,
-    "addedLines": 67511,
+    "prs": 150,
+    "lines": 91043,
+    "addedLines": 67535,
     "removedLines": 23508,
-    "addedRaw": 72774,
+    "addedRaw": 72798,
     "deletedRaw": 29491,
-    "people": 16
+    "people": 17
    },
    "contributors": [
     {
@@ -6703,6 +6772,23 @@
        "lines": 45,
        "addedLines": 24,
        "removedLines": 21
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 24,
+     "addedLines": 24,
+     "removedLines": 0,
+     "addedRaw": 24,
+     "deletedRaw": 0,
+     "repos": {
+      "election-api": {
+       "prs": 1,
+       "lines": 24,
+       "addedLines": 24,
+       "removedLines": 0
       }
      }
     }
@@ -7455,13 +7541,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 202,
-    "lines": 81641,
-    "addedLines": 69134,
-    "removedLines": 12507,
-    "addedRaw": 83348,
-    "deletedRaw": 12869,
-    "people": 17
+    "prs": 203,
+    "lines": 81653,
+    "addedLines": 69140,
+    "removedLines": 12513,
+    "addedRaw": 83354,
+    "deletedRaw": 12875,
+    "people": 18
    },
    "contributors": [
     {
@@ -7804,6 +7890,23 @@
        "lines": 26,
        "addedLines": 22,
        "removedLines": 4
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 12,
+     "addedLines": 6,
+     "removedLines": 6,
+     "addedRaw": 6,
+     "deletedRaw": 6,
+     "repos": {
+      "omni": {
+       "prs": 1,
+       "lines": 12,
+       "addedLines": 6,
+       "removedLines": 6
       }
      }
     }
@@ -9561,13 +9664,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 152,
-    "lines": 82652,
-    "addedLines": 69423,
-    "removedLines": 13229,
-    "addedRaw": 69476,
-    "deletedRaw": 13271,
-    "people": 10
+    "prs": 154,
+    "lines": 83216,
+    "addedLines": 69970,
+    "removedLines": 13246,
+    "addedRaw": 70023,
+    "deletedRaw": 13288,
+    "people": 11
    },
    "contributors": [
     {
@@ -9748,6 +9851,23 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 2,
+     "lines": 564,
+     "addedLines": 547,
+     "removedLines": 17,
+     "addedRaw": 547,
+     "deletedRaw": 17,
+     "repos": {
+      "omni": {
+       "prs": 2,
+       "lines": 564,
+       "addedLines": 547,
+       "removedLines": 17
+      }
+     }
+    },
+    {
      "login": "bryclevgp",
      "prs": 2,
      "lines": 145,
@@ -9772,13 +9892,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 219,
-    "lines": 127967,
-    "addedLines": 108519,
-    "removedLines": 19448,
-    "addedRaw": 110375,
-    "deletedRaw": 19714,
-    "people": 14
+    "prs": 221,
+    "lines": 128180,
+    "addedLines": 108728,
+    "removedLines": 19452,
+    "addedRaw": 110584,
+    "deletedRaw": 19718,
+    "people": 15
    },
    "contributors": [
     {
@@ -10030,6 +10150,23 @@
        "lines": 226,
        "addedLines": 136,
        "removedLines": 90
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 2,
+     "lines": 213,
+     "addedLines": 209,
+     "removedLines": 4,
+     "addedRaw": 209,
+     "deletedRaw": 4,
+     "repos": {
+      "omni": {
+       "prs": 2,
+       "lines": 213,
+       "addedLines": 209,
+       "removedLines": 4
       }
      }
     },
@@ -10543,13 +10680,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 228,
-    "lines": 128478,
-    "addedLines": 118380,
-    "removedLines": 10098,
-    "addedRaw": 118493,
-    "deletedRaw": 10731,
-    "people": 17
+    "prs": 241,
+    "lines": 135442,
+    "addedLines": 125193,
+    "removedLines": 10249,
+    "addedRaw": 125306,
+    "deletedRaw": 10882,
+    "people": 18
    },
    "contributors": [
     {
@@ -10646,6 +10783,23 @@
        "lines": 8687,
        "addedLines": 7928,
        "removedLines": 759
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 13,
+     "lines": 6964,
+     "addedLines": 6813,
+     "removedLines": 151,
+     "addedRaw": 6813,
+     "deletedRaw": 151,
+     "repos": {
+      "omni": {
+       "prs": 13,
+       "lines": 6964,
+       "addedLines": 6813,
+       "removedLines": 151
       }
      }
     },
@@ -10891,13 +11045,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 235,
-    "lines": 331521,
-    "addedLines": 194004,
-    "removedLines": 137517,
-    "addedRaw": 196897,
-    "deletedRaw": 139025,
-    "people": 15
+    "prs": 242,
+    "lines": 332386,
+    "addedLines": 194845,
+    "removedLines": 137541,
+    "addedRaw": 197738,
+    "deletedRaw": 139049,
+    "people": 16
    },
    "contributors": [
     {
@@ -11175,6 +11329,23 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 7,
+     "lines": 865,
+     "addedLines": 841,
+     "removedLines": 24,
+     "addedRaw": 841,
+     "deletedRaw": 24,
+     "repos": {
+      "omni": {
+       "prs": 7,
+       "lines": 865,
+       "addedLines": 841,
+       "removedLines": 24
+      }
+     }
+    },
+    {
      "login": "(ghost)",
      "prs": 1,
      "lines": 39,
@@ -11199,13 +11370,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 385,
-    "lines": 408971,
-    "addedLines": 347673,
-    "removedLines": 61298,
-    "addedRaw": 348648,
-    "deletedRaw": 61449,
-    "people": 17
+    "prs": 386,
+    "lines": 408978,
+    "addedLines": 347675,
+    "removedLines": 61303,
+    "addedRaw": 348650,
+    "deletedRaw": 61454,
+    "people": 18
    },
    "contributors": [
     {
@@ -11556,6 +11727,23 @@
        "removedLines": 0
       }
      }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 1,
+     "lines": 7,
+     "addedLines": 2,
+     "removedLines": 5,
+     "addedRaw": 2,
+     "deletedRaw": 5,
+     "repos": {
+      "omni": {
+       "prs": 1,
+       "lines": 7,
+       "addedLines": 2,
+       "removedLines": 5
+      }
+     }
     }
    ]
   },
@@ -11565,13 +11753,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 337,
-    "lines": 438832,
-    "addedLines": 302672,
-    "removedLines": 136160,
-    "addedRaw": 303673,
-    "deletedRaw": 139169,
-    "people": 18
+    "prs": 339,
+    "lines": 440417,
+    "addedLines": 304213,
+    "removedLines": 136204,
+    "addedRaw": 305214,
+    "deletedRaw": 139213,
+    "people": 19
    },
    "contributors": [
     {
@@ -11815,6 +12003,23 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 2,
+     "lines": 1585,
+     "addedLines": 1541,
+     "removedLines": 44,
+     "addedRaw": 1541,
+     "deletedRaw": 44,
+     "repos": {
+      "omni": {
+       "prs": 2,
+       "lines": 1585,
+       "addedLines": 1541,
+       "removedLines": 44
+      }
+     }
+    },
+    {
      "login": "hhkarimi",
      "prs": 2,
      "lines": 1348,
@@ -11930,13 +12135,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 275,
-    "lines": 155671,
-    "addedLines": 132484,
-    "removedLines": 23187,
-    "addedRaw": 132852,
-    "deletedRaw": 23366,
-    "people": 15
+    "prs": 288,
+    "lines": 158445,
+    "addedLines": 134846,
+    "removedLines": 23599,
+    "addedRaw": 135214,
+    "deletedRaw": 23778,
+    "people": 16
    },
    "contributors": [
     {
@@ -12228,6 +12433,29 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 13,
+     "lines": 2774,
+     "addedLines": 2362,
+     "removedLines": 412,
+     "addedRaw": 2362,
+     "deletedRaw": 412,
+     "repos": {
+      "gp-pi": {
+       "prs": 2,
+       "lines": 131,
+       "addedLines": 89,
+       "removedLines": 42
+      },
+      "omni": {
+       "prs": 11,
+       "lines": 2643,
+       "addedLines": 2273,
+       "removedLines": 370
+      }
+     }
+    },
+    {
      "login": "hhkarimi",
      "prs": 6,
      "lines": 1258,
@@ -12298,13 +12526,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 309,
-    "lines": 272691,
-    "addedLines": 176905,
-    "removedLines": 95786,
-    "addedRaw": 178005,
-    "deletedRaw": 96319,
-    "people": 18
+    "prs": 375,
+    "lines": 280659,
+    "addedLines": 184098,
+    "removedLines": 96561,
+    "addedRaw": 185198,
+    "deletedRaw": 97094,
+    "people": 19
    },
    "contributors": [
     {
@@ -12499,6 +12727,35 @@
        "lines": 10429,
        "addedLines": 8367,
        "removedLines": 2062
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 66,
+     "lines": 7968,
+     "addedLines": 7193,
+     "removedLines": 775,
+     "addedRaw": 7193,
+     "deletedRaw": 775,
+     "repos": {
+      "omni": {
+       "prs": 57,
+       "lines": 7705,
+       "addedLines": 7025,
+       "removedLines": 680
+      },
+      "gp-pi": {
+       "prs": 8,
+       "lines": 244,
+       "addedLines": 149,
+       "removedLines": 95
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 19,
+       "addedLines": 19,
+       "removedLines": 0
       }
      }
     },
@@ -12705,13 +12962,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 314,
-    "lines": 265879,
-    "addedLines": 196588,
-    "removedLines": 69291,
-    "addedRaw": 198902,
-    "deletedRaw": 71578,
-    "people": 16
+    "prs": 335,
+    "lines": 267983,
+    "addedLines": 198525,
+    "removedLines": 69458,
+    "addedRaw": 200839,
+    "deletedRaw": 71745,
+    "people": 17
    },
    "contributors": [
     {
@@ -12974,6 +13231,29 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 21,
+     "lines": 2104,
+     "addedLines": 1937,
+     "removedLines": 167,
+     "addedRaw": 1937,
+     "deletedRaw": 167,
+     "repos": {
+      "omni": {
+       "prs": 20,
+       "lines": 2094,
+       "addedLines": 1932,
+       "removedLines": 162
+      },
+      "gp-pi": {
+       "prs": 1,
+       "lines": 10,
+       "addedLines": 5,
+       "removedLines": 5
+      }
+     }
+    },
+    {
      "login": "eugenebazdyriev",
      "prs": 4,
      "lines": 1216,
@@ -13084,13 +13364,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 232,
-    "lines": 165401,
-    "addedLines": 145842,
-    "removedLines": 19559,
-    "addedRaw": 149610,
-    "deletedRaw": 27521,
-    "people": 16
+    "prs": 270,
+    "lines": 186135,
+    "addedLines": 165855,
+    "removedLines": 20280,
+    "addedRaw": 169658,
+    "deletedRaw": 28243,
+    "people": 17
    },
    "contributors": [
     {
@@ -13130,6 +13410,41 @@
        "lines": 22870,
        "addedLines": 21024,
        "removedLines": 1846
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 38,
+     "lines": 20734,
+     "addedLines": 20013,
+     "removedLines": 721,
+     "addedRaw": 20048,
+     "deletedRaw": 722,
+     "repos": {
+      "omni": {
+       "prs": 32,
+       "lines": 20421,
+       "addedLines": 19789,
+       "removedLines": 632
+      },
+      "gp-pi": {
+       "prs": 2,
+       "lines": 100,
+       "addedLines": 60,
+       "removedLines": 40
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 35,
+       "addedLines": 35,
+       "removedLines": 0
+      },
+      "ops": {
+       "prs": 3,
+       "lines": 178,
+       "addedLines": 129,
+       "removedLines": 49
       }
      }
     },
@@ -13463,13 +13778,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 161,
-    "lines": 120854,
-    "addedLines": 87478,
-    "removedLines": 33376,
-    "addedRaw": 87594,
-    "deletedRaw": 34461,
-    "people": 12
+    "prs": 177,
+    "lines": 123737,
+    "addedLines": 89972,
+    "removedLines": 33765,
+    "addedRaw": 90088,
+    "deletedRaw": 34850,
+    "people": 13
    },
    "contributors": [
     {
@@ -13668,6 +13983,35 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 16,
+     "lines": 2883,
+     "addedLines": 2494,
+     "removedLines": 389,
+     "addedRaw": 2494,
+     "deletedRaw": 389,
+     "repos": {
+      "omni": {
+       "prs": 6,
+       "lines": 1523,
+       "addedLines": 1389,
+       "removedLines": 134
+      },
+      "ops": {
+       "prs": 8,
+       "lines": 1246,
+       "addedLines": 1019,
+       "removedLines": 227
+      },
+      "gp-pi": {
+       "prs": 2,
+       "lines": 114,
+       "addedLines": 86,
+       "removedLines": 28
+      }
+     }
+    },
+    {
      "login": "bryclevgp",
      "prs": 8,
      "lines": 2783,
@@ -13726,13 +14070,13 @@
    "workingDays": 5,
    "partial": false,
    "totals": {
-    "prs": 226,
-    "lines": 266037,
-    "addedLines": 149460,
-    "removedLines": 116577,
-    "addedRaw": 150202,
-    "deletedRaw": 116735,
-    "people": 12
+    "prs": 236,
+    "lines": 274678,
+    "addedLines": 151560,
+    "removedLines": 123118,
+    "addedRaw": 152302,
+    "deletedRaw": 123276,
+    "people": 13
    },
    "contributors": [
     {
@@ -13847,6 +14191,41 @@
        "lines": 8300,
        "addedLines": 7877,
        "removedLines": 423
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 10,
+     "lines": 8641,
+     "addedLines": 2100,
+     "removedLines": 6541,
+     "addedRaw": 2100,
+     "deletedRaw": 6541,
+     "repos": {
+      "omni": {
+       "prs": 3,
+       "lines": 8245,
+       "addedLines": 1763,
+       "removedLines": 6482
+      },
+      "ops": {
+       "prs": 2,
+       "lines": 175,
+       "addedLines": 161,
+       "removedLines": 14
+      },
+      "gp-pi": {
+       "prs": 4,
+       "lines": 192,
+       "addedLines": 147,
+       "removedLines": 45
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 29,
+       "addedLines": 29,
+       "removedLines": 0
       }
      }
     },
@@ -14025,13 +14404,13 @@
    "workingDays": 3,
    "partial": true,
    "totals": {
-    "prs": 82,
-    "lines": 57386,
-    "addedLines": 42166,
-    "removedLines": 15220,
-    "addedRaw": 44162,
-    "deletedRaw": 15291,
-    "people": 9
+    "prs": 103,
+    "lines": 60252,
+    "addedLines": 44759,
+    "removedLines": 15493,
+    "addedRaw": 46755,
+    "deletedRaw": 15564,
+    "people": 10
    },
    "contributors": [
     {
@@ -14139,11 +14518,11 @@
     },
     {
      "login": "sanjayr1",
-     "prs": 7,
-     "lines": 5146,
-     "addedLines": 4897,
+     "prs": 9,
+     "lines": 5221,
+     "addedLines": 4972,
      "removedLines": 249,
-     "addedRaw": 4897,
+     "addedRaw": 4972,
      "deletedRaw": 249,
      "repos": {
       "gp-data-platform": {
@@ -14151,6 +14530,35 @@
        "lines": 5146,
        "addedLines": 4897,
        "removedLines": 249
+      },
+      "gp-terraform-dataplatform": {
+       "prs": 2,
+       "lines": 75,
+       "addedLines": 75,
+       "removedLines": 0
+      }
+     }
+    },
+    {
+     "login": "delegate-gp",
+     "prs": 19,
+     "lines": 2791,
+     "addedLines": 2518,
+     "removedLines": 273,
+     "addedRaw": 2518,
+     "deletedRaw": 273,
+     "repos": {
+      "omni": {
+       "prs": 12,
+       "lines": 2378,
+       "addedLines": 2152,
+       "removedLines": 226
+      },
+      "gp-pi": {
+       "prs": 7,
+       "lines": 413,
+       "addedLines": 366,
+       "removedLines": 47
       }
      }
     },
@@ -14215,12 +14623,6 @@
   }
  ],
  "bots": {
-  "delegate-gp": {
-   "prs": 217,
-   "lines": 58757,
-   "addedLines": 49196,
-   "removedLines": 9561
-  },
   "dependabot": {
    "prs": 2,
    "lines": 14,
