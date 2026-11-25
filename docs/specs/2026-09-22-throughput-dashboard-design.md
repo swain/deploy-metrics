@@ -155,8 +155,9 @@ configuration, never attributed to a contributor.
   bucket, which silently drops or duplicates it at every week boundary.
 - The denominator is that week's weekdays less any holiday in a checked-in
   `holidays.json`, so a short week is not read as a slow one.
-- Bot accounts are held out of the org totals and reported separately. There is
-  no per-contributor volume floor: the parent report needed one to form a
+- Known bot accounts other than `delegate-gp` are held out of the org totals
+  and stored separately. `delegate-gp` is counted as a regular contributor
+  in the list, charts, and totals. There is no per-contributor volume floor: the parent report needed one to form a
   comparable cohort at a single instant, but in a weekly series a light week is
   a data point, not noise to be filtered.
 
