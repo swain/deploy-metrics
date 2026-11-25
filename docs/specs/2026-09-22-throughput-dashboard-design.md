@@ -135,9 +135,10 @@ whatever time range the page has selected rather than being a lifetime total.
 that week's Monday as a `YYYY-MM-DD` string, derived once in `aggregate.ts`
 from the `week` key via `weekStartUTC` so the page can label an axis by date
 without reimplementing ISO week arithmetic; `week` itself stays as the map key,
-sort key, and cache filename stem. Plus, at top level, `generatedAt`, the
-sorted contributor index, the per-bot totals held out of the org figures, and
-`machineStateFiles`.
+sort key, and cache filename stem. Each week also carries a `bots` map keyed by
+login, with the same qualifying counts but excluded from contributor totals.
+At top level, the history retains `generatedAt`, the contributor index, lifetime
+bot totals, and `machineStateFiles`.
 
 `machineStateFiles` is the one place a file path is committed, and it is a
 deliberate exception to "no file lists are stored". Machine state is derived
@@ -182,8 +183,10 @@ server and no CDN. Charts are hand-rolled inline SVG for the same reason.
 
 Separate panels show qualifying lines added, lines removed, and pull requests
 per working day for the org and selected contributors. Range totals and the
-contributor table also show the two line counts separately. Contributor rank and repo share still use combined changed lines. Each
-repo label shows its added and removed counts separately.
+contributor table also show the two line counts separately. Contributor rank
+and repo share still use combined changed lines. Each repo label shows its
+added and removed counts separately. The Bot activity table shows qualifying
+PRs, lines added, and lines removed by bot login for the same selected range.
 
 ## Failure handling
 

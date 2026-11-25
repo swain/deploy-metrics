@@ -425,7 +425,7 @@
       </p>
 
       <section class="block">
-        <h2 class="section-title">Totals</h2>
+        <h2 class="section-title">Contributor totals</h2>
         <section class="panel">
           <h3 class="panel-title">Qualifying lines added per working day</h3>
           <svg
@@ -453,6 +453,24 @@
             aria-label="Org-wide qualifying pull requests per working day"
           ></svg>
         </section>
+      </section>
+
+      <section class="block" aria-labelledby="botActivityTitle">
+        <h2 class="section-title" id="botActivityTitle">Bot activity</h2>
+        <p class="generated">Bot-authored PRs are counted separately from contributor totals.</p>
+        <div class="totals-table-wrap">
+          <table class="totals-table" aria-labelledby="botActivityTitle">
+            <thead>
+              <tr>
+                <th scope="col">Bot</th>
+                <th scope="col" class="num">Qualifying lines added</th>
+                <th scope="col" class="num">Qualifying lines removed</th>
+                <th scope="col" class="num">Qualifying pull requests</th>
+              </tr>
+            </thead>
+            <tbody id="botTableBody"></tbody>
+          </table>
+        </div>
       </section>
 
       <section class="block">
@@ -554,6 +572,7 @@
         emptyState: document.getElementById('emptyState'),
         people: document.getElementById('people'),
         totalsTableBody: document.getElementById('totalsTableBody'),
+        botTableBody: document.getElementById('botTableBody'),
         modeRow: document.getElementById('modeRow'),
         selectionRow: document.getElementById('selectionRow'),
         legend: document.getElementById('legend'),
@@ -1066,6 +1085,36 @@
         drawMultiPanel(els.totalsPrs, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
       }
 
+      const buildBotTable = () => {
+        const totals = new Map()
+        for (const week of weeks) {
+          for (const [login, counts] of Object.entries(week.bots)) {
+            const row = totals.get(login) ?? { login, addedLines: 0, removedLines: 0, prs: 0 }
+            row.addedLines += counts.addedLines
+            row.removedLines += counts.removedLines
+            row.prs += counts.prs
+            totals.set(login, row)
+          }
+        }
+        const rows = [...totals.values()].sort((a, b) => b.prs - a.prs || a.login.localeCompare(b.login))
+        els.botTableBody.replaceChildren()
+        if (rows.length === 0) {
+          const cell = els.botTableBody.insertRow().insertCell()
+          cell.colSpan = 4
+          cell.textContent = 'No qualifying bot PRs in this range.'
+          return
+        }
+        for (const row of rows) {
+          const tr = els.botTableBody.insertRow()
+          tr.insertCell().textContent = row.login
+          for (const count of [row.addedLines, row.removedLines, row.prs]) {
+            const cell = tr.insertCell()
+            cell.className = 'num'
+            cell.textContent = fmtNum(count)
+          }
+        }
+      }
+
       const buildStats = (contributorCount) => {
         const totalAdded = weeks.reduce((n, w) => n + w.totals.addedLines, 0)
         const totalRemoved = weeks.reduce((n, w) => n + w.totals.removedLines, 0)
@@ -1114,6 +1163,7 @@
         updateRangeButtons()
         buildStats(activeLogins.size)
         buildTotalsTable(totals)
+        buildBotTable()
         buildPeople(totals)
         renderTotals()
         renderSelection()
