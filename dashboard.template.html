@@ -427,12 +427,21 @@
       <section class="block">
         <h2 class="section-title">Totals</h2>
         <section class="panel">
-          <h3 class="panel-title">Qualifying lines per working day</h3>
+          <h3 class="panel-title">Qualifying lines added per working day</h3>
           <svg
-            id="totalsLines"
+            id="totalsAdded"
             viewBox="0 0 920 220"
             role="img"
-            aria-label="Org-wide qualifying lines per working day"
+            aria-label="Org-wide qualifying lines added per working day"
+          ></svg>
+        </section>
+        <section class="panel">
+          <h3 class="panel-title">Qualifying lines removed per working day</h3>
+          <svg
+            id="totalsRemoved"
+            viewBox="0 0 920 220"
+            role="img"
+            aria-label="Org-wide qualifying lines removed per working day"
           ></svg>
         </section>
         <section class="panel">
@@ -452,9 +461,10 @@
           <table class="totals-table">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th title="Ranked by lines added plus lines removed">Rank</th>
                 <th>Contributor</th>
-                <th class="num">Qualifying lines</th>
+                <th class="num">Qualifying lines added</th>
+                <th class="num">Qualifying lines removed</th>
                 <th class="num">Qualifying pull requests</th>
               </tr>
             </thead>
@@ -482,12 +492,21 @@
         </p>
         <div id="contributorCharts" hidden>
           <section class="panel">
-            <h3 class="panel-title">Qualifying lines per working day</h3>
+            <h3 class="panel-title">Qualifying lines added per working day</h3>
             <svg
-              id="contribLines"
+              id="contribAdded"
               viewBox="0 0 920 220"
               role="img"
-              aria-label="Qualifying lines per working day by contributor"
+              aria-label="Qualifying lines added per working day by contributor"
+            ></svg>
+          </section>
+          <section class="panel">
+            <h3 class="panel-title">Qualifying lines removed per working day</h3>
+            <svg
+              id="contribRemoved"
+              viewBox="0 0 920 220"
+              role="img"
+              aria-label="Qualifying lines removed per working day by contributor"
             ></svg>
           </section>
           <section class="panel">
@@ -501,7 +520,7 @@
           </section>
         </div>
         <div id="repoSplit" hidden>
-          <h3 class="panel-title">Repo split (qualifying lines, current range)</h3>
+          <h3 class="panel-title">Repo split (share of total changed lines)</h3>
           <div class="repo-split-row" id="repoSplitRow"></div>
         </div>
       </section>
@@ -523,9 +542,11 @@
       const CHART_MODE_STORAGE_KEY = 'deploy-metrics-chart-mode'
 
       const els = {
-        totalsLines: document.getElementById('totalsLines'),
+        totalsAdded: document.getElementById('totalsAdded'),
+        totalsRemoved: document.getElementById('totalsRemoved'),
         totalsPrs: document.getElementById('totalsPrs'),
-        contribLines: document.getElementById('contribLines'),
+        contribAdded: document.getElementById('contribAdded'),
+        contribRemoved: document.getElementById('contribRemoved'),
         contribPrs: document.getElementById('contribPrs'),
         contributorCharts: document.getElementById('contributorCharts'),
         repoSplit: document.getElementById('repoSplit'),
@@ -774,8 +795,10 @@
         const totals = new Map()
         for (const week of weeksInRange) {
           for (const c of week.contributors) {
-            const existing = totals.get(c.login) || { lines: 0, prs: 0 }
+            const existing = totals.get(c.login) || { lines: 0, addedLines: 0, removedLines: 0, prs: 0 }
             existing.lines += c.lines
+            existing.addedLines += c.addedLines
+            existing.removedLines += c.removedLines
             existing.prs += c.prs
             totals.set(c.login, existing)
           }
@@ -785,14 +808,14 @@
 
       const buildPeople = (totals) => {
         const people = [...totals.entries()]
-          .map(([login, t]) => ({ login, lines: t.lines }))
+          .map(([login, t]) => ({ login, ...t }))
           .sort((a, b) => b.lines - a.lines)
         peopleOrder = people.map((p) => p.login)
 
         els.people.innerHTML = people.map((p) =>
           `<button type="button" data-login="${p.login}" aria-pressed="false">` +
           `<span class="chip-login">${p.login}</span>` +
-          `<span class="chip-lines">${fmtNum(p.lines)} lines</span>` +
+          `<span class="chip-lines">+${fmtNum(p.addedLines)} / −${fmtNum(p.removedLines)}</span>` +
           `</button>`
         ).join('')
       }
@@ -801,10 +824,10 @@
       // whenever the range changes, never wired to click/selection state.
       const buildTotalsTable = (totals) => {
         const rows = [...totals.entries()]
-          .map(([login, t]) => ({ login, lines: t.lines, prs: t.prs }))
+          .map(([login, t]) => ({ login, ...t }))
           .sort((a, b) => b.lines - a.lines)
         els.totalsTableBody.innerHTML = rows.map((r, i) =>
-          `<tr><td>${i + 1}</td><td>${r.login}</td><td class="num">${fmtNum(r.lines)}</td><td class="num">${fmtNum(r.prs)}</td></tr>`
+          `<tr><td>${i + 1}</td><td>${r.login}</td><td class="num">${fmtNum(r.addedLines)}</td><td class="num">${fmtNum(r.removedLines)}</td><td class="num">${fmtNum(r.prs)}</td></tr>`
         ).join('')
       }
 
@@ -933,19 +956,28 @@
           const c = week.contributors.find((row) => row.login === login)
           if (!c) continue
           for (const [repo, stats] of Object.entries(c.repos)) {
-            totals[repo] = (totals[repo] || 0) + stats.lines
+            const entry = (totals[repo] ??= { lines: 0, addedLines: 0, removedLines: 0 })
+            entry.lines += stats.lines
+            entry.addedLines += stats.addedLines
+            entry.removedLines += stats.removedLines
           }
         }
         return totals
       }
 
       const repoSlicesFor = (repoTotals) => {
-        const entries = Object.entries(repoTotals).sort((a, b) => b[1] - a[1])
-        const top = entries.slice(0, 5).map(([repo, lines], i) => ({ repo, lines, color: `var(--contrib-${i})` }))
+        const entries = Object.entries(repoTotals).sort((a, b) => b[1].lines - a[1].lines)
+        const top = entries.slice(0, 5).map(([repo, counts], i) => ({ repo, ...counts, color: `var(--contrib-${i})` }))
         const rest = entries.slice(5)
-        if (rest.length === 0) return top.sort((a, b) => b.lines - a.lines)
-        const otherLines = rest.reduce((n, [, v]) => n + v, 0)
-        return [...top, { repo: REPO_OTHER, lines: otherLines, color: 'var(--muted)' }].sort((a, b) => b.lines - a.lines)
+        if (rest.length === 0) return top
+        const other = {
+          repo: REPO_OTHER,
+          color: 'var(--muted)',
+          lines: rest.reduce((n, [, v]) => n + v.lines, 0),
+          addedLines: rest.reduce((n, [, v]) => n + v.addedLines, 0),
+          removedLines: rest.reduce((n, [, v]) => n + v.removedLines, 0),
+        }
+        return [...top, other].sort((a, b) => b.lines - a.lines)
       }
 
       const polarToCartesian = (cx, cy, r, angle) => ({
@@ -992,10 +1024,10 @@
         els.repoSplitRow.innerHTML = items.map(({ login, slices, total }) => {
           const list = slices.map((s) =>
             `<li><span class="repo-split-swatch" style="background:${s.color}"></span>` +
-            `<span>${s.repo}, ${pct(s.lines, total)}%, ${fmtNum(s.lines)}</span></li>`
+            `<span>${s.repo}, ${pct(s.lines, total)}%, +${fmtNum(s.addedLines)} / −${fmtNum(s.removedLines)}</span></li>`
           ).join('')
           return `<div class="repo-split-item">` +
-            `<svg id="pie-${login}" viewBox="0 0 88 88" role="img" aria-label="${login}'s qualifying lines by repo"></svg>` +
+            `<svg id="pie-${login}" viewBox="0 0 88 88" role="img" aria-label="${login}'s share of qualifying changed lines by repo"></svg>` +
             `<div><p class="repo-split-login" style="color:${seriesColorFor(login)}">${login}</p>` +
             `<ul class="repo-split-list">${list}</ul></div>` +
             `</div>`
@@ -1018,26 +1050,31 @@
         buildRepoSplit()
         if (!hasSelection) return
         if (chartMode === 'stacked') {
-          drawStackedPanel(els.contribLines, weeks, buildStackedBands('lines'))
+          drawStackedPanel(els.contribAdded, weeks, buildStackedBands('addedLines'))
+          drawStackedPanel(els.contribRemoved, weeks, buildStackedBands('removedLines'))
           drawStackedPanel(els.contribPrs, weeks, buildStackedBands('prs'))
         } else {
-          drawMultiPanel(els.contribLines, weeks, buildContributorSeries('lines'))
+          drawMultiPanel(els.contribAdded, weeks, buildContributorSeries('addedLines'))
+          drawMultiPanel(els.contribRemoved, weeks, buildContributorSeries('removedLines'))
           drawMultiPanel(els.contribPrs, weeks, buildContributorSeries('prs'))
         }
       }
 
       const renderTotals = () => {
-        drawMultiPanel(els.totalsLines, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'lines')) }])
+        drawMultiPanel(els.totalsAdded, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'addedLines')) }])
+        drawMultiPanel(els.totalsRemoved, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'removedLines')) }])
         drawMultiPanel(els.totalsPrs, weeks, [{ key: 'total', label: 'Total', color: 'var(--series)', values: weeks.map((w) => orgRate(w, 'prs')) }])
       }
 
       const buildStats = (contributorCount) => {
-        const totalLines = weeks.reduce((n, w) => n + w.totals.lines, 0)
+        const totalAdded = weeks.reduce((n, w) => n + w.totals.addedLines, 0)
+        const totalRemoved = weeks.reduce((n, w) => n + w.totals.removedLines, 0)
         const totalPrs = weeks.reduce((n, w) => n + w.totals.prs, 0)
         const stats = [
           { label: 'Weeks tracked', value: weeks.length },
           { label: 'Contributors', value: contributorCount },
-          { label: 'Qualifying lines', value: fmtNum(totalLines) },
+          { label: 'Qualifying lines added', value: fmtNum(totalAdded) },
+          { label: 'Qualifying lines removed', value: fmtNum(totalRemoved) },
           { label: 'Qualifying PRs', value: fmtNum(totalPrs) },
         ]
         els.stats.innerHTML = stats.map((s) =>
@@ -1206,7 +1243,7 @@
       }
 
       const initTooltips = () => {
-        for (const svg of [els.totalsLines, els.totalsPrs, els.contribLines, els.contribPrs]) {
+        for (const svg of [els.totalsAdded, els.totalsRemoved, els.totalsPrs, els.contribAdded, els.contribRemoved, els.contribPrs]) {
           svg.addEventListener('pointermove', (evt) => handlePanelPointer(svg, evt))
           svg.addEventListener('pointerdown', (evt) => handlePanelPointer(svg, evt))
           svg.addEventListener('pointerleave', () => {

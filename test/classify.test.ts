@@ -53,9 +53,12 @@ test('a build-output-only diff is generated only', () => {
   assert.deepEqual(row.reasons, ['generated'])
 })
 
-test('qlocBase ignores lockfile, manifest and build lines but keeps source', () => {
-  const files = [file('src/a.ts', 10, 2), file('package-lock.json', 900, 900), file('dist/x.js', 50, 0)]
-  assert.equal(toCached(pr({ files, changedFiles: 3 })).qlocBase, 12)
+test('qualifying additions and removals each ignore lockfile, manifest and build lines', () => {
+  const files = [file('src/a.ts', 10, 2), file('src/b.ts', 0, 15, 'DELETED'), file('package-lock.json', 900, 900), file('package.json', 2, 9), file('dist/x.js', 50, 0)]
+  const row = toCached(pr({ files, changedFiles: 5 }))
+  assert.equal(row.addedLines, 10)
+  assert.equal(row.removedLines, 17)
+  assert.equal(row.qlocBase, 27)
 })
 
 test('sole-file fields are set only for single-file diffs', () => {

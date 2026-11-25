@@ -29,9 +29,12 @@ test('per-contributor rates divide by that week working days', () => {
   assert.equal(week.weekStart, '2026-01-05')
   assert.equal(week.workingDays, 5)
   assert.equal(week.totals.lines, 100)
+  assert.equal(week.totals.addedLines, 60)
+  assert.equal(week.totals.removedLines, 40)
   assert.equal(week.totals.prs, 1)
   assert.equal(week.contributors[0].login, 'alice')
-  assert.equal(week.contributors[0].lines, 100)
+  assert.equal(week.contributors[0].addedLines, 60)
+  assert.equal(week.contributors[0].removedLines, 40)
 })
 
 test('a holiday shortens the denominator, not the totals', () => {
@@ -97,7 +100,9 @@ test('bots are held out of totals and reported separately', () => {
     h.weeks[0].contributors.map((c) => c.login),
     ['alice'],
   )
-  assert.equal(h.bots.robot.prs, 1)
+  assert.equal(h.weeks[0].totals.addedLines, 60)
+  assert.equal(h.weeks[0].totals.removedLines, 40)
+  assert.deepEqual(h.bots.robot, { prs: 1, lines: 100, addedLines: 60, removedLines: 40 })
   assert(!h.contributors.includes('robot'))
 })
 
@@ -229,10 +234,10 @@ test('the repos map sums to the same lines and prs as the contributor total', ()
   const repoPrs = Object.values(alice.repos).reduce((n, r) => n + r.prs, 0)
   assert.equal(repoLines, alice.lines)
   assert.equal(repoPrs, alice.prs)
-  assert.equal(alice.repos.omni.lines, 100)
-  assert.equal(alice.repos.omni.prs, 1)
-  assert.equal(alice.repos['gp-api'].lines, 30)
-  assert.equal(alice.repos['gp-api'].prs, 1)
+  assert.deepEqual(alice.repos.omni, { prs: 1, lines: 100, addedLines: 60, removedLines: 40 })
+  assert.deepEqual(alice.repos['gp-api'], { prs: 1, lines: 30, addedLines: 20, removedLines: 10 })
+  assert.equal(alice.addedLines, 80)
+  assert.equal(alice.removedLines, 50)
 })
 
 test('an excluded repo never appears in the repos map', () => {

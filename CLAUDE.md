@@ -4,7 +4,7 @@ Contributor throughput dashboard for the `thegoodparty` GitHub org.
 
 ## What this measures
 
-Qualifying merged pull requests, and the lines of code inside them, per
+Qualifying merged pull requests, added lines, and removed lines per
 contributor, per working day, across the org. Results are bucketed into ISO
 weeks so the series is longitudinal, so you can watch throughput trend week
 over week rather than seeing a single snapshot.
@@ -47,8 +47,9 @@ the next render.
 ## Data and caching
 
 `data/history.json` holds the aggregated series. `data/weeks/` caches one
-file per completed ISO week, fetched once from the GitHub API and never
-refetched. The in-progress (current) week is not cached. It is refetched every run, since it's still changing.
+file per ISO week. The two latest weeks are refetched every run. Older
+weeks are also refetched once if they lack separate qualifying addition and
+removal counts. Raw whole-PR totals cannot supply that split.
 
 If you change the classifier (what counts as a qualifying PR, how lines are
 counted), the cached weeks under `data/weeks/` still reflect the old rules.
