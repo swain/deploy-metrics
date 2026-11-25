@@ -26,11 +26,16 @@ mkdirSync(WEEKS_DIR, { recursive: true })
 // the two most recent weeks as unsettled so both get refetched.
 const unsettled = new Set(wanted.slice(-2))
 
+const weeks = new Map<string, CachedPr[]>()
 for (const key of wanted) {
   const path = join(WEEKS_DIR, `${key}.json`)
-  // A finished week never changes, so it is fetched once. The current week is
-  // always refetched, because it is still filling up.
-  if (existsSync(path) && !unsettled.has(key)) continue
+  if (existsSync(path) && !unsettled.has(key)) {
+    const cached: CachedPr[] = JSON.parse(readFileSync(path, 'utf8'))
+    if (cached.every((row) => Number.isSafeInteger(row.addedLines) && Number.isSafeInteger(row.removedLines))) {
+      weeks.set(key, cached)
+      continue
+    }
+  }
   const rows = (await fetchWeek(weekWindow(key), token)).map(toCached)
   // Write only on success: a partial file would be cached as if it were whole.
   // Write-then-rename so a process killed mid-write can't leave a truncated
@@ -38,14 +43,8 @@ for (const key of wanted) {
   const tmp = `${path}.tmp`
   writeFileSync(tmp, JSON.stringify(rows))
   renameSync(tmp, path)
+  weeks.set(key, rows)
   console.log(`${key}: ${rows.length} merged pull requests`)
-}
-
-const weeks = new Map<string, CachedPr[]>()
-for (const key of wanted) {
-  const path = join(WEEKS_DIR, `${key}.json`)
-  if (!existsSync(path)) continue
-  weeks.set(key, JSON.parse(readFileSync(path, 'utf8')))
 }
 
 const holidays = new Set<string>(JSON.parse(readFileSync('holidays.json', 'utf8')))

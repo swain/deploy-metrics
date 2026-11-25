@@ -55,10 +55,9 @@ Ported verbatim from the parent report and validated against its published
 figures: the same six machine-state files with the same counts, 764 machine-state
 exclusions, and per-person pull-request totals within a few of its own.
 
-A pull request **qualifies** if it changed at least one file that is not build
-output, not a lockfile or manifest, and not machine-written state. Nothing looks
-at who or what opened it, so agent-authored and hand-authored changes count
-alike.
+A pull request **qualifies** if it passes all of the exclusion rules below. A
+qualifying PR can have zero qualifying lines. Agent-authored and hand-authored
+changes under the same login count alike.
 
 Exclusion rules, any of which disqualifies a pull request:
 
@@ -70,16 +69,17 @@ Exclusion rules, any of which disqualifies a pull request:
 | Pure move        | every file is a rename                     |
 | Dependency only  | every file is a lockfile or manifest       |
 | Generated only   | every file is build output                 |
-| Machine state    | every file is a detected state file        |
+| Machine state    | the sole changed file is a detected state file |
 
 **Machine state is derived, not listed.** A file that is repeatedly the entire
 diff of a pull request, at trivial size, is a program recording where it got to.
 Detection: at least 10 pull requests where the file is the sole change, and a
 median size of 10 lines or fewer, computed across the whole history.
 
-**Qualifying lines** are additions plus deletions over the files in a qualifying
-pull request that are not lockfiles, manifests, build output or machine state.
-A lockfile bump inside a real change still contributes nothing.
+**Qualifying added and removed lines** are the separate addition and deletion
+counts from eligible files in qualifying PRs. Both exclude lockfiles, manifests
+and build paths. A machine-state file in a qualifying multi-file PR contributes
+like any other file. Combined changed lines are the sum of the two counts.
 
 Branch promotions matter more to a line count than to a pull-request count: they
 are about 44% of every line changed in the org, because a develop-to-qa merge
@@ -94,13 +94,14 @@ Two committed shapes, both derived. No file lists are ever stored.
 One file per ISO week, one row per merged pull request:
 
 ```
-{ repo, number, login, mergedAt, reasons[], qlocBase, added, deleted,
-  changedFiles, soleFile, soleLines }
+{ repo, number, login, mergedAt, reasons[], qlocBase, addedLines, removedLines,
+  added, deleted, changedFiles, soleFile, soleLines }
 ```
 
 The cache holds only the part of the verdict a single week can decide.
-`reasons` carries every exclusion except machine state, and `qlocBase` is the
-line count over files that are not lockfiles, manifests or build output.
+`reasons` carries every exclusion except machine state. `qlocBase` is
+`addedLines + removedLines` over files that are not lockfiles, manifests or
+build output. `added` and `deleted` remain raw whole-PR counts.
 
 `soleFile` and `soleLines` are populated only when the pull request changed
 exactly one file. They are what lets global machine-state detection run across
@@ -161,9 +162,10 @@ configuration, never attributed to a contributor.
 
 ## Refresh
 
-A completed week is fetched once and cached. The in-progress week is refetched
-on every run. Deleting `data/weeks/` rebuilds everything from scratch, which is
-what makes a bug fix in the classifier a re-run rather than a migration.
+The latest two weeks are refetched on every run. Older weeks without the
+qualifying split are also refetched once, because the old combined count and
+raw whole-PR totals cannot recover it in general. Deleting `data/weeks/`
+rebuilds everything from scratch.
 
 Nightly on the existing cron. The first run backfills from 2026-01-05, about
 38 weeks, and takes roughly 25 minutes; subsequent runs take seconds.
@@ -178,13 +180,10 @@ The data is **embedded rather than fetched**, because `fetch()` against a
 Pages is off. Embedding means double-clicking the file works, offline, with no
 server and no CDN. Charts are hand-rolled inline SVG for the same reason.
 
-Two panels stacked on one shared x-axis: qualifying lines per working day, and
-qualifying pull requests per working day. Never a dual axis. The two measures
-have unrelated scales, and overlaying them invents a correlation.
-
-Below the panels, the contributor list. Clicking a contributor filters both
-panels to that person, drawn against a faint org-median band for context.
-Clicking again clears back to the org total. That is the entire interaction.
+Separate panels show qualifying lines added, lines removed, and pull requests
+per working day for the org and selected contributors. Range totals and the
+contributor table also show the two line counts separately. Contributor rank and repo share still use combined changed lines. Each
+repo label shows its added and removed counts separately.
 
 ## Failure handling
 

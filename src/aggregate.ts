@@ -2,13 +2,18 @@ import { detectMachineState, isQualifying } from './classify.ts'
 import type { CachedPr } from './classify.ts'
 import { isoWeekKey, weekStartUTC, workingDays } from './weeks.ts'
 
-export interface ContributorWeek {
-  login: string
+interface Counts {
   prs: number
   lines: number
+  addedLines: number
+  removedLines: number
+}
+
+export interface ContributorWeek extends Counts {
+  login: string
   addedRaw: number
   deletedRaw: number
-  repos: Record<string, { prs: number; lines: number }>
+  repos: Record<string, Counts>
 }
 
 export interface WeekSummary {
@@ -16,7 +21,7 @@ export interface WeekSummary {
   weekStart: string
   workingDays: number
   partial: boolean
-  totals: { prs: number; lines: number; addedRaw: number; deletedRaw: number; people: number }
+  totals: Counts & { addedRaw: number; deletedRaw: number; people: number }
   contributors: ContributorWeek[]
 }
 
@@ -43,14 +48,22 @@ export interface History {
   generatedAt: string
   contributors: string[]
   weeks: WeekSummary[]
-  bots: Record<string, { prs: number; lines: number }>
+  bots: Record<string, Counts>
   machineStateFiles: string[]
+}
+
+const blankCounts = (): Counts => ({ prs: 0, lines: 0, addedLines: 0, removedLines: 0 })
+
+const countPr = (counts: Counts, row: CachedPr) => {
+  counts.prs += 1
+  counts.lines += row.qlocBase
+  counts.addedLines += row.addedLines
+  counts.removedLines += row.removedLines
 }
 
 const blank = (login: string): ContributorWeek => ({
   login,
-  prs: 0,
-  lines: 0,
+  ...blankCounts(),
   addedRaw: 0,
   deletedRaw: 0,
   repos: {},
@@ -67,7 +80,7 @@ export const buildHistory = (
   const now = new Date(options.generatedAt)
   const currentWeekKey = isoWeekKey(options.generatedAt)
 
-  const bots: Record<string, { prs: number; lines: number }> = {}
+  const bots: Record<string, Counts> = {}
   const people = new Set<string>()
   const summaries: WeekSummary[] = []
 
@@ -79,20 +92,17 @@ export const buildHistory = (
 
     for (const row of rows) {
       if (options.bots.has(row.login)) {
-        const bot = bots[row.login] ?? { prs: 0, lines: 0 }
-        bot.prs += 1
-        bot.lines += row.qlocBase
+        const bot = bots[row.login] ?? blankCounts()
+        countPr(bot, row)
         bots[row.login] = bot
         continue
       }
       const entry = byLogin.get(row.login) ?? blank(row.login)
-      entry.prs += 1
-      entry.lines += row.qlocBase
+      countPr(entry, row)
       entry.addedRaw += row.added
       entry.deletedRaw += row.deleted
-      const repoEntry = entry.repos[row.repo] ?? { prs: 0, lines: 0 }
-      repoEntry.prs += 1
-      repoEntry.lines += row.qlocBase
+      const repoEntry = entry.repos[row.repo] ?? blankCounts()
+      countPr(repoEntry, row)
       entry.repos[row.repo] = repoEntry
       byLogin.set(row.login, entry)
       people.add(row.login)
@@ -119,6 +129,8 @@ export const buildHistory = (
       totals: {
         prs: contributors.reduce((n, c) => n + c.prs, 0),
         lines: contributors.reduce((n, c) => n + c.lines, 0),
+        addedLines: contributors.reduce((n, c) => n + c.addedLines, 0),
+        removedLines: contributors.reduce((n, c) => n + c.removedLines, 0),
         addedRaw: contributors.reduce((n, c) => n + c.addedRaw, 0),
         deletedRaw: contributors.reduce((n, c) => n + c.deletedRaw, 0),
         people: contributors.length,

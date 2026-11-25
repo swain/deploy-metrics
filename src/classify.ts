@@ -26,6 +26,8 @@ export interface CachedPr {
   mergedAt: string
   reasons: string[]
   qlocBase: number
+  addedLines: number
+  removedLines: number
   added: number
   deleted: number
   changedFiles: number
@@ -86,9 +88,13 @@ export const toCached = (pr: RawPr): CachedPr => {
     if (files.every((f) => isBuild(f.path))) reasons.push('generated')
   }
 
-  const qlocBase = files
-    .filter((f) => countsTowardLines(f.path))
-    .reduce((sum, f) => sum + f.additions + f.deletions, 0)
+  let addedLines = 0
+  let removedLines = 0
+  for (const file of files) {
+    if (!countsTowardLines(file.path)) continue
+    addedLines += file.additions
+    removedLines += file.deletions
+  }
 
   const sole = pr.changedFiles === 1 && files.length === 1 ? files[0] : null
 
@@ -98,7 +104,9 @@ export const toCached = (pr: RawPr): CachedPr => {
     login: pr.login,
     mergedAt: pr.mergedAt,
     reasons,
-    qlocBase,
+    qlocBase: addedLines + removedLines,
+    addedLines,
+    removedLines,
     added: pr.additions,
     deleted: pr.deletions,
     changedFiles: pr.changedFiles,
