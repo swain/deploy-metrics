@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-25T15:58:34.643Z",
+ "generatedAt": "2026-11-25T16:39:29.736Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -14404,12 +14404,12 @@
    "workingDays": 3,
    "partial": true,
    "totals": {
-    "prs": 103,
-    "lines": 60252,
-    "addedLines": 44759,
-    "removedLines": 15493,
-    "addedRaw": 46755,
-    "deletedRaw": 15564,
+    "prs": 110,
+    "lines": 62628,
+    "addedLines": 46890,
+    "removedLines": 15738,
+    "addedRaw": 48886,
+    "deletedRaw": 15809,
     "people": 10
    },
    "contributors": [
@@ -14438,11 +14438,11 @@
     },
     {
      "login": "tomer-tgp",
-     "prs": 21,
-     "lines": 9969,
-     "addedLines": 8932,
+     "prs": 22,
+     "lines": 9970,
+     "addedLines": 8933,
      "removedLines": 1037,
-     "addedRaw": 8932,
+     "addedRaw": 8933,
      "deletedRaw": 1037,
      "repos": {
       "omni": {
@@ -14450,6 +14450,29 @@
        "lines": 9969,
        "addedLines": 8932,
        "removedLines": 1037
+      },
+      "gp-data-platform": {
+       "prs": 1,
+       "lines": 1,
+       "addedLines": 1,
+       "removedLines": 0
+      }
+     }
+    },
+    {
+     "login": "dealvz",
+     "prs": 8,
+     "lines": 9172,
+     "addedLines": 4893,
+     "removedLines": 4279,
+     "addedRaw": 4894,
+     "deletedRaw": 4329,
+     "repos": {
+      "omni": {
+       "prs": 8,
+       "lines": 9172,
+       "addedLines": 4893,
+       "removedLines": 4279
       }
      }
     },
@@ -14473,23 +14496,6 @@
        "lines": 8828,
        "addedLines": 5306,
        "removedLines": 3522
-      }
-     }
-    },
-    {
-     "login": "dealvz",
-     "prs": 6,
-     "lines": 7356,
-     "addedLines": 3177,
-     "removedLines": 4179,
-     "addedRaw": 3178,
-     "deletedRaw": 4229,
-     "repos": {
-      "omni": {
-       "prs": 6,
-       "lines": 7356,
-       "addedLines": 3177,
-       "removedLines": 4179
       }
      }
     },
@@ -14518,17 +14524,17 @@
     },
     {
      "login": "sanjayr1",
-     "prs": 9,
-     "lines": 5221,
-     "addedLines": 4972,
+     "prs": 10,
+     "lines": 5253,
+     "addedLines": 5004,
      "removedLines": 249,
-     "addedRaw": 4972,
+     "addedRaw": 5004,
      "deletedRaw": 249,
      "repos": {
       "gp-data-platform": {
-       "prs": 7,
-       "lines": 5146,
-       "addedLines": 4897,
+       "prs": 8,
+       "lines": 5178,
+       "addedLines": 4929,
        "removedLines": 249
       },
       "gp-terraform-dataplatform": {
@@ -14541,18 +14547,18 @@
     },
     {
      "login": "delegate-gp",
-     "prs": 19,
-     "lines": 2791,
-     "addedLines": 2518,
-     "removedLines": 273,
-     "addedRaw": 2518,
-     "deletedRaw": 273,
+     "prs": 22,
+     "lines": 3318,
+     "addedLines": 2900,
+     "removedLines": 418,
+     "addedRaw": 2900,
+     "deletedRaw": 418,
      "repos": {
       "omni": {
-       "prs": 12,
-       "lines": 2378,
-       "addedLines": 2152,
-       "removedLines": 226
+       "prs": 15,
+       "lines": 2905,
+       "addedLines": 2534,
+       "removedLines": 371
       },
       "gp-pi": {
        "prs": 7,
