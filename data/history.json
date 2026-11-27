@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T22:03:52.556Z",
+ "generatedAt": "2026-11-27T22:03:48.943Z",
  "contributors": [
   "(ghost)",
   "Collin-GP",
@@ -14404,12 +14404,12 @@
    "workingDays": 3,
    "partial": true,
    "totals": {
-    "prs": 153,
-    "lines": 88921,
-    "addedLines": 66960,
-    "removedLines": 21961,
-    "addedRaw": 68956,
-    "deletedRaw": 22032,
+    "prs": 155,
+    "lines": 89838,
+    "addedLines": 67818,
+    "removedLines": 22020,
+    "addedRaw": 69814,
+    "deletedRaw": 22091,
     "people": 12
    },
    "contributors": [
@@ -14546,6 +14546,29 @@
      }
     },
     {
+     "login": "delegate-gp",
+     "prs": 29,
+     "lines": 6980,
+     "addedLines": 6332,
+     "removedLines": 648,
+     "addedRaw": 6332,
+     "deletedRaw": 648,
+     "repos": {
+      "omni": {
+       "prs": 19,
+       "lines": 4920,
+       "addedLines": 4460,
+       "removedLines": 460
+      },
+      "gp-pi": {
+       "prs": 10,
+       "lines": 2060,
+       "addedLines": 1872,
+       "removedLines": 188
+      }
+     }
+    },
+    {
      "login": "hhkarimi",
      "prs": 5,
      "lines": 6880,
@@ -14565,29 +14588,6 @@
        "lines": 111,
        "addedLines": 90,
        "removedLines": 21
-      }
-     }
-    },
-    {
-     "login": "delegate-gp",
-     "prs": 27,
-     "lines": 6063,
-     "addedLines": 5474,
-     "removedLines": 589,
-     "addedRaw": 5474,
-     "deletedRaw": 589,
-     "repos": {
-      "omni": {
-       "prs": 18,
-       "lines": 4213,
-       "addedLines": 3753,
-       "removedLines": 460
-      },
-      "gp-pi": {
-       "prs": 9,
-       "lines": 1850,
-       "addedLines": 1721,
-       "removedLines": 129
       }
      }
     },
